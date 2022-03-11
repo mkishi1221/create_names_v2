@@ -3,6 +3,7 @@
 from typing import List
 from classes.keyword import Keyword
 import regex as re
+import orjson as json
 
 
 def create_keyword(word: str) -> Keyword:
@@ -33,5 +34,8 @@ def import_keyword_list(words) -> List[Keyword]:
     sorted_unique_words = sorted(
         unique_words, key=lambda k: (k.keyword, k.word.lower())
     )
+
+    with open("ref/sorted_unique_words.json", "wb+") as out_file:
+        out_file.write(json.dumps(sorted_unique_words, option=json.OPT_INDENT_2))
 
     return sorted_unique_words

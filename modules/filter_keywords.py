@@ -4,7 +4,6 @@ from typing import List
 from classes.keyword import Keyword
 from os import path
 import regex as re
-import json
 
 
 def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
@@ -21,6 +20,16 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     keyword_blacklist = {}
 
     # Create set of approved keywords, filtering by pos, "illegal_chars" and length
+    # approved_keywords = []
+    # for keyword in keywords:
+    #     if (
+    #         keyword.wordsAPI_pos in approved_pos
+    #         and not bool(illegal_char.search(keyword.keyword))
+    #         and keyword.keyword_len > 2
+    #         and keyword not in keyword_blacklist
+    #     ):
+    #     approved_keywords.append(keyword)
+
     approved_keywords = {
         keyword
         for keyword in keywords
