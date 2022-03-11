@@ -23,6 +23,8 @@ def generate_word_list(text_file, user_keywords_file):
         # Get keywords from user keyword list
         print("Extracting keywords from keyword list and verifying keywords using wordAPI dictionary......")
         keyword_list_keywords = import_keyword_list(user_keywords)
+        with open("ref/keywords_from_keywords_raw.json", "wb+") as out_file:
+            out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
         keyword_list_keywords = verify_words_with_wordsAPI(keyword_list_keywords)
         keyword_list_keywords = get_keyword_wiki_scores(keyword_list_keywords)
         all_keywords += keyword_list_keywords
@@ -40,6 +42,8 @@ def generate_word_list(text_file, user_keywords_file):
         # Run lines through Spacy to obtain keywords and categorize them according to their POS
         print("Extracting keywords from sentences using spacy...")
         spacy_keywords = extract_words_with_spacy(unique_lines)
+        with open("ref/keywords_from_sentences_spacy.json", "wb+") as out_file:
+            out_file.write(json.dumps(spacy_keywords, option=json.OPT_INDENT_2))
         spacy_keywords = verify_words_with_wordsAPI(spacy_keywords)
         spacy_keywords = get_keyword_wiki_scores(spacy_keywords)
 
@@ -56,9 +60,11 @@ def generate_word_list(text_file, user_keywords_file):
         )
         quit()
 
-    # Run keywords through keywords filter
-    print("Running keywords through keyword filter...")
-    keywords = filter_keywords(all_keywords)
+    # # Run keywords through keywords filter
+    # print("Running keywords through keyword filter...")
+    # keywords = filter_keywords(all_keywords)
+
+    keywords = all_keywords
 
     keywords.sort(key=operator.attrgetter('keyword'))
     keywords.sort(key=operator.attrgetter('keyword_total_score'), reverse=True)

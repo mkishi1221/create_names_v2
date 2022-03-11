@@ -36,7 +36,8 @@ def fetch_pos_wordAPI(word: str, wordapi_data: dict):
     pos_list = []
 
     # Check if keyword is a number (Integer and float). If number, pos is NUM.
-    if re.match("^[0-9.]*$", word or "") is not None:
+    print("target: \"" + str(word) + "\"")
+    if re.match("^[0-9.]+$", word or "") is not None:
         pos_list.append("NUM")
 
     # Check if keyword is in wordsAPI dictionary.
@@ -47,15 +48,16 @@ def fetch_pos_wordAPI(word: str, wordapi_data: dict):
             # Loop through all the definitions tied to the same keyword.
             # Check if pos data is available, is a string and is not already in pos list.
             # If all above is true, add to pos list. Otherwise return pos as empty string.
-            pos_list = [
-                def_data["partOfSpeech"]
-                for def_data in def_list
+            pos_list = []
+            for def_data in def_list:
                 if (
                     "partOfSpeech" in def_data.keys()
                     and isinstance(def_data["partOfSpeech"], str)
                     and def_data["partOfSpeech"] not in pos_list
-                )
-            ]
+                ):
+                    pos_list.append(def_data["partOfSpeech"])
+
+    print(pos_list)
 
     return pos_list
 
@@ -69,14 +71,24 @@ def update_pos_value(
     updated_keywords_db = []
     for keyword_data in keywords_db:
         pos_list_keyword_n_lemma = set()
-
+        print("\n")
         keyword_b = keyword_data.keyword
-        keyword_b_pos = fetch_pos_wordAPI(keyword_b, wordsAPI_data)
-        pos_list_keyword_n_lemma.update(keyword_b_pos)
+        print("base keyword: " + str(keyword_b))
+        if keyword_b is not None:
+            keyword_b_pos = fetch_pos_wordAPI(keyword_b, wordsAPI_data)
+            pos_list_keyword_n_lemma.update(keyword_b_pos)
+        else:
+            print("keyword_b is None")
 
         keyword_l = keyword_data.lemma
-        keyword_l_pos = fetch_pos_wordAPI(keyword_l, wordsAPI_data)
-        pos_list_keyword_n_lemma.update(keyword_l_pos)
+        print("lemma keyword: " + str(keyword_l))
+        if keyword_l is not None:
+            keyword_l_pos = fetch_pos_wordAPI(keyword_l, wordsAPI_data)
+            pos_list_keyword_n_lemma.update(keyword_l_pos)
+        else:
+            print("keyword_l is None")
+
+        print(str(pos_list_keyword_n_lemma))
 
         # Remove duplicate pos
         pos_list = {pos for pos in pos_list_keyword_n_lemma}

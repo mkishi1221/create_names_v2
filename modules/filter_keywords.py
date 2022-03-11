@@ -5,8 +5,6 @@ from classes.keyword import Keyword
 from os import path
 import regex as re
 import json
-from classes.user_repository.mutations.user_preferences import UserPreferenceMutations
-from classes.user_repository.repository import UserRepository
 
 
 def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
@@ -20,8 +18,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     approved_pos = ["noun", "verb", "adjective"]
     illegal_char = re.compile(r"[^a-zA-Z]")
 
-    UserRepository.init_user()
-    keyword_blacklist = UserPreferenceMutations.get_blacklisted()
+    keyword_blacklist = {}
 
     # Create set of approved keywords, filtering by pos, "illegal_chars" and length
     approved_keywords = {

@@ -9,15 +9,6 @@ mkdir -p tmp
 mkdir -p ref/logs
 mkdir -p results
 
-# Set absolute imports
-sh init_env.sh
-
-# Check if testing files are still in the folders and restore data if nessesary
-sh modules/check_for_testing_files.sh
-
-# Load database credentials
-sh modules/load_mongo_creds.sh
-
 # Create script log files
 sh modules/create_script_log_files.sh
 
@@ -40,19 +31,10 @@ else echo "Error: returned sentence and keyword availability indictor values not
     exit
 fi
 
-# Run blacklist / whitelist generator if files exist in results folder
-if [ -n "$(ls -A results/*.xlsx 2>/dev/null)" ]; then
-    echo "Files found in results folder: running black/grey/white-list generator"
-    python3 preference_generator.py \
-        results/
-else
-    echo "Results folder is empty: skipping black/grey/white-list generator"
-fi
-
 # Compare contents of current and previous log files
 # If source data has changed, recompile source data, dictionary and generated name lists.
 if [[ "$(cat ref/logs/prev_source_data_log.tsv)" == "$(cat ref/logs/source_data_log.tsv)" && "$(cat ref/logs/prev_script_log.tsv)" == "$(cat ref/logs/script_log.tsv)" ]];then
-    echo "Source data or script unchanged. Moving on to domain availability check..."
+    echo "Source data or script unchanged."
 
 else
     echo "Source data or script changed. Recompiling source data..."
@@ -70,27 +52,10 @@ else
         tmp/user_sentences.tsv \
         tmp/user_keywords.tsv \
         tmp/keywords.json
-
-    # Generate names
-    echo "Initiating name generator script..."
-    python3 name_generator.py \
-        tmp/keywords.json \
-        tmp/potential_names.json
     
     cat ref/logs/source_data_log.tsv > ref/logs/prev_source_data_log.tsv
     cat ref/logs/script_log.tsv > ref/logs/prev_script_log.tsv
 fi
-
-# Check domains 
-# To make sure we don't overuse the API, the loop breaks after finding 10 available domains. You can change this limit by changing the "limit" variable defined below.
-echo "Choosing names and initiating domain availability check..."
-echo ""
-dt=$(gdate '+%Y%m%d_%H%M%S')
-limit=50
-python3 domain_checker.py \
-    tmp/potential_names.json \
-    results/names_${dt}.xlsx \
-    ${limit}
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`
