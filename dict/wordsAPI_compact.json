@@ -1,0 +1,7947 @@
+{
+ "ability": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "a",
+    "bil",
+    "i",
+    "ty"
+   ]
+  },
+  "pronunciation": {
+   "all": "ə'bɪlɪti",
+   "simplified": "əbɪlɪti"
+  },
+  "rhymePatterns": {
+   "all": "-ɪlɪti"
+  },
+  "definitions": [
+   {
+    "definition": "possession of the qualities (especially mental qualities) required to do something or get something done",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "power"
+    ],
+    "attribute": [
+     "able"
+    ],
+    "typeOf": [
+     "noesis",
+     "knowledge",
+     "cognition"
+    ],
+    "hasTypes": [
+     "aptitude",
+     "attainment",
+     "bilingualism",
+     "superior skill",
+     "capacity",
+     "skill",
+     "science",
+     "creative thinking",
+     "creativeness",
+     "creativity",
+     "faculty",
+     "originality",
+     "hand",
+     "intelligence",
+     "module",
+     "know-how",
+     "leadership",
+     "mental ability",
+     "mental faculty",
+     "acquirement",
+     "acquisition",
+     "accomplishment"
+    ],
+    "antonyms": [
+     "inability"
+    ],
+    "derivation": [
+     "able"
+    ]
+   },
+   {
+    "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+    "partOfSpeech": "noun",
+    "attribute": [
+     "unable",
+     "able"
+    ],
+    "typeOf": [
+     "quality"
+    ],
+    "hasTypes": [
+     "midas touch",
+     "interoperability",
+     "immunocompetence",
+     "form",
+     "penetration",
+     "physical ability",
+     "contractility",
+     "sensitiveness",
+     "sensitivity",
+     "competency",
+     "competence",
+     "capableness",
+     "totipotence",
+     "totipotency",
+     "capability",
+     "adaptability",
+     "magical ability",
+     "magical power"
+    ],
+    "antonyms": [
+     "inability"
+    ],
+    "derivation": [
+     "able"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 7,
+  "frequency": {
+   "zipf": 4.31,
+   "perMillion": 20.53,
+   "diversity": 0.08
+  }
+ },
+ "act": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "act"
+   ]
+  },
+  "pronunciation": {
+   "all": "ækt",
+   "simplified": "ækt"
+  },
+  "rhymePatterns": {
+   "all": "-ækt"
+  },
+  "definitions": [
+   {
+    "definition": "pretend to have certain qualities or state of mind",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "act as",
+     "play"
+    ],
+    "typeOf": [
+     "do",
+     "behave"
+    ],
+    "verbGroup": [
+     "behave",
+     "do",
+     "represent",
+     "play"
+    ],
+    "examples": [
+     "He acted the idiot"
+    ]
+   },
+   {
+    "definition": "behave unnaturally or affectedly",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "dissemble",
+     "pretend"
+    ],
+    "hasTypes": [
+     "feign",
+     "assume",
+     "sham",
+     "simulate"
+    ],
+    "verbGroup": [
+     "do",
+     "behave"
+    ],
+    "examples": [
+     "She's just acting"
+    ]
+   },
+   {
+    "definition": "something that people do or cause to happen",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "deed",
+     "human action",
+     "human activity"
+    ],
+    "typeOf": [
+     "event"
+    ],
+    "hasTypes": [
+     "touch",
+     "stoppage",
+     "stop",
+     "stay",
+     "speech act",
+     "sacrifice",
+     "running away",
+     "retrieval",
+     "residency",
+     "residence",
+     "rejection",
+     "recovery",
+     "propulsion",
+     "promulgation",
+     "production",
+     "proclamation",
+     "permissive waste",
+     "obstetrical delivery",
+     "nonachievement",
+     "nonaccomplishment",
+     "motivation",
+     "motivating",
+     "mitzvah",
+     "mitsvah",
+     "leveling",
+     "legitimation",
+     "leaving",
+     "leaning",
+     "judgment",
+     "judgement",
+     "interference",
+     "inactivity",
+     "implementation",
+     "hire",
+     "hindrance",
+     "hinderance",
+     "group action",
+     "going away",
+     "going",
+     "getting",
+     "forfeiture",
+     "forfeit",
+     "find",
+     "exhumation",
+     "equalization",
+     "equalisation",
+     "emergence",
+     "egression",
+     "egress",
+     "effectuation",
+     "distribution",
+     "disposition",
+     "disposal",
+     "disinterment",
+     "discovery",
+     "digging up",
+     "derivation",
+     "departure",
+     "delivery",
+     "communication",
+     "communicating",
+     "causing",
+     "causation",
+     "assumption",
+     "assessment",
+     "actuation",
+     "activity",
+     "action",
+     "acquiring",
+     "abidance",
+     "wearing",
+     "wear",
+     "waste",
+     "uncovering",
+     "touching"
+    ],
+    "derivation": [
+     "actuate"
+    ]
+   },
+   {
+    "definition": "a legal document codifying the result of deliberations of a committee or society or legislative body",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "enactment"
+    ],
+    "inCategory": [
+     "law",
+     "jurisprudence"
+    ],
+    "typeOf": [
+     "official document",
+     "legal instrument",
+     "instrument",
+     "legal document"
+    ],
+    "hasTypes": [
+     "order",
+     "nullity",
+     "fiat",
+     "rescript",
+     "legislative act",
+     "edict",
+     "decree",
+     "statute"
+    ]
+   },
+   {
+    "definition": "perform an action, or work out or perform (an action)",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "move"
+    ],
+    "hasTypes": [
+     "satisfice",
+     "proceed",
+     "prosecute",
+     "woo",
+     "wind up",
+     "wait",
+     "volunteer",
+     "use",
+     "try",
+     "toy",
+     "take turns",
+     "take time by the forelock",
+     "take part",
+     "take over",
+     "take care",
+     "take",
+     "surprise",
+     "stoop",
+     "step up",
+     "step to the fore",
+     "step forward",
+     "start",
+     "stampede",
+     "solicit",
+     "sneak",
+     "set about",
+     "seek",
+     "satisfise",
+     "rush",
+     "romance",
+     "reward",
+     "respond",
+     "repeat",
+     "repay",
+     "reciprocate",
+     "react",
+     "rampage",
+     "race",
+     "queen it over",
+     "acquit",
+     "put on airs",
+     "act on",
+     "act superior",
+     "aggress",
+     "alternate",
+     "antagonise",
+     "antagonize",
+     "anticipate",
+     "approach",
+     "assay",
+     "attack",
+     "attempt",
+     "bear",
+     "begin",
+     "pursue",
+     "behave",
+     "carry",
+     "coact",
+     "come close",
+     "come forward",
+     "come out",
+     "come to the fore",
+     "commit",
+     "comport",
+     "condescend",
+     "conduct",
+     "contend",
+     "continue",
+     "cope",
+     "counter",
+     "counteract",
+     "court",
+     "create",
+     "dally",
+     "dare",
+     "deal",
+     "deign",
+     "deport",
+     "descend",
+     "dispatch",
+     "disturb",
+     "pull",
+     "do well",
+     "effect",
+     "egotrip",
+     "end up",
+     "engage",
+     "essay",
+     "evade",
+     "exert",
+     "festinate",
+     "fetch up",
+     "finish",
+     "finish up",
+     "flirt",
+     "force",
+     "foresee",
+     "forestall",
+     "go on",
+     "grapple",
+     "guard",
+     "had best",
+     "hasten",
+     "hold back",
+     "hold off",
+     "hurry",
+     "interact",
+     "interrupt",
+     "keep",
+     "land up",
+     "look sharp",
+     "lord it over",
+     "lower oneself",
+     "make a point",
+     "make bold",
+     "make do",
+     "make out",
+     "make sure",
+     "manage",
+     "maneuver",
+     "manoeuver",
+     "manoeuvre",
+     "misbehave",
+     "misconduct",
+     "misdemean",
+     "move",
+     "offer",
+     "oppose",
+     "participate",
+     "partner",
+     "pay back",
+     "perform",
+     "perpetrate",
+     "persist in",
+     "play",
+     "play it by ear",
+     "plow ahead",
+     "presume",
+     "get around to",
+     "get by",
+     "go",
+     "go about",
+     "go ahead",
+     "go along",
+     "go off at half-cock",
+     "go off half-cocked"
+    ],
+    "antonyms": [
+     "refrain"
+    ],
+    "also": [
+     "act up",
+     "act upon",
+     "act on"
+    ],
+    "derivation": [
+     "action"
+    ],
+    "examples": [
+     "think before you act",
+     "The governor should act on the new energy bill",
+     "The nanny acted quickly by grabbing the toddler and covering him with a wet towel"
+    ]
+   },
+   {
+    "definition": "a short performance that is part of a longer program",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "bit",
+     "number",
+     "routine",
+     "turn"
+    ],
+    "typeOf": [
+     "performance",
+     "public presentation"
+    ],
+    "hasTypes": [
+     "stopper",
+     "showstopper",
+     "show-stopper"
+    ],
+    "examples": [
+     "he did his act three times every evening"
+    ]
+   },
+   {
+    "definition": "perform on a stage or theater",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "play",
+     "playact",
+     "roleplay"
+    ],
+    "inCategory": [
+     "dramaturgy",
+     "dramatics",
+     "dramatic art",
+     "theatre",
+     "theater"
+    ],
+    "typeOf": [
+     "perform"
+    ],
+    "hasTypes": [
+     "underplay",
+     "stooge",
+     "ham",
+     "ham it up",
+     "pantomime",
+     "overact",
+     "overplay",
+     "mime",
+     "underact"
+    ],
+    "verbGroup": [
+     "play",
+     "represent"
+    ],
+    "derivation": [
+     "acting",
+     "actable",
+     "actor"
+    ],
+    "examples": [
+     "She acts in this play",
+     "He acted in `Julius Caesar'"
+    ]
+   },
+   {
+    "definition": "have an effect or outcome; often the one desired or expected",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "work"
+    ],
+    "typeOf": [
+     "come through",
+     "win",
+     "bring home the bacon",
+     "succeed",
+     "deliver the goods"
+    ],
+    "verbGroup": [
+     "wreak",
+     "work",
+     "make for",
+     "play",
+     "bring"
+    ],
+    "examples": [
+     "How does your idea work in practice?",
+     "The breaks of my new car act quickly"
+    ]
+   },
+   {
+    "definition": "behave in a certain manner; show a certain behavior; conduct or comport oneself",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "behave",
+     "do"
+    ],
+    "hasTypes": [
+     "play",
+     "make",
+     "lose it",
+     "loosen up",
+     "act as",
+     "act involuntarily",
+     "joke",
+     "jest",
+     "act reflexively",
+     "storm",
+     "presume",
+     "stooge",
+     "trifle",
+     "toy",
+     "vulgarize",
+     "backslap",
+     "snap",
+     "bend over backwards",
+     "bluster",
+     "break down",
+     "bungle",
+     "sentimentize",
+     "sentimentise",
+     "sentimentalize",
+     "sentimentalise",
+     "sauce",
+     "dally",
+     "romanticize",
+     "dawdle",
+     "vulgarise",
+     "puff up",
+     "piffle",
+     "wanton",
+     "hugger mugger",
+     "frivol",
+     "relax",
+     "optimize",
+     "fall over backwards",
+     "swell",
+     "swash",
+     "follow",
+     "footle",
+     "optimise",
+     "menace",
+     "freeze",
+     "swagger",
+     "ramp",
+     "rage",
+     "quack",
+     "make as if"
+    ],
+    "verbGroup": [
+     "play",
+     "pretend",
+     "dissemble",
+     "act as"
+    ],
+    "also": [
+     "act up"
+    ],
+    "examples": [
+     "You should act like an adult",
+     "The dog acts ferocious, but he is really afraid of people"
+    ]
+   },
+   {
+    "definition": "play a role or part",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "play",
+     "represent"
+    ],
+    "inCategory": [
+     "performing arts"
+    ],
+    "typeOf": [
+     "re-create"
+    ],
+    "hasTypes": [
+     "reenact",
+     "support",
+     "portray",
+     "pretend",
+     "enact",
+     "emote",
+     "impersonate",
+     "parody",
+     "act out",
+     "make",
+     "make believe"
+    ],
+    "verbGroup": [
+     "act as",
+     "roleplay",
+     "play",
+     "playact"
+    ],
+    "derivation": [
+     "actable",
+     "acting",
+     "actor"
+    ],
+    "examples": [
+     "She wants to act Lady Macbeth, but she is too young for the role"
+    ]
+   },
+   {
+    "definition": "a manifestation of insincerity",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "manifestation",
+     "reflexion",
+     "expression",
+     "reflection"
+    ],
+    "examples": [
+     "he put on quite an act for her benefit"
+    ]
+   },
+   {
+    "definition": "a subdivision of a play or opera or ballet",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "dramatic composition",
+     "dramatic work"
+    ],
+    "hasParts": [
+     "scene"
+    ],
+    "partOf": [
+     "play",
+     "drama",
+     "opera",
+     "dramatic play",
+     "concert dance",
+     "ballet"
+    ]
+   },
+   {
+    "definition": "be engaged in an activity, often for no particular purpose other than pleasure",
+    "partOfSpeech": "verb",
+    "hasTypes": [
+     "walk around",
+     "drive around",
+     "play"
+    ],
+    "derivation": [
+     "action"
+    ]
+   },
+   {
+    "definition": "be suitable for theatrical performance",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "be"
+    ],
+    "verbGroup": [
+     "roleplay",
+     "play",
+     "playact"
+    ],
+    "derivation": [
+     "acting",
+     "actable"
+    ],
+    "examples": [
+     "This scene acts well"
+    ]
+   },
+   {
+    "definition": "discharge one's duties",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "serve"
+    ],
+    "hasTypes": [
+     "criticise",
+     "criticize",
+     "bank"
+    ],
+    "derivation": [
+     "actor"
+    ],
+    "examples": [
+     "She acts as the chair",
+     "In what capacity are you acting?"
+    ]
+   }
+  ],
+  "letters": 3,
+  "sounds": 3,
+  "frequency": {
+   "zipf": 5.02,
+   "perMillion": 105.01,
+   "diversity": 0.35
+  }
+ },
+ "and": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "and"
+   ]
+  },
+  "pronunciation": {
+   "all": "ænd",
+   "simplified": "ænd"
+  },
+  "rhymePatterns": {
+   "all": "-ænd"
+  },
+  "letters": 3,
+  "sounds": 3,
+  "definitions": [
+   {
+    "partOfSpeech": "conjunction",
+    "definition": "A particle which expresses the relation of connection or addition. It is used to conjoin a word with a word, a clause with a clause, or a sentence with a sentence."
+   }
+  ],
+  "frequency": {
+   "zipf": 7.13,
+   "perMillion": 13482.61,
+   "diversity": 1
+  }
+ },
+ "between": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "be",
+    "tween"
+   ]
+  },
+  "pronunciation": {
+   "all": "bɪ'twin",
+   "simplified": "bɪtwin"
+  },
+  "rhymePatterns": {
+   "all": "-in"
+  },
+  "definitions": [
+   {
+    "definition": "in the interval",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "betwixt"
+    ],
+    "examples": [
+     "dancing all the dances with little rest between"
+    ]
+   },
+   {
+    "definition": "in between",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "'tween"
+    ],
+    "examples": [
+     "two houses with a tree between"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 5.28,
+   "perMillion": 191.67,
+   "diversity": 0.53
+  }
+ },
+ "by": {
+  "pronunciation": {
+   "all": "baɪ",
+   "simplified": "baɪ"
+  },
+  "rhymePatterns": {
+   "all": "-aɪ"
+  },
+  "definitions": [
+   {
+    "definition": "in reserve; not for immediate use",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "aside",
+     "away"
+    ],
+    "examples": [
+     "put something by for her old age"
+    ]
+   },
+   {
+    "definition": "so as to pass a given point",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "past"
+    ]
+   }
+  ],
+  "letters": 2,
+  "sounds": 3,
+  "frequency": {
+   "zipf": 6.15,
+   "perMillion": 1399.19,
+   "diversity": 0.97
+  }
+ },
+ "characterised": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "char",
+    "ac",
+    "ter",
+    "ised"
+   ]
+  },
+  "letters": 13,
+  "frequency": {
+   "zipf": 2.03,
+   "perMillion": 0.09,
+   "diversity": 0
+  }
+ },
+ "characterise": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "char",
+    "ac",
+    "ter",
+    "ise"
+   ]
+  },
+  "pronunciation": {
+   "all": "'kærɪktə,raɪz",
+   "simplified": "kærɪktəraɪz"
+  },
+  "rhymePatterns": {
+   "all": "-aɪz"
+  },
+  "definitions": [
+   {
+    "definition": "describe or portray the character or the qualities or peculiarities of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "characterize",
+     "qualify"
+    ],
+    "typeOf": [
+     "think of",
+     "remember"
+    ],
+    "hasTypes": [
+     "differentiate",
+     "mark",
+     "stamp",
+     "distinguish"
+    ],
+    "derivation": [
+     "character",
+     "characterisation"
+    ]
+   },
+   {
+    "definition": "be characteristic of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "characterize"
+    ],
+    "typeOf": [
+     "distinguish",
+     "differentiate",
+     "mark"
+    ],
+    "hasTypes": [
+     "define",
+     "individuate"
+    ],
+    "derivation": [
+     "character"
+    ]
+   }
+  ],
+  "letters": 12,
+  "sounds": 11,
+  "frequency": {
+   "zipf": 1.6,
+   "perMillion": 0.03,
+   "diversity": 0
+  }
+ },
+ "connection": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "con",
+    "nec",
+    "tion"
+   ]
+  },
+  "pronunciation": {
+   "all": "kə'nɛkʃən",
+   "simplified": "kənɛkʃən"
+  },
+  "rhymePatterns": {
+   "all": "-ɛkʃən"
+  },
+  "definitions": [
+   {
+    "definition": "the process of bringing ideas or events together in memory or imagination",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "association",
+     "connexion"
+    ],
+    "typeOf": [
+     "memory",
+     "remembering"
+    ],
+    "hasTypes": [
+     "colligation"
+    ],
+    "derivation": [
+     "connect"
+    ]
+   },
+   {
+    "definition": "shifting from one form of transportation to another",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connexion"
+    ],
+    "typeOf": [
+     "transport",
+     "conveyance",
+     "transferral",
+     "transfer",
+     "transportation"
+    ],
+    "derivation": [
+     "connect"
+    ],
+    "examples": [
+     "the plane was late and he missed his connection in Atlanta"
+    ]
+   },
+   {
+    "definition": "a relation between things or events (as in the case of one causing the other or sharing features with it)",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connectedness",
+     "connexion"
+    ],
+    "attribute": [
+     "connected",
+     "unconnected"
+    ],
+    "typeOf": [
+     "relation"
+    ],
+    "hasTypes": [
+     "communication",
+     "alliance",
+     "bond",
+     "bridge",
+     "concatenation",
+     "involvement",
+     "linkage",
+     "relatedness",
+     "relevance",
+     "relevancy",
+     "series"
+    ],
+    "examples": [
+     "there was a connection between eating that pickle and having that nightmare"
+    ]
+   },
+   {
+    "definition": "an instrumentality that connects",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connecter",
+     "connective",
+     "connector",
+     "connexion"
+    ],
+    "typeOf": [
+     "instrumentation",
+     "instrumentality"
+    ],
+    "hasTypes": [
+     "bond",
+     "hookup",
+     "coupling",
+     "earth",
+     "telephone line",
+     "telephone circuit",
+     "subscriber line",
+     "slip ring",
+     "backbone",
+     "phone line",
+     "patch",
+     "temporary hookup",
+     "line",
+     "attachment",
+     "yoke",
+     "conjunction",
+     "junction",
+     "hitch",
+     "jumper",
+     "ground"
+    ],
+    "derivation": [
+     "connect"
+    ],
+    "examples": [
+     "he soldered the connection"
+    ]
+   },
+   {
+    "definition": "the act of bringing two things into contact (especially for communication)",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connexion",
+     "joining"
+    ],
+    "typeOf": [
+     "change of integrity"
+    ],
+    "hasTypes": [
+     "interconnection",
+     "intersection",
+     "converging",
+     "convergency",
+     "convergence",
+     "junction",
+     "concatenation",
+     "coming upon",
+     "articulation",
+     "approximation",
+     "adjunction",
+     "bringing close together",
+     "attachment",
+     "hit",
+     "fastening",
+     "encounter"
+    ],
+    "derivation": [
+     "connect"
+    ],
+    "examples": [
+     "there was a connection via the internet"
+    ]
+   },
+   {
+    "definition": "the state of being connected",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connectedness",
+     "link"
+    ],
+    "typeOf": [
+     "unification",
+     "union"
+    ],
+    "hasTypes": [
+     "coherence",
+     "cohesion",
+     "cohesiveness",
+     "concatenation",
+     "contact",
+     "interconnectedness",
+     "interconnection",
+     "coherency"
+    ],
+    "examples": [
+     "the connection between church and state is inescapable"
+    ]
+   },
+   {
+    "definition": "a connecting shape",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "connexion",
+     "link"
+    ],
+    "typeOf": [
+     "shape",
+     "form"
+    ],
+    "hasTypes": [
+     "join",
+     "joint",
+     "junction",
+     "juncture",
+     "articulation",
+     "node"
+    ]
+   },
+   {
+    "definition": "a supplier (especially of narcotics)",
+    "partOfSpeech": "noun",
+    "inCategory": [
+     "narcotic"
+    ],
+    "typeOf": [
+     "supplier",
+     "provider"
+    ]
+   },
+   {
+    "definition": "(usually plural) a person who is influential and to whom you are connected in some way (as by family or friendship)",
+    "partOfSpeech": "noun",
+    "usageOf": [
+     "plural form",
+     "plural"
+    ],
+    "typeOf": [
+     "friend",
+     "acquaintance"
+    ],
+    "derivation": [
+     "connect"
+    ],
+    "examples": [
+     "he has powerful connections"
+    ]
+   }
+  ],
+  "letters": 10,
+  "sounds": 8,
+  "frequency": {
+   "zipf": 4.4,
+   "perMillion": 25.09,
+   "diversity": 0.1
+  }
+ },
+ "creativity": {
+  "syllables": {
+   "count": 5,
+   "list": [
+    "cre",
+    "a",
+    "tiv",
+    "i",
+    "ty"
+   ]
+  },
+  "pronunciation": {
+   "all": ",krieɪ'tɪvɪti",
+   "simplified": "krieɪtɪvɪti"
+  },
+  "rhymePatterns": {
+   "all": "-ɪvɪti"
+  },
+  "definitions": [
+   {
+    "definition": "the ability to create",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "creative thinking",
+     "creativeness"
+    ],
+    "attribute": [
+     "creative",
+     "uncreative",
+     "originative"
+    ],
+    "typeOf": [
+     "ability",
+     "power"
+    ],
+    "hasTypes": [
+     "excogitation",
+     "fecundity",
+     "flight",
+     "fruitfulness",
+     "genius",
+     "imagination",
+     "imaginativeness",
+     "ingeniousness",
+     "ingenuity",
+     "innovation",
+     "invention",
+     "inventiveness",
+     "design",
+     "conception",
+     "cleverness",
+     "vision",
+     "wizardry"
+    ],
+    "hasParts": [
+     "out-of-the-box thinking",
+     "divergent thinking"
+    ],
+    "derivation": [
+     "creative"
+    ]
+   }
+  ],
+  "letters": 10,
+  "sounds": 11,
+  "frequency": {
+   "zipf": 3.46,
+   "perMillion": 2.87,
+   "diversity": 0.01
+  }
+ },
+ "defining": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "de",
+    "fin",
+    "ing"
+   ]
+  },
+  "definitions": [
+   {
+    "definition": "any process serving to define the shape of something",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "shaping"
+    ],
+    "typeOf": [
+     "physical process",
+     "process"
+    ],
+    "derivation": [
+     "define"
+    ]
+   }
+  ],
+  "letters": 8,
+  "frequency": {
+   "zipf": 3.01,
+   "perMillion": 1,
+   "diversity": 0.01
+  },
+  "pronunciation": "dɪ'faɪnɪŋ"
+ },
+ "define": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "de",
+    "fine"
+   ]
+  },
+  "pronunciation": {
+   "all": "dɪ'faɪn",
+   "simplified": "dɪfaɪn"
+  },
+  "rhymePatterns": {
+   "all": "-aɪn"
+  },
+  "definitions": [
+   {
+    "definition": "show the form or outline of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "delineate"
+    ],
+    "typeOf": [
+     "show"
+    ],
+    "derivation": [
+     "defining",
+     "definition"
+    ],
+    "examples": [
+     "The tree was clearly defined by the light",
+     "The camera could define the smallest object"
+    ]
+   },
+   {
+    "definition": "decide upon or fix definitely",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "determine",
+     "fix",
+     "limit",
+     "set",
+     "specify"
+    ],
+    "typeOf": [
+     "take",
+     "pick out",
+     "select",
+     "choose"
+    ],
+    "hasTypes": [
+     "name",
+     "quantify",
+     "reset"
+    ]
+   },
+   {
+    "definition": "determine the essential quality of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "delimit",
+     "delimitate",
+     "delineate",
+     "specify"
+    ],
+    "typeOf": [
+     "be"
+    ],
+    "hasTypes": [
+     "redefine",
+     "determine"
+    ]
+   },
+   {
+    "definition": "determine the nature of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "characterise",
+     "characterize"
+    ],
+    "examples": [
+     "What defines a good wine?"
+    ]
+   },
+   {
+    "definition": "give a definition for the meaning of a word",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "fix",
+     "limit",
+     "specify",
+     "set",
+     "determine"
+    ],
+    "hasTypes": [
+     "redefine"
+    ],
+    "derivation": [
+     "definition"
+    ]
+   }
+  ],
+  "letters": 6,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 3.77,
+   "perMillion": 5.93,
+   "diversity": 0.03
+  }
+ },
+ "find": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "find"
+   ]
+  },
+  "pronunciation": {
+   "all": "faɪnd",
+   "simplified": "faɪnd"
+  },
+  "rhymePatterns": {
+   "all": "-aɪnd"
+  },
+  "definitions": [
+   {
+    "definition": "the act of discovering something",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "discovery",
+     "uncovering"
+    ],
+    "typeOf": [
+     "human activity",
+     "act",
+     "deed",
+     "human action"
+    ],
+    "hasTypes": [
+     "determination",
+     "detection",
+     "tracing",
+     "spying",
+     "catching",
+     "spotting",
+     "self-discovery",
+     "rediscovery",
+     "finding",
+     "espial",
+     "breakthrough"
+    ]
+   },
+   {
+    "definition": "come upon, as if by accident; meet with",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bump",
+     "chance",
+     "encounter",
+     "happen"
+    ],
+    "derivation": [
+     "finder"
+    ],
+    "examples": [
+     "We find this idea in Plato"
+    ]
+   },
+   {
+    "definition": "discover or determine the existence, presence, or fact of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "detect",
+     "discover",
+     "notice",
+     "observe"
+    ],
+    "typeOf": [
+     "sight",
+     "spy"
+    ],
+    "hasTypes": [
+     "instantiate",
+     "find out",
+     "sense",
+     "catch out",
+     "trace",
+     "see"
+    ],
+    "verbGroup": [
+     "discover"
+    ],
+    "derivation": [
+     "finder",
+     "finding"
+    ]
+   },
+   {
+    "definition": "come to believe on the basis of emotion, intuitions, or indefinite grounds",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "feel"
+    ],
+    "typeOf": [
+     "conclude",
+     "reason out",
+     "reason"
+    ],
+    "verbGroup": [
+     "rule"
+    ],
+    "examples": [
+     "I find him to be obnoxious"
+    ]
+   },
+   {
+    "definition": "perceive or be contemporaneous with",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "see",
+     "witness"
+    ],
+    "typeOf": [
+     "experience",
+     "go through",
+     "see"
+    ],
+    "hasTypes": [
+     "catch"
+    ],
+    "verbGroup": [
+     "learn",
+     "get wind",
+     "get word",
+     "see",
+     "discover",
+     "find out",
+     "hear",
+     "get a line",
+     "pick up"
+    ],
+    "derivation": [
+     "finder"
+    ]
+   },
+   {
+    "definition": "get or find back; recover the use of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "recover",
+     "regain",
+     "retrieve"
+    ],
+    "typeOf": [
+     "acquire",
+     "get"
+    ],
+    "hasTypes": [
+     "access"
+    ],
+    "verbGroup": [
+     "regain"
+    ]
+   },
+   {
+    "definition": "accept and make use of one's personality, abilities, and situation",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "find oneself"
+    ],
+    "typeOf": [
+     "grow",
+     "maturate",
+     "mature"
+    ],
+    "examples": [
+     "My son went to Berkeley to find himself"
+    ]
+   },
+   {
+    "definition": "make a discovery",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "discover"
+    ],
+    "typeOf": [
+     "discover",
+     "hear",
+     "get a line",
+     "learn",
+     "get wind",
+     "see",
+     "get word",
+     "find out",
+     "pick up"
+    ],
+    "hasTypes": [
+     "ferret out",
+     "rake up",
+     "ferret"
+    ],
+    "verbGroup": [
+     "discover"
+    ],
+    "also": [
+     "find out"
+    ]
+   },
+   {
+    "definition": "receive a specified treatment (abstract)",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "get",
+     "incur",
+     "obtain",
+     "receive"
+    ],
+    "typeOf": [
+     "change"
+    ],
+    "hasTypes": [
+     "take"
+    ],
+    "verbGroup": [
+     "get",
+     "acquire"
+    ],
+    "examples": [
+     "These aspects of civilization do not find expression or receive an interpretation"
+    ]
+   },
+   {
+    "definition": "a productive insight",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "breakthrough",
+     "discovery"
+    ],
+    "typeOf": [
+     "brainwave",
+     "brainstorm",
+     "insight"
+    ]
+   },
+   {
+    "definition": "establish after a calculation, investigation, experiment, survey, or study",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "ascertain",
+     "determine",
+     "find out"
+    ],
+    "hasTypes": [
+     "numerate",
+     "admeasure",
+     "count",
+     "enumerate",
+     "gauge",
+     "locate",
+     "number",
+     "rectify",
+     "redetermine",
+     "refract",
+     "sequence",
+     "situate",
+     "translate"
+    ],
+    "verbGroup": [
+     "find out",
+     "learn",
+     "ascertain",
+     "watch",
+     "determine",
+     "see",
+     "discover",
+     "check"
+    ],
+    "derivation": [
+     "finding"
+    ],
+    "examples": [
+     "find the product of two numbers"
+    ]
+   },
+   {
+    "definition": "make a discovery, make a new finding",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "discover"
+    ],
+    "typeOf": [
+     "conceptualise",
+     "conceptualize",
+     "conceive",
+     "gestate"
+    ],
+    "verbGroup": [
+     "notice",
+     "determine",
+     "find out",
+     "detect",
+     "discover",
+     "ascertain",
+     "observe"
+    ],
+    "derivation": [
+     "finding"
+    ]
+   },
+   {
+    "definition": "get something or somebody for a specific purpose",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "come up",
+     "get hold",
+     "line up"
+    ],
+    "typeOf": [
+     "acquire",
+     "get"
+    ]
+   },
+   {
+    "definition": "decide on and make a declaration about",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "rule"
+    ],
+    "typeOf": [
+     "judge",
+     "pronounce",
+     "label"
+    ],
+    "verbGroup": [
+     "feel"
+    ],
+    "derivation": [
+     "finding"
+    ],
+    "examples": [
+     "find someone guilty"
+    ]
+   },
+   {
+    "definition": "come upon after searching; find the location of something that was missed or lost",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "regain"
+    ],
+    "typeOf": [
+     "get",
+     "acquire"
+    ],
+    "hasTypes": [
+     "fall upon",
+     "discover",
+     "turn up",
+     "strike",
+     "rout up",
+     "rout out",
+     "locate",
+     "light upon",
+     "attain",
+     "happen upon",
+     "chance on",
+     "chance upon",
+     "come across",
+     "come upon",
+     "feel"
+    ],
+    "verbGroup": [
+     "recover",
+     "retrieve",
+     "regain"
+    ],
+    "antonyms": [
+     "lose"
+    ],
+    "derivation": [
+     "finder"
+    ],
+    "examples": [
+     "Did you find your glasses?",
+     "I cannot find my gloves!"
+    ]
+   },
+   {
+    "definition": "obtain through effort or management",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "get",
+     "acquire"
+    ],
+    "verbGroup": [
+     "regain"
+    ]
+   },
+   {
+    "definition": "perceive oneself to be in a certain condition or place",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "comprehend",
+     "perceive"
+    ],
+    "verbGroup": [
+     "see",
+     "witness"
+    ]
+   },
+   {
+    "definition": "succeed in reaching; arrive at",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "attain",
+     "gain",
+     "make",
+     "reach",
+     "arrive at",
+     "hit"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 5,
+  "frequency": {
+   "zipf": 5.9,
+   "perMillion": 797.78,
+   "diversity": 0.91
+  }
+ },
+ "generate": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "gen",
+    "er",
+    "ate"
+   ]
+  },
+  "pronunciation": {
+   "all": "'dʒɛnə,reɪt",
+   "simplified": "dʒɛnəreɪt"
+  },
+  "rhymePatterns": {
+   "all": "-eɪt"
+  },
+  "definitions": [
+   {
+    "definition": "make (offspring) by reproduction",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "beget",
+     "bring forth",
+     "engender",
+     "father",
+     "get",
+     "mother",
+     "sire"
+    ],
+    "typeOf": [
+     "make",
+     "create"
+    ],
+    "derivation": [
+     "generative",
+     "generation"
+    ]
+   },
+   {
+    "definition": "bring into existence",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring forth"
+    ],
+    "typeOf": [
+     "make",
+     "create"
+    ],
+    "hasTypes": [
+     "bring on",
+     "liberate",
+     "come up",
+     "free",
+     "induce",
+     "release",
+     "develop"
+    ],
+    "derivation": [
+     "generation",
+     "generator",
+     "generative"
+    ],
+    "examples": [
+     "The new manager generated a lot of problems",
+     "The computer bug generated chaos in the office",
+     "The computer generated this image",
+     "The earthquake generated a tsunami"
+    ]
+   },
+   {
+    "definition": "give or supply",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "give",
+     "render",
+     "return",
+     "yield"
+    ],
+    "typeOf": [
+     "create",
+     "make",
+     "produce"
+    ],
+    "verbGroup": [
+     "yield",
+     "establish",
+     "give"
+    ],
+    "derivation": [
+     "generation"
+    ]
+   },
+   {
+    "definition": "produce (energy)",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "make",
+     "produce",
+     "create"
+    ],
+    "hasTypes": [
+     "fire"
+    ],
+    "derivation": [
+     "generation",
+     "generative",
+     "generator"
+    ],
+    "examples": [
+     "We can't generate enough power for the entire city",
+     "The hydroelectric plant needs to generate more electricity"
+    ]
+   }
+  ],
+  "letters": 8,
+  "sounds": 9,
+  "frequency": {
+   "zipf": 3.43,
+   "perMillion": 2.69,
+   "diversity": 0.01
+  }
+ },
+ "hidden": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "hid",
+    "den"
+   ]
+  },
+  "pronunciation": {
+   "all": "'hɪdən",
+   "simplified": "hɪdən"
+  },
+  "rhymePatterns": {
+   "all": "-ɪdən"
+  },
+  "definitions": [
+   {
+    "definition": "not accessible to view",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "concealed",
+     "out of sight"
+    ],
+    "similarTo": [
+     "invisible",
+     "unseeable"
+    ],
+    "examples": [
+     "concealed (or hidden) damage"
+    ]
+   },
+   {
+    "definition": "designed to elude detection",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "secret"
+    ],
+    "similarTo": [
+     "concealed"
+    ],
+    "examples": [
+     "a hidden room or place of concealment such as a priest hole"
+    ]
+   },
+   {
+    "definition": "difficult to find",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "obscure"
+    ],
+    "similarTo": [
+     "concealed"
+    ],
+    "examples": [
+     "hidden valleys",
+     "a hidden cave"
+    ]
+   }
+  ],
+  "letters": 6,
+  "sounds": 5,
+  "frequency": {
+   "zipf": 4.49,
+   "perMillion": 30.61,
+   "diversity": 0.13
+  }
+ },
+ "idea": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "i",
+    "de",
+    "a"
+   ]
+  },
+  "pronunciation": {
+   "all": "aɪ'diə",
+   "simplified": "aɪdiə"
+  },
+  "rhymePatterns": {
+   "all": "-iə"
+  },
+  "definitions": [
+   {
+    "definition": "(music) melodic subject of a musical composition",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "melodic theme",
+     "musical theme",
+     "theme"
+    ],
+    "inCategory": [
+     "music"
+    ],
+    "typeOf": [
+     "melodic phrase",
+     "melody",
+     "air",
+     "tune",
+     "strain",
+     "line",
+     "melodic line"
+    ],
+    "hasTypes": [
+     "motif",
+     "motive",
+     "statement",
+     "variation"
+    ],
+    "examples": [
+     "the accompanist picked up the idea and elaborated it"
+    ]
+   },
+   {
+    "definition": "an approximate calculation of quantity or degree or worth",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "approximation",
+     "estimate",
+     "estimation"
+    ],
+    "typeOf": [
+     "computation",
+     "calculation",
+     "reckoning",
+     "figuring"
+    ],
+    "hasTypes": [
+     "underreckoning",
+     "underrating",
+     "underestimation",
+     "underestimate",
+     "scalage",
+     "overreckoning",
+     "overrating",
+     "overestimation",
+     "overestimate",
+     "shot",
+     "guess",
+     "guessing",
+     "guesstimate",
+     "guesswork",
+     "guestimate",
+     "credit",
+     "credit rating",
+     "dead reckoning"
+    ],
+    "examples": [
+     "a rough idea how long it would take"
+    ]
+   },
+   {
+    "definition": "the content of cognition; the main thing you are thinking about",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "thought"
+    ],
+    "typeOf": [
+     "mental object",
+     "cognitive content",
+     "content"
+    ],
+    "hasTypes": [
+     "whimsy",
+     "burden",
+     "belief",
+     "whim",
+     "whimsey",
+     "misconception",
+     "motif",
+     "meaning",
+     "kink",
+     "notion",
+     "keynote",
+     "opinion",
+     "inspiration",
+     "impression",
+     "idealization",
+     "plan",
+     "preoccupation",
+     "program",
+     "programme",
+     "reaction",
+     "idealisation",
+     "ideal",
+     "generalization",
+     "generality",
+     "generalisation",
+     "figment",
+     "substance",
+     "suggestion",
+     "theme",
+     "theorem",
+     "feeling",
+     "construct",
+     "conception",
+     "concept",
+     "cogitation"
+    ],
+    "derivation": [
+     "ideal",
+     "ideate"
+    ],
+    "examples": [
+     "it was not a good idea"
+    ]
+   },
+   {
+    "definition": "your intention; what you intend to do",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "mind"
+    ],
+    "typeOf": [
+     "aim",
+     "intent",
+     "design",
+     "purpose",
+     "intention"
+    ],
+    "examples": [
+     "the idea of the game is to capture all the pieces"
+    ]
+   },
+   {
+    "definition": "a personal view",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "persuasion",
+     "thought",
+     "opinion",
+     "sentiment",
+     "view"
+    ],
+    "hasTypes": [
+     "body image"
+    ],
+    "examples": [
+     "he has an idea that we don't like him"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 5,
+  "frequency": {
+   "zipf": 5.52,
+   "perMillion": 330.58,
+   "diversity": 0.7
+  }
+ },
+ "imaginative": {
+  "syllables": {
+   "count": 5,
+   "list": [
+    "im",
+    "ag",
+    "i",
+    "na",
+    "tive"
+   ]
+  },
+  "pronunciation": {
+   "all": "ɪ'mædʒənətɪv",
+   "simplified": "ɪmædʒənətɪv"
+  },
+  "rhymePatterns": {
+   "all": "-ædʒənətɪv"
+  },
+  "definitions": [
+   {
+    "definition": "(used of persons or artifacts) marked by independence and creativity in thought or action",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "inventive"
+    ],
+    "similarTo": [
+     "creative",
+     "originative"
+    ],
+    "derivation": [
+     "imaginativeness",
+     "imagine"
+    ],
+    "examples": [
+     "an imaginative use of material"
+    ]
+   }
+  ],
+  "letters": 11,
+  "sounds": 11,
+  "frequency": {
+   "zipf": 3.05,
+   "perMillion": 1.12,
+   "diversity": 0.01
+  }
+ },
+ "in": {
+  "pronunciation": {
+   "all": "ɪn",
+   "simplified": "ɪn"
+  },
+  "rhymePatterns": {
+   "all": "-ɪn"
+  },
+  "definitions": [
+   {
+    "definition": "a state in midwestern United States",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "hoosier state",
+     "ind.",
+     "indiana"
+    ],
+    "instanceOf": [
+     "american state"
+    ],
+    "hasParts": [
+     "wabash",
+     "fort wayne",
+     "gary",
+     "muncie",
+     "south bend",
+     "bloomington",
+     "capital of indiana",
+     "wabash river",
+     "evansville",
+     "indianapolis",
+     "lafayette"
+    ],
+    "partOf": [
+     "the states",
+     "us",
+     "united states of america",
+     "united states",
+     "u.s.a.",
+     "corn belt",
+     "america",
+     "middle west",
+     "midwest",
+     "midwestern united states",
+     "usa",
+     "u.s."
+    ]
+   },
+   {
+    "definition": "to or toward the inside of",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "inward",
+     "inwards"
+    ],
+    "examples": [
+     "come in",
+     "smash in the door"
+    ]
+   },
+   {
+    "definition": "a unit of length equal to one twelfth of a foot",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "inch"
+    ],
+    "inRegion": [
+     "united states",
+     "britain",
+     "great britain",
+     "the states",
+     "u.k.",
+     "u.s.",
+     "u.s.a.",
+     "uk",
+     "united kingdom",
+     "united kingdom of great britain and northern ireland",
+     "america",
+     "united states of america",
+     "us",
+     "usa"
+    ],
+    "typeOf": [
+     "linear measure",
+     "linear unit"
+    ],
+    "hasParts": [
+     "em",
+     "pica em",
+     "pica",
+     "mesh",
+     "ligne",
+     "mil"
+    ],
+    "partOf": [
+     "foot",
+     "ft"
+    ]
+   },
+   {
+    "definition": "a rare soft silvery metallic element; occurs in small quantities in sphalerite",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "atomic number 49",
+     "indium"
+    ],
+    "typeOf": [
+     "metallic element",
+     "metal"
+    ],
+    "substanceOf": [
+     "sphalerite",
+     "blende",
+     "zinc blende"
+    ]
+   },
+   {
+    "definition": "currently fashionable",
+    "partOfSpeech": "adjective",
+    "usageOf": [
+     "colloquialism"
+    ],
+    "similarTo": [
+     "stylish",
+     "fashionable"
+    ],
+    "examples": [
+     "the in thing to do",
+     "large shoulder pads are in"
+    ]
+   },
+   {
+    "definition": "directed or bound inward",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "incoming"
+    ],
+    "examples": [
+     "took the in bus",
+     "the in basket"
+    ]
+   },
+   {
+    "definition": "holding office",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "successful"
+    ],
+    "examples": [
+     "the in party"
+    ]
+   }
+  ],
+  "letters": 2,
+  "sounds": 2,
+  "frequency": {
+   "zipf": 6.99,
+   "perMillion": 9762.09,
+   "diversity": 1
+  }
+ },
+ "innovation": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "in",
+    "no",
+    "va",
+    "tion"
+   ]
+  },
+  "pronunciation": {
+   "all": ",ɪnə'veɪʃən",
+   "simplified": "ɪnəveɪʃən"
+  },
+  "rhymePatterns": {
+   "all": "-eɪʃən"
+  },
+  "definitions": [
+   {
+    "definition": "a creation (a new device or process) resulting from study and experimentation",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "invention"
+    ],
+    "typeOf": [
+     "creation"
+    ],
+    "derivation": [
+     "innovate",
+     "innovational"
+    ]
+   },
+   {
+    "definition": "the creation of something in the mind",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "conception",
+     "design",
+     "excogitation",
+     "invention"
+    ],
+    "typeOf": [
+     "creativity",
+     "creativeness",
+     "creative thinking"
+    ],
+    "hasTypes": [
+     "contrivance",
+     "concoction"
+    ],
+    "derivation": [
+     "innovational"
+    ]
+   },
+   {
+    "definition": "the act of starting something for the first time; introducing something new",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "creation",
+     "foundation",
+     "founding",
+     "initiation",
+     "instauration",
+     "institution",
+     "introduction",
+     "origination"
+    ],
+    "typeOf": [
+     "beginning",
+     "commencement",
+     "start"
+    ],
+    "hasTypes": [
+     "paternity",
+     "authorship"
+    ],
+    "derivation": [
+     "innovate",
+     "innovational"
+    ]
+   }
+  ],
+  "letters": 10,
+  "sounds": 9,
+  "frequency": {
+   "zipf": 3.09,
+   "perMillion": 1.23,
+   "diversity": 0.01
+  }
+ },
+ "into": {
+  "rhymes": {
+   "all": "-ɪntu"
+  },
+  "letters": 4,
+  "pronunciation": "ɪn'tu",
+  "sounds": 4,
+  "definitions": [
+   {
+    "partOfSpeech": "preposition",
+    "definition": "To the inside of; within. It is used in a variety of applications."
+   }
+  ],
+  "frequency": {
+   "zipf": 5.88,
+   "perMillion": 761.17,
+   "diversity": 0.88
+  }
+ },
+ "involve": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "in",
+    "volve"
+   ]
+  },
+  "pronunciation": {
+   "all": "ɪn'vɑlv",
+   "simplified": "ɪnvɑlv"
+  },
+  "rhymePatterns": {
+   "all": "-ɑlv"
+  },
+  "definitions": [
+   {
+    "definition": "have as a necessary feature",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "imply"
+    ],
+    "typeOf": [
+     "feature",
+     "have"
+    ],
+    "hasTypes": [
+     "carry"
+    ],
+    "derivation": [
+     "involvement"
+    ],
+    "examples": [
+     "This decision involves many changes"
+    ]
+   },
+   {
+    "definition": "connect closely and often incriminatingly",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "affect",
+     "regard"
+    ],
+    "typeOf": [
+     "bear on",
+     "relate",
+     "come to",
+     "refer",
+     "pertain",
+     "concern",
+     "have to do with",
+     "touch on",
+     "touch"
+    ],
+    "hasTypes": [
+     "implicate"
+    ],
+    "derivation": [
+     "involvement"
+    ]
+   },
+   {
+    "definition": "require as useful, just, or proper",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "ask",
+     "call for",
+     "demand",
+     "necessitate",
+     "need",
+     "postulate",
+     "require",
+     "take"
+    ],
+    "hasTypes": [
+     "exact",
+     "govern",
+     "draw",
+     "cry out for",
+     "cry for",
+     "cost",
+     "compel",
+     "claim",
+     "take"
+    ],
+    "verbGroup": [
+     "claim",
+     "exact",
+     "take"
+    ]
+   },
+   {
+    "definition": "contain as a part",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "include"
+    ],
+    "examples": [
+     "Dinner at Joe's always involves at least six courses"
+    ]
+   },
+   {
+    "definition": "engage as a participant",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "let in",
+     "include",
+     "admit"
+    ],
+    "hasTypes": [
+     "sweep up",
+     "drag",
+     "drag in",
+     "embroil",
+     "entangle",
+     "mire",
+     "sweep",
+     "tangle"
+    ],
+    "derivation": [
+     "involution",
+     "involvement"
+    ],
+    "examples": [
+     "Don't involve me in your family affairs!"
+    ]
+   },
+   {
+    "definition": "make complex or intricate or complicated",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "rarify",
+     "complicate",
+     "refine",
+     "elaborate"
+    ],
+    "examples": [
+     "The situation was rather involved"
+    ]
+   },
+   {
+    "definition": "occupy or engage the interest of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "occupy",
+     "engross",
+     "absorb",
+     "engage"
+    ],
+    "derivation": [
+     "involvement"
+    ],
+    "examples": [
+     "His story completely involved me during the entire afternoon"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 3.78,
+   "perMillion": 6.03,
+   "diversity": 0.03
+  }
+ },
+ "is": {
+  "rhymes": {
+   "all": "-ɪz"
+  },
+  "letters": 2,
+  "pronunciation": "ɪz",
+  "sounds": 2,
+  "frequency": {
+   "zipf": 7.03,
+   "perMillion": 10619.01,
+   "diversity": 1
+  }
+ },
+ "be": {
+  "pronunciation": {
+   "all": "bi",
+   "simplified": "bi"
+  },
+  "rhymePatterns": {
+   "all": "-i"
+  },
+  "definitions": [
+   {
+    "definition": "be priced at",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "cost"
+    ],
+    "hasTypes": [
+     "knock back",
+     "put back",
+     "set back"
+    ]
+   },
+   {
+    "definition": "represent, as of a character on stage",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "embody",
+     "personify"
+    ],
+    "typeOf": [
+     "symbolize",
+     "stand for",
+     "symbolise",
+     "typify",
+     "represent"
+    ],
+    "hasTypes": [
+     "represent",
+     "body",
+     "exemplify",
+     "personify"
+    ]
+   },
+   {
+    "definition": "form or compose",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "comprise",
+     "constitute",
+     "make up",
+     "represent"
+    ],
+    "hasTypes": [
+     "compose",
+     "range",
+     "present",
+     "fall into",
+     "fall under",
+     "pose",
+     "form",
+     "constitute",
+     "make",
+     "supplement",
+     "straddle"
+    ],
+    "examples": [
+     "These constitute my entire belonging"
+    ]
+   },
+   {
+    "definition": "be identical or equivalent to",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "equal"
+    ],
+    "hasTypes": [
+     "correspond",
+     "stand for",
+     "translate",
+     "tally",
+     "represent",
+     "fit",
+     "check",
+     "jibe",
+     "gibe",
+     "agree",
+     "match",
+     "equate"
+    ]
+   },
+   {
+    "definition": "have life, be alive",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "live"
+    ],
+    "verbGroup": [
+     "go",
+     "live on",
+     "hold out",
+     "hold up",
+     "live",
+     "last",
+     "endure",
+     "survive"
+    ],
+    "derivation": [
+     "being"
+    ]
+   },
+   {
+    "definition": "a light strong brittle grey toxic bivalent metallic element",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "atomic number 4",
+     "beryllium",
+     "glucinium"
+    ],
+    "typeOf": [
+     "metal",
+     "metallic element"
+    ],
+    "substanceOf": [
+     "beryl",
+     "chrysoberyl",
+     "ytterbite",
+     "gadolinite"
+    ]
+   },
+   {
+    "definition": "have an existence, be extant",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "exist"
+    ],
+    "hasTypes": [
+     "come",
+     "menace",
+     "hold",
+     "endanger",
+     "lie in",
+     "lie",
+     "kick about",
+     "kick around",
+     "knock about",
+     "preexist",
+     "distribute",
+     "threaten",
+     "obtain",
+     "dwell",
+     "cohabit",
+     "imperil",
+     "coexist",
+     "consist",
+     "indwell",
+     "prevail",
+     "inhabit",
+     "peril",
+     "jeopardise",
+     "jeopardize",
+     "flow"
+    ],
+    "derivation": [
+     "being"
+    ]
+   },
+   {
+    "definition": "work in a specific place, with a specific subject, or in a specific function",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "follow"
+    ],
+    "hasTypes": [
+     "cox",
+     "vet"
+    ]
+   },
+   {
+    "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)",
+    "partOfSpeech": "verb",
+    "hasTypes": [
+     "delimitate",
+     "delineate",
+     "depend",
+     "deserve",
+     "disaccord",
+     "disagree",
+     "discombobulate",
+     "discord",
+     "distribute",
+     "diverge",
+     "draw",
+     "drown",
+     "embellish",
+     "embody",
+     "encounter",
+     "end",
+     "enter",
+     "fall",
+     "feel",
+     "figure",
+     "fit",
+     "footle",
+     "fox",
+     "fuddle",
+     "gape",
+     "go",
+     "grace",
+     "gravitate",
+     "hail",
+     "hang",
+     "hang around",
+     "head",
+     "head up",
+     "hold",
+     "hoodoo",
+     "hum",
+     "hurt",
+     "impend",
+     "incarnate",
+     "incline",
+     "interrelate",
+     "iridesce",
+     "jumble",
+     "kill",
+     "lallygag",
+     "yawn",
+     "abound",
+     "accept",
+     "account",
+     "account for",
+     "act",
+     "add up",
+     "adhere",
+     "adorn",
+     "amount",
+     "answer",
+     "appear",
+     "bake",
+     "balance",
+     "be given",
+     "be well",
+     "beat",
+     "beautify",
+     "bedevil",
+     "befuddle",
+     "begin",
+     "behoove",
+     "behove",
+     "belong",
+     "blow",
+     "body forth",
+     "boil",
+     "breathe",
+     "broil",
+     "buy",
+     "buzz",
+     "clean",
+     "cohere",
+     "come",
+     "come in for",
+     "come in handy",
+     "compact",
+     "compare",
+     "comprise",
+     "confound",
+     "confuse",
+     "connect",
+     "consist",
+     "contain",
+     "continue",
+     "coruscate",
+     "cost",
+     "count",
+     "cover",
+     "curve",
+     "cut",
+     "cut across",
+     "deck",
+     "decorate",
+     "define",
+     "delimit",
+     "run",
+     "run into",
+     "rut",
+     "scintillate",
+     "seem",
+     "seethe",
+     "sell",
+     "shine",
+     "sparkle",
+     "specify",
+     "squat",
+     "stagnate",
+     "stand",
+     "stand by",
+     "start",
+     "stay",
+     "stay on",
+     "stick",
+     "stick by",
+     "stink",
+     "substantiate",
+     "subtend",
+     "suck",
+     "suffer",
+     "suit",
+     "swim",
+     "swing",
+     "take",
+     "tarry",
+     "tend",
+     "terminate",
+     "test",
+     "throw",
+     "total",
+     "translate",
+     "transplant",
+     "trim",
+     "turn out",
+     "turn up",
+     "twist",
+     "underlie",
+     "want",
+     "wash",
+     "weigh",
+     "wind",
+     "work",
+     "yaw",
+     "lean",
+     "lend",
+     "let go",
+     "lie",
+     "linger",
+     "litter",
+     "loaf",
+     "loiter",
+     "lollygag",
+     "look",
+     "lounge",
+     "lubricate",
+     "lurk",
+     "make",
+     "make sense",
+     "matter",
+     "measure",
+     "merit",
+     "mess about",
+     "mill about",
+     "mill around",
+     "mingle",
+     "moon about",
+     "moon around",
+     "mope",
+     "need",
+     "number",
+     "object",
+     "osculate",
+     "owe",
+     "pack",
+     "pay",
+     "point",
+     "press",
+     "promise",
+     "prove",
+     "put out",
+     "rage",
+     "range",
+     "rank",
+     "rate",
+     "recognize",
+     "relate",
+     "remain",
+     "represent",
+     "require",
+     "rest",
+     "retard"
+    ]
+   },
+   {
+    "definition": "occupy a certain position or area; be somewhere",
+    "partOfSpeech": "verb",
+    "hasTypes": [
+     "belong",
+     "lead",
+     "extend",
+     "center on",
+     "stand back",
+     "touch",
+     "go",
+     "occupy",
+     "pass",
+     "follow",
+     "continue",
+     "poke out",
+     "populate",
+     "fill",
+     "face",
+     "extend to",
+     "come",
+     "stay away",
+     "lie",
+     "keep one's hands off",
+     "keep one's eyes off",
+     "dwell",
+     "live",
+     "keep one's distance",
+     "inhabit",
+     "reach",
+     "reach out",
+     "straddle",
+     "sit",
+     "sit around",
+     "cover",
+     "go to",
+     "stretch",
+     "stretch along",
+     "rest",
+     "attend",
+     "run"
+    ],
+    "examples": [
+     "What is behind this behavior?"
+    ]
+   },
+   {
+    "definition": "spend or use time",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "use up",
+     "occupy",
+     "take"
+    ],
+    "examples": [
+     "I may be an hour"
+    ]
+   },
+   {
+    "definition": "to remain unmolested, undisturbed, or uninterrupted -- used only in infinitive form",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "stay",
+     "remain",
+     "rest"
+    ],
+    "examples": [
+     "let her be"
+    ]
+   }
+  ],
+  "letters": 2,
+  "sounds": 2,
+  "frequency": {
+   "zipf": 6.74,
+   "perMillion": 5465.04,
+   "diversity": 1
+  }
+ },
+ "make": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "make"
+   ]
+  },
+  "pronunciation": {
+   "all": "meɪk",
+   "simplified": "meɪk"
+  },
+  "rhymePatterns": {
+   "all": "-eɪk"
+  },
+  "definitions": [
+   {
+    "definition": "put in order or neaten",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "make up"
+    ],
+    "typeOf": [
+     "tidy up",
+     "tidy",
+     "straighten out",
+     "neaten",
+     "clean up",
+     "square away",
+     "straighten"
+    ],
+    "examples": [
+     "make the bed",
+     "make up a room"
+    ]
+   },
+   {
+    "definition": "eliminate urine",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "make water",
+     "micturate",
+     "pass water",
+     "pee",
+     "pee-pee",
+     "piddle",
+     "piss",
+     "puddle",
+     "relieve oneself",
+     "spend a penny",
+     "take a leak",
+     "urinate",
+     "wee",
+     "wee-wee"
+    ],
+    "typeOf": [
+     "pass",
+     "excrete",
+     "egest",
+     "eliminate"
+    ],
+    "hasTypes": [
+     "wet",
+     "stale"
+    ],
+    "verbGroup": [
+     "urinate",
+     "stool",
+     "take a crap",
+     "ca-ca",
+     "take a shit",
+     "defecate",
+     "crap",
+     "shit"
+    ]
+   },
+   {
+    "definition": "have a bowel movement",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "ca-ca",
+     "crap",
+     "defecate",
+     "shit",
+     "stool",
+     "take a crap",
+     "take a shit"
+    ],
+    "typeOf": [
+     "eliminate",
+     "egest",
+     "excrete",
+     "pass"
+    ],
+    "hasTypes": [
+     "dung"
+    ],
+    "verbGroup": [
+     "pee-pee",
+     "urinate",
+     "pee",
+     "make water",
+     "pass water",
+     "micturate",
+     "spend a penny",
+     "take a leak",
+     "piddle",
+     "relieve oneself",
+     "wee-wee",
+     "puddle",
+     "wee",
+     "piss"
+    ]
+   },
+   {
+    "definition": "institute, enact, or establish",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "establish",
+     "lay down"
+    ],
+    "typeOf": [
+     "create"
+    ],
+    "hasTypes": [
+     "mark",
+     "set"
+    ],
+    "examples": [
+     "make laws"
+    ]
+   },
+   {
+    "definition": "create by artistic means",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "create"
+    ],
+    "typeOf": [
+     "create"
+    ],
+    "hasTypes": [
+     "design",
+     "do"
+    ],
+    "verbGroup": [
+     "produce",
+     "create"
+    ],
+    "derivation": [
+     "making"
+    ]
+   },
+   {
+    "definition": "make by combining materials and parts",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "build",
+     "construct"
+    ],
+    "typeOf": [
+     "create"
+    ],
+    "hasTypes": [
+     "customise",
+     "groin",
+     "erect",
+     "set up",
+     "frame up",
+     "corduroy",
+     "wattle",
+     "lock",
+     "dry-wall",
+     "revet",
+     "reconstruct",
+     "cantilever",
+     "rebuild",
+     "rear",
+     "channelise",
+     "channelize",
+     "raise",
+     "frame",
+     "customize",
+     "put up"
+    ],
+    "verbGroup": [
+     "build"
+    ],
+    "derivation": [
+     "making",
+     "maker"
+    ]
+   },
+   {
+    "definition": "give certain properties to something",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "get"
+    ],
+    "typeOf": [
+     "modify",
+     "alter",
+     "change"
+    ],
+    "hasTypes": [
+     "leave",
+     "have",
+     "get",
+     "let",
+     "render"
+    ],
+    "examples": [
+     "Don't make this into a big deal",
+     "This invention will make you a millionaire"
+    ]
+   },
+   {
+    "definition": "create or design, often in a certain way",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "do"
+    ],
+    "typeOf": [
+     "create"
+    ],
+    "antonyms": [
+     "unmake"
+    ]
+   },
+   {
+    "definition": "charge with a function; charge to be",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "name",
+     "nominate"
+    ],
+    "typeOf": [
+     "charge",
+     "appoint"
+    ],
+    "hasTypes": [
+     "rename"
+    ]
+   },
+   {
+    "definition": "induce to have sex",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "score",
+     "seduce"
+    ],
+    "entails": [
+     "sleep with",
+     "eff",
+     "have sex",
+     "bonk",
+     "get it on",
+     "love",
+     "screw",
+     "sleep together",
+     "make love",
+     "make out",
+     "fuck",
+     "have it off",
+     "have it away",
+     "get laid",
+     "be intimate",
+     "bed",
+     "have intercourse",
+     "do it",
+     "have a go at it",
+     "hump",
+     "jazz",
+     "bang",
+     "know",
+     "roll in the hay",
+     "lie with"
+    ],
+    "typeOf": [
+     "persuade"
+    ],
+    "verbGroup": [
+     "seduce"
+    ]
+   },
+   {
+    "definition": "head into a specified direction",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "take"
+    ],
+    "typeOf": [
+     "head"
+    ]
+   },
+   {
+    "definition": "achieve a point or goal",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "get",
+     "have"
+    ],
+    "typeOf": [
+     "hit",
+     "tally",
+     "rack up",
+     "score"
+    ]
+   },
+   {
+    "definition": "earn on some commercial or business transaction; earn as salary or wages",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring in",
+     "clear",
+     "earn",
+     "gain",
+     "pull in",
+     "realise",
+     "realize",
+     "take in"
+    ],
+    "typeOf": [
+     "get",
+     "acquire"
+    ],
+    "hasTypes": [
+     "rake off",
+     "pay",
+     "squeeze out",
+     "profit",
+     "bring home",
+     "rake in",
+     "turn a profit",
+     "eke out",
+     "take home",
+     "yield",
+     "bear",
+     "gross",
+     "shovel in"
+    ],
+    "verbGroup": [
+     "sack up",
+     "sack",
+     "clear",
+     "net"
+    ],
+    "examples": [
+     "How much do you make a month in your new job?"
+    ]
+   },
+   {
+    "definition": "represent fictitiously, as in a play, or pretend to be or act like",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "make believe",
+     "pretend"
+    ],
+    "typeOf": [
+     "represent",
+     "act",
+     "play"
+    ],
+    "hasTypes": [
+     "go through the motions"
+    ],
+    "verbGroup": [
+     "pretend",
+     "feign",
+     "affect",
+     "sham",
+     "dissemble"
+    ],
+    "examples": [
+     "She makes like an actress"
+    ]
+   },
+   {
+    "definition": "proceed along a path",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "work"
+    ],
+    "typeOf": [
+     "pass"
+    ],
+    "hasTypes": [
+     "jostle",
+     "bushwhack",
+     "claw"
+    ],
+    "verbGroup": [
+     "work"
+    ],
+    "examples": [
+     "make one's way into the forest"
+    ]
+   },
+   {
+    "definition": "the act of mixing cards haphazardly",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "shuffle",
+     "shuffling"
+    ],
+    "typeOf": [
+     "reordering"
+    ],
+    "hasTypes": [
+     "reshuffle",
+     "riffle",
+     "reshuffling"
+    ],
+    "partOf": [
+     "cards",
+     "card game"
+    ]
+   },
+   {
+    "definition": "reach a goal",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "get to",
+     "progress to",
+     "reach"
+    ],
+    "typeOf": [
+     "accomplish",
+     "reach",
+     "achieve",
+     "attain"
+    ],
+    "examples": [
+     "make the first team",
+     "She may not make the grade"
+    ]
+   },
+   {
+    "definition": "organize or be responsible for",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "give",
+     "have",
+     "hold",
+     "throw"
+    ],
+    "typeOf": [
+     "direct"
+    ],
+    "examples": [
+     "have, throw, or make a party"
+    ]
+   },
+   {
+    "definition": "give rise to; cause to happen or occur, not always intentionally",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "cause",
+     "do"
+    ],
+    "typeOf": [
+     "create"
+    ],
+    "hasTypes": [
+     "shape",
+     "actuate",
+     "breed",
+     "call forth",
+     "determine",
+     "effect",
+     "effectuate",
+     "engender",
+     "evoke",
+     "facilitate",
+     "force",
+     "impel",
+     "incite",
+     "influence",
+     "initiate",
+     "kick up",
+     "mold",
+     "motivate",
+     "move",
+     "occasion",
+     "pioneer",
+     "prompt",
+     "propel",
+     "provoke",
+     "regulate",
+     "set up",
+     "spawn"
+    ],
+    "examples": [
+     "make a stir"
+    ]
+   },
+   {
+    "definition": "make, formulate, or derive in the mind",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "draw"
+    ],
+    "typeOf": [
+     "create mentally",
+     "create by mental act"
+    ],
+    "examples": [
+     "make an estimate",
+     "What do you make of his remarks?"
+    ]
+   },
+   {
+    "definition": "reach a destination, either real or abstract",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "arrive at",
+     "attain",
+     "gain",
+     "hit",
+     "reach"
+    ],
+    "entails": [
+     "go",
+     "travel",
+     "locomote",
+     "move"
+    ],
+    "hasTypes": [
+     "breast",
+     "get at",
+     "scale",
+     "run aground",
+     "find",
+     "access",
+     "get through",
+     "bottom out",
+     "ground",
+     "come through",
+     "top",
+     "top out",
+     "summit",
+     "catch up",
+     "peak",
+     "culminate",
+     "surmount"
+    ]
+   },
+   {
+    "definition": "engage in",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "do"
+    ],
+    "hasTypes": [
+     "exaggerate",
+     "overdo"
+    ],
+    "examples": [
+     "make love, not war",
+     "make an effort",
+     "make revolution"
+    ]
+   },
+   {
+    "definition": "cause to do; cause to act in a specified manner",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "cause",
+     "get",
+     "have",
+     "induce",
+     "stimulate"
+    ],
+    "hasTypes": [
+     "persuade",
+     "prompt",
+     "bring",
+     "compel",
+     "inspire",
+     "decide",
+     "solicit",
+     "instigate",
+     "encourage",
+     "suborn",
+     "lead",
+     "let",
+     "oblige",
+     "obligate"
+    ]
+   },
+   {
+    "definition": "prepare for eating by applying heat",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "cook",
+     "fix",
+     "prepare",
+     "ready"
+    ],
+    "typeOf": [
+     "create from raw material",
+     "create from raw stuff"
+    ],
+    "hasTypes": [
+     "dress",
+     "flambe",
+     "dress out",
+     "scallop",
+     "lard",
+     "whomp up",
+     "whip up",
+     "cook up",
+     "keep",
+     "precook",
+     "concoct",
+     "preserve",
+     "escallop",
+     "put on",
+     "deglaze",
+     "devil"
+    ],
+    "examples": [
+     "can you make me an omelette?"
+    ]
+   },
+   {
+    "definition": "a recognizable kind",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "brand"
+    ],
+    "typeOf": [
+     "variety",
+     "kind",
+     "sort",
+     "form"
+    ],
+    "examples": [
+     "what make of car is that?"
+    ]
+   },
+   {
+    "definition": "to compose or represent",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "constitute",
+     "form"
+    ],
+    "typeOf": [
+     "be",
+     "represent",
+     "comprise",
+     "constitute",
+     "make up"
+    ],
+    "hasTypes": [
+     "add",
+     "chelate"
+    ],
+    "examples": [
+     "This makes a fine introduction"
+    ]
+   },
+   {
+    "definition": "make or cause to be or to become",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "create"
+    ],
+    "hasTypes": [
+     "father",
+     "give",
+     "give rise",
+     "grind",
+     "extract",
+     "evoke",
+     "establish",
+     "incorporate",
+     "initiate",
+     "institute",
+     "enkindle",
+     "kindle",
+     "engender",
+     "lay down",
+     "elicit",
+     "educe",
+     "do",
+     "distill",
+     "distil",
+     "direct",
+     "derive",
+     "cut",
+     "create verbally",
+     "make for",
+     "create mentally",
+     "create from raw stuff",
+     "manufacture",
+     "create from raw material",
+     "mother",
+     "multiply",
+     "create by mental act",
+     "create",
+     "offset",
+     "organise",
+     "organize",
+     "originate",
+     "copy",
+     "piece",
+     "play",
+     "construct",
+     "prepare",
+     "press",
+     "procreate",
+     "produce",
+     "compose",
+     "work",
+     "wreak",
+     "provoke",
+     "write",
+     "cleave",
+     "clear",
+     "choreograph",
+     "puncture",
+     "put on",
+     "chop",
+     "put together",
+     "raise",
+     "re-create",
+     "cause",
+     "realise",
+     "realize",
+     "recreate",
+     "call up",
+     "regenerate",
+     "build",
+     "bring forth",
+     "bring about",
+     "reproduce",
+     "bring",
+     "scrape",
+     "blast",
+     "beget",
+     "set up",
+     "yield",
+     "shell",
+     "beat",
+     "short",
+     "short-circuit",
+     "bear",
+     "sire",
+     "spume",
+     "start",
+     "assemble",
+     "strike",
+     "style",
+     "substantiate",
+     "suds",
+     "summon",
+     "tack",
+     "tack together",
+     "arouse",
+     "actualize",
+     "actualise",
+     "track",
+     "turn in",
+     "turn out",
+     "twine",
+     "froth",
+     "form",
+     "generate",
+     "fire",
+     "film-make",
+     "film",
+     "get"
+    ],
+    "also": [
+     "make over",
+     "make up"
+    ],
+    "derivation": [
+     "making"
+    ],
+    "examples": [
+     "make a mess in one's office"
+    ]
+   },
+   {
+    "definition": "create or manufacture a man-made product",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "create",
+     "produce"
+    ],
+    "hasTypes": [
+     "confect",
+     "refashion",
+     "burn",
+     "remake",
+     "put out",
+     "pulse",
+     "churn out",
+     "clap together",
+     "clap up",
+     "pulsate",
+     "publish",
+     "render",
+     "proof",
+     "reproduce",
+     "return",
+     "print",
+     "prefabricate",
+     "preassemble",
+     "breed",
+     "overproduce",
+     "output",
+     "yield",
+     "bootleg",
+     "make over",
+     "custom-make",
+     "customise",
+     "customize",
+     "cut",
+     "slap together",
+     "smelt",
+     "squeeze out",
+     "tailor-make",
+     "dummy",
+     "dummy up",
+     "machine",
+     "elaborate",
+     "laminate",
+     "throw together",
+     "turn out",
+     "fudge together",
+     "generate",
+     "underproduce",
+     "extrude",
+     "give",
+     "redo"
+    ],
+    "verbGroup": [
+     "create"
+    ],
+    "derivation": [
+     "maker",
+     "making"
+    ]
+   },
+   {
+    "definition": "act in a certain way so as to acquire",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "do",
+     "behave",
+     "act"
+    ],
+    "verbGroup": [
+     "have",
+     "gain",
+     "pull in",
+     "realize",
+     "take in",
+     "realise",
+     "clear",
+     "earn",
+     "get",
+     "bring in"
+    ],
+    "examples": [
+     "make friends",
+     "make enemies"
+    ]
+   },
+   {
+    "definition": "add up to",
+    "partOfSpeech": "verb",
+    "inCategory": [
+     "arithmetic"
+    ],
+    "typeOf": [
+     "number",
+     "total",
+     "add up",
+     "amount",
+     "come"
+    ],
+    "examples": [
+     "four and four make eight"
+    ]
+   },
+   {
+    "definition": "amount to",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "amount"
+    ],
+    "examples": [
+     "This salary increase makes no difference to my standard of living"
+    ]
+   },
+   {
+    "definition": "appear to begin an activity",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "appear",
+     "seem",
+     "look"
+    ]
+   },
+   {
+    "definition": "assure the success of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "assure",
+     "ensure",
+     "guarantee",
+     "secure",
+     "insure"
+    ],
+    "antonyms": [
+     "break"
+    ],
+    "examples": [
+     "A good review by this critic will make your play!"
+    ]
+   },
+   {
+    "definition": "behave in a certain way",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "behave",
+     "do",
+     "act"
+    ],
+    "examples": [
+     "make merry"
+    ]
+   },
+   {
+    "definition": "be or be capable of being changed or made into",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "become"
+    ],
+    "examples": [
+     "He makes a great host",
+     "He will make a fine father"
+    ]
+   },
+   {
+    "definition": "be suitable for",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "be"
+    ],
+    "derivation": [
+     "making"
+    ],
+    "examples": [
+     "Wood makes good furniture"
+    ]
+   },
+   {
+    "definition": "calculate as being",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "gauge",
+     "guess",
+     "approximate",
+     "estimate",
+     "judge"
+    ],
+    "verbGroup": [
+     "draw"
+    ],
+    "examples": [
+     "I make the height about 100 feet"
+    ]
+   },
+   {
+    "definition": "carry out or commit",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "perpetrate",
+     "pull",
+     "commit"
+    ],
+    "examples": [
+     "make a mistake"
+    ]
+   },
+   {
+    "definition": "cause to be enjoyable or pleasurable",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "change",
+     "alter",
+     "modify"
+    ],
+    "examples": [
+     "make my day"
+    ]
+   },
+   {
+    "definition": "change from one form into another",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "change",
+     "alter",
+     "modify"
+    ],
+    "examples": [
+     "make water into wine",
+     "make lead into gold",
+     "make clay into bricks"
+    ]
+   },
+   {
+    "definition": "compel or make somebody or something to act in a certain way",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "do",
+     "cause"
+    ],
+    "hasTypes": [
+     "drive"
+    ],
+    "examples": [
+     "Heat makes you sweat"
+    ]
+   },
+   {
+    "definition": "consider as being",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "consider",
+     "reckon",
+     "see",
+     "regard",
+     "view"
+    ]
+   },
+   {
+    "definition": "constitute the essence of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "comprise",
+     "be",
+     "make up",
+     "represent",
+     "constitute"
+    ],
+    "examples": [
+     "Clothes make the man"
+    ]
+   },
+   {
+    "definition": "develop into",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "develop",
+     "grow"
+    ],
+    "derivation": [
+     "making"
+    ],
+    "examples": [
+     "He will make a splendid father!"
+    ]
+   },
+   {
+    "definition": "favor the development of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "develop"
+    ],
+    "examples": [
+     "Practice makes the winner"
+    ]
+   },
+   {
+    "definition": "form by assembling individuals or constituents",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "assemble",
+     "gather",
+     "get together"
+    ]
+   },
+   {
+    "definition": "gather and light the materials for",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "create from raw stuff",
+     "create from raw material"
+    ],
+    "verbGroup": [
+     "make up",
+     "cook",
+     "fix",
+     "ready",
+     "prepare"
+    ],
+    "examples": [
+     "make a fire"
+    ]
+   },
+   {
+    "definition": "make by shaping or bringing together constituents",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "create from raw material",
+     "create from raw stuff"
+    ],
+    "hasTypes": [
+     "compile",
+     "forge",
+     "fashion",
+     "cooper",
+     "construct",
+     "fabricate",
+     "compose",
+     "manufacture"
+    ],
+    "derivation": [
+     "making"
+    ],
+    "examples": [
+     "make a dress",
+     "make a cake",
+     "make a wall of stones"
+    ]
+   },
+   {
+    "definition": "perform or carry out",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "execute",
+     "do",
+     "perform"
+    ],
+    "hasTypes": [
+     "pay"
+    ],
+    "verbGroup": [
+     "do"
+    ],
+    "examples": [
+     "make a decision",
+     "make a move",
+     "make advances",
+     "make a phone call"
+    ]
+   },
+   {
+    "definition": "reach in time",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "attain",
+     "hit",
+     "gain",
+     "arrive at",
+     "reach"
+    ],
+    "verbGroup": [
+     "arrive at",
+     "gain",
+     "hit",
+     "attain",
+     "reach"
+    ]
+   },
+   {
+    "definition": "undergo fabrication or creation",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "change"
+    ],
+    "derivation": [
+     "making"
+    ],
+    "examples": [
+     "This wool makes into a nice sweater"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 4,
+  "frequency": {
+   "zipf": 6.11,
+   "perMillion": 1294.43,
+   "diversity": 0.96
+  }
+ },
+ "new": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "new"
+   ]
+  },
+  "pronunciation": {
+   "all": "nu",
+   "simplified": "nu"
+  },
+  "rhymePatterns": {
+   "all": "-u"
+  },
+  "definitions": [
+   {
+    "definition": "original and of a kind not seen before",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "fresh",
+     "novel"
+    ],
+    "similarTo": [
+     "original"
+    ]
+   },
+   {
+    "definition": "(of crops) harvested at an early stage of development; before complete maturity",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "young"
+    ],
+    "similarTo": [
+     "early"
+    ],
+    "examples": [
+     "new potatoes"
+    ]
+   },
+   {
+    "definition": "used of a living language; being the current stage in its development",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "modern"
+    ],
+    "inCategory": [
+     "linguistics"
+    ],
+    "similarTo": [
+     "late"
+    ]
+   },
+   {
+    "definition": "lacking training or experience",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "raw"
+    ],
+    "similarTo": [
+     "inexperienced",
+     "inexperient"
+    ],
+    "examples": [
+     "the new men were eager to fight"
+    ]
+   },
+   {
+    "definition": "having no previous example or precedent or parallel",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "unexampled"
+    ],
+    "similarTo": [
+     "unprecedented"
+    ]
+   },
+   {
+    "definition": "very recently",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "fresh",
+     "freshly",
+     "newly"
+    ],
+    "examples": [
+     "they are newly married",
+     "newly raised objections",
+     "a newly arranged hairdo",
+     "grass new washed by the rain"
+    ]
+   },
+   {
+    "definition": "in use after medieval times",
+    "partOfSpeech": "adjective",
+    "inCategory": [
+     "linguistics"
+    ],
+    "similarTo": [
+     "late"
+    ]
+   },
+   {
+    "definition": "not of long duration; having just (or relatively recently) come into being or been made or acquired or discovered",
+    "partOfSpeech": "adjective",
+    "also": [
+     "modern",
+     "current",
+     "fresh"
+    ],
+    "attribute": [
+     "age"
+    ],
+    "similarTo": [
+     "young",
+     "bran-new",
+     "brand-new",
+     "fresh",
+     "hot",
+     "spic-and-span",
+     "spick-and-span",
+     "sunrise",
+     "untested",
+     "untried",
+     "unused",
+     "virgin",
+     "new-fangled",
+     "new-sprung",
+     "newborn",
+     "newfangled",
+     "newfound",
+     "novel",
+     "parvenu",
+     "parvenue",
+     "radical",
+     "recent",
+     "red-hot",
+     "refreshing",
+     "revolutionary",
+     "rising"
+    ],
+    "antonyms": [
+     "old"
+    ],
+    "derivation": [
+     "newness"
+    ],
+    "examples": [
+     "a new law",
+     "new cars",
+     "a new comet",
+     "a new friend",
+     "a new year"
+    ]
+   },
+   {
+    "definition": "(often followed by `to') unfamiliar",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "unaccustomed to"
+    ],
+    "examples": [
+     "new experiences",
+     "experiences new to him",
+     "errors of someone new to the job"
+    ]
+   },
+   {
+    "definition": "other than the former one(s); different",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "other"
+    ],
+    "examples": [
+     "they now have a new leaders",
+     "my new car is four years old but has only 15,000 miles on it",
+     "ready to take a new direction"
+    ]
+   },
+   {
+    "definition": "unaffected by use or exposure",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "unweathered"
+    ],
+    "antonyms": [
+     "worn"
+    ],
+    "examples": [
+     "it looks like new"
+    ]
+   }
+  ],
+  "letters": 3,
+  "sounds": 2,
+  "frequency": {
+   "zipf": 5.84,
+   "perMillion": 685.77,
+   "diversity": 0.85
+  }
+ },
+ "of": {
+  "rhymes": {
+   "all": "-əv"
+  },
+  "letters": 2,
+  "pronunciation": "ʌv",
+  "sounds": 2,
+  "definitions": [
+   {
+    "partOfSpeech": "preposition",
+    "definition": "In a general sense, from, or out from; proceeding from; belonging to; relating to; concerning; -- used in a variety of applications."
+   }
+  ],
+  "frequency": {
+   "zipf": 7.05,
+   "perMillion": 11340.85,
+   "diversity": 1
+  }
+ },
+ "pattern": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "pat",
+    "tern"
+   ]
+  },
+  "pronunciation": {
+   "all": "'pætərn",
+   "simplified": "pætərn"
+  },
+  "rhymePatterns": {
+   "all": "-ætərn"
+  },
+  "definitions": [
+   {
+    "definition": "a customary way of operation or behavior",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "practice"
+    ],
+    "typeOf": [
+     "activity"
+    ],
+    "hasTypes": [
+     "cross dressing",
+     "biologism",
+     "calisthenics",
+     "callisthenics",
+     "cannibalism",
+     "careerism",
+     "cooperation",
+     "custom",
+     "fashion",
+     "featherbedding",
+     "formalism",
+     "habitude",
+     "lobbyism",
+     "lynch law",
+     "mistreatment",
+     "modernism",
+     "naturism",
+     "nonconformism",
+     "nudism",
+     "occult",
+     "occult arts",
+     "one-upmanship",
+     "ornamentalism",
+     "papism",
+     "peonage",
+     "pluralism",
+     "popery",
+     "quotation",
+     "ritual",
+     "ritualism",
+     "slaveholding",
+     "slavery",
+     "symbolisation",
+     "symbolism",
+     "symbolization",
+     "systematism",
+     "transvestism",
+     "transvestitism",
+     "unwritten law",
+     "usage",
+     "usance"
+    ],
+    "examples": [
+     "they changed their dietary pattern"
+    ]
+   },
+   {
+    "definition": "a perceptual structure",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "form",
+     "shape"
+    ],
+    "typeOf": [
+     "structure"
+    ],
+    "hasTypes": [
+     "gestalt",
+     "fractal",
+     "strand",
+     "kaleidoscope",
+     "grid",
+     "mosaic"
+    ],
+    "partOf": [
+     "perceptual experience",
+     "perception",
+     "percept"
+    ],
+    "examples": [
+     "a visual pattern must include not only objects but the spaces between them"
+    ]
+   },
+   {
+    "definition": "something intended as a guide for making something else",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "blueprint",
+     "design"
+    ],
+    "typeOf": [
+     "plan",
+     "program",
+     "programme"
+    ],
+    "examples": [
+     "a pattern for a skirt"
+    ]
+   },
+   {
+    "definition": "a decorative or artistic work",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "design",
+     "figure"
+    ],
+    "typeOf": [
+     "ornamentation",
+     "decoration",
+     "ornament"
+    ],
+    "hasTypes": [
+     "decal",
+     "damascene",
+     "linocut",
+     "tattoo",
+     "emblem",
+     "screen saver",
+     "decalcomania",
+     "herringbone",
+     "triskele",
+     "triskelion",
+     "sunburst",
+     "mandala",
+     "polka dot",
+     "weave",
+     "pyrograph",
+     "argyle",
+     "argyll",
+     "bear claw",
+     "marking",
+     "mihrab",
+     "device",
+     "motif",
+     "motive",
+     "tetraskele",
+     "tetraskelion",
+     "herringbone pattern"
+    ]
+   },
+   {
+    "definition": "the path that is prescribed for an airplane that is preparing to land at an airport",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "approach pattern",
+     "traffic pattern"
+    ],
+    "typeOf": [
+     "itinerary",
+     "route",
+     "path"
+    ],
+    "hasParts": [
+     "approach",
+     "approach path",
+     "glide path",
+     "glide slope"
+    ],
+    "examples": [
+     "the traffic patterns around O'Hare are very crowded",
+     "they stayed in the pattern until the fog lifted"
+    ]
+   },
+   {
+    "definition": "something regarded as a normative example",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "convention",
+     "formula",
+     "normal",
+     "rule"
+    ],
+    "typeOf": [
+     "practice"
+    ],
+    "hasTypes": [
+     "code of behavior",
+     "mores",
+     "code of conduct",
+     "universal"
+    ]
+   },
+   {
+    "definition": "graphical representation (in polar or Cartesian coordinates) of the spatial distribution of radiation from an antenna as a function of angle",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "radiation diagram",
+     "radiation pattern"
+    ],
+    "typeOf": [
+     "graphical recording",
+     "graphical record",
+     "graph"
+    ],
+    "hasParts": [
+     "lobe"
+    ]
+   },
+   {
+    "definition": "plan or create according to a model or models",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "model"
+    ],
+    "typeOf": [
+     "imitate",
+     "simulate",
+     "copy"
+    ],
+    "hasTypes": [
+     "sovietize",
+     "scale",
+     "sovietise"
+    ]
+   },
+   {
+    "definition": "a model considered worthy of imitation",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "good example",
+     "exemplar",
+     "model",
+     "example"
+    ],
+    "examples": [
+     "the American constitution has provided a pattern for many republics"
+    ]
+   },
+   {
+    "definition": "form a pattern",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "correspond",
+     "jibe",
+     "match",
+     "tally",
+     "agree",
+     "check",
+     "fit",
+     "gibe"
+    ],
+    "examples": [
+     "These sentences pattern like the ones we studied before"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 4.08,
+   "perMillion": 11.88,
+   "diversity": 0.05
+  }
+ },
+ "perceive": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "per",
+    "ceive"
+   ]
+  },
+  "pronunciation": {
+   "all": "pər'siv",
+   "simplified": "pərsiv"
+  },
+  "rhymePatterns": {
+   "all": "-iv"
+  },
+  "definitions": [
+   {
+    "definition": "to become aware of through the senses",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "comprehend"
+    ],
+    "derivation": [
+     "perceptible"
+    ],
+    "examples": [
+     "I could perceive the ship coming over the horizon"
+    ]
+   },
+   {
+    "definition": "become conscious of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "realize",
+     "see",
+     "understand",
+     "realise"
+    ],
+    "hasTypes": [
+     "sense",
+     "smell",
+     "smell out"
+    ],
+    "derivation": [
+     "perceptible",
+     "perception",
+     "perceptive",
+     "percipient"
+    ],
+    "examples": [
+     "She finally perceived the futility of her protest"
+    ]
+   }
+  ],
+  "letters": 8,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 3.36,
+   "perMillion": 2.27,
+   "diversity": 0.01
+  }
+ },
+ "phenomena": {
+  "rhymes": {
+   "all": "-ɑmənə"
+  },
+  "letters": 9,
+  "pronunciation": "fʌ'nɑmʌnʌ",
+  "sounds": 8,
+  "frequency": {
+   "zipf": 3.33,
+   "perMillion": 2.13,
+   "diversity": 0.01
+  }
+ },
+ "phenomenon": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "phe",
+    "nom",
+    "e",
+    "non"
+   ]
+  },
+  "pronunciation": {
+   "all": "fɪ'nɑmə,nɑn",
+   "simplified": "fɪnɑmənɑn"
+  },
+  "rhymePatterns": {
+   "all": "-ɑn"
+  },
+  "definitions": [
+   {
+    "definition": "any state or process known through the senses rather than by intuition or reasoning",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "process",
+     "physical process"
+    ],
+    "hasTypes": [
+     "effect",
+     "event",
+     "fortune",
+     "hazard",
+     "issue",
+     "levitation",
+     "luck",
+     "metempsychosis",
+     "natural phenomenon",
+     "outcome",
+     "upshot",
+     "consequence",
+     "chance",
+     "pulsation",
+     "rebirth",
+     "result"
+    ]
+   },
+   {
+    "definition": "a remarkable development",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "development"
+    ]
+   }
+  ],
+  "letters": 10,
+  "sounds": 9,
+  "frequency": {
+   "zipf": 3.78,
+   "perMillion": 6,
+   "diversity": 0.03
+  }
+ },
+ "process": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "pro",
+    "cess"
+   ]
+  },
+  "pronunciation": {
+   "all": "'prɑsɛs",
+   "simplified": "prɑsɛs"
+  },
+  "rhymePatterns": {
+   "all": "-ɑsɛs"
+  },
+  "definitions": [
+   {
+    "definition": "a natural prolongation or projection from a part of an organism either animal or plant",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "appendage",
+     "outgrowth"
+    ],
+    "typeOf": [
+     "body part"
+    ],
+    "hasTypes": [
+     "mastoid process",
+     "acrosome",
+     "caruncle",
+     "caruncula",
+     "cecal appendage",
+     "tuberosity",
+     "zygomatic process",
+     "cirrus",
+     "tubercle",
+     "trochanter",
+     "villus",
+     "aculea",
+     "condyle",
+     "coronoid process",
+     "crest",
+     "transverse process",
+     "tentacle",
+     "tail",
+     "styloid process",
+     "style",
+     "spine",
+     "spiculum",
+     "ala",
+     "alveolar arch",
+     "spicule",
+     "alveolar process",
+     "eminence",
+     "enation",
+     "epicondyle",
+     "excrescence",
+     "pseudopod",
+     "vermiform appendix",
+     "plant process",
+     "papilla",
+     "osteophyte",
+     "olecranon process",
+     "olecranon",
+     "odontoid process",
+     "metaphysis",
+     "mastoidal",
+     "mastoid",
+     "mastoid bone",
+     "processus coronoideus",
+     "alveolar ridge",
+     "apophysis",
+     "fetlock",
+     "fimbria",
+     "appendix",
+     "flagellum",
+     "arista",
+     "acromial process",
+     "vermiform process",
+     "acromion",
+     "ridge",
+     "gum ridge",
+     "hair",
+     "pterygoid process",
+     "horn",
+     "pseudopodium"
+    ],
+    "examples": [
+     "a bony process"
+    ]
+   },
+   {
+    "definition": "a writ issued by authority of law; usually compels the defendant's attendance in a civil suit; failure to appear results in a default judgment against the defendant",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "summons"
+    ],
+    "inCategory": [
+     "law",
+     "jurisprudence"
+    ],
+    "typeOf": [
+     "writ",
+     "judicial writ"
+    ],
+    "hasTypes": [
+     "monition",
+     "process of monition",
+     "ticket",
+     "citation"
+    ]
+   },
+   {
+    "definition": "shape, form, or improve a material",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "work",
+     "work on"
+    ],
+    "typeOf": [
+     "transmute",
+     "transform",
+     "transubstantiate"
+    ],
+    "hasTypes": [
+     "rework",
+     "retread",
+     "rack",
+     "cold work",
+     "coldwork",
+     "overwork",
+     "hot-work",
+     "make over",
+     "tool",
+     "till"
+    ],
+    "verbGroup": [
+     "form",
+     "work",
+     "forge",
+     "mold",
+     "mould",
+     "shape"
+    ],
+    "examples": [
+     "process iron"
+    ]
+   },
+   {
+    "definition": "deliver a warrant or summons to someone",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "serve",
+     "swear out"
+    ],
+    "typeOf": [
+     "deliver"
+    ],
+    "hasTypes": [
+     "wash",
+     "subpoena",
+     "rinse"
+    ],
+    "examples": [
+     "He was processed by the sheriff"
+    ]
+   },
+   {
+    "definition": "a sustained phenomenon or one marked by gradual changes through a series of states",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "physical process"
+    ],
+    "typeOf": [
+     "physical entity"
+    ],
+    "hasTypes": [
+     "photography",
+     "shaping",
+     "execution",
+     "evolution",
+     "encapsulation",
+     "economic process",
+     "devolution",
+     "development",
+     "degeneration",
+     "defining",
+     "decrement",
+     "decrease",
+     "dealignment",
+     "chelation",
+     "variation",
+     "biological process",
+     "activity",
+     "action",
+     "natural action",
+     "loop",
+     "looping",
+     "natural process",
+     "operation",
+     "organic process",
+     "iteration",
+     "irreversible process",
+     "instruction execution",
+     "performance",
+     "phenomenon",
+     "industrial process",
+     "processing",
+     "increment",
+     "increase",
+     "human process",
+     "reversible process",
+     "growth",
+     "functioning",
+     "sensitisation",
+     "sensitization"
+    ],
+    "examples": [
+     "events now in process",
+     "the process of calcification begins later for boys than for girls"
+    ]
+   },
+   {
+    "definition": "institute legal proceedings against; file a suit against",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "action",
+     "litigate",
+     "sue"
+    ],
+    "typeOf": [
+     "challenge"
+    ],
+    "hasTypes": [
+     "expedite"
+    ],
+    "verbGroup": [
+     "litigate"
+    ],
+    "examples": [
+     "He was warned that the district attorney would process him"
+    ]
+   },
+   {
+    "definition": "march in a procession",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "march"
+    ],
+    "typeOf": [
+     "walk"
+    ],
+    "hasTypes": [
+     "march out",
+     "goose step",
+     "troop",
+     "promenade",
+     "parade",
+     "countermarch",
+     "debouch",
+     "file"
+    ],
+    "examples": [
+     "They processed into the dining room"
+    ]
+   },
+   {
+    "definition": "a particular course of action intended to achieve a result",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "procedure"
+    ],
+    "typeOf": [
+     "activity"
+    ],
+    "hasTypes": [
+     "rigamarole",
+     "bertillon system",
+     "calculation",
+     "chromosome mapping",
+     "computation",
+     "computing",
+     "condition",
+     "diagnostic procedure",
+     "diagnostic technique",
+     "emergency procedure",
+     "experimental condition",
+     "experimental procedure",
+     "fingerprinting",
+     "formula",
+     "genetic fingerprinting",
+     "genetic profiling",
+     "indirection",
+     "mapping",
+     "medical procedure",
+     "modus operandi",
+     "operating procedure",
+     "rigmarole",
+     "routine",
+     "rule",
+     "stiffening"
+    ],
+    "examples": [
+     "it was a process of trial and error"
+    ]
+   },
+   {
+    "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "cognitive operation",
+     "cognitive process",
+     "mental process",
+     "operation"
+    ],
+    "inCategory": [
+     "psychological science",
+     "psychology"
+    ],
+    "typeOf": [
+     "cognition",
+     "noesis",
+     "knowledge"
+    ],
+    "hasTypes": [
+     "basic cognitive process",
+     "higher cognitive process"
+    ],
+    "examples": [
+     "the process of thinking"
+    ]
+   },
+   {
+    "definition": "a mental process that you are not directly aware of",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "unconscious process"
+    ],
+    "typeOf": [
+     "cognition",
+     "noesis",
+     "knowledge"
+    ],
+    "hasTypes": [
+     "defence",
+     "defence mechanism",
+     "defence reaction",
+     "defense",
+     "somniloquy",
+     "defense mechanism",
+     "somniloquism",
+     "defense reaction",
+     "sleep talking",
+     "condensation"
+    ],
+    "examples": [
+     "the process of denial"
+    ]
+   },
+   {
+    "definition": "subject to a process or treatment, with the aim of readying for some purpose, improving, or remedying a condition",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "treat"
+    ],
+    "typeOf": [
+     "touch",
+     "touch on",
+     "bear upon",
+     "bear on",
+     "impact",
+     "affect"
+    ],
+    "hasTypes": [
+     "malt",
+     "digest",
+     "curry",
+     "mercerise",
+     "mercerize",
+     "aerate",
+     "nitrate",
+     "nitrify",
+     "nitrogenise",
+     "nitrogenize",
+     "creosote",
+     "oxygenate",
+     "oxygenise",
+     "oxygenize",
+     "chrome",
+     "chlorinate",
+     "propagate",
+     "carboxylate",
+     "ray",
+     "carbonate",
+     "refine",
+     "camphorate",
+     "reverberate",
+     "brominate",
+     "bromate",
+     "run",
+     "scald",
+     "seed",
+     "vulcanize",
+     "bituminize",
+     "sulfur",
+     "sulphur",
+     "tank",
+     "bituminise",
+     "beneficiate",
+     "ammoniate",
+     "air-condition",
+     "agenize",
+     "agenise",
+     "vulcanise",
+     "fumigate",
+     "fume",
+     "fluoridise",
+     "fluoridize",
+     "iodise",
+     "iodize",
+     "irradiate",
+     "fluoridate",
+     "dose"
+    ],
+    "derivation": [
+     "processing",
+     "processor"
+    ],
+    "examples": [
+     "process cheese",
+     "process hair"
+    ]
+   },
+   {
+    "definition": "deal with in a routine way",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "care",
+     "deal",
+     "handle",
+     "manage"
+    ],
+    "derivation": [
+     "processing"
+    ],
+    "examples": [
+     "process a loan",
+     "process the applicants"
+    ]
+   },
+   {
+    "definition": "perform mathematical and logical operations on (data) according to programmed instructions in order to obtain the required information",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "calculate",
+     "compute",
+     "work out",
+     "reckon",
+     "cypher",
+     "figure",
+     "cipher"
+    ],
+    "derivation": [
+     "processor"
+    ],
+    "examples": [
+     "The results of the elections were still being processed when he gave his acceptance speech"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 4.5,
+   "perMillion": 31.54,
+   "diversity": 0.12
+  }
+ },
+ "producing": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "pro",
+    "duc",
+    "ing"
+   ]
+  },
+  "letters": 9,
+  "frequency": {
+   "zipf": 3.7,
+   "perMillion": 4.96,
+   "diversity": 0.02
+  },
+  "pronunciation": "prʌ'dusɪŋ"
+ },
+ "produce": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "pro",
+    "duce"
+   ]
+  },
+  "pronunciation": {
+   "all": "'prɑd,us",
+   "noun": "'prɑdus",
+   "verb": "prə'dus",
+   "simplified": "prɑdus"
+  },
+  "rhymePatterns": {
+   "all": "-us",
+   "noun": "-ɑdus",
+   "verb": "-us"
+  },
+  "definitions": [
+   {
+    "definition": "come to have or undergo a change of (physical features and attributes)",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "acquire",
+     "develop",
+     "get",
+     "grow"
+    ],
+    "typeOf": [
+     "change"
+    ],
+    "hasTypes": [
+     "pupate",
+     "cut",
+     "feather",
+     "fledge",
+     "get up",
+     "leaf",
+     "pod",
+     "regrow",
+     "spring",
+     "sprout",
+     "stock",
+     "stool",
+     "teethe",
+     "tiller",
+     "work up"
+    ],
+    "verbGroup": [
+     "develop",
+     "evolve",
+     "acquire"
+    ]
+   },
+   {
+    "definition": "bring out for display",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring forth"
+    ],
+    "typeOf": [
+     "expose",
+     "exhibit",
+     "display"
+    ],
+    "hasTypes": [
+     "turn on"
+    ],
+    "derivation": [
+     "production"
+    ],
+    "examples": [
+     "The proud father produced many pictures of his baby"
+    ]
+   },
+   {
+    "definition": "cause to happen, occur or exist",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring about",
+     "give rise"
+    ],
+    "typeOf": [
+     "make",
+     "create"
+    ],
+    "hasTypes": [
+     "induct",
+     "induce",
+     "result",
+     "leave",
+     "lead"
+    ],
+    "derivation": [
+     "product"
+    ],
+    "examples": [
+     "This procedure produces a curious effect",
+     "These chemicals produce a noxious vapor"
+    ]
+   },
+   {
+    "definition": "fresh fruits and vegetable grown for the market",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "garden truck",
+     "green goods",
+     "green groceries"
+    ],
+    "typeOf": [
+     "solid food",
+     "food"
+    ],
+    "hasTypes": [
+     "vegetable",
+     "eater",
+     "veg",
+     "edible fruit",
+     "veggie"
+    ]
+   },
+   {
+    "definition": "bring onto the market or release",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring on",
+     "bring out"
+    ],
+    "cause": [
+     "appear"
+    ],
+    "hasTypes": [
+     "offer"
+    ],
+    "derivation": [
+     "production",
+     "producer"
+    ],
+    "examples": [
+     "produce a movie",
+     "produce a new play"
+    ]
+   },
+   {
+    "definition": "bring forth or yield",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bring forth"
+    ],
+    "typeOf": [
+     "create",
+     "make"
+    ],
+    "hasTypes": [
+     "bear",
+     "sporulate",
+     "manufacture",
+     "birth",
+     "have",
+     "grind out",
+     "give birth",
+     "deliver",
+     "crank out"
+    ],
+    "derivation": [
+     "producer"
+    ],
+    "examples": [
+     "The tree would not produce fruit"
+    ]
+   },
+   {
+    "definition": "cultivate by growing, often involving improvements by means of agricultural techniques",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "farm",
+     "grow",
+     "raise"
+    ],
+    "inCategory": [
+     "husbandry",
+     "agriculture",
+     "farming"
+    ],
+    "typeOf": [
+     "cultivate"
+    ],
+    "hasTypes": [
+     "keep",
+     "overproduce",
+     "carry"
+    ],
+    "examples": [
+     "The Bordeaux region produces great red wines",
+     "They produce good ham in Parma"
+    ]
+   },
+   {
+    "definition": "create or manufacture a man-made product",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "create",
+     "make"
+    ],
+    "hasTypes": [
+     "yield",
+     "squeeze out",
+     "fudge together",
+     "generate",
+     "give",
+     "burn",
+     "breed",
+     "bootleg",
+     "cut",
+     "churn out",
+     "extrude",
+     "remake",
+     "render",
+     "reproduce",
+     "return",
+     "slap together",
+     "smelt",
+     "custom-make",
+     "customise",
+     "customize",
+     "clap together",
+     "throw together",
+     "confect",
+     "clap up",
+     "dummy",
+     "dummy up",
+     "elaborate",
+     "laminate",
+     "turn out",
+     "machine",
+     "make over",
+     "output",
+     "overproduce",
+     "tailor-make",
+     "preassemble",
+     "prefabricate",
+     "print",
+     "proof",
+     "publish",
+     "pulsate",
+     "pulse",
+     "put out",
+     "redo",
+     "refashion",
+     "underproduce"
+    ],
+    "verbGroup": [
+     "make",
+     "create"
+    ],
+    "derivation": [
+     "product",
+     "producer"
+    ],
+    "examples": [
+     "We produce more cars than we can sell"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 4.18,
+   "perMillion": 14.98,
+   "diversity": 0.06
+  }
+ },
+ "reality": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "re",
+    "al",
+    "i",
+    "ty"
+   ]
+  },
+  "pronunciation": {
+   "all": "ri'ælɪti",
+   "simplified": "riælɪti"
+  },
+  "rhymePatterns": {
+   "all": "-ælɪti"
+  },
+  "definitions": [
+   {
+    "definition": "all of your experiences that determine how things appear to you",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "world"
+    ],
+    "typeOf": [
+     "experience"
+    ],
+    "hasTypes": [
+     "real life",
+     "real world"
+    ],
+    "examples": [
+     "for them demons were as much a part of reality as trees were"
+    ]
+   },
+   {
+    "definition": "the state of being actual or real",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "realism",
+     "realness"
+    ],
+    "attribute": [
+     "unreal",
+     "existent",
+     "real"
+    ],
+    "typeOf": [
+     "actuality"
+    ],
+    "hasTypes": [
+     "fact"
+    ],
+    "antonyms": [
+     "unreality"
+    ],
+    "derivation": [
+     "real"
+    ],
+    "examples": [
+     "the reality of his situation slowly dawned on him"
+    ]
+   },
+   {
+    "definition": "the quality possessed by something that is real",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "physicalness",
+     "corporeality",
+     "corporality",
+     "materiality"
+    ],
+    "antonyms": [
+     "unreality"
+    ],
+    "derivation": [
+     "real"
+    ]
+   },
+   {
+    "definition": "the state of the world as it really is rather than as you might want it to be",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "actuality"
+    ],
+    "hasTypes": [
+     "historicalness"
+    ],
+    "derivation": [
+     "real"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 7,
+  "frequency": {
+   "zipf": 4.63,
+   "perMillion": 42.3,
+   "diversity": 0.14
+  }
+ },
+ "seemingly": {
+  "definitions": [
+   {
+    "definition": "from appearances alone",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "apparently",
+     "on the face of it",
+     "ostensibly"
+    ],
+    "pertainsTo": [
+     "seeming"
+    ],
+    "examples": [
+     "the child is seemingly healthy but the doctor is concerned"
+    ]
+   }
+  ],
+  "letters": 9,
+  "frequency": {
+   "zipf": 3.36,
+   "perMillion": 2.29,
+   "diversity": 0.01
+  },
+  "pronunciation": "'simɪŋli"
+ },
+ "solution": {
+  "syllables": {
+   "count": 3,
+   "list": [
+    "so",
+    "lu",
+    "tion"
+   ]
+  },
+  "pronunciation": {
+   "all": "sə'luʃən",
+   "simplified": "səluʃən"
+  },
+  "rhymePatterns": {
+   "all": "-uʃən"
+  },
+  "definitions": [
+   {
+    "definition": "a statement that solves a problem or explains how to solve the problem",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "answer",
+     "resolution",
+     "result",
+     "solvent"
+    ],
+    "typeOf": [
+     "statement"
+    ],
+    "hasTypes": [
+     "denouement"
+    ],
+    "examples": [
+     "they were trying to find a peaceful solution"
+    ]
+   },
+   {
+    "definition": "the set of values that give a true statement when substituted into an equation",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "root"
+    ],
+    "typeOf": [
+     "set"
+    ]
+   },
+   {
+    "definition": "a homogeneous mixture of two or more substances; frequently (but not necessarily) a liquid solution",
+    "partOfSpeech": "noun",
+    "hasCategories": [
+     "fluorescein",
+     "fluorescent dye",
+     "saltiness",
+     "fluoresceine",
+     "solubility",
+     "n",
+     "normality",
+     "congo red",
+     "resorcinolphthalein"
+    ],
+    "typeOf": [
+     "mixture"
+    ],
+    "hasTypes": [
+     "eluate",
+     "extract",
+     "fehling's solution",
+     "formalin",
+     "formol",
+     "gargle",
+     "gram's solution",
+     "infusion",
+     "injectant",
+     "injection",
+     "isosmotic solution",
+     "isotonic solution",
+     "liquid bleach",
+     "mouthwash",
+     "primary solid solution",
+     "sal volatile",
+     "toner",
+     "bleach liquor",
+     "brine",
+     "buffer solution",
+     "chlorine water",
+     "collodion",
+     "conjugate",
+     "conjugate solution",
+     "dilution",
+     "electrolyte",
+     "sap",
+     "solid solution",
+     "spirits of ammonia",
+     "aqueous solution"
+    ],
+    "examples": [
+     "he used a solution of peroxide and water"
+    ]
+   },
+   {
+    "definition": "a method for solving a problem",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "method"
+    ],
+    "hasTypes": [
+     "silver bullet"
+    ],
+    "examples": [
+     "the easy solution is to look it up in the handbook"
+    ]
+   },
+   {
+    "definition": "the successful action of solving a problem",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "success"
+    ],
+    "derivation": [
+     "solve"
+    ],
+    "examples": [
+     "the solution took three hours"
+    ]
+   }
+  ],
+  "letters": 8,
+  "sounds": 7,
+  "frequency": {
+   "zipf": 4.39,
+   "perMillion": 24.61,
+   "diversity": 0.1
+  }
+ },
+ "the": {
+  "rhymes": {
+   "all": "-ə"
+  },
+  "letters": 3,
+  "pronunciation": "ðʌ",
+  "sounds": 2,
+  "definitions": [
+   {
+    "partOfSpeech": "definite article",
+    "definition": "A word placed before nouns to limit or individualize their meaning."
+   },
+   {
+    "partOfSpeech": "adverb",
+    "definition": "By that; by how much; by so much; on that account; used before comparatives.",
+    "examples": [
+     "the longer we continue in sin, the more difficult it is to reform"
+    ]
+   }
+  ],
+  "frequency": {
+   "zipf": 7.48,
+   "perMillion": 30198.18,
+   "diversity": 1
+  }
+ },
+ "then": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "then"
+   ]
+  },
+  "pronunciation": {
+   "all": "ðɛn",
+   "simplified": "ðɛn"
+  },
+  "rhymePatterns": {
+   "all": "-ɛn"
+  },
+  "definitions": [
+   {
+    "definition": "subsequently or soon afterward (often used as sentence connectors)",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "and so",
+     "so"
+    ],
+    "examples": [
+     "then he left",
+     "go left first, then right",
+     "first came lightning, then thunder",
+     "we watched the late movie and then went to bed"
+    ]
+   },
+   {
+    "definition": "at a specific prior time",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "past"
+    ],
+    "examples": [
+     "the then president"
+    ]
+   },
+   {
+    "definition": "that time; that moment",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "point",
+     "point in time"
+    ],
+    "examples": [
+     "we will arrive before then",
+     "we were friends from then on"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 3,
+  "frequency": {
+   "zipf": 6.25,
+   "perMillion": 1759.62,
+   "diversity": 0.98
+  }
+ },
+ "thinking": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "think",
+    "ing"
+   ]
+  },
+  "pronunciation": {
+   "all": "'θɪŋkɪŋ",
+   "simplified": "θɪŋkɪŋ"
+  },
+  "rhymePatterns": {
+   "all": "-ɪŋkɪŋ"
+  },
+  "definitions": [
+   {
+    "definition": "endowed with the capacity to reason",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "intelligent",
+     "reasoning"
+    ],
+    "similarTo": [
+     "rational"
+    ]
+   },
+   {
+    "definition": "the process of using your mind to consider something carefully",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "cerebration",
+     "intellection",
+     "mentation",
+     "thought",
+     "thought process"
+    ],
+    "typeOf": [
+     "higher cognitive process"
+    ],
+    "hasTypes": [
+     "construction",
+     "convergent thinking",
+     "divergent thinking",
+     "excogitation",
+     "explanation",
+     "free association",
+     "ideation",
+     "line of thought",
+     "abstract thought",
+     "mental synthesis",
+     "mysticism",
+     "out-of-the-box thinking",
+     "planning",
+     "preparation",
+     "problem solving",
+     "provision",
+     "reasoning",
+     "thread",
+     "train of thought",
+     "logical thinking",
+     "consideration"
+    ],
+    "derivation": [
+     "think"
+    ],
+    "examples": [
+     "thinking always made him frown"
+    ]
+   }
+  ],
+  "letters": 8,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 5.4,
+   "perMillion": 252.56,
+   "diversity": 0.62
+  }
+ },
+ "to": {
+  "rhymes": {
+   "all": "-u"
+  },
+  "letters": 2,
+  "pronunciation": "tu",
+  "sounds": 2,
+  "definitions": [
+   {
+    "partOfSpeech": "preposition",
+    "definition": "The preposition to primarily indicates approach and arrival, motion made in the direction of a place or thing and attaining it, access; and also, motion or tendency without arrival; movement toward.",
+    "antonyms": [
+     "from"
+    ]
+   }
+  ],
+  "frequency": {
+   "zipf": 7.35,
+   "perMillion": 22270.03,
+   "diversity": 1
+  }
+ },
+ "turning": {
+  "syllables": {
+   "count": 2,
+   "list": [
+    "turn",
+    "ing"
+   ]
+  },
+  "pronunciation": {
+   "all": "'tɜrnɪŋ",
+   "simplified": "tɜrnɪŋ"
+  },
+  "rhymePatterns": {
+   "all": "-ɜrnɪŋ"
+  },
+  "definitions": [
+   {
+    "definition": "a movement in a new direction",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "turn"
+    ],
+    "typeOf": [
+     "movement",
+     "motion"
+    ],
+    "hasTypes": [
+     "yaw",
+     "coming back",
+     "gyration",
+     "return",
+     "reversal",
+     "revolution",
+     "rotation",
+     "swerve",
+     "turn around",
+     "volution"
+    ],
+    "derivation": [
+     "turn"
+    ],
+    "examples": [
+     "the turning of the wind"
+    ]
+   },
+   {
+    "definition": "the act of changing or reversing the direction of the course",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "turn"
+    ],
+    "typeOf": [
+     "change of course"
+    ],
+    "hasTypes": [
+     "veering",
+     "stem",
+     "stem turn",
+     "swerve",
+     "version",
+     "deviation",
+     "digression",
+     "divagation",
+     "diversion",
+     "kick turn",
+     "deflexion",
+     "deflection",
+     "telemark",
+     "three-point turn",
+     "right",
+     "swerving",
+     "left"
+    ],
+    "derivation": [
+     "turn"
+    ]
+   },
+   {
+    "definition": "act of changing in practice or custom",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "change"
+    ],
+    "derivation": [
+     "turn"
+    ],
+    "examples": [
+     "the law took many turnings over the years"
+    ]
+   },
+   {
+    "definition": "a shaving created when something is produced by turning it on a lathe",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "paring",
+     "shaving",
+     "sliver"
+    ]
+   },
+   {
+    "definition": "the activity of shaping something on a lathe",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "shaping",
+     "formation"
+    ]
+   },
+   {
+    "definition": "the end-product created by shaping something on a lathe",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "end product",
+     "output"
+    ]
+   }
+  ],
+  "letters": 7,
+  "sounds": 6,
+  "frequency": {
+   "zipf": 4.55,
+   "perMillion": 35.76,
+   "diversity": 0.16
+  }
+ },
+ "turn": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "turn"
+   ]
+  },
+  "pronunciation": {
+   "all": "tɜrn",
+   "simplified": "tɜrn"
+  },
+  "rhymePatterns": {
+   "all": "-ɜrn"
+  },
+  "definitions": [
+   {
+    "definition": "to break and turn over earth especially with a plow",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "plough",
+     "plow"
+    ],
+    "inCategory": [
+     "agriculture",
+     "farming",
+     "husbandry"
+    ],
+    "entails": [
+     "cut into",
+     "delve",
+     "turn over",
+     "dig"
+    ],
+    "typeOf": [
+     "till"
+    ],
+    "hasTypes": [
+     "ridge",
+     "disk",
+     "harrow"
+    ],
+    "examples": [
+     "turn the earth in the Spring"
+    ]
+   },
+   {
+    "definition": "twist suddenly so as to sprain",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "rick",
+     "sprain",
+     "twist",
+     "wrench",
+     "wrick"
+    ],
+    "typeOf": [
+     "injure",
+     "wound"
+    ],
+    "examples": [
+     "I turned my ankle and couldn't walk for several days"
+    ]
+   },
+   {
+    "definition": "pass into a condition gradually, take on a specific property or attribute; become",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "grow"
+    ],
+    "typeOf": [
+     "change"
+    ],
+    "hasTypes": [
+     "bald"
+    ],
+    "verbGroup": [
+     "change state"
+    ],
+    "examples": [
+     "The weather turned nasty"
+    ]
+   },
+   {
+    "definition": "cause to move around a center so as to show another side of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "turn over"
+    ],
+    "typeOf": [
+     "displace",
+     "move"
+    ],
+    "hasTypes": [
+     "leaf",
+     "evert"
+    ],
+    "derivation": [
+     "turner"
+    ],
+    "examples": [
+     "turn a page of a book"
+    ]
+   },
+   {
+    "definition": "undergo a change or development",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "become"
+    ],
+    "typeOf": [
+     "transform",
+     "metamorphose",
+     "transmute"
+    ],
+    "hasTypes": [
+     "add up",
+     "choke",
+     "amount",
+     "come",
+     "reduce",
+     "nucleate",
+     "boil down",
+     "come down",
+     "suffocate"
+    ],
+    "verbGroup": [
+     "change state"
+    ],
+    "examples": [
+     "The water turned into ice",
+     "He turned traitor"
+    ]
+   },
+   {
+    "definition": "let (something) fall or spill from a container",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "release"
+    ],
+    "typeOf": [
+     "channel",
+     "channelise",
+     "transfer",
+     "channelize",
+     "transmit",
+     "transport"
+    ],
+    "hasTypes": [
+     "deflate",
+     "throw"
+    ],
+    "examples": [
+     "turn the flour onto a plate"
+    ]
+   },
+   {
+    "definition": "cause (a plastic object) to assume a crooked or angular form",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "bend",
+     "deform",
+     "flex",
+     "twist"
+    ],
+    "typeOf": [
+     "change shape",
+     "change form",
+     "deform"
+    ],
+    "hasTypes": [
+     "convolute",
+     "convolve",
+     "crank",
+     "dent",
+     "gnarl",
+     "incurvate",
+     "indent"
+    ],
+    "examples": [
+     "the strong man could turn an iron bar"
+    ]
+   },
+   {
+    "definition": "undergo a transformation or a change of position or action",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "change state"
+    ],
+    "typeOf": [
+     "change"
+    ],
+    "hasTypes": [
+     "hot up",
+     "ignite",
+     "improve",
+     "gain",
+     "frenchify",
+     "freeze",
+     "inspissate",
+     "integrate",
+     "fly high",
+     "fluctuate",
+     "ionise",
+     "ionize",
+     "kick the bucket",
+     "flourish",
+     "liberate",
+     "liquefy",
+     "fit out",
+     "loosen up",
+     "fill up",
+     "fill",
+     "meliorate",
+     "melt off",
+     "ferment",
+     "acetify",
+     "fall",
+     "fade out",
+     "fade away",
+     "explode",
+     "expire",
+     "exit",
+     "etherify",
+     "open",
+     "open up",
+     "esterify",
+     "ossify",
+     "overgrow",
+     "erupt",
+     "pass",
+     "pass away",
+     "pass out",
+     "equilibrate",
+     "perish",
+     "enclothe",
+     "emulsify",
+     "pop off",
+     "empty",
+     "emancipate",
+     "precipitate",
+     "emaciate",
+     "prosper",
+     "put on",
+     "raiment",
+     "react",
+     "drop dead",
+     "reduce",
+     "dress",
+     "relapse",
+     "relax",
+     "dissolve",
+     "resuscitate",
+     "disengage",
+     "discharge",
+     "die",
+     "revive",
+     "denitrify",
+     "decompress",
+     "decline",
+     "decease",
+     "curdle",
+     "cross-fertilize",
+     "cross-fertilise",
+     "croak",
+     "secularise",
+     "secularize",
+     "cool off",
+     "cool it",
+     "cool down",
+     "settle down",
+     "cool",
+     "conk",
+     "shut",
+     "simmer down",
+     "slenderize",
+     "conflagrate",
+     "slim",
+     "slim down",
+     "slow down",
+     "concentrate",
+     "snuff it",
+     "solvate",
+     "sorb",
+     "sour",
+     "conceive",
+     "come to",
+     "come alive",
+     "combust",
+     "coke",
+     "coagulate",
+     "cloud over",
+     "clothe",
+     "clot",
+     "close",
+     "clabber",
+     "take fire",
+     "citrate",
+     "take up",
+     "tangle with",
+     "tense",
+     "tense up",
+     "thicken",
+     "thin",
+     "thrive",
+     "thrombose",
+     "chondrify",
+     "choke",
+     "tog",
+     "chill out",
+     "chill",
+     "catch fire",
+     "catalyze",
+     "catalyse",
+     "zonk out",
+     "cash in one's chips",
+     "carnify",
+     "carburize",
+     "carburise",
+     "carbonize",
+     "carbonise",
+     "calm down",
+     "calm",
+     "calcify",
+     "buy the farm",
+     "burst forth",
+     "burn",
+     "break loose",
+     "break",
+     "get worse",
+     "go",
+     "get into",
+     "get",
+     "garment",
+     "habilitate",
+     "garb",
+     "heat",
+     "heat up",
+     "homogenise",
+     "homogenize",
+     "work",
+     "worsen",
+     "give-up the ghost",
+     "boil",
+     "black out",
+     "better",
+     "become",
+     "be born",
+     "basify",
+     "awaken",
+     "awake",
+     "arouse",
+     "apparel",
+     "ameliorate",
+     "alkalize",
+     "unbend",
+     "alkalise",
+     "alkalify",
+     "unwind",
+     "wake",
+     "wake up",
+     "waken",
+     "acidify"
+    ],
+    "verbGroup": [
+     "become",
+     "grow"
+    ],
+    "also": [
+     "turn around",
+     "turn off"
+    ],
+    "derivation": [
+     "turning"
+    ],
+    "examples": [
+     "We turned from Socialism to Capitalism",
+     "The people turned against the President when he stole the election"
+    ]
+   },
+   {
+    "definition": "pass to the other side of",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "move around"
+    ],
+    "typeOf": [
+     "locomote",
+     "move",
+     "travel",
+     "go"
+    ],
+    "examples": [
+     "turn the corner"
+    ]
+   },
+   {
+    "definition": "have recourse to or make an appeal or request for help or information to",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "call on"
+    ],
+    "typeOf": [
+     "appeal",
+     "invoke"
+    ],
+    "examples": [
+     "She turned to her relatives for help"
+    ]
+   },
+   {
+    "definition": "turning or twisting around (in place)",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "twist"
+    ],
+    "typeOf": [
+     "rotation",
+     "rotary motion"
+    ],
+    "hasTypes": [
+     "twiddle"
+    ]
+   },
+   {
+    "definition": "a favor for someone",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "good turn"
+    ],
+    "typeOf": [
+     "favor",
+     "favour"
+    ],
+    "examples": [
+     "he did me a good turn"
+    ]
+   },
+   {
+    "definition": "change to the contrary",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "change by reversal",
+     "reverse"
+    ],
+    "typeOf": [
+     "change"
+    ],
+    "hasTypes": [
+     "flip-flop",
+     "transmogrify",
+     "desynchronize",
+     "undo",
+     "desynchronise",
+     "unhallow",
+     "alternate",
+     "turn the tide",
+     "turn the tables",
+     "transfigure",
+     "correct",
+     "transpose",
+     "switch",
+     "permute",
+     "exchange",
+     "interchange",
+     "return",
+     "falsify",
+     "metamorphose",
+     "flip",
+     "commutate",
+     "revert",
+     "desecrate",
+     "regress",
+     "retrovert",
+     "tack",
+     "deconsecrate",
+     "rectify",
+     "turn back",
+     "right",
+     "commute",
+     "switch over"
+    ],
+    "also": [
+     "turn off",
+     "turn on"
+    ],
+    "examples": [
+     "the tides turned against him",
+     "public opinion turned when it was revealed that the president had an affair with a White House intern"
+    ]
+   },
+   {
+    "definition": "(game) the activity of doing something in an agreed succession",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "play"
+    ],
+    "inCategory": [
+     "game"
+    ],
+    "typeOf": [
+     "activity"
+    ],
+    "hasTypes": [
+     "move",
+     "start",
+     "starting",
+     "trick",
+     "trumping",
+     "lead",
+     "at-bat",
+     "ruff",
+     "innings",
+     "down",
+     "attack",
+     "bat"
+    ],
+    "examples": [
+     "it is my turn"
+    ]
+   },
+   {
+    "definition": "a short performance that is part of a longer program",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "act",
+     "bit",
+     "number",
+     "routine"
+    ],
+    "typeOf": [
+     "performance",
+     "public presentation"
+    ],
+    "hasTypes": [
+     "show-stopper",
+     "stopper",
+     "showstopper"
+    ]
+   },
+   {
+    "definition": "a circular segment of a curve",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "bend",
+     "crook",
+     "twist"
+    ],
+    "typeOf": [
+     "curved shape",
+     "curve"
+    ],
+    "hasTypes": [
+     "bight"
+    ]
+   },
+   {
+    "definition": "(sports) a division during which one team is on the offensive",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "bout",
+     "round"
+    ],
+    "inCategory": [
+     "athletics",
+     "sport"
+    ],
+    "typeOf": [
+     "section",
+     "division",
+     "part"
+    ],
+    "hasTypes": [
+     "top",
+     "bottom",
+     "top of the inning",
+     "bottom of the inning"
+    ],
+    "partOf": [
+     "playing period",
+     "play",
+     "period of play"
+    ]
+   },
+   {
+    "definition": "a time period for working (after which you will be relieved by someone else)",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "go",
+     "spell",
+     "tour"
+    ],
+    "typeOf": [
+     "shift",
+     "duty period",
+     "work shift"
+    ]
+   },
+   {
+    "definition": "a movement in a new direction",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "turning"
+    ],
+    "typeOf": [
+     "movement",
+     "motion"
+    ],
+    "hasTypes": [
+     "gyration",
+     "return",
+     "reversal",
+     "yaw",
+     "swerve",
+     "turn around",
+     "revolution",
+     "rotation",
+     "volution",
+     "coming back"
+    ],
+    "examples": [
+     "the turning of the wind"
+    ]
+   },
+   {
+    "definition": "an unforeseen development",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "turn of events",
+     "twist"
+    ],
+    "typeOf": [
+     "development"
+    ],
+    "examples": [
+     "events suddenly took an awkward turn"
+    ]
+   },
+   {
+    "definition": "the act of changing or reversing the direction of the course",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "turning"
+    ],
+    "typeOf": [
+     "change of course"
+    ],
+    "hasTypes": [
+     "left",
+     "digression",
+     "deviation",
+     "deflection",
+     "deflexion",
+     "version",
+     "veering",
+     "three-point turn",
+     "kick turn",
+     "telemark",
+     "divagation",
+     "swerving",
+     "swerve",
+     "stem turn",
+     "stem",
+     "diversion",
+     "right"
+    ],
+    "examples": [
+     "he took a turn to the right"
+    ]
+   },
+   {
+    "definition": "go sour or spoil",
+    "partOfSpeech": "verb",
+    "synonyms": [
+     "ferment",
+     "sour",
+     "work"
+    ],
+    "typeOf": [
+     "change state"
+    ],
+    "verbGroup": [
+     "work",
+     "ferment"
+    ],
+    "examples": [
+     "The cream has turned--we have to throw it out"
+    ]
+   },
+   {
+    "definition": "accomplish by rotating",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "do",
+     "perform"
+    ],
+    "derivation": [
+     "turner"
+    ],
+    "examples": [
+     "turn a somersault",
+     "turn cartwheels"
+    ]
+   },
+   {
+    "definition": "alter the functioning or setting of",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "control",
+     "operate"
+    ],
+    "examples": [
+     "turn the dial to 10",
+     "turn the heat down"
+    ]
+   },
+   {
+    "definition": "become officially one year older",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "age",
+     "maturate",
+     "senesce",
+     "get on",
+     "mature"
+    ],
+    "examples": [
+     "She is turning 50 this year"
+    ]
+   },
+   {
+    "definition": "cause to change or turn into something different;assume new characteristics",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "modify",
+     "alter",
+     "change"
+    ],
+    "verbGroup": [
+     "become"
+    ],
+    "examples": [
+     "The princess turned the frog into a prince by kissing him",
+     "The alchemists tried to turn lead into gold"
+    ]
+   },
+   {
+    "definition": "cause to move along an axis or into a new direction",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "displace",
+     "move"
+    ],
+    "hasTypes": [
+     "bring about"
+    ],
+    "examples": [
+     "turn your face to the wall",
+     "turn the car around",
+     "turn your dance partner around"
+    ]
+   },
+   {
+    "definition": "cause to move around or rotate",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "move",
+     "displace"
+    ],
+    "hasTypes": [
+     "supinate",
+     "port",
+     "reorient"
+    ],
+    "examples": [
+     "turn a key",
+     "turn your palm this way"
+    ]
+   },
+   {
+    "definition": "change color",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "colour",
+     "discolour",
+     "grow",
+     "color",
+     "discolor"
+    ],
+    "examples": [
+     "In Vermont, the leaves turn early"
+    ]
+   },
+   {
+    "definition": "change orientation or direction, also in the abstract sense",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "move"
+    ],
+    "hasTypes": [
+     "slue",
+     "slew",
+     "sheer",
+     "rotate",
+     "corner",
+     "corkscrew",
+     "flip",
+     "face",
+     "gyrate",
+     "overturn",
+     "pivot",
+     "port",
+     "about-face",
+     "pronate",
+     "veer",
+     "divert",
+     "twist",
+     "turn over",
+     "avert",
+     "turn out",
+     "turn on a dime",
+     "turn off",
+     "bend",
+     "turn away",
+     "turn around",
+     "caracole",
+     "tump over",
+     "trend",
+     "deviate",
+     "gee",
+     "flip over",
+     "deflect",
+     "roll",
+     "cut",
+     "curve",
+     "toss",
+     "tip over",
+     "roll over",
+     "circumvolve",
+     "swivel",
+     "coil",
+     "swing around",
+     "swing about",
+     "swerve",
+     "spread out",
+     "splay",
+     "spiral"
+    ],
+    "also": [
+     "turn back",
+     "turn away",
+     "turn to"
+    ],
+    "derivation": [
+     "turning"
+    ],
+    "examples": [
+     "The mugger turned and fled before I could see his face",
+     "She turned from herself and learned to listen to others' needs"
+    ]
+   },
+   {
+    "definition": "channel one's attention, interest, thought, or attention toward or away from something",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "direct",
+     "send"
+    ],
+    "hasTypes": [
+     "take up"
+    ],
+    "examples": [
+     "The pedophile turned to boys for satisfaction",
+     "people turn to mysticism at the turn of a millennium"
+    ]
+   },
+   {
+    "definition": "direct at someone",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "take",
+     "take aim",
+     "aim",
+     "train",
+     "direct"
+    ],
+    "examples": [
+     "She turned a smile on me",
+     "They turned their flashlights on the car"
+    ]
+   },
+   {
+    "definition": "get by buying and selling",
+    "partOfSpeech": "verb",
+    "inCategory": [
+     "commerce",
+     "mercantilism",
+     "commercialism"
+    ],
+    "typeOf": [
+     "get",
+     "acquire"
+    ],
+    "examples": [
+     "the company turned a good profit after a year"
+    ]
+   },
+   {
+    "definition": "move around an axis or a center",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "move"
+    ],
+    "hasTypes": [
+     "rotate",
+     "revolve",
+     "go around"
+    ],
+    "examples": [
+     "The wheels are turning"
+    ]
+   },
+   {
+    "definition": "shape by rotating on a lathe or cutting device or a wheel",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "form",
+     "shape"
+    ],
+    "derivation": [
+     "turnery",
+     "turner"
+    ],
+    "examples": [
+     "turn the legs of the table",
+     "turn the clay on the wheel"
+    ]
+   },
+   {
+    "definition": "taking a short walk out and back",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "walk"
+    ],
+    "examples": [
+     "we took a turn in the park"
+    ]
+   },
+   {
+    "definition": "the act of turning away or in the opposite direction",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "reorientation",
+     "change of direction"
+    ],
+    "examples": [
+     "he made an abrupt turn away from her"
+    ]
+   },
+   {
+    "definition": "to send or let go",
+    "partOfSpeech": "verb",
+    "typeOf": [
+     "send",
+     "direct"
+    ],
+    "examples": [
+     "They turned away the crowd at the gate of the governor's mansion"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 4,
+  "frequency": {
+   "zipf": 5.5,
+   "perMillion": 315.11,
+   "diversity": 0.71
+  }
+ },
+ "two": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "two"
+   ]
+  },
+  "pronunciation": {
+   "all": "tu",
+   "simplified": "tu"
+  },
+  "rhymePatterns": {
+   "all": "-u"
+  },
+  "definitions": [
+   {
+    "definition": "being one more than one",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "2",
+     "ii"
+    ],
+    "similarTo": [
+     "cardinal"
+    ],
+    "examples": [
+     "he received two messages"
+    ]
+   },
+   {
+    "definition": "one of the four playing cards in a deck that have two spots",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "deuce"
+    ],
+    "typeOf": [
+     "playing card"
+    ]
+   },
+   {
+    "definition": "the cardinal number that is the sum of one and one or a numeral representing this number",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "2",
+     "deuce",
+     "ii"
+    ],
+    "typeOf": [
+     "figure",
+     "digit"
+    ],
+    "hasTypes": [
+     "distich",
+     "duad",
+     "duet",
+     "duo",
+     "brace",
+     "pair",
+     "snake eyes",
+     "span",
+     "twain",
+     "twosome",
+     "yoke",
+     "dyad",
+     "couple",
+     "couplet",
+     "craps"
+    ]
+   }
+  ],
+  "letters": 3,
+  "sounds": 2,
+  "frequency": {
+   "zipf": 6.02,
+   "perMillion": 1041.02,
+   "diversity": 0.93
+  }
+ },
+ "unrelated": {
+  "syllables": {
+   "count": 4,
+   "list": [
+    "un",
+    "re",
+    "lat",
+    "ed"
+   ]
+  },
+  "pronunciation": {
+   "all": ",ənri'leɪtɪd",
+   "simplified": "ənrileɪtɪd"
+  },
+  "rhymePatterns": {
+   "all": "-eɪtɪd"
+  },
+  "definitions": [
+   {
+    "definition": "lacking a logical or causal relation",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "misrelated",
+     "orthogonal",
+     "uncorrelated"
+    ],
+    "antonyms": [
+     "related"
+    ],
+    "derivation": [
+     "unrelatedness"
+    ]
+   },
+   {
+    "definition": "not connected by kinship",
+    "partOfSpeech": "adjective",
+    "similarTo": [
+     "unconnected"
+    ],
+    "antonyms": [
+     "related"
+    ],
+    "derivation": [
+     "unrelatedness"
+    ]
+   }
+  ],
+  "letters": 9,
+  "sounds": 10,
+  "frequency": {
+   "zipf": 3.11,
+   "perMillion": 1.28,
+   "diversity": 0.01
+  }
+ },
+ "ways": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "ways"
+   ]
+  },
+  "pronunciation": {
+   "all": "weɪz",
+   "simplified": "weɪz"
+  },
+  "rhymePatterns": {
+   "all": "-eɪz"
+  },
+  "definitions": [
+   {
+    "definition": "structure consisting of a sloping way down to the water from the place where ships are built or repaired",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "shipway",
+     "slipway"
+    ],
+    "typeOf": [
+     "construction",
+     "structure"
+    ],
+    "partOf": [
+     "shipyard"
+    ]
+   }
+  ],
+  "letters": 4,
+  "sounds": 4,
+  "frequency": {
+   "zipf": 4.71,
+   "perMillion": 50.96,
+   "diversity": 0.21
+  }
+ },
+ "way": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "way"
+   ]
+  },
+  "pronunciation": {
+   "all": "weɪ",
+   "simplified": "weɪ"
+  },
+  "rhymePatterns": {
+   "all": "-eɪ"
+  },
+  "definitions": [
+   {
+    "definition": "space for movement",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "elbow room",
+     "room"
+    ],
+    "typeOf": [
+     "position",
+     "spatial relation"
+    ],
+    "hasTypes": [
+     "breathing room",
+     "living space",
+     "seats",
+     "lebensraum",
+     "standing room",
+     "sea room",
+     "headroom",
+     "seating",
+     "seating area",
+     "seating room",
+     "parking",
+     "clearance",
+     "breathing space",
+     "houseroom",
+     "headway"
+    ],
+    "examples": [
+     "make way for"
+    ]
+   },
+   {
+    "definition": "a course of conduct",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "path",
+     "way of life"
+    ],
+    "typeOf": [
+     "course of action",
+     "course"
+    ],
+    "hasTypes": [
+     "primrose path",
+     "ambages",
+     "strait and narrow",
+     "straight and narrow",
+     "sunnah",
+     "warpath",
+     "hadith",
+     "sunna"
+    ],
+    "examples": [
+     "we went our separate ways"
+    ]
+   },
+   {
+    "definition": "thing or person that acts to produce a particular effect or achieve an end",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "agency",
+     "means"
+    ],
+    "typeOf": [
+     "implementation",
+     "effectuation"
+    ],
+    "hasTypes": [
+     "fast track",
+     "salvation",
+     "instrument",
+     "stepping stone",
+     "open sesame",
+     "expedient",
+     "escape",
+     "tool",
+     "tooth",
+     "wings",
+     "dint",
+     "desperate measure",
+     "voice",
+     "road"
+    ],
+    "examples": [
+     "the true way to success"
+    ]
+   },
+   {
+    "definition": "a line leading to a place or point",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "direction"
+    ],
+    "typeOf": [
+     "itinerary",
+     "path",
+     "route"
+    ],
+    "hasTypes": [
+     "trend",
+     "heading",
+     "bearing",
+     "aim",
+     "qibla",
+     "north-south direction",
+     "course",
+     "east-west direction",
+     "tendency"
+    ],
+    "examples": [
+     "didn't know the way home"
+    ]
+   },
+   {
+    "definition": "to a great degree or by a great distance; very much (`right smart' is regional in the United States)",
+    "partOfSpeech": "adverb",
+    "synonyms": [
+     "right smart"
+    ],
+    "usageOf": [
+     "colloquialism"
+    ],
+    "examples": [
+     "way over budget",
+     "way off base"
+    ]
+   },
+   {
+    "definition": "how something is done or how it happens",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "fashion",
+     "manner",
+     "mode",
+     "style"
+    ],
+    "typeOf": [
+     "property"
+    ],
+    "hasTypes": [
+     "signature",
+     "artistic style",
+     "drape",
+     "fit",
+     "form",
+     "idiom",
+     "life-style",
+     "life style",
+     "lifestyle",
+     "modus vivendi",
+     "response",
+     "setup",
+     "touch",
+     "wise"
+    ],
+    "examples": [
+     "a lonely way of life"
+    ]
+   },
+   {
+    "definition": "a general category of things; used in the expression `in the way of'",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "category"
+    ],
+    "examples": [
+     "they didn't have much in the way of clothing"
+    ]
+   },
+   {
+    "definition": "a journey or passage",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "journey",
+     "journeying"
+    ],
+    "examples": [
+     "they are on the way"
+    ]
+   },
+   {
+    "definition": "any artifact consisting of a road or path affording passage from one place to another",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "artifact",
+     "artefact"
+    ],
+    "hasTypes": [
+     "watercourse",
+     "path",
+     "road",
+     "passage",
+     "approach",
+     "stairway",
+     "staircase",
+     "access",
+     "lane",
+     "route",
+     "waterway"
+    ],
+    "hasParts": [
+     "wayside",
+     "roadside"
+    ],
+    "partOf": [
+     "transportation",
+     "transit",
+     "transportation system"
+    ],
+    "examples": [
+     "he said he was looking for the way out"
+    ]
+   },
+   {
+    "definition": "a portion of something divided into shares",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "portion",
+     "percentage",
+     "part",
+     "share"
+    ],
+    "examples": [
+     "they split the loot three ways"
+    ]
+   },
+   {
+    "definition": "doing as one pleases or chooses",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "pick",
+     "choice",
+     "selection"
+    ],
+    "examples": [
+     "if I had my way"
+    ]
+   },
+   {
+    "definition": "the condition of things generally",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "condition",
+     "status"
+    ],
+    "examples": [
+     "that's the way it is",
+     "I felt the same way"
+    ]
+   },
+   {
+    "definition": "the property of distance in general",
+    "partOfSpeech": "noun",
+    "usageOf": [
+     "colloquialism"
+    ],
+    "typeOf": [
+     "distance"
+    ],
+    "examples": [
+     "it's a long way to Moscow",
+     "he went a long ways"
+    ]
+   }
+  ],
+  "letters": 3,
+  "sounds": 3,
+  "frequency": {
+   "zipf": 6.11,
+   "perMillion": 1290.47,
+   "diversity": 0.96
+  }
+ },
+ "world": {
+  "syllables": {
+   "count": 1,
+   "list": [
+    "world"
+   ]
+  },
+  "pronunciation": {
+   "all": "wɜrld",
+   "simplified": "wɜrld"
+  },
+  "rhymePatterns": {
+   "all": "-ɜrld"
+  },
+  "definitions": [
+   {
+    "definition": "people in general; especially a distinctive group of people with some shared interest",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "domain"
+    ],
+    "typeOf": [
+     "stratum",
+     "class",
+     "socio-economic class",
+     "social class"
+    ],
+    "hasTypes": [
+     "academe",
+     "academia",
+     "grub street"
+    ],
+    "examples": [
+     "the Western world"
+    ]
+   },
+   {
+    "definition": "people in general considered as a whole",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "populace",
+     "public"
+    ],
+    "typeOf": [
+     "people"
+    ],
+    "hasTypes": [
+     "admass"
+    ],
+    "hasMembers": [
+     "audience"
+    ]
+   },
+   {
+    "definition": "all of your experiences that determine how things appear to you",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "reality"
+    ],
+    "typeOf": [
+     "experience"
+    ],
+    "hasTypes": [
+     "real life",
+     "real world"
+    ],
+    "examples": [
+     "his world was shattered",
+     "we live in different worlds"
+    ]
+   },
+   {
+    "definition": "the 3rd planet from the sun; the planet we live on",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "earth",
+     "globe"
+    ],
+    "instanceOf": [
+     "terrestrial planet"
+    ],
+    "memberOf": [
+     "solar system"
+    ],
+    "examples": [
+     "he sailed around the world"
+    ]
+   },
+   {
+    "definition": "involving the entire earth; not limited or provincial in scope",
+    "partOfSpeech": "adjective",
+    "synonyms": [
+     "global",
+     "planetary",
+     "world-wide",
+     "worldwide"
+    ],
+    "similarTo": [
+     "international"
+    ],
+    "examples": [
+     "a world crisis",
+     "of worldwide significance"
+    ]
+   },
+   {
+    "definition": "the concerns of this life as distinguished from heaven and the afterlife",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "earth",
+     "earthly concern",
+     "worldly concern"
+    ],
+    "typeOf": [
+     "concern"
+    ],
+    "derivation": [
+     "worldly"
+    ],
+    "examples": [
+     "they consider the church to be independent of the world"
+    ]
+   },
+   {
+    "definition": "everything that exists anywhere",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "cosmos",
+     "creation",
+     "existence",
+     "macrocosm",
+     "universe"
+    ],
+    "typeOf": [
+     "natural object"
+    ],
+    "hasTypes": [
+     "natural order",
+     "closed universe",
+     "nature"
+    ],
+    "hasMembers": [
+     "galaxy",
+     "extragalactic nebula"
+    ],
+    "hasParts": [
+     "heavenly body",
+     "extraterrestrial object",
+     "estraterrestrial body",
+     "celestial body"
+    ]
+   },
+   {
+    "definition": "all of the living human inhabitants of the earth",
+    "partOfSpeech": "noun",
+    "synonyms": [
+     "human beings",
+     "human race",
+     "humanity",
+     "humankind",
+     "humans",
+     "man",
+     "mankind"
+    ],
+    "typeOf": [
+     "group",
+     "grouping",
+     "man",
+     "human being",
+     "human",
+     "homo"
+    ],
+    "hasMembers": [
+     "people"
+    ],
+    "examples": [
+     "all the world loves a lover"
+    ]
+   },
+   {
+    "definition": "a part of the earth that can be considered separately",
+    "partOfSpeech": "noun",
+    "typeOf": [
+     "piece",
+     "part"
+    ],
+    "examples": [
+     "the outdoor world",
+     "the world of insects"
+    ]
+   }
+  ],
+  "letters": 5,
+  "sounds": 5,
+  "frequency": {
+   "zipf": 5.74,
+   "perMillion": 549.3,
+   "diversity": 0.74
+  }
+ }
+}
