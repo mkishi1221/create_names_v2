@@ -51,7 +51,7 @@ else
     python3 keyword_generator.py \
         tmp/user_sentences.tsv \
         tmp/user_keywords.tsv \
-        tmp/keywords.json
+        results/keywords.xlsx
     
     cat ref/logs/source_data_log.tsv > ref/logs/prev_source_data_log.tsv
     cat ref/logs/script_log.tsv > ref/logs/prev_script_log.tsv

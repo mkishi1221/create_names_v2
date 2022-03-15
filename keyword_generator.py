@@ -13,7 +13,7 @@ import operator
 import pandas as pd
 
 
-def generate_word_list(text_file, user_keywords_file):
+def generate_word_list(text_file, user_keywords_file, output):
 
     all_keywords: list[Keyword] = []
 
@@ -61,7 +61,7 @@ def generate_word_list(text_file, user_keywords_file):
     keywords.sort(key=operator.attrgetter('keyword'))
     keywords.sort(key=operator.attrgetter('keyword_total_score'), reverse=True)
 
-    with open(sys.argv[3], "wb+") as out_file:
+    with open("tmp/keywords.json", "wb+") as out_file:
         out_file.write(json.dumps(keywords, option=json.OPT_INDENT_2))
 
     user_keywords = []
@@ -78,7 +78,7 @@ def generate_word_list(text_file, user_keywords_file):
     # Export to excel file
     df1 = pd.DataFrame.from_dict(user_keywords, orient="columns")
     df1.insert(5, column="Keyword check", value="")
-    df1.to_excel("tmp/keywords.xlsx", index=False)
+    df1.to_excel(output, index=False)
 
 if __name__ == "__main__":
-    generate_word_list(sys.argv[1], sys.argv[2])
+    generate_word_list(sys.argv[1], sys.argv[2], sys.argv[3])
