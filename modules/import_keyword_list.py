@@ -13,9 +13,16 @@ def create_keyword(word: str) -> Keyword:
         Removes non-alphabet characters from beginning and end of word and saves it as lowercase "keyword".
         (eg. "+High-tech!" → "high-tech" )
     """
-    keyword = re.sub(r"^\W+", "", word)
-    keyword = re.sub(r"\W+$", "", keyword)
-    return Keyword(word, len(keyword), keyword.lower(), "keyword_list", keyword_user_score=3, keyword_total_score=3)
+    processed_word = re.sub(r"^\W+", "", word).lower()
+    processed_word = re.sub(r"\W+$", "", processed_word)
+    return Keyword(
+        origin="keyword_list",
+        source_word=word,
+        keyword=processed_word,
+        keyword_len=len(processed_word),
+        keyword_user_score=3,
+        keyword_total_score=3
+    )
 
 
 def import_keyword_list(words) -> List[Keyword]:
@@ -32,7 +39,7 @@ def import_keyword_list(words) -> List[Keyword]:
     # - "keyword" in alphabetical order
     # - "original" word in alphabetical order.
     sorted_unique_words = sorted(
-        unique_words, key=lambda k: (k.keyword, k.word.lower())
+        unique_words, key=lambda k: (k.keyword, k.source_word.lower())
     )
 
     with open("ref/sorted_unique_words.json", "wb+") as out_file:

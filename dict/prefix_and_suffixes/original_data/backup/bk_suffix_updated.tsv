@@ -1,0 +1,62 @@
+suffix	len	meaning	examples	paired words	POS pair	immediate viability	notes
+ac	2	pertaining to	cardiac, hemophiliac, maniac	cardia, hemophilia, mania	noun	yes	"only words that end in ""a"""
+ic	2	relating to, characterized by	historic, meteoric, organic	history, meteor, organ	verb	no	
+sophic	6	wisdom, knowledge	philosophic, theosophic, anthroposophic	philosophy, theosophy, anthroposophy	noun	yes	
+etic	4	relating to (makes the word an adj.)	athletic, energetic, poetic	athelete, energy, poem	noun	no	
+oid	3	resembling	humanoid, paraboloid, parasitoid	human, parabola, parasite	noun	yes	last vowel needs to be removed
+ward	4	specifies direction	backward, eastward, homeward	back, east, home	noun	yes	
+ance	4	state or quality of	brilliance, defiance, annoyance	brilliant, defiant, annoying	adjective	yes	
+ence	4	state or condition, action	absence, dependence, negligence	absent, dependent, negligible	adjective	yes	
+ade	4	act, action or process, product	blockade, galopade, harlequinade,	block, galop, harlequin	noun	yes	
+tude	4	state, condition or quality	infinitude, definitude, certitude	infinite, definite, certain	adjective	no	
+age	3	action or process	passage, pilgrimage, voltage	pass, pilgrim, volt	noun	yes	
+able	4	able to be	excitable, understandable, preventable	excite, understand, prevent	verb	yes	last vowel needs to be removed
+ible	4	able to be	comprehensible, destructible, compressible	comprehend, destroy, compress	verb	yes	
+ile	3	relating to, capable of	percentile, infantile, insectile	percent, infant, insect	noun	yes	
+some	4	characterized by, group of	adventuresome, quarrelsome, troublesome	adventure, quarrel, trouble	noun	yes	
+ine	3	relating to	canine, feminine, masculine	(all latin words)	noun	yes	
+phone	5	sound	homophone, telephone, microphone	(all latin words)	adjective	yes	
+ware	4	things of the same type or material	graniteware, laquerware, kitchenware	granite, laquer, kitchen	noun	yes	last vowel needs to be removed
+ure	3	action, condition	closure, erasure, failure	close, erase,fail	verb	yes	last vowel needs to be removed
+wise	4	in what manner or direction	clockwise, lengthwise, streetwise	clock, length, street	noun	yes	
+ate	3	state or quality of (adj.)	affectionate, passionate, orchestrate	affection, passion, orchestra	noun	yes	last vowel needs to be removed
+ive	3	inclined to; quality of; that which	attractive, expensive, repulsive	attract, expense, repulse	verb	yes	last vowel needs to be removed
+ative	5	tending to (adj.)	creative, preservative, talkative	create, preserve, talk	verb	yes	last vowel needs to be removed
+ize	3	cause, treat, become	professionalize, characterise, sensationalize	professional, character, sensational	adjective	yes	"only words that end in ""al"""
+log	3	speech	dialog, monolog,	(all latin words)	noun	yes	
+ish	3	relating to, characteristic	apish, brutish, childish	ape, brute, child	noun	yes	last vowel needs to be removed
+th	2	state or quality	depth, length, strength	deep, long, strong	adjective	no	
+al	2	relating to	bacterial, theatrical, natural	bacteria, theatric, nature	noun	yes	last vowel needs to be removed
+ical	4	relating to, characterized by	historical, anatomical, philathropical	history, anatomy, philanthropy	noun	yes	"only words that end in ""y"" and y needs to be removed"
+ial	3	relating to	entrepreneurial, editorial, presidential	entrepreneur, editor, president	noun	yes	
+onym	4	name, word	synonym, antonym, homonym	(all latin words)	noun	yes	
+an	2	relating to, belonging to	Italian, Elizabethan, African	Italy, Elizabeth, Africa	noun	yes	last vowel needs to be removed
+ian	3	relating to, belonging to	librarian, utopian, magician	library, utopia, magic	noun	yes	last vowel needs to be removed
+en	2	makes the word a verb	awaken, lengthen, strengthen	awake, length, strength	noun	yes	last vowel needs to be removed
+ion	3	action or process	celebration, completion, navigation	celebrate, complete, navigate	verb	yes	"only words that end in ""te"""
+sion	4	state or quality	confusion, depression, fabrication	confuse, depress, impress	verb	yes	only words that end with s (with or without vowel after) last vowel needs to be removed
+tion	4	state or quality	distribution, construction, protection	distribute, construct, protect	verb	yes	only words that end with t (with or without vowel after) last vowel needs to be removed
+ern	3	state or quality of	eastern, northern, western	east, north, west	noun	yes	
+ar	2	of or relating to, being	beggar, molecular, liar	beg, molecule, lie	noun	yes	last vowel needs to be removed
+ular	4	relating to or resembling	cellular, circular, muscular	cell, circle,muscle	noun	yes	"only words that end in ""cule"" or ""cle"" and ""cule"" or ""cle"" needs to be removed"
+less	4	without	fearless, helpless, homeless	fear, help, home	noun	yes	
+ness	4	state or quality (makes a noun)	kindness, shyness, weakness	kind, shy, weak	adjective	yes	
+ous	3	full of	hazardous, humorous, wondrous	hazard, humor, wonder	noun	yes	
+ious	4	having the qualities of, full of	ambitious, cautious, religious	ambition, caution, religion	noun	yes	"only words that end in ""ion"" and ""ion"" needs to be removed"
+uous	4	state or quality of	nonsensuous, spiritous, virtuous	nonsense, spirit, continue	noun	yes	last vowel needs to be removed
+let	3	version of	booklet, droplet, streamlet	book, drop, stream	noun	yes	
+ent	3	inclined to performing/causing, or one who performs/causes	dependent, correspondent, absorbent	depend, correspond, absorb	verb	yes	last vowel needs to be removed
+ment	4	action, result	movement, placement, shipment	move, place, ship	verb	yes	
+dox	3	belief, praise	orthodox, paradox	(all latin words)	noun	yes	
+y	1	made up of, characterized	brainy, fruity, gooey	brain, fruit, goo	noun	yes	"if word ends in vowel, ""e"" needs to be added before ""y"""
+cy	2	state, condition or quality	efficiency, privacy, belligerency	efficient, private, belligerent	adjective	yes	"only words that end in ""ent"""
+ency	4	condition or quality	clemency, dependency, efficiency	clement, dependent, efficient	adjective	yes	"only words that end in ""ent"" and ""ent"" needs to be removed"
+fy	2	make, cause (makes the word a verb)	simplify, falsify, humidify	simple, false, humid	adjective	yes	"if word ends in vowel, ""i"" needs to be added before ""fy"""
+ology	5	study of, science of	anthropology, archaeology, biology	(all latin words)	verb	yes	last vowel needs to be removed
+sophy	5	wisdom, knowledge	philosophy, theosophy, anthroposophic	(all latin words)	noun	yes	
+ly	2	in what manner	badly, courageously, happily	bad, courageous, happy	adjective	yes	"last vowel needs to be replaced with ""i"""
+ily	3	in what manner	sloppily, steadily, zanily	sloppy, steady, thirst	adjective	yes	"if word ends in ""y"" needs to be replaced with ""i"""
+ary	3	of or relating to	parliamentary, military, budgetary	parliament, military, budget	noun	yes	last vowel needs to be removed
+ory	3	relating to	contributory, inflammatory, satisfactory	contribute, inflame, satsify	verb	yes	last vowel needs to be removed
+ty	2	state, condition or quality	ability, honesty, loyalty	able, honest, loyal	adjective	yes	last vowel needs to be removed
+ity	3	state, condition, or quality	abnormality, civility, compatibility	abnormal, civil, compatible	adjective	yes	only words that end with l (with or without vowel after) last vowel needs to be removed

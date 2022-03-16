@@ -3,6 +3,7 @@
 import regex as re
 import sys
 import json
+from classes.keyword import Keyword
 
 # Convert tsv format dictionary to json form
 def generate_json_dict(filepath, word_type, output_path):

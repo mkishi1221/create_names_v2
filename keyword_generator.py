@@ -35,6 +35,7 @@ def generate_word_list(text_file, user_keywords_file, output):
     if sentences != "":
 
         # Filter out unique lines from source data containing sentences
+        # BLACKLIST SORTER NEEDS TO BE CREATED!
         print("Finding unique lines...")
         unique_lines = find_unique_lines(sentences)
 
@@ -64,21 +65,10 @@ def generate_word_list(text_file, user_keywords_file, output):
     with open("tmp/keywords.json", "wb+") as out_file:
         out_file.write(json.dumps(keywords, option=json.OPT_INDENT_2))
 
-    user_keywords = []
-    for keyword_obj in keywords:
-        user_keyword = {
-            "user": keyword_obj.keyword_user_score,
-            "wiki": keyword_obj.keyword_wiki_score,
-            "score": keyword_obj.keyword_total_score,
-            "pos": keyword_obj.wordsAPI_pos,
-            "keyword": keyword_obj.keyword,
-        }
-        user_keywords.append(user_keyword)
-
     # Export to excel file
-    df1 = pd.DataFrame.from_dict(user_keywords, orient="columns")
-    df1.insert(5, column="Keyword check", value="")
-    df1.to_excel(output, index=False)
+    df1 = pd.DataFrame.from_dict(keywords, orient="columns")
+    df1.insert(13, column="Keyword shortlist (insert \"s\")", value="")
+    df1.to_excel(output)
 
 if __name__ == "__main__":
     generate_word_list(sys.argv[1], sys.argv[2], sys.argv[3])

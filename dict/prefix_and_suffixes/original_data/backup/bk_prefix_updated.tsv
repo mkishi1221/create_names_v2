@@ -1,0 +1,65 @@
+prefixes	len	meaning	examples	paired words	POS pair	immediate viability	notes
+acro	4	beginning, end, height, peak, summit, tip, top	acrophobia, acrobatic, acropolis	(all latin)	any	yes	
+aero	4	air, atmosphere, aviation, gas	aeromechanics, aeronautical, aeromedicine	mechanic, nautical, medicine	any	yes	
+after	5	following, lower, rear, resulting	afterthought, aftermarket, aftereffect	thought, market, effect	noun	yes	
+ambi	4	both	ambisexuality, ambidextrous, ambiversion	sexuality, dextrous, version	any	yes	
+ante	4	before, forward, prior or prior to	antechamber, antenuptial, antedating	chamber, nuptial, dating	any	yes	
+anti	4	against, alleviating, curing, opposed, opposite, preventing	antidemocratic, anticapitalist, antibacterial	democratic, capitalist, bacterial	any	yes	
+arch	4	chief, extreme, principal; original, primary, primitive	archaeologist, archetypical, archrival	-ologist, typical, rival	any	yes	
+archi	5	chief, extreme, principal; original, primary, primitive	architectural, archipelago, archiepiscopal	-tectural, -pelago, episcopal	any	yes	
+auto	4	automatic, same one, self or self-acting	autosuggestion, autoinfection, autobiographic	suggestion, infection, biographic	any	yes	
+bi	2	between, double, two, twice; biographical, life	bipartisanship, bipolarization, bidirectionally	partisanship, polarization, directionally	any	yes	
+bio	3	between, double, two, twice; biographical, life	bioluminescence, biogeochemistry, biotechnologist	luminescence, geochemistry, technologist	noun	yes	
+chrono	6	time	chronobiologic, chronological, chronotherapy	biologic, logical, therapy	any	yes	
+co	2	alternate, deputy, fellow, in or to the same degree, joint, partner, together, with	codetermination, coconspirator, copolymer	determination, conspirator, polymer	any	yes	
+contra	6	against, contrary, contrasting	contraindicate, contraposition, contrabassist	indicate, position, bassist	any	yes	
+counter	7	against, complementary, contrary, corresponding, duplicate, opposing, retaliatory, substitute	counterargument, countermeasure, counterfactual	argument, measure, factual	any	yes	
+crypto	6	coded, covered, hidden	cryptozoologist, cryptographer, cryptologic	zoologist, grapher, logic	any	yes	
+cyber	5	pertaining to computers or computer networks	cybercafe, cyberspace, cyberpunk	cafe, space, punk	any	yes	
+dia	3	containing two, double, twice, twofold, daytime	diamagnetism, diametrically, diacritical	magnetism, metrically, critical	any	yes	
+dis	3	absence or opposite of, completely, deprive of, do the opposite of, exclude or expel from, not	dissatisfaction, disadvantageous, disrespectfully	satisfaction, advantageous, respectfully	any	yes	
+dys	3	abnormal, bad, difficult, impaired	dyslogistically, dysfunctional, dysphoric	logistically, functional, phoric	adjective	yes	
+epi	3	after, attached to, besides, outer, over, upon	epiphenomenon, epicenter, epipen	phenomenon, center, pen	any	yes	
+extra	5	beyond, outside	extralinguistic, extraordinary, extralogical	linguistic, ordinary, logical	any	yes	
+extro	5	outward	extroversion, extrovert, extroverted	version, -vert, -verted	any	yes	
+fore	4	at or in front, before, earlier	foresightedness, foreknowledge, foreshadowing	sightedness, knowledge, shadowing	any	yes	
+geo	3	earth, ground, soil	geopolitically, geochronologic, geophysicists	politically, chronologic, physicists	any	yes	
+hyper	5	above, beyond, excessive	hypercorrection, hyperinflation, hyperreactive	correction, inflation, reactive	any	yes	
+hypo	4	beneath, down, less than usual, under	hypoallergenic, hypocritical, hypotension	allergenic, critical, tension	any	yes	
+infra	5	below, within	infrastructure, infraspecific, infrasonic	structure, specific, sonic	any	yes	
+inter	5	among, between, between the limits of, carried on between, derived from two or more, existing between, in the midst of, involving, located between, occurring between, reciprocal or reciprocally, shared by, within	interchangeable, intertwinement, international	changeable, twinement, national	any	yes	
+intra	5	between layers of, during, within	intramolecular, intragalactic, intracranial	molecular, galactic, cranial	any	yes	
+intro	5	in, into, inward, within	introversion, introversive, introvert	version, -versive, -vert	any	yes	
+macro	5	large, long	macrophotograph, macroeconomics, macrocyclic	photograph, economics, cyclic	any	yes	
+mega	4	great, large, million, surpassing	megaproject, megapixel, megaphonic	project, pixel, phonic	any	yes	
+meta	4	after, behind, beyond, change, later, transcending, transformation	metamathematics, metamorphosing, metafictional	mathematics, morphosing, fictional	any	yes	
+micro	5	abnormally small, millionth, minute, pertaining to a minute qualities or a small area, small	microphotograph, microinjection, microstructure	photograph, injection, structure	any	yes	
+mid	3	in the middle or the midst	midfielder, midsection, midstream	fielder, section, stream	any	yes	
+mini	4	briefer, smaller	minicomputer, minicourse, minibus	computer, course, bus	any	yes	
+mis	3	bad or badly, opposite of, not, suspiciously, unfavorably, wrong or wrongly; hatred	mischaracterize, miscorrelation, misdistribution	characterize, correlation, distribution	any	yes	
+mono	4	alone, one, single	monounsaturated, monopropellants, monochromatic	unsaturated, propellants, chromatic	any	yes	
+multi	5	many, many times over, more than one or two, multiple, much	multiprocessing, multifunctional, multidiscipline	processing, functional, discipline	any	yes	
+omni	4	all, universally	omnidirectional, omnicompetence, omnipresent	directional, competence, present	any	yes	
+over	4	excessive, surpassing	overrepresented, oversensitivity, overfamiliarity	represented, sensitivity, familiarity	any	yes	
+para	4	abnormal, accessory, almost, alongside of, aside from, beside, beyond, faulty, related, resembling, subsidiary; parachute	paralinguistic, paramagnetism, parasynthetic	linguistic, magnetism, synthetic	any	yes	
+philo	5	attracted to, enjoying, loving, requiring	philologically, philodendron, philosophy	logically, dendron, -sophy	any	yes	
+phono	5	sound, speech, voice	phonocardiogram, phonogramically, phonological	cardiogram, gramically, logical	any	yes	
+photo	5	light, radiant energy	photojournalism, photosynthesize, photoconductive	journalism, synthesize, conductive	any	yes	
+poly	4	excessive, increased, many, much, multiple, several	polycrystalline, polymorphically, polyembryonic	crystalline, morphically, embryonic	any	yes	
+post	4	after, behind, following, later, posterior, subsequent	posttransfusion, postproduction, posttraumatic	transfusion, production, traumatic	any	yes	
+pre	3	anterior to, before, beforehand, earlier than, in advance, in front of, preparatory to, prerequisite to, prior to	preregistration, preadolescence, predetermining	registration, adolescence, determining	any	yes	
+pro	3	anterior, before, earlier than, in front of, precursory, prior to, projecting, rudimentary; championing, favoring, substituting for, supporting	pronunciation, propositional, provisional	nunciation, positional, visional	any	yes	
+proto	5	beginning, first, giving rise to, primary	protohistorian, protolanguage, protohistoric	historian, language, historic	any	yes	
+semi	4	half in quantity or time, or halfway through, incomplete or incompletely, partly, similar to	semitransparent, semicrystalline, semiconductor	transparent, crystalline, conductor	any	yes	
+sub	3	almost, below, beneath, nearly, secondary, somewhat, subordinate, under,	suborganization, subnormality, subdiscipline	organization, normality, discipline	any	yes	
+super	5	above, exceeding, extra, higher, more than, on, over and above, superior, surpassing, transcending	superconducting, supernaturalism, superplasticity	conducting, naturalism, plasticity	any	yes	
+sym	3	at the same time, the same, together, united, with or along with	symphonically, symmetallism, sympathetic	phonically, metallism, pathetic	any	yes	
+syn	3	at the same time, the same, together, united, with or along with	synchronisation, synchronically, synecology	chronisation, chronically, ecology	any	yes	
+tele	4	distant; completion, end	telephotography, teleconference, telemarketing	photography, conference, marketing	any	yes	
+thermo	6	heat, thermoelectric	thermochemistry, thermodynamical, thermoregulate	chemistry, dynamical, regulate	any	yes	
+trans	5	across, beyond, changed, through, transferred	transhistorical, transpositional, transformation	historical, positional, formation	any	yes	
+tri	3	into thirds, every third, three, thrice	tridimensional, triphosphate, trichromatic	dimensional, phosphate, chromatic	any	yes	
+ultra	5	beyond, transcending	ultrafiltration, ultraconvenient, ultramodernist	filtration, convenient, modernist	any	yes	
+un	2	contrary to, not, opposite of; deprive of, release, remove, reverse	unsubstantiated, unreconstructed, unaccommodating	substantiated, reconstructed, accommodating	any	yes	
+under	5	below, beneath, facing downward, lower, short of, subjected, subordinate	underprivileged, underestimation, understatement	privileged, estimation, statement	any	yes	
+uni	3	one, single	unidirectional, unicellular, uniform	directional, cellular, form	any	yes	

@@ -24,15 +24,16 @@ def create_keyword(word, word_pos, word_lemma) -> Keyword:
     returns:
         token_dict: dict; a dictionary containing all important parameters of keyword
     """
-    keyword = re.sub(r"^\W+", "", word)
-    keyword = re.sub(r"\W+$", "", keyword)
+    processed_word = re.sub(r"^\W+", "", word).lower()
+    processed_word = re.sub(r"\W+$", "", processed_word)
+
     return Keyword(
-        word,
-        len(keyword),
-        keyword.lower(),
-        "sentences",
-        spacy_pos=word_pos,
-        lemma=word_lemma,
+        origin="sentences",
+        source_word=word,
+        spacy_lemma=word_lemma,
+        keyword=processed_word,
+        keyword_len=len(processed_word),
+        spacy_pos=word_pos
     )
 
 
@@ -53,19 +54,19 @@ def extract_words_with_spacy(lines) -> List[Keyword]:
 
     unique_words = []
     for keyword in keywords:
-        if keyword.word != "" and keyword.keyword_len >= 1 and keyword not in unique_words:
+        if keyword.source_word != "" and keyword.keyword_len >= 1 and keyword not in unique_words:
             unique_words.append(keyword)
 
     # Count occurrence of unique word
     for unique_word in unique_words:
-        unique_word.occurrence = keywords.count(unique_word)
+        unique_word.spacy_occurrence = keywords.count(unique_word)
 
     # Sort keyword list according to:
-    # - "keyword" in alphabetical order
-    # - occurrence
-    # - "original" word in alphabetical order.
+    # 1. "keyword" in alphabetical order
+    # 2. occurrence
+    # 3. "original" word in alphabetical order.
     sorted_unique_words = sorted(
-        unique_words, key=lambda k: (k.keyword, -k.occurrence, k.word.lower())
+        unique_words, key=lambda k: (k.keyword, -k.spacy_occurrence, k.source_word.lower())
     )
 
     return sorted_unique_words

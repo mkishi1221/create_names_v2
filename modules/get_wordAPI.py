@@ -19,7 +19,7 @@ def create_small_wordAPI(keywords: List[Keyword], wordapi_data: dict):
         word_base = str(keyword_obj.keyword)
         word_list.append(word_base)
 
-        word_lemma = str(keyword_obj.lemma)
+        word_lemma = str(keyword_obj.spacy_lemma)
         if word_lemma != "" and word_lemma.lower() != word_base:
             word_list.append(word_lemma)
 
@@ -77,7 +77,7 @@ def update_pos_value(
             keyword_b_pos = fetch_pos_wordAPI(keyword_b, wordsAPI_data)
             pos_list_keyword_n_lemma.update(keyword_b_pos)
 
-        keyword_l = keyword_data.lemma
+        keyword_l = keyword_data.spacy_lemma
         if keyword_l is not None:
             keyword_l_pos = fetch_pos_wordAPI(keyword_l, wordsAPI_data)
             pos_list_keyword_n_lemma.update(keyword_l_pos)
@@ -90,6 +90,8 @@ def update_pos_value(
         for pos in pos_list:
             keyword_data_update = copy.deepcopy(keyword_data)
             keyword_data_update.wordsAPI_pos = pos
+            # Future update will evaluate both spacy_POS and wordAPI_POS for accuracy and determine true POS
+            keyword_data_update.pos = pos
             updated_keywords_db.append(keyword_data_update)
 
     return updated_keywords_db
