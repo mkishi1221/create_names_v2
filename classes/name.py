@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from classes.algorithm import Algorithm
 
 @dataclass
 class Name:
@@ -9,10 +10,11 @@ class Name:
 
     name: str = ""
     length: int = 0
-    keywords: list[tuple] = field(default_factory=list)
     keyword_score: int = 0
     length_score: int = 0
     score: int = 0
+    algorithm: Algorithm = ""
+    keywords: list[tuple] = field(default_factory=list)
 
     def __eq__(self, o: object) -> bool:
         return self.name == o.name

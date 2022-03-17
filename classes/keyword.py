@@ -49,7 +49,25 @@ class Modword(Keyword):
     modword: str = ""
     modword_len: int = 0
 
-    def __init__(self, origin, source_word, spacy_lemma, keyword, keyword_len, spacy_pos, wordsAPI_pos, pos, spacy_occurrence, keyword_user_score, keyword_wiki_score, keyword_total_score, pairing_limitations, modifier, modword, modword_len):
+    def __init__(
+        self,
+        origin,
+        source_word,
+        spacy_lemma,
+        keyword,
+        keyword_len,
+        spacy_pos,
+        wordsAPI_pos,
+        pos,
+        spacy_occurrence,
+        keyword_user_score,
+        keyword_wiki_score,
+        keyword_total_score,
+        pairing_limitations,
+        modifier,
+        modword,
+        modword_len
+    ):
         self.origin = origin
         self.source_word = source_word
         self.spacy_lemma = spacy_lemma

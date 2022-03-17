@@ -7,7 +7,7 @@ start_time=`gdate +%s%3N`
 # Create required folders
 mkdir -p tmp
 mkdir -p ref/logs
-mkdir -p results
+mkdir -p results/
 
 # Create script log files
 sh modules/create_script_log_files.sh

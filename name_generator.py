@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import sys
 import orjson as json
-from modules.combine_words import combine_words
+from modules.make_names import make_names
 from modules.collect_algorithms import collect_algorithms
 from classes.algorithm import Algorithm
 import pandas as pd
@@ -34,7 +34,29 @@ def pull_dictionary(dictionary_file, keyword_type):
     return target_list
 
 # Generate name ideas
-def generate_names(keyword_file, algorithm_file, output):
+def generate_names(keyword_file, algorithm_file, tmp_output, output):
+
+    # Get all algorithms
+    algorithms = collect_algorithms(algorithm_file)
+    comp_list_types = []
+    required_comps = []
+
+    for algo in algorithms:
+        comp_list_type = sorted([component[0] for component in algo.components])
+        if comp_list_type not in comp_list_types:
+            comp_list_types.append(comp_list_type)
+
+    print("comp_list_types:")
+    print(comp_list_types)
+
+    # Get all elements used in comp_list
+    for comp_list_type in comp_list_types:
+        for comp in comp_list_type:
+            if comp not in required_comps:
+                required_comps.append(comp)
+
+    print("required_comps:")
+    print(required_comps)
 
     # Access keyword list and sort words into verbs, nouns or adjectives
     df = pd.read_excel(keyword_file, index_col=0)
@@ -68,13 +90,20 @@ def generate_names(keyword_file, algorithm_file, output):
         elif row["wordsAPI_pos"] == "adjective":
             adjectives.append(keyword_obj)
 
-    # Access suffix list and add to suffix list
-    prefix_file = "dict/prefix.xlsx"
-    keyword_type = "prefix"
-    prefixes = pull_dictionary(prefix_file, keyword_type)
-    suffix_file = "dict/suffix.xlsx"
-    keyword_type = "suffix"
-    suffixes = pull_dictionary(suffix_file, keyword_type)
+    # Pull required dictionaries
+    if "pref" in required_comps:
+        prefix_file = "dict/prefix.xlsx"
+        keyword_type = "prefix"
+        prefixes = pull_dictionary(prefix_file, keyword_type)
+    else:
+        prefixes = []
+
+    if "suff" in required_comps:
+        suffix_file = "dict/suffix.xlsx"
+        keyword_type = "suffix"
+        suffixes = pull_dictionary(suffix_file, keyword_type)
+    else:
+        suffixes = []
 
     # these lists will be added later
     joints = []
@@ -94,27 +123,17 @@ def generate_names(keyword_file, algorithm_file, output):
     with open("tmp/keyword_shortlist.json", "wb+") as out_file:
         out_file.write(json.dumps(keyword_dict, option=json.OPT_INDENT_2))
 
-    # Get all algorithms
-    algorithms = collect_algorithms(algorithm_file)
+    # Generate names
+    all_names = make_names(algorithms, keyword_dict)
 
-    # Generate names by combining two keywords together
-    def combine(alg: Algorithm):
-        print(
-            f"Generating names with {alg}..."
-        )
-
-        return combine_words(
-            alg,
-            keyword_dict,
-        )
-
-    all_names = [name for alg in algorithms for name in combine(alg)]
-    all_names = sorted(all_names, key=lambda k: (k.score * -1, k.name))
-
-    with open(sys.argv[3], "wb+") as out_file:
+    with open(tmp_output, "wb+") as out_file:
         # remove below indent when no further debug needed for more speeeeeed
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
+    # # Export to excel file
+    # df1 = pd.DataFrame.from_dict(all_names, orient="columns")
+    # # df1.insert(13, column="Keyword shortlist (insert \"s\")", value="")
+    # df1.to_excel(output)
 
 if __name__ == "__main__":
-    generate_names(sys.argv[1], sys.argv[2], sys.argv[3])
+    generate_names(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
