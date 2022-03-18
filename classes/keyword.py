@@ -10,28 +10,25 @@ class Keyword:
     A simple helper class for keywords adding a comparator for better readability
     """
 
-    origin: str = ""
-    source_word: str = ""
-    spacy_lemma: str = ""
-    keyword: str = ""
+    origin: list[str] = None
+    source_word: str = None
+    spacy_lemma: str = None
+    keyword: str = None
     keyword_len: int = 0
-    spacy_pos: str = ""
-    wordsAPI_pos: str = ""
-    pos: str = ""
+    spacy_pos: str = None
+    wordsAPI_pos: str = None
+    pos: str = None
     spacy_occurrence: int = 0
-    keyword_user_score: int = 0
-    keyword_wiki_score: int = 0
-    keyword_total_score: int = 0
     pairing_limitations: str = "none"
 
     def __eq__(self, o: object) -> bool:
-        return self.keyword == o.keyword and self.wordsAPI_pos == o.wordsAPI_pos
+        return self.source_word == o.source_word and self.keyword == o.keyword and self.pos == o.pos
 
     def __ne__(self, o: object) -> bool:
-        return self.keyword != o.keyword and self.wordsAPI_pos != o.wordsAPI_pos
+        return self.source_word != o.source_word and self.keyword != o.keyword and self.pos != o.pos
 
     def __hash__(self) -> int:
-        return hash((self.source_word, self.keyword_len, self.keyword, self.origin))
+        return hash((self.source_word, self.keyword_len, self.keyword, str(self.origin)))
 
     def __repr__(self) -> str:
         return str(
@@ -60,9 +57,6 @@ class Modword(Keyword):
         wordsAPI_pos,
         pos,
         spacy_occurrence,
-        keyword_user_score,
-        keyword_wiki_score,
-        keyword_total_score,
         pairing_limitations,
         modifier,
         modword,
@@ -77,9 +71,6 @@ class Modword(Keyword):
         self.wordsAPI_pos = wordsAPI_pos
         self.pos = pos
         self.spacy_occurrence = spacy_occurrence
-        self.keyword_user_score = keyword_user_score
-        self.keyword_wiki_score = keyword_wiki_score
-        self.keyword_total_score = keyword_total_score
         self.pairing_limitations = pairing_limitations
         self.modifier = modifier
         self.modword = modword

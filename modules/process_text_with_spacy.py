@@ -28,7 +28,6 @@ def create_keyword(word, word_pos, word_lemma) -> Keyword:
     processed_word = re.sub(r"\W+$", "", processed_word)
 
     return Keyword(
-        origin="sentences",
         source_word=word,
         spacy_lemma=word_lemma,
         keyword=processed_word,
@@ -37,9 +36,9 @@ def create_keyword(word, word_pos, word_lemma) -> Keyword:
     )
 
 
-def extract_words_with_spacy(lines) -> List[Keyword]:
+def process_text_with_spacy(lines) -> List[Keyword]:
     keywords: list[Keyword] = []
-    for line in map(lambda line: line["line"], lines):
+    for line in lines:
         doc = nlp(line)
 
         # Spacy divides sentences ("sent") into words ("tokens").

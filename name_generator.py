@@ -25,9 +25,6 @@ def pull_dictionary(dictionary_file, keyword_type):
                 wordsAPI_pos="",
                 pos=keyword_type,
                 spacy_occurrence="",
-                keyword_user_score=row["keyword_user_score"],
-                keyword_wiki_score=row["keyword_wiki_score"],
-                keyword_total_score=row["keyword_total_score"],
                 pairing_limitations=row["pairing_limitations"]
             )
         )
@@ -77,9 +74,6 @@ def generate_names(keyword_file, algorithm_file, tmp_output, output):
             wordsAPI_pos=row["wordsAPI_pos"],
             pos=row["pos"],
             spacy_occurrence=row["spacy_occurrence"],
-            keyword_user_score=row["keyword_user_score"],
-            keyword_wiki_score=row["keyword_wiki_score"],
-            keyword_total_score=row["keyword_total_score"],
             pairing_limitations=row["pairing_limitations"]
         )
 
@@ -130,10 +124,19 @@ def generate_names(keyword_file, algorithm_file, tmp_output, output):
         # remove below indent when no further debug needed for more speeeeeed
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
-    # # Export to excel file
-    # df1 = pd.DataFrame.from_dict(all_names, orient="columns")
-    # # df1.insert(13, column="Keyword shortlist (insert \"s\")", value="")
-    # df1.to_excel(output)
+    excel_output = []
+
+    for comp_list_types in all_names.keys():
+        for name in all_names[comp_list_types]:
+            excel_output.append(name)
+
+    excel_output = sorted(excel_output, key=lambda d: d.name)
+    excel_output = sorted(excel_output, key=lambda d: d.length)
+    excel_output = sorted(excel_output, key=lambda d: d.total_score, reverse=True)
+
+    # Export to excel file
+    df1 = pd.DataFrame.from_dict(excel_output, orient="columns")
+    df1.to_excel(output)
 
 if __name__ == "__main__":
     generate_names(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])

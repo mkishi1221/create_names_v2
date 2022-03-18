@@ -26,16 +26,16 @@ def combined_keyword_scorer(score_list):
 def combine_1_word(modword_1_obj, alg, name_key):
     name_c1w = modword_1_obj.modword.title()
     name_length = len(name_c1w)
-    name_keyword_score = int(modword_1_obj.keyword_total_score)
     name_length_score = name_length_scorer(name_length)
-    name_score = name_keyword_score + int(name_length_score)
+    # other scores will be added to name_score later (ie. legibility scores etc.)
+    name_score = int(name_length_score)
 
     return Name(
         name=name_c1w,
+        name_lower=name_c1w.lower(),
         length=name_length,
-        keyword_score=name_keyword_score,
         length_score=name_length_score,
-        score=name_score,
+        total_score=name_score,
         algorithm=alg,
         keywords=name_key
     )
@@ -48,21 +48,16 @@ def combine_2_words(modword_1_obj, modword_2_obj, alg, name_key):
         ]
     )
     name_length = len(name_c2w)
-    name_keyword_score = combined_keyword_scorer(
-        [
-            int(modword_1_obj.keyword_total_score),
-            int(modword_2_obj.keyword_total_score)
-        ]
-    )
     name_length_score = name_length_scorer(name_length)
-    name_score = name_keyword_score + int(name_length_score)
+    # other scores will be added to name_score later (ie. legibility scores etc.)
+    name_score = int(name_length_score)
 
     return Name(
         name=name_c2w,
+        name_lower=name_c2w.lower(),
         length=name_length,
-        keyword_score=name_keyword_score,
         length_score=name_length_score,
-        score=name_score,
+        total_score=name_score,
         algorithm=alg,
         keywords=name_key
     )
@@ -76,22 +71,16 @@ def combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, alg, name_key):
         ]
     )
     name_length = len(name_c3w)
-    name_keyword_score = combined_keyword_scorer(
-        [
-            int(modword_1_obj.keyword_total_score),
-            int(modword_2_obj.keyword_total_score),
-            int(modword_3_obj.keyword_total_score)
-        ]
-    )
     name_length_score = name_length_scorer(name_length)
-    name_score = name_keyword_score + int(name_length_score)
+    # other scores will be added to name_score later (ie. legibility scores etc.)
+    name_score = int(name_length_score)
 
     return Name(
         name=name_c3w,
+        name_lower=name_c3w.lower(),
         length=name_length,
-        keyword_score=name_keyword_score,
         length_score=name_length_score,
-        score=name_score,
+        total_score=name_score,
         algorithm=alg,
         keywords=name_key
     )
@@ -110,9 +99,6 @@ def keyword_modifier(keyword_obj: Name, kw_modifier):
         wordsAPI_pos=keyword_obj.wordsAPI_pos,
         pos=keyword_obj.pos,
         spacy_occurrence=keyword_obj.spacy_occurrence,
-        keyword_user_score=keyword_obj.keyword_user_score,
-        keyword_wiki_score=keyword_obj.keyword_wiki_score,
-        keyword_total_score=keyword_obj.keyword_total_score,
         pairing_limitations=keyword_obj.pairing_limitations,
         modifier=kw_modifier,
         modword=final_modword,
@@ -188,7 +174,7 @@ def make_names(algorithms: list[Algorithm], wordlist: dict) -> dict[list[Name]]:
 
     # Sort each name list.
     for key, names in name_dict.items():
-        sorted_names = sorted(names, key=lambda k: (k.name.lower(), k.length, k.score * -1))
+        sorted_names = sorted(names, key=lambda k: (k.name.lower(), k.length, k.total_score * -1))
         name_dict[key] = sorted_names
 
     # Sort name dict by keys.

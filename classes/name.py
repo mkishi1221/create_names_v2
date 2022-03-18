@@ -9,10 +9,10 @@ class Name:
     """
 
     name: str = ""
+    name_lower: str = ""
     length: int = 0
-    keyword_score: int = 0
     length_score: int = 0
-    score: int = 0
+    total_score: int = 0
     algorithm: Algorithm = ""
     keywords: list[tuple] = field(default_factory=list)
 
@@ -41,6 +41,7 @@ class Name:
             }
         )
 
+@dataclass
 class Domain(Name):
 
     # domain list will contain tuples showing (domain, availability)
