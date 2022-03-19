@@ -31,7 +31,10 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
 
     return list(approved_keywords)
 
-def generate_word_list(text_file, user_keywords_file, output):
+# "text_file" input is a filepath
+# "user_keywords_file" input is a filepath
+# "output" input is a filepath
+def generate_word_list(text_file: str, user_keywords_file: str, output: str):
 
     all_keywords: list[Keyword] = []
 
@@ -77,7 +80,7 @@ def generate_word_list(text_file, user_keywords_file, output):
                 all_keywords.append(keyword)
             else:
                 all_keywords.append(keyword)
-        
+
         for keyword in keyword_list_keywords:
             if keyword not in all_keywords:
                 all_keywords.append(keyword)

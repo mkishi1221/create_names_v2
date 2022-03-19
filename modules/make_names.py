@@ -5,7 +5,7 @@ from classes.algorithm import Algorithm
 from classes.name import Name
 from classes.keyword import Modword
 
-def name_length_scorer(name_length):
+def name_length_scorer(name_length: int) -> int:
     if name_length <= 6:
         name_length_score = 6
     elif name_length <= 8:
@@ -20,10 +20,10 @@ def name_length_scorer(name_length):
         name_length_score = -10
     return name_length_score
 
-def combined_keyword_scorer(score_list):
+def combined_keyword_scorer(score_list: list[int]) -> int:
     return round(sum(score_list) / len(score_list))
 
-def combine_1_word(modword_1_obj, alg, name_key):
+def combine_1_word(modword_1_obj: Modword, alg: str, name_key) -> Name:
     name_c1w = modword_1_obj.modword.title()
     name_length = len(name_c1w)
     name_length_score = name_length_scorer(name_length)
@@ -40,7 +40,7 @@ def combine_1_word(modword_1_obj, alg, name_key):
         keywords=name_key
     )
 
-def combine_2_words(modword_1_obj, modword_2_obj, alg, name_key):
+def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, alg, name_key) -> Name:
     name_c2w = "".join(
         [
             modword_1_obj.modword.title(),
@@ -62,7 +62,7 @@ def combine_2_words(modword_1_obj, modword_2_obj, alg, name_key):
         keywords=name_key
     )
 
-def combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, alg, name_key):
+def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_obj: Modword, alg, name_key) -> Name:
     name_c3w = "".join(
         [
             modword_1_obj.modword.title(),
@@ -85,7 +85,7 @@ def combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, alg, name_key):
         keywords=name_key
     )
 
-def keyword_modifier(keyword_obj: Name, kw_modifier):
+def keyword_modifier(keyword_obj: Name, kw_modifier: str) -> Modword:
     # Needs to be expanded upon to accomodate other modifiers
     if kw_modifier == "no_cut":
         final_modword = keyword_obj.keyword

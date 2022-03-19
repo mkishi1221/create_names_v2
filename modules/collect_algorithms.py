@@ -1,7 +1,8 @@
 from classes.algorithm import Algorithm
 import pandas as pd
 
-def collect_algorithms(algorithm_file):
+# Input is a file path
+def collect_algorithms(algorithm_file: str) -> list[Algorithm]:
 
     # Import algorithm list from xlsx file
     df = pd.read_excel(algorithm_file, index_col=0)
@@ -20,4 +21,4 @@ def collect_algorithms(algorithm_file):
 
         algorithms.add(Algorithm(0, comp_list))
 
-    return algorithms
+    return list(algorithms)

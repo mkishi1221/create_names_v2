@@ -7,6 +7,7 @@ from dataclasses_json import dataclass_json
 class Algorithm:
     """
     Helper class for manipulation of keywords
+    Components are stored in a list of component/modifier pairs
     """
 
     id: int

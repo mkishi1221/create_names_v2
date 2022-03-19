@@ -9,7 +9,7 @@ import spacy
 nlp = spacy.load("en_core_web_lg")
 
 
-def create_keyword(word, word_pos, word_lemma) -> Keyword:
+def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     """
     summary:
         Creates a "keyword" so that similar words are grouped together regardless of their case-styles/symbols used.
@@ -36,7 +36,7 @@ def create_keyword(word, word_pos, word_lemma) -> Keyword:
     )
 
 
-def process_text_with_spacy(lines) -> List[Keyword]:
+def process_text_with_spacy(lines: list[str]) -> List[Keyword]:
     keywords: list[Keyword] = []
     for line in lines:
         doc = nlp(line)

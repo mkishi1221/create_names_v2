@@ -8,7 +8,8 @@ from classes.algorithm import Algorithm
 import pandas as pd
 from classes.keyword import Keyword
 
-def pull_dictionary(dictionary_file, keyword_type):
+# "dictionary_file" input is a filepath
+def pull_dictionary(dictionary_file: str, keyword_type: str) -> list[Keyword]:
     df = pd.read_excel(dictionary_file, index_col=0)
     final_df = df[df["Keyword shortlist (insert \"s\")"] == "s"]
     final_df = final_df.fillna('')
@@ -31,7 +32,11 @@ def pull_dictionary(dictionary_file, keyword_type):
     return target_list
 
 # Generate name ideas
-def generate_names(keyword_file, algorithm_file, tmp_output, output):
+# "keyword_file" input is a filepath
+# "algorithm_file" input is a filepath
+# "tmp_output" input is a filepath
+# "output" input is a filepath
+def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, output: str):
 
     # Get all algorithms
     algorithms = collect_algorithms(algorithm_file)
@@ -43,17 +48,11 @@ def generate_names(keyword_file, algorithm_file, tmp_output, output):
         if comp_list_type not in comp_list_types:
             comp_list_types.append(comp_list_type)
 
-    print("comp_list_types:")
-    print(comp_list_types)
-
     # Get all elements used in comp_list
     for comp_list_type in comp_list_types:
         for comp in comp_list_type:
             if comp not in required_comps:
                 required_comps.append(comp)
-
-    print("required_comps:")
-    print(required_comps)
 
     # Access keyword list and sort words into verbs, nouns or adjectives
     df = pd.read_excel(keyword_file, index_col=0)
@@ -101,7 +100,8 @@ def generate_names(keyword_file, algorithm_file, tmp_output, output):
 
     # these lists will be added later
     joints = []
-    determiners = []
+    heads = []
+    tails = []
 
     # Add all lists into dict form
     keyword_dict = {
@@ -111,7 +111,8 @@ def generate_names(keyword_file, algorithm_file, tmp_output, output):
         "pref": prefixes,
         "suff": suffixes,
         "join": joints,
-        "detr": determiners
+        "head": heads,
+        "tail": tails,
     }
 
     with open("tmp/keyword_shortlist.json", "wb+") as out_file:

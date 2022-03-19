@@ -6,7 +6,7 @@ from classes.keyword import Keyword
 import regex as re
 import copy
 
-def check_wordsAPI_dict(keyword, wordapi_data):
+def check_wordsAPI_dict(keyword: str, wordapi_data: dict) -> list[str]:
     pos_list = []
     if keyword in wordapi_data.keys() and "definitions" in wordapi_data[keyword].keys():
         def_list = wordapi_data[keyword]["definitions"]
@@ -27,7 +27,7 @@ def check_wordsAPI_dict(keyword, wordapi_data):
         return pos_list
 
 
-def fetch_pos_wordAPI(keyword_obj: Keyword, wordapi_data: dict):
+def fetch_pos_wordAPI(keyword_obj: Keyword, wordapi_data: dict) -> list[str]:
 
     # Get all "parts of speech" (pos) associated with each keyword.
     # If keyword is None or not in wordsAPI dictionary, return pos as None.
