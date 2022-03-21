@@ -65,8 +65,8 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 ### major changes
 1. Names output/storage updated 
     a. lists of dictionaries -> dictionary of lists of dictionaries
-    b. Names are stored in key/value pairs where the key is "keywords contained" and value is "list of names with said keywords".
-    c. The new name storage system is designed to manage the many permutations one name could generate. To ensure the user does not receive identical names, the top "x" number of names from each key will be pulled into the final name list.
+    b. Names are stored in nexted key/value pairs where the first key is "name_lower" (name in lowercase) and the second key is "name_title" (name components in titlecase) and the resulting value is a list of Names.
+    c. Permutations of names could generate identical names from different sets of keywords. The new name storage system is designed to manage this and create a list of unique names with easy access to the multiple ways it was generated.
 
 2. name style (algorithm) system updated
     a. "joints" and other text components are also considered as "keywords". 
@@ -83,11 +83,15 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 4. Names do not contain "keyword scores" anymore 
     a. As mentioned in "keyword_generator.py", this value could be revived in the future with more research and development.
 
+5. Names contain a list of keywords - this list is generated out of keywords used in multiple names creating identical names.
+
 ## classes.algorithm.py
 
 ### major changes
 1. Uses the new algorithm class from ng_back_end repo
 2. Components are stored in a list of component/modifier pairs
+3. Added the new "Component" class
+    a. Algorithm "component"s are a list of these objects
 
 ## classes.keyword.py
 
@@ -95,10 +99,10 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 1. Attribute order has changed - see classes.keyword.py
 
 2. "Keyword" attributes have changed:
-    a. "word" -> "source_word"
-    b. "lemma" -> "spacy_lemma"
-    c. "occurrence" -> "spacy_occurrence"
-    d. "origin" -> ftype changed to list of strings so that mutiple origins can be stored
+  a. "origin" -> type changed to list of strings so that mutiple origins can be stored
+    b. "word" -> "source_word"
+    c. "lemma" -> "spacy_lemma"
+    d. "occurrence" -> "spacy_occurrence"
     e. "algorithm": REMOVED
     f. "keyword_user_score": REMOVED
     g. "keyword_wiki_score": REMOVED
@@ -121,9 +125,10 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 1. Attribute order has changed - see classes.name.py
 
 2. "Name" attributes have changed:
+    a. "name" -> "name_title"
     a. "name_length_score" -> "length_score"
     b. "name_score" -> "total_score"
-    c. "all_keywords" -> "keywords" (also now a list of strings)
+    c. "all_keywords" -> "keywords" (list of unique keywords)
     d. "keyword1" -> REMOVED
     e. "keyword2" -> REMOVED
     f. "keyword_1_score" -> REMOVED

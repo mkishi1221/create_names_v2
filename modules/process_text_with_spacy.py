@@ -6,7 +6,21 @@ import regex as re
 import spacy
 
 
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load(
+    "en_core_web_lg",
+    exclude=[
+        "ner",
+        "entity_linker",
+        "entity_ruler",
+        "textcat",
+        "textcat_multilabel",
+        "morphologizer",
+        "senter",
+        "sentencizer",
+        "tok2vec",
+        "transformer",
+    ],
+)
 
 
 def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
@@ -36,8 +50,8 @@ def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     )
 
 
-def process_text_with_spacy(lines: list[str]) -> List[Keyword]:
-    keywords: list[Keyword] = []
+def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
+    keywords: List[Keyword] = []
     for line in lines:
         doc = nlp(line)
 

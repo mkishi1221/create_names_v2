@@ -36,7 +36,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
 # "output" input is a filepath
 def generate_word_list(text_file: str, user_keywords_file: str, output: str):
 
-    all_keywords: list[Keyword] = []
+    all_keywords: List[Keyword] = []
 
     # Check if keywords exists
     user_keywords = open(user_keywords_file, "r").read().splitlines()
@@ -44,7 +44,7 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
 
         print("Extracting keywords from keyword list and processing them through spacy......")
         # Spacy is used here as well to generate "lemma" values - this form is more commonly found in wordsAPI dictionary
-        user_keywords = sorted(list(set(user_keywords)))
+        user_keywords = sorted(set(user_keywords))
         user_keywords = process_text_with_spacy(user_keywords)
         for keyword in user_keywords:
             keyword.origin = ["keyword_list"]
@@ -63,7 +63,7 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
 
         # Filter out unique lines from source data containing sentences
         print("Finding unique lines...")
-        unique_lines = sorted(list(set(sentences)))
+        unique_lines = sorted(set(sentences))
 
         # Run lines through Spacy to obtain keywords and categorize them according to their POS
         print("Extracting keywords from sentences using spacy...")

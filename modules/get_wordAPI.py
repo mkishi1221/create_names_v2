@@ -22,7 +22,7 @@ def check_wordsAPI_dict(keyword: str, wordapi_data: dict) -> list[str]:
             ):
                 pos_list.append(def_data["partOfSpeech"])
 
-        return list(set(pos_list))
+        return set(pos_list)
     else:
         return pos_list
 
@@ -68,10 +68,10 @@ def fetch_pos_wordAPI(keyword_obj: Keyword, wordapi_data: dict) -> list[str]:
         all_pos = check_wordsAPI_dict(keyword, wordapi_data)
 
         if lemma is not None:
-            all_pos.extend(check_wordsAPI_dict(lemma, wordapi_data))
+            list(all_pos).extend(check_wordsAPI_dict(lemma, wordapi_data))
 
         if all_pos is not None:
-            all_pos = list(set(sorted(all_pos)))
+            all_pos = sorted(set(all_pos))
 
         if keyword_spacy_pos in all_pos:
             return [keyword_spacy_pos]

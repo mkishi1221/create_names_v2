@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from classes.algorithm import Algorithm
+from classes.algorithm import Component
+from typing import List
 
 @dataclass
 class Name:
@@ -8,27 +10,27 @@ class Name:
     keywords list will contain tuples that contain (keyword, pos, modifier)
     """
 
-    name: str = ""
-    name_lower: str = ""
+    name_lower: str = None
+    name_title: List[str] = field(default_factory=list)
     length: int = 0
     length_score: int = 0
     total_score: int = 0
-    algorithm: Algorithm = ""
-    keywords: list[tuple] = field(default_factory=list)
+    keywords: List[str] = field(default_factory=list)
+    algorithm: List[Algorithm] = field(default_factory=list)
 
     def __eq__(self, o: object) -> bool:
-        return self.name == o.name
+        return self.name_lower == o.name_lower
 
     def __ne__(self, o: object) -> bool:
-        return self.name != o.name
+        return self.name_lower != o.name_lower
 
     def __hash__(self) -> int:
         return hash(
             (
                 self.length,
-                self.name,
-                self.name_length_score,
-                self.name_score,
+                self.name_lower,
+                self.length_score,
+                self.total_score,
             )
         )
 
@@ -46,5 +48,5 @@ class Domain(Name):
 
     # domain list will contain tuples showing (domain, availability)
 
-    tld_list: list[str] = field(default_factory=list)
-    domain: list[tuple] = field(default_factory=list)
+    tld_list: List[str] = field(default_factory=list)
+    domain: List[tuple] = field(default_factory=list)

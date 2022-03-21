@@ -7,9 +7,10 @@ from modules.collect_algorithms import collect_algorithms
 from classes.algorithm import Algorithm
 import pandas as pd
 from classes.keyword import Keyword
+from typing import List
 
 # "dictionary_file" input is a filepath
-def pull_dictionary(dictionary_file: str, keyword_type: str) -> list[Keyword]:
+def pull_dictionary(dictionary_file: str, keyword_type: str) -> List[Keyword]:
     df = pd.read_excel(dictionary_file, index_col=0)
     final_df = df[df["Keyword shortlist (insert \"s\")"] == "s"]
     final_df = final_df.fillna('')
@@ -44,7 +45,7 @@ def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, outp
     required_comps = []
 
     for algo in algorithms:
-        comp_list_type = sorted([component[0] for component in algo.components])
+        comp_list_type = sorted([component.keyword_type for component in algo.components])
         if comp_list_type not in comp_list_types:
             comp_list_types.append(comp_list_type)
 
@@ -127,11 +128,11 @@ def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, outp
 
     excel_output = []
 
-    for comp_list_types in all_names.keys():
-        for name in all_names[comp_list_types]:
+    for name_key, names_list in all_names.items():
+        for name in names_list:
             excel_output.append(name)
 
-    excel_output = sorted(excel_output, key=lambda d: d.name)
+    excel_output = sorted(excel_output, key=lambda d: d.name_lower)
     excel_output = sorted(excel_output, key=lambda d: d.length)
     excel_output = sorted(excel_output, key=lambda d: d.total_score, reverse=True)
 

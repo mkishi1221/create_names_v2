@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from typing import Dict, Optional
-
+from typing import List
 
 @dataclass_json
 @dataclass
@@ -10,7 +10,7 @@ class Keyword:
     A simple helper class for keywords adding a comparator for better readability
     """
 
-    origin: list[str] = None
+    origin: List[str] = None
     source_word: str = None
     spacy_lemma: str = None
     keyword: str = None
@@ -45,36 +45,6 @@ class Modword(Keyword):
     modifier: str = "no_mod"
     modword: str = ""
     modword_len: int = 0
-
-    def __init__(
-        self,
-        origin,
-        source_word,
-        spacy_lemma,
-        keyword,
-        keyword_len,
-        spacy_pos,
-        wordsAPI_pos,
-        pos,
-        spacy_occurrence,
-        pairing_limitations,
-        modifier,
-        modword,
-        modword_len
-    ):
-        self.origin = origin
-        self.source_word = source_word
-        self.spacy_lemma = spacy_lemma
-        self.keyword = keyword
-        self.keyword_len = keyword_len
-        self.spacy_pos = spacy_pos
-        self.wordsAPI_pos = wordsAPI_pos
-        self.pos = pos
-        self.spacy_occurrence = spacy_occurrence
-        self.pairing_limitations = pairing_limitations
-        self.modifier = modifier
-        self.modword = modword
-        self.modword_len = modword_len
 
     def __eq__(self, o: object) -> bool:
         return self.modword == o.modword and self.keyword == o.keyword and self.wordsAPI_pos == o.wordsAPI_pos
