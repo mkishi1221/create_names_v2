@@ -18,16 +18,29 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     - Not contain any characters except alphabets
     - Word is at least 3 letters
     """
-    approved_pos = ["noun", "verb", "adjective"]
+    approved_pos = ["noun", "verb", "adjective", "adverb"]
     illegal_char = re.compile(r"[^a-zA-Z]")
+    approved_keywords = []
+    discarded_keywords = []
+    
+    for keyword in keywords:
+        if (
+            keyword.pos in approved_pos
+            and not bool(illegal_char.search(keyword.keyword))
+            and keyword.keyword_len > 2
+        ):
+            approved_keywords.append(keyword)
+        else:
+            discarded_keywords.append(keyword)
 
-    approved_keywords = {
-        keyword
-        for keyword in keywords
-        if keyword.wordsAPI_pos in approved_pos
-        and not bool(illegal_char.search(keyword.keyword))
-        and keyword.keyword_len > 2
-    }
+    discarded_keywords = list(set(discarded_keywords))
+    approved_keywords = list(set(approved_keywords))
+
+    with open("ref/illegal_keywords.json", "wb+") as out_file:
+        out_file.write(json.dumps(list(set(discarded_keywords)), option=json.OPT_INDENT_2))
+
+    df1 = pd.DataFrame.from_dict(discarded_keywords, orient="columns")
+    df1.to_excel("ref/illegal_keywords.xlsx")        
 
     return list(approved_keywords)
 
@@ -49,6 +62,7 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
         for keyword in user_keywords:
             keyword.origin = ["keyword_list"]
             keyword.spacy_pos = None
+            keyword.pos = None
             keyword.spacy_occurrence = None
 
         print("Getting keyword pos using wordAPI dictionary......")
@@ -85,7 +99,7 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
             if keyword not in all_keywords:
                 all_keywords.append(keyword)
 
-        with open("ref/keywords_from_sentences_.json", "wb+") as out_file:
+        with open("ref/keywords_from_sentences.json", "wb+") as out_file:
             out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
 
     # Quit if both files are empty
@@ -98,6 +112,8 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
     # # Run keywords through keywords filter
     print("Running keywords through keyword filter...")
     keywords = filter_keywords(all_keywords)
+
+    print("Sorting keywords and exporting files...")
     keywords.sort(key=operator.attrgetter('keyword'))
 
     with open("tmp/keywords.json", "wb+") as out_file:

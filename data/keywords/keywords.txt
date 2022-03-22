@@ -525,7 +525,8 @@ restrictions
 retained
 reveals
 rhyming
-risingroster
+rising
+roster
 rounded
 safe
 Savant
@@ -1392,4 +1393,6 @@ worth
 write
 writing
 Yellow
-
+Masayuki
+M
+Ma

@@ -62,6 +62,7 @@ def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, outp
     verbs = []
     nouns = []
     adjectives = []
+    adverbs = []
 
     for index, row in keyword_df.iterrows():
         keyword_obj = Keyword(
@@ -77,12 +78,14 @@ def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, outp
             pairing_limitations=row["pairing_limitations"]
         )
 
-        if row["wordsAPI_pos"] == "noun":
+        if row["pos"] == "noun":
             nouns.append(keyword_obj)
-        elif row["wordsAPI_pos"] == "verb":
+        elif row["pos"] == "verb":
             verbs.append(keyword_obj)
-        elif row["wordsAPI_pos"] == "adjective":
+        elif row["pos"] == "adjective":
             adjectives.append(keyword_obj)
+        elif row["pos"] == "adverb":
+            adverbs.append(keyword_obj)
 
     # Pull required dictionaries
     if "pref" in required_comps:
@@ -109,6 +112,7 @@ def generate_names(keyword_file: str, algorithm_file: str, tmp_output: str, outp
         "verb": verbs,
         "noun": nouns,
         "adje": adjectives,
+        "adve": adverbs,
         "pref": prefixes,
         "suff": suffixes,
         "join": joints,

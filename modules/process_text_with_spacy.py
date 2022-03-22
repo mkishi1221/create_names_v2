@@ -23,6 +23,7 @@ nlp = spacy.load(
 )
 
 
+
 def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     """
     summary:
@@ -41,13 +42,33 @@ def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     processed_word = re.sub(r"^\W+", "", word).lower()
     processed_word = re.sub(r"\W+$", "", processed_word)
 
+    if word_pos is not None:
+            pos_conversion = {
+                "NOUN": "noun",
+                "VERB": "verb",
+                "ADJ": "adjective",
+                "ADV": "adverb",
+                "DET": "definite article",
+                "CCONJ": "conjunction",
+                "ADP": "adposition",
+                "PART": "preposition"
+            }
+            if word_pos is not None and word_pos.strip() in pos_conversion.keys():
+                pos = pos_conversion[word_pos]
+            else:
+                pos = None
+    else:
+        pos = None
+
     return Keyword(
         source_word=word,
         spacy_lemma=word_lemma,
         keyword=processed_word,
         keyword_len=len(processed_word),
-        spacy_pos=word_pos
+        spacy_pos=word_pos,
+        pos=pos
     )
+
 
 
 def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
@@ -67,7 +88,7 @@ def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
 
     unique_words = []
     for keyword in keywords:
-        if keyword.source_word != "" and keyword.keyword_len >= 1 and keyword not in unique_words:
+        if keyword.source_word != "" and keyword not in unique_words:
             unique_words.append(keyword)
 
     # Count occurrence of unique word

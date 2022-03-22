@@ -51,6 +51,8 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
     a. Keyword scores may be revived later on with more research to generate "reccommended keywords"
 4. Keywords are now outputted as an excel file for user review. (Whitelist is generated here)
 
+5. Filtered keywords that don't make it to the keyword list is now saved as "discarded keywords". This is to make sure users can manually edit any keywords that couldn't be properly identified and added to the keyword list.
+
 ## name_generator.py
 
 ### discontinued modules
@@ -85,6 +87,10 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 
 5. Names contain a list of keywords - this list is generated out of keywords used in multiple names creating identical names.
 
+6. "Adverbs" are added as an approved keyword and will be used to create names.
+
+7. "wordsAPI_pos" will no longr be used to sort keywords - the key "pos" will be used instead.
+
 ## classes.algorithm.py
 
 ### major changes
@@ -111,6 +117,7 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 3. New attributes to "Keyword" have been added:
     a. "pos": final "pos" based on both spacy and wordAPI "pos"
     b. "pairing_limitations": some keywords can be limited to be paired with specific types of keywords. (eg. rules such as "nouns" can only come after "verb" can be implemented this way)
+    c. "hard_lemma": if wordsAPI cannot verify the keyword pos, modified keywords will be generated and those keywords will be searched again on wordsAPI
 
 4. "Modword" class have been added:
     a. "modifier": type of modification (eg. extract first 3 letters "number" -> "num"). Default is "no_mod" for "no modification required"
@@ -118,6 +125,8 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
     c. "modword_len": length of keyword after modification
 
 5. Keyword/pos pairs found both in sentences and keyword lists are combined. (origin will be a list containing both "sentences" and "keyword_list")
+
+
 
 ## classes.name.py
 
@@ -152,6 +161,8 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 
 3. "Origin" attribute no longer assigned in module. (As both sentences and keyword_list will use this module)
 
+4. Initially, spacy pos will be added as the main "pos" under key "pos". It will later be replaced by wordaPI pos if the keyword is found on wordsPAI database.
+
 ## modules.get_wordAPI.py
 
 ### major changes
@@ -172,6 +183,10 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
     d. Spacy POS format to wordsAPI pos format conversion also added. (dict called "pos_conversion")
     d. The POS of lemma is also searched. If the pos of the keyword returns empty, the correct POS can be found using lemma.
 
+5. function "create_hard_lemma" has been added - if wordsAPI cannot find the keyword POS, the "hard lemma" object will be generated to provide keyword alternatives that can be searched and its possible POS.
+
+6. function "fetch_pos_wordAPI_w_hardlemma" has been added - based on the "hard lemma" object, possible pos will be searched on wordsAPI. If the pos is found that matches possible POS, they will be added to the pos list.
+
 ## modules.make_names.py
 
 ### major changes
@@ -185,7 +200,8 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 
 4. function "keyword_modifier" added:
     a. Based on "modifier, the "Keyword" object will be transformed into a "Modword" object.
-    b. Dunctions "combine_1_word", "combine_2_words", "combine_3_words" will only accept "Modword" objects as input (not "Keyword" objects).
+    b. Current modifiers accepted cut the keyword down into specified lengths.
+    c. Dunctions "combine_1_word", "combine_2_words", "combine_3_words" will only accept "Modword" objects as input (not "Keyword" objects).
 
 5. Whether a keyword is a prefix, suffix etc. is no longer required to be identified. Attributes are assigned outside this module.
 
