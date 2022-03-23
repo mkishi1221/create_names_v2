@@ -13,7 +13,7 @@ class Keyword:
     origin: List[str] = None
     source_word: str = None
     spacy_lemma: str = None
-    hard_lemma: Dict[str, List[str]] = None
+    hard_lemma: Dict[str, str] = None
     keyword: str = None
     keyword_len: int = 0
     spacy_pos: str = None

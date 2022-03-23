@@ -8,8 +8,12 @@ import copy
 
 def create_hard_lemma(keyword: str) -> dict:
 
-    hard_lemma_1 = []
-    hard_lemma_2 = []
+    hard_lemma_conversion_dict_fp = "dict/hard_lemma_conversions.json"
+    with open(hard_lemma_conversion_dict_fp) as wordsAPI_file:
+        hl_conversion_dict = json.loads(wordsAPI_file.read())
+
+    hard_lemma_1 = None
+    hard_lemma_2 = None
     possible_pos = []
 
     ending_1 = keyword[-1]
@@ -19,39 +23,31 @@ def create_hard_lemma(keyword: str) -> dict:
     word_cut_2 = keyword[:-2]
     word_cut_3 = keyword[:-3]
 
-    if ending_3 == "ing":
-        hard_lemma_1.append(word_cut_3)
-        hard_lemma_2.append("".join([word_cut_3,"e"]))
-        possible_pos.extend(["noun", "verb", "adjective"])
-    elif ending_3 == "est":
-        hard_lemma_1.append(word_cut_3)
-        possible_pos.extend(["adjective", "adverb"])
-    elif ending_3 == "ies":
-        hard_lemma_1.append("".join([word_cut_3,"y"]))
-        hard_lemma_2.append(word_cut_1)
-        possible_pos.extend(["noun", "verb"])
-    elif ending_3 == "ier":
-        hard_lemma_1.append("".join([word_cut_3,"y"]))
-        possible_pos.extend(["adjective", "adverb"])
-    elif ending_2 == "ed":
-        hard_lemma_1.append(word_cut_2)
-        hard_lemma_2.append("".join([word_cut_2,"e"]))
-        possible_pos.extend(["adjective", "verb"])
-    elif ending_2 == "er":
-        hard_lemma_1.append(word_cut_2)
-        possible_pos.extend(["adjective", "adverb"])
-    elif ending_2 == "es":
-        hard_lemma_2.append(word_cut_2)
-        hard_lemma_1.append(word_cut_1)
-        possible_pos.extend(["noun", "verb"])
-    elif ending_1 == "s":
-        hard_lemma_1.append(word_cut_1)
-        possible_pos.extend(["noun"])
-    elif ending_1 == "t":
-        hard_lemma_1.append(word_cut_1)
-        possible_pos.extend(["verb"])
+    if ending_3 in hl_conversion_dict.keys():
+        replacement_1 = hl_conversion_dict[ending_3]["replacement_1"]
+        hard_lemma_1 = "".join([word_cut_3, replacement_1])
+        if hl_conversion_dict[ending_3]["replacement_2"] is not None:
+            replacement_2 = hl_conversion_dict[ending_3]["replacement_2"]
+            hard_lemma_2 = "".join([word_cut_3, replacement_2])
+        possible_pos.extend(hl_conversion_dict[ending_3]["possible_pos"])
 
-    if len(hard_lemma_1) == 0 and len(hard_lemma_2) == 0:
+    elif ending_2 in hl_conversion_dict.keys():
+        replacement_1 = hl_conversion_dict[ending_2]["replacement_1"]
+        hard_lemma_1 = "".join([word_cut_2, replacement_1])
+        if hl_conversion_dict[ending_2]["replacement_2"] is not None:
+            replacement_2 = hl_conversion_dict[ending_2]["replacement_2"]
+            hard_lemma_2 = "".join([word_cut_2, replacement_2])
+        possible_pos.extend(hl_conversion_dict[ending_2]["possible_pos"])
+
+    elif ending_1 in hl_conversion_dict.keys():
+        replacement_1 = hl_conversion_dict[ending_1]["replacement_1"]
+        hard_lemma_1 = "".join([word_cut_1, replacement_1])
+        if hl_conversion_dict[ending_1]["replacement_2"] is not None:
+            replacement_2 = hl_conversion_dict[ending_1]["replacement_2"]
+            hard_lemma_2 = "".join([word_cut_1, replacement_2])
+        possible_pos.extend(hl_conversion_dict[ending_1]["possible_pos"])
+
+    if hard_lemma_1 == None and hard_lemma_2 == None:
         hard_lemma_combined = None
     else:
         hard_lemma_combined = {"hard_lemma_1":hard_lemma_1, "hard_lemma_2":hard_lemma_2, "possible_pos":possible_pos}
@@ -85,26 +81,28 @@ def fetch_pos_wordAPI_w_hardlemma(keyword_obj: Keyword, wordapi_data: dict) -> l
     hard_lemma_1 = keyword_obj.hard_lemma["hard_lemma_1"]
     hard_lemma_2 = keyword_obj.hard_lemma["hard_lemma_2"]
     possible_pos = keyword_obj.hard_lemma["possible_pos"]
+    potential_pos = []
     
-    if len(hard_lemma_1) != 0:
-        for hard_lemma in hard_lemma_1:
-            potential_pos = check_wordsAPI_dict(hard_lemma, wordapi_data)
+    if hard_lemma_1 != None:
+        potential_pos.extend(check_wordsAPI_dict(hard_lemma_1, wordapi_data))
+        if len(potential_pos) > 0:
+            for pos in potential_pos:
+                if pos in possible_pos:
+                    all_pos.append(pos)
+
+    if len(all_pos) == 0:
+        if hard_lemma_2 != None:
+            potential_pos.extend(check_wordsAPI_dict(hard_lemma_2, wordapi_data))
             if len(potential_pos) > 0:
                 for pos in potential_pos:
                     if pos in possible_pos:
                         all_pos.append(pos)
-
-    if len(all_pos) == 0:
-        if len(hard_lemma_2) != 0:
-            for hard_lemma in hard_lemma_2:
-                potential_pos = check_wordsAPI_dict(hard_lemma, wordapi_data)
-                if len(potential_pos) > 0:
-                    for pos in potential_pos:
-                        if pos in possible_pos:
-                            all_pos.append(pos)
     
     if len(all_pos) == 0:
-        all_pos = None
+        if len(potential_pos) > 0:
+            all_pos = potential_pos
+        else:
+            all_pos = None
     
     else:
         sorted(set(all_pos))
@@ -170,8 +168,8 @@ def fetch_pos_wordAPI(keyword_obj: Keyword, wordapi_data: dict) -> list[str]:
 
 def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
 
-    main_wordsAPI_dict_filepath = "../wordsAPI/original_data/wordsapi_list.json"
-    with open(main_wordsAPI_dict_filepath) as wordsAPI_file:
+    main_wordsAPI_dict_fp = "../wordsAPI/original_data/wordsapi_list.json"
+    with open(main_wordsAPI_dict_fp) as wordsAPI_file:
         wordsAPI_data = json.loads(wordsAPI_file.read())
 
     # Take in keyword list created by spacy and add wordAPI pos data as well as other pos variations.
