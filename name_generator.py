@@ -4,7 +4,7 @@ import sys
 import orjson as json
 from modules.make_names import make_names
 from modules.collect_name_styles import collect_name_styles
-from classes.keyword import Keyword
+from classes.keyword_class import Keyword
 from typing import List
 from modules.convert_excel_to_json import convert_excel_to_json
 

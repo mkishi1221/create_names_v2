@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 from typing import List
-from classes.keyword import Keyword
+from classes.keyword_class import Keyword
 import regex as re
 import spacy
 

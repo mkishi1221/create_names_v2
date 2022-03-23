@@ -1,5 +1,5 @@
-from classes.Name_Style import Name_Style
-from classes.Name_Style import Component
+from classes.name_style_class import Name_Style
+from classes.name_style_class import Component
 import orjson as json
 from typing import List
 

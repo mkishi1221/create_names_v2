@@ -2,10 +2,10 @@
 # -*- coding:utf-8 -*-
 from typing import List
 from typing import Dict
-from classes.Name_Style import Name_Style
-from classes.Name_Style import Component
-from classes.name import Name
-from classes.keyword import Modword
+from classes.name_style_class import Name_Style
+from classes.name_style_class import Component
+from classes.name_class import Name
+from classes.keyword_class import Modword
 import regex as re
 import copy
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-from classes.keyword import Keyword
+from classes.keyword_class import Keyword
 import sys
 import orjson as json
 from modules.process_text_with_spacy import process_text_with_spacy
