@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
-from classes.algorithm import Algorithm
-from classes.algorithm import Component
+from classes.Name_Style import Name_Style
+from classes.Name_Style import Component
 from typing import List
 
 @dataclass
@@ -16,7 +16,7 @@ class Name:
     length_score: int = 0
     total_score: int = 0
     keywords: List[str] = field(default_factory=list)
-    algorithm: List[Algorithm] = field(default_factory=list)
+    name_styles: List[Name_Style] = field(default_factory=list)
 
     def __eq__(self, o: object) -> bool:
         return self.name_lower == o.name_lower

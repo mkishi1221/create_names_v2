@@ -37,7 +37,7 @@ echo "Collect source data into tmp files..."
 sh modules/collect_source_data.sh ${sentences} ${keywords}
 
 # Generate word list from source text
-# Words to be sorted by POS, length and other factors in the future to accomodate more complex name-generating algorithms.
+# Words to be sorted by POS, length and other factors in the future to accomodate more complex name-generating name_styles.
 echo "Creating word list..."
 python3 keyword_generator.py \
     tmp/user_sentences.tsv \

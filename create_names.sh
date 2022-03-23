@@ -11,8 +11,8 @@ mkdir -p results/
 
 python3 name_generator.py \
     results/keywords.xlsx \
-    algorithm_list.xlsx \
-    tmp/names.json \
+    data/name_styles/name_style_list.xlsx \
+    results/names.json \
     results/names.xlsx
 
 # Calculate time elapsed

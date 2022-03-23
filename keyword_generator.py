@@ -6,9 +6,11 @@ import orjson as json
 from modules.process_text_with_spacy import process_text_with_spacy
 from modules.get_wordAPI import verify_words_with_wordsAPI
 import operator
-import pandas as pd
 from typing import List
 import regex as re
+
+# Pandas input/output for prototype only: remove for production
+import pandas as pd
 
 
 def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
@@ -18,11 +20,13 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     - Not contain any characters except alphabets
     - Word is at least 3 letters
     """
+
     approved_pos = ["noun", "verb", "adjective", "adverb"]
     illegal_char = re.compile(r"[^a-zA-Z]")
     approved_keywords = []
     discarded_keywords = []
-    
+    discarded_keywords_output_fp = "results/discarded_keywords.json"
+
     for keyword in keywords:
         if (
             keyword.pos in approved_pos
@@ -36,23 +40,25 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     discarded_keywords = list(set(discarded_keywords))
     approved_keywords = list(set(approved_keywords))
 
-    with open("ref/illegal_keywords.json", "wb+") as out_file:
+    with open(discarded_keywords_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(list(set(discarded_keywords)), option=json.OPT_INDENT_2))
 
+    # Excel output for reference only: remove for production
+    excel_output = "".join([discarded_keywords_output_fp[:-5], ".xlsx"])
     df1 = pd.DataFrame.from_dict(discarded_keywords, orient="columns")
-    df1.to_excel("ref/illegal_keywords.xlsx")        
+    df1.to_excel(excel_output)        
 
     return list(approved_keywords)
 
 # "text_file" input is a filepath
 # "user_keywords_file" input is a filepath
 # "output" input is a filepath
-def generate_word_list(text_file: str, user_keywords_file: str, output: str):
+def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str):
 
     all_keywords: List[Keyword] = []
 
     # Check if keywords exists
-    user_keywords = open(user_keywords_file, "r").read().splitlines()
+    user_keywords = open(keyword_list_fp, "r").read().splitlines()
     if len(user_keywords) != 0:
 
         print("Extracting keywords from keyword list and processing them through spacy......")
@@ -72,7 +78,7 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
             out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
 
     # Check if sentences exists
-    sentences = open(text_file, "r").read().splitlines()
+    sentences = open(sentences_fp, "r").read().splitlines()
     if len(sentences) != 0:
 
         # Filter out unique lines from source data containing sentences
@@ -116,13 +122,14 @@ def generate_word_list(text_file: str, user_keywords_file: str, output: str):
     print("Sorting keywords and exporting files...")
     keywords.sort(key=operator.attrgetter('keyword'))
 
-    with open("tmp/keywords.json", "wb+") as out_file:
+    with open(json_output, "wb+") as out_file:
         out_file.write(json.dumps(keywords, option=json.OPT_INDENT_2))
 
-    # Export to excel file
+    # Excel output for reference only: remove for production
+    excel_output = "".join([json_output[:-5], ".xlsx"])
     df1 = pd.DataFrame.from_dict(keywords, orient="columns")
     df1.insert(10, column="Keyword shortlist (insert \"s\")", value="")
-    df1.to_excel(output)
+    df1.to_excel(excel_output)
 
 if __name__ == "__main__":
     generate_word_list(sys.argv[1], sys.argv[2], sys.argv[3])

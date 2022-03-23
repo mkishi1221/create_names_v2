@@ -62,7 +62,7 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 - modules.combine_words -> changed to -> modules.make_names
 
 ### new modules
-- modules.collect_algorithms -> algorithm collection function now a separate module
+- modules.collect_name_styles -> name style collection function now a separate module
 
 ### major changes
 1. Names output/storage updated 
@@ -70,7 +70,7 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
     b. Names are stored in nexted key/value pairs where the first key is "name_lower" (name in lowercase) and the second key is "name_title" (name components in titlecase) and the resulting value is a list of Names.
     c. Permutations of names could generate identical names from different sets of keywords. The new name storage system is designed to manage this and create a list of unique names with easy access to the multiple ways it was generated.
 
-2. name style (algorithm) system updated
+2. name style system updated
     a. "joints" and other text components are also considered as "keywords". 
     b. for text component, the pos designation will be the type of text component. (ie. pos of "joint" component will be "joint")
     c. There are three new standard text components: head, joint, tail.
@@ -80,7 +80,7 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
     d. modifiers are now paired with each keyword. Modifiers can alter each keyword in a specific way (eg. extract first 3 letters "number" -> "num")
 
 3. dictionaries are pulled only if required
-    a. When the algorithm list is imported, a "list of required components" is generated. Dictionaries are pulled only if the specific component is in that list. (ie. the prefix dictionary is only imported if prefix is in the "list of required components")
+    a. When the name style list is imported, a "list of required components" is generated. Dictionaries are pulled only if the specific component is in that list. (ie. the prefix dictionary is only imported if prefix is in the "list of required components")
 
 4. Names do not contain "keyword scores" anymore 
     a. As mentioned in "keyword_generator.py", this value could be revived in the future with more research and development.
@@ -91,13 +91,13 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 
 7. "wordsAPI_pos" will no longr be used to sort keywords - the key "pos" will be used instead.
 
-## classes.algorithm.py
+## classes.name_style.py
 
 ### major changes
-1. Uses the new algorithm class from ng_back_end repo
+1. Uses the new Name_Style class from ng_back_end repo
 2. Components are stored in a list of component/modifier pairs
 3. Added the new "Component" class
-    a. Algorithm "component"s are a list of these objects
+    a. Name Style "components" are a list of these objects
 
 ## classes.keyword.py
 
@@ -193,7 +193,7 @@ Add source data (use 2000+ default name styles no need to add anything) -> gener
 1. Name has changed from "combine_words" to "make_names"
 
 2. functions "combine_1_word", "combine_2_words", "combine_3_words" added.
-    a. These functions are used based on the length of the algorithm or how many keywords are used (ie. if algorithm has 2 keywords, "combine_2_words" is used)
+    a. These functions are used based on the length of the Name Style or how many keywords are used (ie. if Name Style has 2 keywords, "combine_2_words" is used)
     b. The 
 
 3. "name_key" is the list of keywords used. This will become the key for each name list in the final dict output.

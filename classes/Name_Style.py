@@ -29,7 +29,7 @@ class Component:
 
 @dataclass_json
 @dataclass
-class Algorithm(Component):
+class Name_Style(Component):
     """
     Helper class for manipulation of keywords
     Components are stored in a list of component/modifier pairs
@@ -53,10 +53,10 @@ class Algorithm(Component):
 
     def __repr__(self) -> str:
         if self.components[0].keyword is None:
-            algo = " + ".join(map(lambda x: str(x.keyword_type) + '(' + str(x.modifier) + ')', self.components))
+            name_style = " + ".join(map(lambda x: str(x.keyword_type) + '(' + str(x.modifier) + ')', self.components))
         else:
-            algo = " + ".join(map(lambda x: str(x.keyword) + "|" + str(x.keyword_type) + '(' + str(x.modifier) + ')', self.components))
-        return algo
+            name_style = " + ".join(map(lambda x: str(x.keyword) + "|" + str(x.keyword_type) + '(' + str(x.modifier) + ')', self.components))
+        return name_style
 
     def __len__(self) -> int:
         return len(self.components)
