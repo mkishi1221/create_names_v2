@@ -4,6 +4,7 @@ from typing import List
 from typing import Dict
 from classes.name_style_class import Name_Style
 from classes.name_style_class import Component
+from classes.name_class import Etymology
 from classes.name_class import Name
 from classes.keyword_class import Modword
 import regex as re
@@ -30,21 +31,14 @@ def combined_keyword_scorer(score_list: List[int]) -> int:
 
 def combine_1_word(modword_1_obj: Modword, name_style: List[Component]) -> Name:
     name_c1w = modword_1_obj.modword.title()
-    name_length = len(name_c1w)
-    name_length_score = name_length_scorer(name_length)
     # other scores will be added to name_score later (ie. legibility scores etc.)
-    name_score = int(name_length_score)
     name_style_update = copy.deepcopy(name_style)
     name_style_update[0].keyword = modword_1_obj.keyword
     name_style_update[0].modword = modword_1_obj.modword
     name_keywords = [modword_1_obj.keyword]
 
-    return Name(
-        name_lower=name_c1w.lower(),
-        name_title=name_c1w,
-        length=name_length,
-        length_score=name_length_score,
-        total_score=name_score,
+    return Etymology(
+        name_in_title=name_c1w,
         keywords=name_keywords,
         name_styles=[name_style_update]
     )
@@ -56,10 +50,7 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, name_style: 
             modword_2_obj.modword.title()
         ]
     )
-    name_length = len(name_c2w)
-    name_length_score = name_length_scorer(name_length)
     # other scores will be added to name_score later (ie. legibility scores etc.)
-    name_score = int(name_length_score)
     name_style_update = copy.deepcopy(name_style)
     name_style_update[0].keyword = modword_1_obj.keyword
     name_style_update[0].modword = modword_1_obj.modword
@@ -67,12 +58,8 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, name_style: 
     name_style_update[1].modword = modword_2_obj.modword
     name_keywords = sorted(set([modword_1_obj.keyword, modword_2_obj.keyword]))
 
-    return Name(
-        name_lower=name_c2w.lower(),
-        name_title=name_c2w,
-        length=name_length,
-        length_score=name_length_score,
-        total_score=name_score,
+    return Etymology(
+        name_in_title=name_c2w,
         keywords=name_keywords,
         name_styles=[name_style_update],
     )
@@ -85,10 +72,7 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
             modword_3_obj.modword.title(),
         ]
     )
-    name_length = len(name_c3w)
-    name_length_score = name_length_scorer(name_length)
     # other scores will be added to name_score later (ie. legibility scores etc.)
-    name_score = int(name_length_score)
     name_style_update = copy.deepcopy(name_style)
     name_style_update[0].keyword = modword_1_obj.keyword
     name_style_update[0].modword = modword_1_obj.modword
@@ -98,32 +82,39 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
     name_style_update[2].modword = modword_3_obj.modword
     name_keywords = sorted(set([modword_1_obj.keyword, modword_2_obj.keyword, modword_3_obj.keyword]))
 
-    return Name(
-        name_lower=name_c3w.lower(),
-        name_title=name_c3w,
-        length=name_length,
-        length_score=name_length_score,
-        total_score=name_score,
+    return Etymology(
+        name_in_title=name_c3w,
         keywords=name_keywords,
         name_styles=[name_style_update],
     )
 
-def add_to_dict(name_obj: Name, name_dict: dict):
+def create_name_obj(etymology_obj: Etymology, name_dict: dict):
 
-    name_lower = name_obj.name_lower
-    name_title = name_obj.name_title
+    name_lower = etymology_obj.name_in_title.lower()
+    name_title = etymology_obj.name_in_title
 
     if name_lower not in name_dict.keys():
-        name_dict[name_lower] = {}
-        name_dict[name_lower][name_title] = name_obj
+
+        name_length = len(name_lower)
+        name_length_score = name_length_scorer(name_length)
+        # other scores will be added to name_score later (ie. legibility scores etc.)
+        name_score = int(name_length_score)
+
+        name_dict[name_lower] = Name(
+            name_in_lower=name_lower,
+            length=name_length,
+            length_score=name_length_score,
+            total_score=name_score,
+            etymologies={name_title:etymology_obj}
+        )
     else:
-        if name_obj.name_title in name_dict[name_lower].keys():
-            name_dict[name_lower][name_title].name_styles.extend(name_obj.name_styles)
-            name_dict[name_lower][name_title].keywords.extend(name_obj.keywords)
-            name_dict[name_lower][name_title].keywords = sorted(set(name_dict[name_lower][name_title].keywords))
+        if name_title in name_dict[name_lower].etymologies.keys():
+            name_dict[name_lower].etymologies[name_title].name_styles.extend(etymology_obj.name_styles)
+            name_dict[name_lower].etymologies[name_title].keywords.extend(etymology_obj.keywords)
+            name_dict[name_lower].etymologies[name_title].keywords = sorted(set(name_dict[name_lower].etymologies[name_title].keywords))
 
         else:
-            name_dict[name_lower][name_title] = name_obj
+            name_dict[name_lower].etymologies[name_title] = etymology_obj
     
     return name_dict
 
@@ -180,8 +171,8 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
         if name_style_length == 1:
             for keyword_1_obj in wordlist1:
                 modword_1_obj = keyword_modifier(keyword_1_obj, wordlist_1_modifier)
-                name_obj = combine_1_word(modword_1_obj, name_style.components)
-                name_dict = add_to_dict(name_obj, name_dict)
+                etymology_obj = combine_1_word(modword_1_obj, name_style.components)
+                name_dict = create_name_obj(etymology_obj, name_dict)
 
         elif name_style_length == 2:
             wordlist_2_pos = name_style.components[1].keyword_type
@@ -191,8 +182,8 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
                 modword_1_obj = keyword_modifier(keyword_1_obj, wordlist_1_modifier)
                 for keyword_2_obj in wordlist2:
                     modword_2_obj = keyword_modifier(keyword_2_obj, wordlist_2_modifier)
-                    name_obj = combine_2_words(modword_1_obj, modword_2_obj, name_style.components)
-                    name_dict = add_to_dict(name_obj, name_dict)
+                    etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, name_style.components)
+                    name_dict = create_name_obj(etymology_obj, name_dict)
 
         elif name_style_length == 3:
             wordlist_2_pos = name_style.components[1].keyword_type
@@ -207,8 +198,8 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
                     modword_2_obj = keyword_modifier(keyword_2_obj, wordlist_2_modifier)
                     for keyword_3_obj in wordlist3:
                         modword_3_obj = keyword_modifier(keyword_3_obj, wordlist_3_modifier)
-                        name_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, name_style.components)
-                        name_dict = add_to_dict(name_obj, name_dict)
+                        etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, name_style.components)
+                        name_dict = create_name_obj(etymology_obj, name_dict)
 
         else:
             if name_style_length > 3:
@@ -216,13 +207,7 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
             elif name_style_length < 1:
                 print("Name Style contains no keywords!")
 
-    # Sort each name list.
-    for key, names in name_dict.items():
-
-        sorted_names = sorted(names.values(), key=lambda k: (k.total_score * -1, k.length, k.name_lower))
-        name_dict[key] = sorted_names
-
     # Sort name dict by keys.
-    sorted_name_dict = {key: name_dict[key] for key in sorted(name_dict.keys())}
+    name_dict = {key: name_dict[key] for key in sorted(name_dict.keys())}
 
-    return sorted_name_dict
+    return name_dict

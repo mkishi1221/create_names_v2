@@ -142,20 +142,38 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xls
     all_names = make_names(name_styles, keyword_dict)
 
     with open(json_output_fp, "wb+") as out_file:
-        # remove below indent when no further debug needed for more speeeeeed
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
+    # Excel output for prototype only: for production, remove code below
     excel_output = []
+    name_in_lower_previous = ""
+    for key_1, name in all_names.items():
 
-    for name_key, names_list in all_names.items():
-        for name in names_list:
-            excel_output.append(name)
+        for key_2, etymology in name.etymologies.items():
 
-    excel_output = sorted(excel_output, key=lambda d: d.name_lower)
-    excel_output = sorted(excel_output, key=lambda d: d.length)
-    excel_output = sorted(excel_output, key=lambda d: d.total_score, reverse=True)
+            if name_in_lower_previous == name.name_in_lower:
+                name_lowercase = ""
+            else:
+                name_lowercase = name.name_in_lower
 
-    # Export to excel file
+            excel_output.append(
+                {
+                    "name lowercase": name_lowercase,
+                    "name titlecase": etymology.name_in_title,
+                    "length": name.length,
+                    "length score": name.length_score,
+                    "total score": name.total_score,
+                    "keywords": etymology.keywords,
+                    "name styles": etymology.name_styles,
+                }
+            )
+
+            name_in_lower_previous = name_lowercase
+
+    excel_output = sorted(excel_output, key=lambda d: d["name titlecase"].lower())
+    excel_output = sorted(excel_output, key=lambda d: d["length"])
+    excel_output = sorted(excel_output, key=lambda d: d["total score"], reverse=True)
+
     df1 = pd.DataFrame.from_dict(excel_output, orient="columns")
     df1.to_excel(xlsx_output_fp)
 
