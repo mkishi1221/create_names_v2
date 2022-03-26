@@ -7,7 +7,7 @@
     "paired words": "cardia, hemophilia, mania",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"a\""
   },
   {
@@ -18,7 +18,7 @@
     "paired words": "history, meteor, organ",
     "pairing_limitations": "verb",
     "deactivate": "yes",
-    "Keyword shortlist (insert \"s\")": "",
+    "shortlist": "",
     "notes": ""
   },
   {
@@ -29,7 +29,7 @@
     "paired words": "philosophy, theosophy, anthroposophy",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -40,7 +40,7 @@
     "paired words": "athelete, energy, poem",
     "pairing_limitations": "noun",
     "deactivate": "yes",
-    "Keyword shortlist (insert \"s\")": "",
+    "shortlist": "",
     "notes": ""
   },
   {
@@ -51,7 +51,7 @@
     "paired words": "human, parabola, parasite",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -62,7 +62,7 @@
     "paired words": "back, east, home",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -73,7 +73,7 @@
     "paired words": "brilliant, defiant, annoying",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -84,7 +84,7 @@
     "paired words": "absent, dependent, negligible",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -95,7 +95,7 @@
     "paired words": "block, galop, harlequin",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -106,7 +106,7 @@
     "paired words": "infinite, definite, certain",
     "pairing_limitations": "adjective",
     "deactivate": "yes",
-    "Keyword shortlist (insert \"s\")": "",
+    "shortlist": "",
     "notes": ""
   },
   {
@@ -117,7 +117,7 @@
     "paired words": "pass, pilgrim, volt",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -128,7 +128,7 @@
     "paired words": "excite, understand, prevent",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -139,7 +139,7 @@
     "paired words": "comprehend, destroy, compress",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -150,7 +150,7 @@
     "paired words": "percent, infant, insect",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -161,7 +161,7 @@
     "paired words": "adventure, quarrel, trouble",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -172,7 +172,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -183,7 +183,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -194,7 +194,7 @@
     "paired words": "granite, laquer, kitchen",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -205,7 +205,7 @@
     "paired words": "close, erase,fail",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -216,7 +216,7 @@
     "paired words": "clock, length, street",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -227,7 +227,7 @@
     "paired words": "affection, passion, orchestra",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -238,7 +238,7 @@
     "paired words": "attract, expense, repulse",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -249,7 +249,7 @@
     "paired words": "create, preserve, talk",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -260,7 +260,7 @@
     "paired words": "professional, character, sensational",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"al\""
   },
   {
@@ -271,7 +271,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -282,7 +282,7 @@
     "paired words": "ape, brute, child",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -293,7 +293,7 @@
     "paired words": "deep, long, strong",
     "pairing_limitations": "adjective",
     "deactivate": "yes",
-    "Keyword shortlist (insert \"s\")": "",
+    "shortlist": "",
     "notes": ""
   },
   {
@@ -304,7 +304,7 @@
     "paired words": "bacteria, theatric, nature",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -315,7 +315,7 @@
     "paired words": "history, anatomy, philanthropy",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"y\" and y needs to be removed"
   },
   {
@@ -326,7 +326,7 @@
     "paired words": "entrepreneur, editor, president",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -337,7 +337,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -348,7 +348,7 @@
     "paired words": "Italy, Elizabeth, Africa",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -359,7 +359,7 @@
     "paired words": "library, utopia, magic",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -370,7 +370,7 @@
     "paired words": "awake, length, strength",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -381,7 +381,7 @@
     "paired words": "celebrate, complete, navigate",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"te\""
   },
   {
@@ -392,7 +392,7 @@
     "paired words": "confuse, depress, impress",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end with s (with or without vowel after) last vowel needs to be removed"
   },
   {
@@ -403,7 +403,7 @@
     "paired words": "distribute, construct, protect",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end with t (with or without vowel after) last vowel needs to be removed"
   },
   {
@@ -414,7 +414,7 @@
     "paired words": "east, north, west",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -425,7 +425,7 @@
     "paired words": "beg, molecule, lie",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -436,7 +436,7 @@
     "paired words": "cell, circle,muscle",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"cule\" or \"cle\" and \"cule\" or \"cle\" needs to be removed"
   },
   {
@@ -447,7 +447,7 @@
     "paired words": "fear, help, home",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -458,7 +458,7 @@
     "paired words": "kind, shy, weak",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -469,7 +469,7 @@
     "paired words": "hazard, humor, wonder",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -480,7 +480,7 @@
     "paired words": "ambition, caution, religion",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"ion\" and \"ion\" needs to be removed"
   },
   {
@@ -491,7 +491,7 @@
     "paired words": "nonsense, spirit, continue",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -502,7 +502,7 @@
     "paired words": "book, drop, stream",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -513,7 +513,7 @@
     "paired words": "depend, correspond, absorb",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -524,7 +524,7 @@
     "paired words": "move, place, ship",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -535,7 +535,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -546,7 +546,7 @@
     "paired words": "brain, fruit, goo",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "if word ends in vowel, \"e\" needs to be added before \"y\""
   },
   {
@@ -557,7 +557,7 @@
     "paired words": "efficient, private, belligerent",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"ent\""
   },
   {
@@ -568,7 +568,7 @@
     "paired words": "clement, dependent, efficient",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end in \"ent\" and \"ent\" needs to be removed"
   },
   {
@@ -579,7 +579,7 @@
     "paired words": "simple, false, humid",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "if word ends in vowel, \"i\" needs to be added before \"fy\""
   },
   {
@@ -590,7 +590,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -601,7 +601,7 @@
     "paired words": "(all latin words)",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": ""
   },
   {
@@ -612,7 +612,7 @@
     "paired words": "bad, courageous, happy",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be replaced with \"i\""
   },
   {
@@ -623,7 +623,7 @@
     "paired words": "sloppy, steady, thirst",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "if word ends in \"y\" needs to be replaced with \"i\""
   },
   {
@@ -634,7 +634,7 @@
     "paired words": "parliament, military, budget",
     "pairing_limitations": "noun",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -645,7 +645,7 @@
     "paired words": "contribute, inflame, satsify",
     "pairing_limitations": "verb",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -656,7 +656,7 @@
     "paired words": "able, honest, loyal",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "last vowel needs to be removed"
   },
   {
@@ -667,7 +667,7 @@
     "paired words": "abnormal, civil, compatible",
     "pairing_limitations": "adjective",
     "deactivate": "",
-    "Keyword shortlist (insert \"s\")": "s",
+    "shortlist": "s",
     "notes": "only words that end with l (with or without vowel after) last vowel needs to be removed"
   }
 ]

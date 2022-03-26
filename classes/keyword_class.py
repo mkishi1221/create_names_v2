@@ -21,6 +21,7 @@ class Keyword:
     pos: str = None
     spacy_occurrence: int = 0
     pairing_limitations: str = "none"
+    shortlist: str = None
 
     def __eq__(self, o: object) -> bool:
         return self.source_word == o.source_word and self.keyword == o.keyword and self.pos == o.pos

@@ -42,8 +42,7 @@ echo "Creating word list..."
 python3 keyword_generator.py \
     tmp/user_sentences.tsv \
     tmp/user_keywords.tsv \
-    results/keywords.xlsx
-
+    results/keywords.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

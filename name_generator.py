@@ -7,6 +7,7 @@ from modules.collect_name_styles import collect_name_styles
 from classes.keyword_class import Keyword
 from typing import List
 from modules.convert_excel_to_json import convert_excel_to_json
+from modules.generate_keyword_shortlist import generate_keyword_shortlist
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
@@ -19,7 +20,7 @@ def pull_dictionary(dictionary_fp: str, keyword_type: str) -> List[Keyword]:
 
     target_list = []
     for data in dictionary_data:
-        if data["Keyword shortlist (insert \"s\")"] == "s":
+        if data["shortlist"] is not None and data["shortlist"] != "":
             target_list.append(
                 Keyword(
                     origin="dictionary",
@@ -31,7 +32,8 @@ def pull_dictionary(dictionary_fp: str, keyword_type: str) -> List[Keyword]:
                     wordsAPI_pos="",
                     pos=keyword_type,
                     spacy_occurrence="",
-                    pairing_limitations=data["pairing_limitations"]
+                    pairing_limitations=data["pairing_limitations"],
+                    shortlist=data["shortlist"]
                 )
         )
     return target_list
@@ -73,29 +75,17 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xls
     adjectives = []
     adverbs = []
 
-    for keyword in keyword_data:
+    keyword_shortlist = generate_keyword_shortlist(keyword_data)
 
-        if keyword["Keyword shortlist (insert \"s\")"] == "s":
-            keyword_obj = Keyword(
-                origin=keyword["origin"],
-                source_word=keyword["source_word"],
-                spacy_lemma=keyword["spacy_lemma"],
-                keyword=keyword["keyword"],
-                keyword_len=keyword["keyword_len"],
-                spacy_pos=keyword["spacy_pos"],
-                wordsAPI_pos=keyword["wordsAPI_pos"],
-                pos=keyword["pos"],
-                spacy_occurrence=keyword["spacy_occurrence"],
-                pairing_limitations=keyword["pairing_limitations"]
-            )
+    for keyword_obj in keyword_shortlist:
 
-            if keyword["pos"] == "noun":
+            if keyword_obj.pos == "noun":
                 nouns.append(keyword_obj)
-            elif keyword["pos"] == "verb":
+            elif keyword_obj.pos == "verb":
                 verbs.append(keyword_obj)
-            elif keyword["pos"] == "adjective":
+            elif keyword_obj.pos == "adjective":
                 adjectives.append(keyword_obj)
-            elif keyword["pos"] == "adverb":
+            elif keyword_obj.pos == "adverb":
                 adverbs.append(keyword_obj)
 
     # Pull required dictionaries

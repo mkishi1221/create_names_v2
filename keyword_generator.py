@@ -3,12 +3,15 @@
 from classes.keyword_class import Keyword
 import sys
 import orjson as json
-from modules.process_text_with_spacy import process_text_with_spacy
-from modules.get_wordAPI import verify_words_with_wordsAPI
 import operator
-from typing import List
+from typing import List, Dict
 import regex as re
 import copy
+import os.path
+from modules.process_text_with_spacy import process_text_with_spacy
+from modules.get_wordAPI import verify_words_with_wordsAPI
+from modules.generate_keyword_shortlist import generate_keyword_shortlist
+from modules.convert_excel_to_json import convert_excel_to_json
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
@@ -81,6 +84,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
 def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str):
 
     all_keywords: List[Keyword] = []
+    all_keywords_dict: Dict[str, Dict[str, Keyword]] = {}
 
     # Check if keywords exists
     user_keywords = open(keyword_list_fp, "r").read().splitlines()
@@ -119,16 +123,15 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
         print("Verifying keyword pos using wordAPI dictionary......")
         sentence_keywords = verify_words_with_wordsAPI(sentence_keywords)
 
-        for keyword in sentence_keywords:
-            if keyword in keyword_list_keywords:
-                keyword.origin.append("keyword_list")
-                all_keywords.append(keyword)
-            else:
-                all_keywords.append(keyword)
+        for keyword_obj in sentence_keywords:
+            if keyword_obj in keyword_list_keywords:
+                keyword_obj.origin.append("keyword_list")
+            if keyword_obj not in all_keywords:
+                all_keywords.append(keyword_obj)
 
-        for keyword in keyword_list_keywords:
-            if keyword not in all_keywords:
-                all_keywords.append(keyword)
+        for keyword_obj in keyword_list_keywords:
+            if keyword_obj not in all_keywords:
+                all_keywords.append(keyword_obj)
 
         with open("ref/keywords_from_sentences.json", "wb+") as out_file:
             out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
@@ -140,21 +143,55 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
         )
         quit()
 
-    # # Run keywords through keywords filter
+    # Run keywords through keywords filter
     print("Running keywords through keyword filter...")
     keywords = filter_keywords(all_keywords)
 
+    # Convert keyword list into keyword dict
+    for keyword_obj in keywords:
+        keyword_str = keyword_obj.keyword
+        pos_str = keyword_obj.pos
+        if keyword_str not in all_keywords_dict.keys():
+            all_keywords_dict[keyword_str] = {}
+            all_keywords_dict[keyword_str][pos_str] = keyword_obj
+        elif pos_str not in all_keywords_dict[keyword_str].keys():
+            all_keywords_dict[keyword_str][pos_str] = keyword_obj
+
+    # Shortlist keywords if keyword shortlist exists
+    # Excel input for prototype only: for production, import directly from json
+    old_excel_output = "".join([json_output[:-5], ".xlsx"])
+    if os.path.exists(old_excel_output):
+        
+        sheet_name = "Sheet1"
+        old_excel_output = convert_excel_to_json(old_excel_output, sheet_name)   
+
+        with open(old_excel_output) as keyword_file:
+            keyword_data = json.loads(keyword_file.read())
+
+        keyword_shortlist = generate_keyword_shortlist(keyword_data)
+
+        for keyword_obj in keyword_shortlist:
+            keyword_str = keyword_obj.keyword
+            pos_str = keyword_obj.pos
+            keyword_shortlist = keyword_obj.shortlist
+            if keyword_str in all_keywords_dict.keys():
+                if pos_str in all_keywords_dict[keyword_str].keys():
+                    all_keywords_dict[keyword_str][pos_str].shortlist = keyword_shortlist
+
     print("Sorting keywords and exporting files...")
-    keywords.sort(key=operator.attrgetter('keyword'))
+    all_keywords_dict = {key: all_keywords_dict[key] for key in sorted(all_keywords_dict.keys())}
 
     with open(json_output, "wb+") as out_file:
-        out_file.write(json.dumps(keywords, option=json.OPT_INDENT_2))
+        out_file.write(json.dumps(all_keywords_dict, option=json.OPT_INDENT_2))
 
     # Excel output for reference only: remove for production
-    excel_output = "".join([json_output[:-5], ".xlsx"])
-    df1 = pd.DataFrame.from_dict(keywords, orient="columns")
-    df1.insert(10, column="Keyword shortlist (insert \"s\")", value="")
-    df1.to_excel(excel_output)
+    excel_output_fp = "".join([json_output[:-5], ".xlsx"])
+    excel_output_list = []
+    for key_1, keyword_pos in all_keywords_dict.items():
+        for key_2, keyword in keyword_pos.items():
+            excel_output_list.append(keyword)
+    df1 = pd.DataFrame.from_dict(excel_output_list, orient="columns")
+    df1.to_excel(excel_output_fp)
 
 if __name__ == "__main__":
     generate_word_list(sys.argv[1], sys.argv[2], sys.argv[3])
