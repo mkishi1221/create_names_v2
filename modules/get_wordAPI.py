@@ -195,10 +195,10 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
         else:
             # Generate hard_lemma values
 
+            keyword_obj_update = copy.deepcopy(keyword_obj)
             hard_lemma = create_hard_lemma(keyword_obj.keyword)
 
             if hard_lemma is not None:
-
                 keyword_obj_hl = copy.deepcopy(keyword_obj)
                 keyword_obj_hl.hard_lemma = hard_lemma
 
@@ -215,6 +215,6 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
                     updated_keywords_db.append(keyword_obj_hl)
 
             else:
-                updated_keywords_db.append(keyword_obj)
+                updated_keywords_db.append(keyword_obj_update)
 
     return updated_keywords_db

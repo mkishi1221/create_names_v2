@@ -29,7 +29,7 @@ class Component:
 
 @dataclass_json
 @dataclass
-class Name_Style(Component):
+class Name_Style:
     """
     Helper class for manipulation of keywords
     Components are stored in a list of component/modifier pairs

@@ -8,6 +8,7 @@ from modules.get_wordAPI import verify_words_with_wordsAPI
 import operator
 from typing import List
 import regex as re
+import copy
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
@@ -28,6 +29,30 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     discarded_keywords_output_fp = "results/discarded_keywords.json"
 
     for keyword in keywords:
+
+        if keyword.pos is None:
+            if keyword.spacy_pos is not None:
+                spacy_pos = keyword.spacy_pos
+
+                if spacy_pos is not None:
+                    pos_conversion = {
+                        "NOUN": "noun",
+                        "VERB": "verb",
+                        "ADJ": "adjective",
+                        "ADV": "adverb",
+                        "DET": "definite article",
+                        "CCONJ": "conjunction",
+                        "ADP": "adposition",
+                        "PART": "preposition"
+                    }
+                    conv_pos = pos_conversion[spacy_pos]
+                else:
+                    conv_pos = None
+                
+                keyword = copy.deepcopy(keyword)
+
+                keyword.pos = conv_pos
+
         if (
             keyword.pos in approved_pos
             and not bool(illegal_char.search(keyword.keyword))

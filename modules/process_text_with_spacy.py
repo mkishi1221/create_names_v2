@@ -42,31 +42,12 @@ def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     processed_word = re.sub(r"^\W+", "", word).lower()
     processed_word = re.sub(r"\W+$", "", processed_word)
 
-    if word_pos is not None:
-            pos_conversion = {
-                "NOUN": "noun",
-                "VERB": "verb",
-                "ADJ": "adjective",
-                "ADV": "adverb",
-                "DET": "definite article",
-                "CCONJ": "conjunction",
-                "ADP": "adposition",
-                "PART": "preposition"
-            }
-            if word_pos is not None and word_pos.strip() in pos_conversion.keys():
-                pos = pos_conversion[word_pos]
-            else:
-                pos = None
-    else:
-        pos = None
-
     return Keyword(
         source_word=word,
         spacy_lemma=word_lemma,
         keyword=processed_word,
         keyword_len=len(processed_word),
-        spacy_pos=word_pos,
-        pos=pos
+        spacy_pos=word_pos
     )
 
 
