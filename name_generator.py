@@ -8,6 +8,7 @@ from classes.keyword_class import Keyword
 from typing import List
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
+from modules.generate_hard_lemma import generate_hard_lemma
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
@@ -40,7 +41,7 @@ def pull_dictionary(dictionary_fp: str, keyword_type: str) -> List[Keyword]:
 
 # Generate name ideas
 # "keyword_fp", "name_style_fp", "json_output_fp", "xlsx_output_fp" inputs are filepaths
-def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xlsx_output_fp: str):
+def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str):
 
     # Convert excel file to json file (remove when excel files not used anymore)
     sheet_name = "name_styles"
@@ -131,10 +132,25 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xls
     # Generate names
     all_names = make_names(name_styles, keyword_dict)
 
+
     with open(json_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
+    shortlisted_names = {}
+
+    for key, name in all_names.items():
+        if name.shortlist == "yes":
+            shortlisted_names[key] = name
+
+    json_sl_output_fp = json_output_fp.replace("/", "/shortlisted_")
+
+    with open(json_sl_output_fp, "wb+") as out_file:
+        out_file.write(json.dumps(shortlisted_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
+
+    
+
     # Excel output for prototype only: for production, remove code below
+    xlsx_output_fp = json_output_fp.replace(".json", ".xlsx")
     excel_output = []
     name_in_lower_previous = ""
     for key_1, name in all_names.items():
@@ -153,6 +169,11 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xls
                     "length": name.length,
                     "length score": name.length_score,
                     "total score": name.total_score,
+                    "phonetic pattern": int(name.phonetic_pattern),
+                    "phonetic count": name.phonetic_count,
+                    "plausible word?": name.word_plausibility,
+                    "is it a word?": name.is_word,
+                    "shortlist": name.shortlist,
                     "keywords": etymology.keywords,
                     "name styles": etymology.name_styles,
                 }
@@ -168,4 +189,4 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str, xls
     df1.to_excel(xlsx_output_fp)
 
 if __name__ == "__main__":
-    generate_names(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    generate_names(sys.argv[1], sys.argv[2], sys.argv[3])

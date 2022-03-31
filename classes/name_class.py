@@ -33,6 +33,8 @@ class Etymology:
         )
 
 
+
+
 @dataclass
 class Name:
     """
@@ -44,6 +46,11 @@ class Name:
     length: int = 0
     length_score: int = 0
     total_score: int = 0
+    phonetic_pattern: str = None
+    phonetic_count: dict = None
+    word_plausibility: str = None
+    is_word: str = None
+    shortlist: str = None
     etymologies: Dict[str, Etymology] = None
 
     def __eq__(self, o: object) -> bool:
@@ -72,7 +79,12 @@ class Name:
         )
 
 @dataclass
-class Domain(Name):
+class Domain:
+    domain: str = None
+    availability: str = None
+    last_checked: str = None
+    check_validity: str = None
 
-    # domain list will contain a dictionary with 2 keys: domain and availability (eg. domains: {domain: "google.com", availability: "Not available"})
-    domains: List[Dict[str,str]] = field(default_factory=list)
+@dataclass
+class NameDomain:
+    domain: List[Domain] = field(default_factory=list)

@@ -12,8 +12,7 @@ mkdir -p results/
 python3 name_generator.py \
     results/keywords.xlsx \
     data/name_styles/name_style_list.xlsx \
-    results/names.json \
-    results/names.xlsx
+    results/names.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

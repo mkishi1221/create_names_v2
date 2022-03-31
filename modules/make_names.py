@@ -2,13 +2,46 @@
 # -*- coding:utf-8 -*-
 from typing import List
 from typing import Dict
+import regex as re
+import copy
+import orjson as json
 from classes.name_style_class import Name_Style
 from classes.name_style_class import Component
 from classes.name_class import Etymology
 from classes.name_class import Name
 from classes.keyword_class import Modword
-import regex as re
-import copy
+from modules.generate_phonetic import generate_phonetic
+from modules.word_plausible import word_plausability
+from modules.generate_hard_lemma import generate_hard_lemma
+
+def is_word(name: str, wordsAPI_data: dict):
+
+    is_it_word = None
+
+    if name not in wordsAPI_data.keys():
+        hard_lemma = generate_hard_lemma(name, "use short")
+        if hard_lemma is None:
+            is_it_word = "no"
+        else:
+            hl_1 = hard_lemma["hard_lemma_1"]
+            hl_2 = hard_lemma["hard_lemma_2"]
+
+            if hl_1 in wordsAPI_data.keys() or hl_2 in wordsAPI_data.keys():
+                is_it_word = "yes"
+            else:
+                is_it_word = "no"
+    else:
+        is_it_word = "yes"
+
+    return is_it_word
+
+def count_phonetic(phonetic_pattern: str):
+
+    vowel_count = phonetic_pattern.count("11")
+    consonant_count = phonetic_pattern.count("22")
+    phonetic_values = {"double_vowels":vowel_count, "double_consonants":consonant_count}
+
+    return phonetic_values
 
 def name_length_scorer(name_length: int) -> int:
 
@@ -88,7 +121,7 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
         name_styles=[name_style_update],
     )
 
-def create_name_obj(etymology_obj: Etymology, name_dict: dict):
+def create_name_obj(etymology_obj: Etymology, name_dict: dict, wordsAPI_data: dict):
 
     name_lower = etymology_obj.name_in_title.lower()
     name_title = etymology_obj.name_in_title
@@ -97,6 +130,10 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict):
 
         name_length = len(name_lower)
         name_length_score = name_length_scorer(name_length)
+        phonetic_patt = generate_phonetic(name_lower)
+        phonetic_values = count_phonetic(phonetic_patt)
+        word_plaus = word_plausability(name_lower)
+        is_it_word = is_word(name_lower, wordsAPI_data)
         # other scores will be added to name_score later (ie. legibility scores etc.)
         name_score = int(name_length_score)
 
@@ -105,6 +142,10 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict):
             length=name_length,
             length_score=name_length_score,
             total_score=name_score,
+            phonetic_pattern=phonetic_patt,
+            phonetic_count=phonetic_values,
+            word_plausibility=word_plaus,
+            is_word=is_it_word,
             etymologies={name_title:etymology_obj}
         )
     else:
@@ -160,6 +201,10 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
     name_dict: dict[List[Name]] = {}
     # delete below list after bugfix
 
+    main_wordsAPI_dict_fp = "../wordsAPI/original_data/wordsapi_list.json"
+    with open(main_wordsAPI_dict_fp) as wordsAPI_file:
+        wordsAPI_data = json.loads(wordsAPI_file.read())
+
     for name_style in name_styles:
         print(f"Generating names with {name_style}...")
 
@@ -172,7 +217,7 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
             for keyword_1_obj in wordlist1:
                 modword_1_obj = keyword_modifier(keyword_1_obj, wordlist_1_modifier)
                 etymology_obj = combine_1_word(modword_1_obj, name_style.components)
-                name_dict = create_name_obj(etymology_obj, name_dict)
+                name_dict = create_name_obj(etymology_obj, name_dict, wordsAPI_data)
 
         elif name_style_length == 2:
             wordlist_2_pos = name_style.components[1].keyword_type
@@ -183,7 +228,7 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
                 for keyword_2_obj in wordlist2:
                     modword_2_obj = keyword_modifier(keyword_2_obj, wordlist_2_modifier)
                     etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, name_style.components)
-                    name_dict = create_name_obj(etymology_obj, name_dict)
+                    name_dict = create_name_obj(etymology_obj, name_dict, wordsAPI_data)
 
         elif name_style_length == 3:
             wordlist_2_pos = name_style.components[1].keyword_type
@@ -199,7 +244,7 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
                     for keyword_3_obj in wordlist3:
                         modword_3_obj = keyword_modifier(keyword_3_obj, wordlist_3_modifier)
                         etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, name_style.components)
-                        name_dict = create_name_obj(etymology_obj, name_dict)
+                        name_dict = create_name_obj(etymology_obj, name_dict, wordsAPI_data)
 
         else:
             if name_style_length > 3:

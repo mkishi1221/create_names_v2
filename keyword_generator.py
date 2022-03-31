@@ -3,7 +3,6 @@
 from classes.keyword_class import Keyword
 import sys
 import orjson as json
-import operator
 from typing import List, Dict
 import regex as re
 import copy
@@ -24,37 +23,41 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     - Not contain any characters except alphabets
     - Word is at least 3 letters
     """
-
+    default_blacklist_fp = "dict/default_blacklist.txt"
+    blacklist = user_keywords = open(default_blacklist_fp, "r").read().splitlines()
     approved_pos = ["noun", "verb", "adjective", "adverb"]
     illegal_char = re.compile(r"[^a-zA-Z]")
+    legal_char = re.compile(r"[a-zA-Z]")
     approved_keywords = []
     discarded_keywords = []
     discarded_keywords_output_fp = "results/discarded_keywords.json"
 
+    pos_conversion = {
+    "NOUN": "noun",
+    "VERB": "verb",
+    "ADJ": "adjective",
+    "ADV": "adverb",
+    "DET": "definite article",
+    "CCONJ": "conjunction",
+    "ADP": "adposition",
+    "PART": "preposition",
+    "PRON": "pronoun"
+    }
+
     for keyword in keywords:
 
-        if keyword.pos is None:
+        if keyword.keyword in blacklist:
+            keyword = copy.deepcopy(keyword)
+            keyword.pos = "Common"
+    
+        elif keyword.pos is None:
             if keyword.spacy_pos is not None:
                 spacy_pos = keyword.spacy_pos
 
-                if spacy_pos is not None:
-                    pos_conversion = {
-                        "NOUN": "noun",
-                        "VERB": "verb",
-                        "ADJ": "adjective",
-                        "ADV": "adverb",
-                        "DET": "definite article",
-                        "CCONJ": "conjunction",
-                        "ADP": "adposition",
-                        "PART": "preposition"
-                    }
+                if spacy_pos in pos_conversion.keys():
                     conv_pos = pos_conversion[spacy_pos]
-                else:
-                    conv_pos = None
-                
-                keyword = copy.deepcopy(keyword)
-
-                keyword.pos = conv_pos
+                    keyword = copy.deepcopy(keyword)
+                    keyword.pos = conv_pos            
 
         if (
             keyword.pos in approved_pos
@@ -62,7 +65,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
             and keyword.keyword_len > 2
         ):
             approved_keywords.append(keyword)
-        else:
+        elif bool(legal_char.search(keyword.keyword)):
             discarded_keywords.append(keyword)
 
     discarded_keywords = list(set(discarded_keywords))
@@ -179,15 +182,19 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
                     all_keywords_dict[keyword_str][pos_str].shortlist = keyword_shortlist
 
     print("Sorting keywords and exporting files...")
-    all_keywords_dict = {key: all_keywords_dict[key] for key in sorted(all_keywords_dict.keys())}
 
+    all_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
+    sorted_keywords_dict = {}
+    for k in sorted(all_keywords_dict, key=len):
+        sorted_keywords_dict[k] = all_keywords_dict[k]
+    
     with open(json_output, "wb+") as out_file:
-        out_file.write(json.dumps(all_keywords_dict, option=json.OPT_INDENT_2))
+        out_file.write(json.dumps(sorted_keywords_dict, option=json.OPT_INDENT_2))
 
     # Excel output for reference only: remove for production
     excel_output_fp = "".join([json_output[:-5], ".xlsx"])
     excel_output_list = []
-    for key_1, keyword_pos in all_keywords_dict.items():
+    for key_1, keyword_pos in sorted_keywords_dict.items():
         for key_2, keyword in keyword_pos.items():
             excel_output_list.append(keyword)
     df1 = pd.DataFrame.from_dict(excel_output_list, orient="columns")
