@@ -8,7 +8,6 @@ from classes.keyword_class import Keyword
 from typing import List
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
-from modules.generate_hard_lemma import generate_hard_lemma
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd

@@ -8,7 +8,6 @@ def word_plausability(word):
 
     in_list = "yes"
 
-    
     length = 3
     letters_list = set()
 
