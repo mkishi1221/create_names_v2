@@ -14,6 +14,20 @@ from modules.generate_phonetic import generate_phonetic
 from modules.word_plausible import word_plausability
 from modules.generate_hard_lemma import generate_hard_lemma
 
+def determine_shortlist(phonetic_values: dict, word_plaus: str, is_it_word_str: str):
+
+    shortlist = None
+    # phonetic_total = phonetic_values["double_vowels"] + phonetic_values["double_consonants"]
+
+    phonetic_total = phonetic_values["double_vowels"]
+
+    if phonetic_total < 2 and word_plaus == "yes" and is_it_word_str == "no":
+        shortlist = "Yes"
+    else:
+        shortlist = "No"
+
+    return shortlist
+
 def is_word(name: str, wordsAPI_data: dict):
 
     is_it_word = None
@@ -133,7 +147,8 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, wordsAPI_data: di
         phonetic_patt = generate_phonetic(name_lower)
         phonetic_values = count_phonetic(phonetic_patt)
         word_plaus = word_plausability(name_lower)
-        is_it_word = is_word(name_lower, wordsAPI_data)
+        is_it_word_str = is_word(name_lower, wordsAPI_data)
+        shortlist_str = determine_shortlist(phonetic_values, word_plaus, is_it_word_str)
         # other scores will be added to name_score later (ie. legibility scores etc.)
         name_score = int(name_length_score)
 
@@ -145,7 +160,8 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, wordsAPI_data: di
             phonetic_pattern=phonetic_patt,
             phonetic_count=phonetic_values,
             word_plausibility=word_plaus,
-            is_word=is_it_word,
+            is_word=is_it_word_str,
+            shortlist=shortlist_str,
             etymologies={name_title:etymology_obj}
         )
     else:
@@ -201,7 +217,7 @@ def make_names(name_styles: List[Name_Style], wordlist: dict) -> Dict[str, List[
     name_dict: dict[List[Name]] = {}
     # delete below list after bugfix
 
-    main_wordsAPI_dict_fp = "../wordsAPI/original_data/wordsapi_list.json"
+    main_wordsAPI_dict_fp = "../wordsAPI/cleaned_wordAPI_dict.json"
     with open(main_wordsAPI_dict_fp) as wordsAPI_file:
         wordsAPI_data = json.loads(wordsAPI_file.read())
 

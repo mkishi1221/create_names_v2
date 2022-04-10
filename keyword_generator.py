@@ -11,75 +11,12 @@ from modules.process_text_with_spacy import process_text_with_spacy
 from modules.get_wordAPI import verify_words_with_wordsAPI
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.convert_excel_to_json import convert_excel_to_json
+from modules.filter_keywords import filter_keywords
+from modules.create_lemma_keywords import create_lemma_keywords
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
 
-
-def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
-    """
-    Filter approved keywords (approved keywords may be the following):
-    - Either a noun, verb, or an adjective
-    - Not contain any characters except alphabets
-    - Word is at least 3 letters
-    """
-    default_blacklist_fp = "dict/default_blacklist.txt"
-    blacklist = user_keywords = open(default_blacklist_fp, "r").read().splitlines()
-    approved_pos = ["noun", "verb", "adjective", "adverb"]
-    illegal_char = re.compile(r"[^a-zA-Z]")
-    legal_char = re.compile(r"[a-zA-Z]")
-    approved_keywords = []
-    discarded_keywords = []
-    discarded_keywords_output_fp = "results/discarded_keywords.json"
-
-    pos_conversion = {
-    "NOUN": "noun",
-    "VERB": "verb",
-    "ADJ": "adjective",
-    "ADV": "adverb",
-    "DET": "definite article",
-    "CCONJ": "conjunction",
-    "ADP": "adposition",
-    "PART": "preposition",
-    "PRON": "pronoun"
-    }
-
-    for keyword in keywords:
-
-        if keyword.keyword in blacklist:
-            keyword = copy.deepcopy(keyword)
-            keyword.pos = "Common"
-    
-        elif keyword.pos is None:
-            if keyword.spacy_pos is not None:
-                spacy_pos = keyword.spacy_pos
-
-                if spacy_pos in pos_conversion.keys():
-                    conv_pos = pos_conversion[spacy_pos]
-                    keyword = copy.deepcopy(keyword)
-                    keyword.pos = conv_pos            
-
-        if (
-            keyword.pos in approved_pos
-            and not bool(illegal_char.search(keyword.keyword))
-            and keyword.keyword_len > 2
-        ):
-            approved_keywords.append(keyword)
-        elif bool(legal_char.search(keyword.keyword)):
-            discarded_keywords.append(keyword)
-
-    discarded_keywords = list(set(discarded_keywords))
-    approved_keywords = list(set(approved_keywords))
-
-    with open(discarded_keywords_output_fp, "wb+") as out_file:
-        out_file.write(json.dumps(list(set(discarded_keywords)), option=json.OPT_INDENT_2))
-
-    # Excel output for reference only: remove for production
-    excel_output = "".join([discarded_keywords_output_fp[:-5], ".xlsx"])
-    df1 = pd.DataFrame.from_dict(discarded_keywords, orient="columns")
-    df1.to_excel(excel_output)        
-
-    return list(approved_keywords)
 
 # "text_file" input is a filepath
 # "user_keywords_file" input is a filepath
@@ -105,6 +42,7 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
         print("Getting keyword pos using wordAPI dictionary......")
         keyword_list_keywords = verify_words_with_wordsAPI(user_keywords)
+        keyword_list_keywords = create_lemma_keywords(keyword_list_keywords)
 
         with open("ref/keywords_from_keyword-list.json", "wb+") as out_file:
             out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
@@ -125,6 +63,7 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
         print("Verifying keyword pos using wordAPI dictionary......")
         sentence_keywords = verify_words_with_wordsAPI(sentence_keywords)
+        sentence_keywords = create_lemma_keywords(sentence_keywords)
 
         for keyword_obj in sentence_keywords:
             if keyword_obj in keyword_list_keywords:
@@ -148,7 +87,8 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
     # Run keywords through keywords filter
     print("Running keywords through keyword filter...")
-    keywords = filter_keywords(all_keywords)
+    discarded_keywords_output_fp = json_output.replace("/", "/discarded_")
+    keywords = filter_keywords(all_keywords, discarded_keywords_output_fp)
 
     # Convert keyword list into keyword dict
     for keyword_obj in keywords:
@@ -184,15 +124,17 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
     print("Sorting keywords and exporting files...")
 
     all_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
-    sorted_keywords_dict = {}
-    for k in sorted(all_keywords_dict, key=len):
-        sorted_keywords_dict[k] = all_keywords_dict[k]
+    # sorted_keywords_dict = {}
+    # for k in sorted(all_keywords_dict, key=len):
+    #     sorted_keywords_dict[k] = all_keywords_dict[k]
+
+    sorted_keywords_dict = all_keywords_dict
     
     with open(json_output, "wb+") as out_file:
         out_file.write(json.dumps(sorted_keywords_dict, option=json.OPT_INDENT_2))
 
     # Excel output for reference only: remove for production
-    excel_output_fp = "".join([json_output[:-5], ".xlsx"])
+    excel_output_fp = "".join([json_output[:-5], "_shortlist.xlsx"])
     excel_output_list = []
     for key_1, keyword_pos in sorted_keywords_dict.items():
         for key_2, keyword in keyword_pos.items():

@@ -121,7 +121,7 @@ def fetch_pos_wordAPI(keyword_obj: Keyword, wordapi_data: dict) -> list[str]:
 
 def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
 
-    main_wordsAPI_dict_fp = "../wordsAPI/original_data/wordsapi_list.json"
+    main_wordsAPI_dict_fp = "../wordsAPI/cleaned_wordAPI_dict.json"
     with open(main_wordsAPI_dict_fp) as wordsAPI_file:
         wordsAPI_data = json.loads(wordsAPI_file.read())
 
@@ -131,13 +131,10 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
     updated_keywords_db = []
     for keyword_obj in keywords_db:
 
-        # Generate hard_lemma values
-
         # Collect all pos possibilities
         pos_list = fetch_pos_wordAPI(keyword_obj, wordsAPI_data)            
 
         # Add different pos variations to keyword list.
-        # Potential bug: deepcopy required here
         if pos_list is not None:
             for pos in pos_list:
                 keyword_obj_update = copy.deepcopy(keyword_obj)

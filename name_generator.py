@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 import sys
 import orjson as json
+import os
 from modules.make_names import make_names
 from modules.collect_name_styles import collect_name_styles
 from classes.keyword_class import Keyword
@@ -130,15 +131,14 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str):
 
     # Generate names
     all_names = make_names(name_styles, keyword_dict)
-
-
+    
     with open(json_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     shortlisted_names = {}
 
     for key, name in all_names.items():
-        if name.shortlist == "yes":
+        if name.shortlist == "Yes":
             shortlisted_names[key] = name
 
     json_sl_output_fp = json_output_fp.replace("/", "/shortlisted_")
@@ -146,7 +146,13 @@ def generate_names(keyword_fp: str, name_style_fp: str, json_output_fp: str):
     with open(json_sl_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(shortlisted_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
-    
+    # Removing previously generated names and domains 
+    tmp_file="tmp/remaining_shortlist.json"
+    if os.path.exists(tmp_file):
+        os.remove(tmp_file)
+    previous_domain_output_fp = "results/domains.json"
+    if os.path.exists(previous_domain_output_fp):
+        os.remove(previous_domain_output_fp)
 
     # Excel output for prototype only: for production, remove code below
     xlsx_output_fp = json_output_fp.replace(".json", ".xlsx")

@@ -9,10 +9,10 @@ mkdir -p tmp
 mkdir -p ref/logs
 mkdir -p results/
 
-python3 name_generator.py \
-    results/keywords_shortlist.xlsx \
-    data/name_styles/name_style_list.xlsx \
-    results/names.json
+python3 domain_checker.py \
+    results/shortlisted_names.json \
+    50 \
+    results/domains.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

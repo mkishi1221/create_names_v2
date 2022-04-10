@@ -1,0 +1,50 @@
+[
+  {
+    "origin": [
+      "seed_branding_definition"
+    ],
+    "source_word": "the",
+    "spacy_lemma": "the",
+    "hard_lemma": null,
+    "keyword": "the",
+    "keyword_len": 3,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "determiner",
+    "pos": "Common",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_branding_definition"
+    ],
+    "source_word": "of",
+    "spacy_lemma": "of",
+    "hard_lemma": null,
+    "keyword": "of",
+    "keyword_len": 2,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": null,
+    "pos": "Common",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_branding_synonyms"
+    ],
+    "source_word": "stigmatisation",
+    "spacy_lemma": "stigmatisation",
+    "hard_lemma": null,
+    "keyword": "stigmatisation",
+    "keyword_len": 14,
+    "spacy_pos": null,
+    "wordsAPI_pos": null,
+    "pos": null,
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  }
+]

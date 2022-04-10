@@ -1,0 +1,2776 @@
+[
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "acts",
+    "spacy_lemma": "acts",
+    "hard_lemma": {
+      "hard_lemma_1": "act",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "act",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "act",
+    "spacy_lemma": "act",
+    "hard_lemma": null,
+    "keyword": "act",
+    "keyword_len": 3,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "actions",
+    "spacy_lemma": "actions",
+    "hard_lemma": {
+      "hard_lemma_1": "action",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "action",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "actions",
+    "spacy_lemma": "actions",
+    "hard_lemma": {
+      "hard_lemma_1": "action",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "actions",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "acts",
+    "spacy_lemma": "acts",
+    "hard_lemma": {
+      "hard_lemma_1": "act",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "acts",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "aim",
+    "spacy_lemma": "aim",
+    "hard_lemma": null,
+    "keyword": "aim",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "aim",
+    "spacy_lemma": "aim",
+    "hard_lemma": null,
+    "keyword": "aim",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "anticipated",
+    "spacy_lemma": "anticipated",
+    "hard_lemma": {
+      "hard_lemma_1": "anticipat",
+      "hard_lemma_2": "anticipate",
+      "possible_pos": [
+        "adjective",
+        "verb"
+      ]
+    },
+    "keyword": "anticipate",
+    "keyword_len": 11,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "anticipated",
+    "spacy_lemma": "anticipated",
+    "hard_lemma": {
+      "hard_lemma_1": "anticipat",
+      "hard_lemma_2": "anticipate",
+      "possible_pos": [
+        "adjective",
+        "verb"
+      ]
+    },
+    "keyword": "anticipated",
+    "keyword_len": 11,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "argyle",
+    "spacy_lemma": "argyle",
+    "hard_lemma": null,
+    "keyword": "argyle",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "arrangement",
+    "spacy_lemma": "arrangement",
+    "hard_lemma": null,
+    "keyword": "arrangement",
+    "keyword_len": 11,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "artistic",
+    "spacy_lemma": "artistic",
+    "hard_lemma": null,
+    "keyword": "artistic",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "bear",
+    "spacy_lemma": "bear",
+    "hard_lemma": null,
+    "keyword": "bear",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "blueprint",
+    "spacy_lemma": "blueprint",
+    "hard_lemma": null,
+    "keyword": "blueprint",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "blueprint",
+    "spacy_lemma": "blueprint",
+    "hard_lemma": null,
+    "keyword": "blueprint",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cause",
+    "spacy_lemma": "cause",
+    "hard_lemma": null,
+    "keyword": "cause",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "claw",
+    "spacy_lemma": "claw",
+    "hard_lemma": null,
+    "keyword": "claw",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "conceive",
+    "spacy_lemma": "conceive",
+    "hard_lemma": null,
+    "keyword": "conceive",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "conception",
+    "spacy_lemma": "conception",
+    "hard_lemma": null,
+    "keyword": "conception",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "conceptualize",
+    "spacy_lemma": "conceptualize",
+    "hard_lemma": null,
+    "keyword": "conceptualize",
+    "keyword_len": 13,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "concert",
+    "spacy_lemma": "concert",
+    "hard_lemma": null,
+    "keyword": "concert",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "concert",
+    "spacy_lemma": "concert",
+    "hard_lemma": null,
+    "keyword": "concert",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "concoction",
+    "spacy_lemma": "concoction",
+    "hard_lemma": null,
+    "keyword": "concoction",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "configuration",
+    "spacy_lemma": "configuration",
+    "hard_lemma": null,
+    "keyword": "configuration",
+    "keyword_len": 13,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "constellation",
+    "spacy_lemma": "constellation",
+    "hard_lemma": null,
+    "keyword": "constellation",
+    "keyword_len": 13,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "contrivance",
+    "spacy_lemma": "contrivance",
+    "hard_lemma": null,
+    "keyword": "contrivance",
+    "keyword_len": 11,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "contrive",
+    "spacy_lemma": "contrive",
+    "hard_lemma": null,
+    "keyword": "contrive",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "creating",
+    "spacy_lemma": "creating",
+    "hard_lemma": {
+      "hard_lemma_1": "creat",
+      "hard_lemma_2": "create",
+      "possible_pos": [
+        "noun",
+        "verb",
+        "adjective"
+      ]
+    },
+    "keyword": "create",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "create",
+    "spacy_lemma": "create",
+    "hard_lemma": null,
+    "keyword": "create",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 3,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "creating",
+    "spacy_lemma": "creating",
+    "hard_lemma": {
+      "hard_lemma_1": "creat",
+      "hard_lemma_2": "create",
+      "possible_pos": [
+        "noun",
+        "verb",
+        "adjective"
+      ]
+    },
+    "keyword": "creating",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "creation",
+    "spacy_lemma": "creation",
+    "hard_lemma": null,
+    "keyword": "creation",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "creative",
+    "spacy_lemma": "creative",
+    "hard_lemma": null,
+    "keyword": "creative",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "creativeness",
+    "spacy_lemma": "creativeness",
+    "hard_lemma": null,
+    "keyword": "creativeness",
+    "keyword_len": 12,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "creativity",
+    "spacy_lemma": "creativity",
+    "hard_lemma": null,
+    "keyword": "creativity",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cross",
+    "spacy_lemma": "cross",
+    "hard_lemma": null,
+    "keyword": "cross",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cross",
+    "spacy_lemma": "cross",
+    "hard_lemma": null,
+    "keyword": "cross",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cross",
+    "spacy_lemma": "cross",
+    "hard_lemma": null,
+    "keyword": "cross",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cut",
+    "spacy_lemma": "cut",
+    "hard_lemma": null,
+    "keyword": "cut",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "cut",
+    "spacy_lemma": "cut",
+    "hard_lemma": null,
+    "keyword": "cut",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "decal",
+    "spacy_lemma": "decal",
+    "hard_lemma": null,
+    "keyword": "decal",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "decalcomania",
+    "spacy_lemma": "decalcomania",
+    "hard_lemma": null,
+    "keyword": "decalcomania",
+    "keyword_len": 12,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "decoration",
+    "spacy_lemma": "decoration",
+    "hard_lemma": null,
+    "keyword": "decoration",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "decorative",
+    "spacy_lemma": "decorative",
+    "hard_lemma": null,
+    "keyword": "decorative",
+    "keyword_len": 10,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "design",
+    "spacy_lemma": "design",
+    "hard_lemma": null,
+    "keyword": "design",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "designs",
+    "spacy_lemma": "designs",
+    "hard_lemma": {
+      "hard_lemma_1": "design",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "design",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "designate",
+    "spacy_lemma": "designate",
+    "hard_lemma": null,
+    "keyword": "designate",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "designate",
+    "spacy_lemma": "designate",
+    "hard_lemma": null,
+    "keyword": "designate",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_derivation"
+    ],
+    "source_word": "designer",
+    "spacy_lemma": "designer",
+    "hard_lemma": null,
+    "keyword": "designer",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 3,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_derivation"
+    ],
+    "source_word": "designer",
+    "spacy_lemma": "designer",
+    "hard_lemma": null,
+    "keyword": "designer",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 3,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms",
+      "seed_design_derivation"
+    ],
+    "source_word": "designing",
+    "spacy_lemma": "designing",
+    "hard_lemma": null,
+    "keyword": "designing",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "designs",
+    "spacy_lemma": "designs",
+    "hard_lemma": {
+      "hard_lemma_1": "design",
+      "hard_lemma_2": null,
+      "possible_pos": [
+        "noun"
+      ]
+    },
+    "keyword": "designs",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "destine",
+    "spacy_lemma": "destine",
+    "hard_lemma": null,
+    "keyword": "destine",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "device",
+    "spacy_lemma": "device",
+    "hard_lemma": null,
+    "keyword": "device",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "devise",
+    "spacy_lemma": "devise",
+    "hard_lemma": null,
+    "keyword": "devise",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "dot",
+    "spacy_lemma": "dot",
+    "hard_lemma": null,
+    "keyword": "dot",
+    "keyword_len": 3,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "draft",
+    "spacy_lemma": "draft",
+    "hard_lemma": null,
+    "keyword": "draft",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "draft",
+    "spacy_lemma": "draft",
+    "hard_lemma": null,
+    "keyword": "draft",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "draft",
+    "spacy_lemma": "draft",
+    "hard_lemma": null,
+    "keyword": "draft",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "draught",
+    "spacy_lemma": "draught",
+    "hard_lemma": null,
+    "keyword": "draught",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "draught",
+    "spacy_lemma": "draught",
+    "hard_lemma": null,
+    "keyword": "draught",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "effect",
+    "spacy_lemma": "effect",
+    "hard_lemma": null,
+    "keyword": "effect",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "emblem",
+    "spacy_lemma": "emblem",
+    "hard_lemma": null,
+    "keyword": "emblem",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "end",
+    "spacy_lemma": "end",
+    "hard_lemma": null,
+    "keyword": "end",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "end",
+    "spacy_lemma": "end",
+    "hard_lemma": null,
+    "keyword": "end",
+    "keyword_len": 3,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "engineer",
+    "spacy_lemma": "engineer",
+    "hard_lemma": null,
+    "keyword": "engineer",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "engineer",
+    "spacy_lemma": "engineer",
+    "hard_lemma": null,
+    "keyword": "engineer",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "excogitation",
+    "spacy_lemma": "excogitation",
+    "hard_lemma": null,
+    "keyword": "excogitation",
+    "keyword_len": 12,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "execute",
+    "spacy_lemma": "execute",
+    "hard_lemma": null,
+    "keyword": "execute",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "fashion",
+    "spacy_lemma": "fashion",
+    "hard_lemma": null,
+    "keyword": "fashion",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "figure",
+    "spacy_lemma": "figure",
+    "hard_lemma": null,
+    "keyword": "figure",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "figure",
+    "spacy_lemma": "figure",
+    "hard_lemma": null,
+    "keyword": "figure",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "final",
+    "spacy_lemma": "final",
+    "hard_lemma": null,
+    "keyword": "final",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "form",
+    "spacy_lemma": "form",
+    "hard_lemma": null,
+    "keyword": "form",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "gestate",
+    "spacy_lemma": "gestate",
+    "hard_lemma": null,
+    "keyword": "gestate",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "goal",
+    "spacy_lemma": "goal",
+    "hard_lemma": null,
+    "keyword": "goal",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "graphic",
+    "spacy_lemma": "graphic",
+    "hard_lemma": null,
+    "keyword": "graphic",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "guides",
+    "spacy_lemma": "guides",
+    "hard_lemma": {
+      "hard_lemma_1": "guid",
+      "hard_lemma_2": "guide",
+      "possible_pos": [
+        "noun",
+        "verb"
+      ]
+    },
+    "keyword": "guide",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "guides",
+    "spacy_lemma": "guides",
+    "hard_lemma": {
+      "hard_lemma_1": "guid",
+      "hard_lemma_2": "guide",
+      "possible_pos": [
+        "noun",
+        "verb"
+      ]
+    },
+    "keyword": "guide",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "guide",
+    "spacy_lemma": "guide",
+    "hard_lemma": null,
+    "keyword": "guide",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "guides",
+    "spacy_lemma": "guides",
+    "hard_lemma": {
+      "hard_lemma_1": "guid",
+      "hard_lemma_2": "guide",
+      "possible_pos": [
+        "noun",
+        "verb"
+      ]
+    },
+    "keyword": "guides",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "guides",
+    "spacy_lemma": "guides",
+    "hard_lemma": {
+      "hard_lemma_1": "guid",
+      "hard_lemma_2": "guide",
+      "possible_pos": [
+        "noun",
+        "verb"
+      ]
+    },
+    "keyword": "guides",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "herringbone",
+    "spacy_lemma": "herringbone",
+    "hard_lemma": null,
+    "keyword": "herringbone",
+    "keyword_len": 11,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "highly",
+    "spacy_lemma": "highly",
+    "hard_lemma": null,
+    "keyword": "highly",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adverb",
+    "pos": "adverb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "hotel",
+    "spacy_lemma": "hotel",
+    "hard_lemma": null,
+    "keyword": "hotel",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "idea",
+    "spacy_lemma": "idea",
+    "hard_lemma": null,
+    "keyword": "idea",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "indicating",
+    "spacy_lemma": "indicating",
+    "hard_lemma": {
+      "hard_lemma_1": "indicat",
+      "hard_lemma_2": "indicate",
+      "possible_pos": [
+        "noun",
+        "verb",
+        "adjective"
+      ]
+    },
+    "keyword": "indicate",
+    "keyword_len": 10,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "indicating",
+    "spacy_lemma": "indicating",
+    "hard_lemma": {
+      "hard_lemma_1": "indicat",
+      "hard_lemma_2": "indicate",
+      "possible_pos": [
+        "noun",
+        "verb",
+        "adjective"
+      ]
+    },
+    "keyword": "indicating",
+    "keyword_len": 10,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "innovation",
+    "spacy_lemma": "innovation",
+    "hard_lemma": null,
+    "keyword": "innovation",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "intend",
+    "spacy_lemma": "intend",
+    "hard_lemma": null,
+    "keyword": "intend",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "intended",
+    "spacy_lemma": "intended",
+    "hard_lemma": null,
+    "keyword": "intended",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "intent",
+    "spacy_lemma": "intent",
+    "hard_lemma": null,
+    "keyword": "intent",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "intent",
+    "spacy_lemma": "intent",
+    "hard_lemma": null,
+    "keyword": "intent",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "intention",
+    "spacy_lemma": "intention",
+    "hard_lemma": null,
+    "keyword": "intention",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "invent",
+    "spacy_lemma": "invent",
+    "hard_lemma": null,
+    "keyword": "invent",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "invention",
+    "spacy_lemma": "invention",
+    "hard_lemma": null,
+    "keyword": "invention",
+    "keyword_len": 9,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "layout",
+    "spacy_lemma": "layout",
+    "hard_lemma": null,
+    "keyword": "layout",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "linocut",
+    "spacy_lemma": "linocut",
+    "hard_lemma": null,
+    "keyword": "linocut",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "making",
+    "spacy_lemma": "making",
+    "hard_lemma": null,
+    "keyword": "making",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "mandala",
+    "spacy_lemma": "mandala",
+    "hard_lemma": null,
+    "keyword": "mandala",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "manner",
+    "spacy_lemma": "manner",
+    "hard_lemma": null,
+    "keyword": "manner",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "map",
+    "spacy_lemma": "map",
+    "hard_lemma": null,
+    "keyword": "map",
+    "keyword_len": 3,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "marking",
+    "spacy_lemma": "marking",
+    "hard_lemma": null,
+    "keyword": "marking",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "meal",
+    "spacy_lemma": "meal",
+    "hard_lemma": null,
+    "keyword": "meal",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "mental",
+    "spacy_lemma": "mental",
+    "hard_lemma": null,
+    "keyword": "mental",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 3,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "mentally",
+    "spacy_lemma": "mentally",
+    "hard_lemma": null,
+    "keyword": "mentally",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adverb",
+    "pos": "adverb",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "mihrab",
+    "spacy_lemma": "mihrab",
+    "hard_lemma": null,
+    "keyword": "mihrab",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "mind",
+    "spacy_lemma": "mind",
+    "hard_lemma": null,
+    "keyword": "mind",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "motif",
+    "spacy_lemma": "motif",
+    "hard_lemma": null,
+    "keyword": "motif",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "motive",
+    "spacy_lemma": "motive",
+    "hard_lemma": null,
+    "keyword": "motive",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "motive",
+    "spacy_lemma": "motive",
+    "hard_lemma": null,
+    "keyword": "motive",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "organization",
+    "spacy_lemma": "organization",
+    "hard_lemma": null,
+    "keyword": "organization",
+    "keyword_len": 12,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "ornament",
+    "spacy_lemma": "ornament",
+    "hard_lemma": null,
+    "keyword": "ornament",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "ornament",
+    "spacy_lemma": "ornament",
+    "hard_lemma": null,
+    "keyword": "ornament",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "ornamentation",
+    "spacy_lemma": "ornamentation",
+    "hard_lemma": null,
+    "keyword": "ornamentation",
+    "keyword_len": 13,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "outcome",
+    "spacy_lemma": "outcome",
+    "hard_lemma": null,
+    "keyword": "outcome",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "outline",
+    "spacy_lemma": "outline",
+    "hard_lemma": null,
+    "keyword": "outline",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "pattern",
+    "spacy_lemma": "pattern",
+    "hard_lemma": null,
+    "keyword": "pattern",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "pattern",
+    "spacy_lemma": "pattern",
+    "hard_lemma": null,
+    "keyword": "pattern",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_synonyms",
+      "seed_design_typeOf",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "plan",
+    "spacy_lemma": "plan",
+    "hard_lemma": null,
+    "keyword": "plan",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 5,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "planned",
+    "spacy_lemma": "planned",
+    "hard_lemma": {
+      "hard_lemma_1": "plann",
+      "hard_lemma_2": "planne",
+      "possible_pos": [
+        "adjective",
+        "verb"
+      ]
+    },
+    "keyword": "planned",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": null,
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "planning",
+    "spacy_lemma": "planning",
+    "hard_lemma": null,
+    "keyword": "planning",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "plot",
+    "spacy_lemma": "plot",
+    "hard_lemma": null,
+    "keyword": "plot",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "plot",
+    "spacy_lemma": "plot",
+    "hard_lemma": null,
+    "keyword": "plot",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "polka",
+    "spacy_lemma": "polka",
+    "hard_lemma": null,
+    "keyword": "polka",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "preliminary",
+    "spacy_lemma": "preliminary",
+    "hard_lemma": null,
+    "keyword": "preliminary",
+    "keyword_len": 11,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "program",
+    "spacy_lemma": "program",
+    "hard_lemma": null,
+    "keyword": "program",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "program",
+    "spacy_lemma": "program",
+    "hard_lemma": null,
+    "keyword": "program",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "project",
+    "spacy_lemma": "project",
+    "hard_lemma": null,
+    "keyword": "project",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_synonyms"
+    ],
+    "source_word": "project",
+    "spacy_lemma": "project",
+    "hard_lemma": null,
+    "keyword": "project",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_synonyms",
+      "seed_design_hasTypes"
+    ],
+    "source_word": "purpose",
+    "spacy_lemma": "purpose",
+    "hard_lemma": null,
+    "keyword": "purpose",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "redesign",
+    "spacy_lemma": "redesign",
+    "hard_lemma": null,
+    "keyword": "redesign",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "redesign",
+    "spacy_lemma": "redesign",
+    "hard_lemma": null,
+    "keyword": "redesign",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "role",
+    "spacy_lemma": "role",
+    "hard_lemma": null,
+    "keyword": "role",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "sake",
+    "spacy_lemma": "sake",
+    "hard_lemma": null,
+    "keyword": "sake",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "saver",
+    "spacy_lemma": "saver",
+    "hard_lemma": null,
+    "keyword": "saver",
+    "keyword_len": 5,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "scheme",
+    "spacy_lemma": "scheme",
+    "hard_lemma": null,
+    "keyword": "scheme",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "screen",
+    "spacy_lemma": "screen",
+    "hard_lemma": null,
+    "keyword": "screen",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition",
+      "seed_design_typeOf"
+    ],
+    "source_word": "sketch",
+    "spacy_lemma": "sketch",
+    "hard_lemma": null,
+    "keyword": "sketch",
+    "keyword_len": 6,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "skilled",
+    "spacy_lemma": "skilled",
+    "hard_lemma": null,
+    "keyword": "skilled",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "snare",
+    "spacy_lemma": "snare",
+    "hard_lemma": null,
+    "keyword": "snare",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "snare",
+    "spacy_lemma": "snare",
+    "hard_lemma": null,
+    "keyword": "snare",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "something",
+    "spacy_lemma": "something",
+    "hard_lemma": null,
+    "keyword": "something",
+    "keyword_len": 9,
+    "spacy_pos": "PRON",
+    "wordsAPI_pos": "adverb",
+    "pos": "adverb",
+    "spacy_occurrence": 6,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "specific",
+    "spacy_lemma": "specific",
+    "hard_lemma": null,
+    "keyword": "specific",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "specify",
+    "spacy_lemma": "specify",
+    "hard_lemma": null,
+    "keyword": "specify",
+    "keyword_len": 7,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "study",
+    "spacy_lemma": "study",
+    "hard_lemma": null,
+    "keyword": "study",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "study",
+    "spacy_lemma": "study",
+    "hard_lemma": null,
+    "keyword": "study",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "sunburst",
+    "spacy_lemma": "sunburst",
+    "hard_lemma": null,
+    "keyword": "sunburst",
+    "keyword_len": 8,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "system",
+    "spacy_lemma": "system",
+    "hard_lemma": null,
+    "keyword": "system",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "systematic",
+    "spacy_lemma": "systematic",
+    "hard_lemma": null,
+    "keyword": "systematic",
+    "keyword_len": 10,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "adjective",
+    "pos": "adjective",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "tailor",
+    "spacy_lemma": "tailor",
+    "hard_lemma": null,
+    "keyword": "tailor",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "tailor",
+    "spacy_lemma": "tailor",
+    "hard_lemma": null,
+    "keyword": "tailor",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "tattoo",
+    "spacy_lemma": "tattoo",
+    "hard_lemma": null,
+    "keyword": "tattoo",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "tattoo",
+    "spacy_lemma": "tattoo",
+    "hard_lemma": null,
+    "keyword": "tattoo",
+    "keyword_len": 6,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "think",
+    "spacy_lemma": "think",
+    "hard_lemma": null,
+    "keyword": "think",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "think",
+    "spacy_lemma": "think",
+    "hard_lemma": null,
+    "keyword": "think",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_typeOf"
+    ],
+    "source_word": "thinking",
+    "spacy_lemma": "thinking",
+    "hard_lemma": null,
+    "keyword": "thinking",
+    "keyword_len": 8,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "trap",
+    "spacy_lemma": "trap",
+    "hard_lemma": null,
+    "keyword": "trap",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "trap",
+    "spacy_lemma": "trap",
+    "hard_lemma": null,
+    "keyword": "trap",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "triskelion",
+    "spacy_lemma": "triskelion",
+    "hard_lemma": null,
+    "keyword": "triskelion",
+    "keyword_len": 10,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "view",
+    "spacy_lemma": "view",
+    "hard_lemma": null,
+    "keyword": "view",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "view",
+    "spacy_lemma": "view",
+    "hard_lemma": null,
+    "keyword": "view",
+    "keyword_len": 4,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "weave",
+    "spacy_lemma": "weave",
+    "hard_lemma": null,
+    "keyword": "weave",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_hasTypes"
+    ],
+    "source_word": "weave",
+    "spacy_lemma": "weave",
+    "hard_lemma": null,
+    "keyword": "weave",
+    "keyword_len": 5,
+    "spacy_pos": null,
+    "wordsAPI_pos": "verb",
+    "pos": "verb",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "work",
+    "spacy_lemma": "work",
+    "hard_lemma": null,
+    "keyword": "work",
+    "keyword_len": 4,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 2,
+    "pairing_limitations": "none",
+    "shortlist": null
+  },
+  {
+    "origin": [
+      "seed_design_definition"
+    ],
+    "source_word": "working",
+    "spacy_lemma": "working",
+    "hard_lemma": null,
+    "keyword": "working",
+    "keyword_len": 7,
+    "spacy_pos": "NOUN",
+    "wordsAPI_pos": "noun",
+    "pos": "noun",
+    "spacy_occurrence": 1,
+    "pairing_limitations": "none",
+    "shortlist": null
+  }
+]
