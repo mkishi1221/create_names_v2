@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-
 import orjson as json
 
 def generate_hard_lemma(keyword: str, data: str=None) -> dict:
@@ -10,8 +9,8 @@ def generate_hard_lemma(keyword: str, data: str=None) -> dict:
     else:
         hard_lemma_conversion_dict_fp = "dict/hard_lemma_conversions_short.json"
 
-    with open(hard_lemma_conversion_dict_fp) as wordsAPI_file:
-        hl_conversion_dict = json.loads(wordsAPI_file.read())
+    with open(hard_lemma_conversion_dict_fp) as hard_lemma_conversion_dict_file:
+        hl_conversion_dict = json.loads(hard_lemma_conversion_dict_file.read())
 
     hard_lemma_1 = None
     hard_lemma_2 = None

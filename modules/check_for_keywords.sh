@@ -8,7 +8,7 @@ if [ -n "$(ls -A data/keywords/*.txt 2>/dev/null)" ]; then
     for f in $FILES
     do
     ls -lh ${f} \
-    >> ref/logs/source_data_log.tsv
+    >> tmp/logs/source_data_log.tsv
     done
 else
     keywords="none"

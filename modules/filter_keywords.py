@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-
 from typing import List
 from classes.keyword_class import Keyword
 import regex as re
 import copy
-import orjson as json
-import pandas as pd
+from pattern3.text.en import singularize
+from modules.pull_wordsAPI import pull_wordsAPI_dict
+from modules.grade_phonetic import grade_phonetic
+from modules.find_contained_words import find_contained_words
 
-def filter_keywords(keywords: List[Keyword], discarded_keywords_output_fp) -> List[Keyword]:
+def isplural(pluralForm):
+     singularForm = singularize(pluralForm)
+     verdict = True if pluralForm is not singularForm else False
+     return verdict, singularForm
+
+def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     """
     Filter approved keywords (approved keywords may be the following):
     - Either a noun, verb, or an adjective
@@ -21,8 +27,9 @@ def filter_keywords(keywords: List[Keyword], discarded_keywords_output_fp) -> Li
     illegal_char = re.compile(r"[^a-zA-Z]")
     legal_char = re.compile(r"[a-zA-Z]")
     approved_keywords = []
-    discarded_keywords = []
-    # discarded_keywords_output_fp = "results/discarded_keywords.json"
+    other_keywords = []
+
+    wordsAPI_data = pull_wordsAPI_dict()
 
     pos_conversion = {
     "NOUN": "noun",
@@ -33,23 +40,39 @@ def filter_keywords(keywords: List[Keyword], discarded_keywords_output_fp) -> Li
     "CCONJ": "conjunction",
     "ADP": "adposition",
     "PART": "preposition",
-    "PRON": "pronoun"
+    "PRON": "pronoun",
+    "PROPN": "noun",
     }
 
     for keyword in keywords:
-
-        if keyword.keyword in blacklist:
-            keyword = copy.deepcopy(keyword)
-            keyword.pos = "Common"
     
-        elif keyword.pos is None:
+        keyword.phonetic_grade = grade_phonetic(keyword.keyword)
+
+        if keyword.pos is None:
             if keyword.spacy_pos is not None:
                 spacy_pos = keyword.spacy_pos
 
                 if spacy_pos in pos_conversion.keys():
                     conv_pos = pos_conversion[spacy_pos]
                     keyword = copy.deepcopy(keyword)
-                    keyword.pos = conv_pos            
+                    keyword.pos = conv_pos
+        
+        if keyword.pos == "noun":
+            verdict, singularForm = isplural(keyword.keyword)
+            if verdict == True and singularForm in wordsAPI_data.keys():
+                keyword = copy.deepcopy(keyword)
+                keyword.keyword = singularForm
+        
+        # if keyword.pos == "verb" or keyword.pos == "adjective":
+        #     if keyword.spacy_lemma in wordsAPI_data.keys():
+        #         keyword = copy.deepcopy(keyword)
+        #         keyword.keyword = keyword.spacy_lemma
+
+        keyword.contained_words = find_contained_words(keyword.keyword, wordsAPI_data)
+
+        if keyword.keyword in blacklist:
+            keyword = copy.deepcopy(keyword)
+            keyword.pos = "Stopword"
 
         if (
             keyword.pos in approved_pos
@@ -58,17 +81,6 @@ def filter_keywords(keywords: List[Keyword], discarded_keywords_output_fp) -> Li
         ):
             approved_keywords.append(keyword)
         elif bool(legal_char.search(keyword.keyword)):
-            discarded_keywords.append(keyword)
+            other_keywords.append(keyword)
 
-    discarded_keywords = list(set(discarded_keywords))
-    approved_keywords = list(set(approved_keywords))
-
-    with open(discarded_keywords_output_fp, "wb+") as out_file:
-        out_file.write(json.dumps(list(set(discarded_keywords)), option=json.OPT_INDENT_2))
-
-    # Excel output for reference only: remove for production
-    excel_output = "".join([discarded_keywords_output_fp[:-5], ".xlsx"])
-    df1 = pd.DataFrame.from_dict(discarded_keywords, orient="columns")
-    df1.to_excel(excel_output)        
-
-    return list(approved_keywords)
+    return list(set(approved_keywords)), list(set(other_keywords))

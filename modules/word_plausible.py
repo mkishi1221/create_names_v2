@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-
 def word_plausability(word):
 
-    letter_sets_fp = "dict/letter_sets.txt"
-    letter_sets = open(letter_sets_fp, "r").read().splitlines()
-
-    in_list = "yes"
-
-    length = 3
+    letter_sets_fp = "../letter_sequences/results/letter_combinations.tsv"
+    letter_sets = set(open(letter_sets_fp, "r").read().splitlines())
+    length = 4
     letters_list = set()
 
-    for start in range(0,len(word)-2):
+    for start in range(0,len(word)-length+1):
         end = start + length
         letters_list.add(word[start:end])
 

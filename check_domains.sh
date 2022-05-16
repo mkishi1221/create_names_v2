@@ -5,14 +5,14 @@ date
 start_time=`gdate +%s%3N`
 
 # Create required folders
-mkdir -p tmp
-mkdir -p ref/logs
+mkdir -p tmp/logs
+mkdir -p tmp/domain_checker
 mkdir -p results/
 
 python3 domain_checker.py \
-    results/shortlisted_names.json \
+    tmp/name_generator/names_shortlist.json \
     50 \
-    results/domains.json
+    tmp/domain_checker/domains.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

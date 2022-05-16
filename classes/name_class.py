@@ -1,39 +1,52 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-from dataclasses import dataclass, field
-from classes.name_style_class import Name_Style
-from typing import List, Dict
+from dataclasses import dataclass
+from classes.algorithm_class import Component
+from classes.keyword_class import Modword
+from typing import List, Dict, Tuple
 
 @dataclass
 class Etymology:
     name_in_title: str = None
-    keywords: List[str] = field(default_factory=list)
-    name_styles: List[Name_Style] = field(default_factory=list)
+    keyword_tuple: Tuple[Modword.keyword] = None
+    pos_tuple: Tuple[Component.pos] = None
+    modifier_tuple: Tuple[Component.modifier] = None
+    name_type: str = None
 
     def __eq__(self, o: object) -> bool:
-        return self.name_in_title == o.name_in_title
+        return (
+            self.name_in_title == o.name_in_title
+            and self.keyword_tuple == o.keyword_tuple
+            and self.modifier_tuple == o.modifier_tuple
+            and self.pos_tuple == o.pos_tuple
+        )
 
     def __ne__(self, o: object) -> bool:
-        return self.name_in_title != o.name_in_title
+        return (
+            self.name_in_title != o.name_in_title
+            and self.keyword_tuple != o.keyword_tuple
+            and self.modifier_tuple != o.modifier_tuple
+            and self.pos_tuple != o.pos_tuple
+        )
 
     def __hash__(self) -> int:
         return hash(
             (
                 self.name_in_title,
-                self.keywords,
-                self.name_styles,
+                self.keyword_tuple,
+                self.modifier_tuple,
+                self.pos_tuple,
+                self.name_type
             )
         )
 
     def __repr__(self) -> str:
-        return str(
-            {
-                key: self.__dict__[key]
-                for key in self.__dict__
-                if self.__dict__[key] is not None
-            }
-        )
+
+        algorithm_list = []
+        for index in range(len(self.pos_tuple)):
+            algorithm_list.append(f"{self.keyword_tuple[index]}({self.pos_tuple[index]}|{self.modifier_tuple[index]})")
+        return "+".join(algorithm_list)
 
 @dataclass
 class Name:
@@ -44,13 +57,10 @@ class Name:
 
     name_in_lower: str = None
     length: int = 0
-    length_score: int = 0
-    total_score: int = 0
-    phonetic_pattern: str = None
-    phonetic_count: dict = None
+    phonetic_grade: str = None
     word_plausibility: str = None
     is_word: str = None
-    shortlist: str = None
+    contained_words: str = None
     etymologies: Dict[str, Etymology] = None
 
     def __eq__(self, o: object) -> bool:
@@ -64,8 +74,6 @@ class Name:
             (
                 self.length,
                 self.name_in_lower,
-                self.length_score,
-                self.total_score,
             )
         )
 
@@ -78,3 +86,44 @@ class Name:
             }
         )
 
+@dataclass
+class Graded_name:
+
+    name_in_lower: Name.name_in_lower = None
+    name_in_title: Etymology.name_in_title = None
+    name_type: Etymology.name_type = None
+    length: Name.length = 0
+    phonetic_grade: Name.phonetic_grade = None
+    word_plausibility: Name.word_plausibility = None
+    is_word: Name.is_word = None
+    contained_words: Name.contained_words = None
+    wiki_title: str = None
+    keywords: List[str] = None
+    keyword_combinations: List[str] = None
+    pos_combinations: List[str] = None
+    modifier_combinations: List[str] = None
+    etymologies: List[Etymology] = None
+    grade: str = None
+
+    def __eq__(self, o: object) -> bool:
+        return self.name_in_title == o.name_in_title and self.name_type == o.name_type
+
+    def __ne__(self, o: object) -> bool:
+        return self.name_in_title != o.name_in_title and self.name_type != o.name_type
+
+    def __hash__(self) -> int:
+        return hash(
+            (
+                self.length,
+                self.name_in_lower,
+            )
+        )
+
+    def __repr__(self) -> str:
+        return str(
+            {
+                key: self.__dict__[key]
+                for key in self.__dict__
+                if self.__dict__[key] is not None
+            }
+        )

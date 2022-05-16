@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from typing import Dict, Optional
+from typing import Dict, Tuple
 from typing import List
 
 @dataclass_json
@@ -13,6 +13,7 @@ class Keyword:
     origin: List[str] = None
     source_word: str = None
     spacy_lemma: str = None
+    nltk_lemma: str = None
     hard_lemma: Dict[str, str] = None
     keyword: str = None
     keyword_len: int = 0
@@ -20,7 +21,12 @@ class Keyword:
     wordsAPI_pos: str = None
     pos: str = None
     spacy_occurrence: int = 0
-    pairing_limitations: str = "none"
+    contained_words: List[str] = None
+    phonetic_grade: str = None
+    yake_rank: Tuple = None
+    restrictions_before: List[str] = None
+    restrictions_after: List[str] = None
+    restrictions_as_joint: List[str] = None
     shortlist: str = None
 
     def __eq__(self, o: object) -> bool:

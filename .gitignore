@@ -5,8 +5,6 @@ tmp/*
 results/
 results/*
 test.sh
-ref/
-ref/*
 tmp_keyw/
 tmp_keyw/*
 tmp_sents/
@@ -14,6 +12,9 @@ tmp_sents/*
 dict/wikipedia_word_count/wikipedia-en-words-cumulative.json
 dict/wikipedia_word_count/wikipedia-en-words-cumulative.tsv
 dict/wikipedia_word_count/original_data/wikipedia-en-words.tsv
+
+keywords/
+keywords/*
 
 data/keywords/other/
 data/sentences/other/

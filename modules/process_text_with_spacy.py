@@ -5,7 +5,6 @@ from classes.keyword_class import Keyword
 import regex as re
 import spacy
 
-
 nlp = spacy.load(
     "en_core_web_lg",
     exclude=[
@@ -17,12 +16,9 @@ nlp = spacy.load(
         "morphologizer",
         "senter",
         "sentencizer",
-        "tok2vec",
         "transformer",
     ],
 )
-
-
 
 def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     """
@@ -47,10 +43,8 @@ def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
         spacy_lemma=word_lemma,
         keyword=processed_word,
         keyword_len=len(processed_word),
-        spacy_pos=word_pos
+        spacy_pos=word_pos,
     )
-
-
 
 def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
     keywords: List[Keyword] = []

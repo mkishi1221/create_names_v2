@@ -1,0 +1,416 @@
+[
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "I",
+    "keyword_len": 1,
+    "restrictions_after": "noun, plural_noun, verb",
+    "restrictions_as_joint": "adverb<joint>verb, noun<joint>noun, noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "adverb",
+    "keyword": "a",
+    "keyword_len": 1,
+    "restrictions_after": "noun, plural_noun",
+    "restrictions_as_joint": "adverb<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "about",
+    "keyword_len": 5,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "actually",
+    "keyword_len": 8,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "after",
+    "keyword_len": 5,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "adverb<joint>noun, noun<joint>adjective, noun<joint>noun, noun<joint>verb, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "all",
+    "keyword_len": 3,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "also",
+    "keyword_len": 4,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "always",
+    "keyword_len": 6,
+    "restrictions_after": "adjective, verb",
+    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>adjective, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "an",
+    "keyword_len": 2,
+    "restrictions_after": "noun, plural_noun",
+    "restrictions_as_joint": "adverb<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "and",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "any",
+    "keyword_len": 3,
+    "restrictions_after": "noun",
+    "restrictions_as_joint": "not_allowed",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "plural_noun",
+    "keyword": "are",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adjective, noun, plural_noun, verb",
+    "keyword": "as",
+    "keyword_len": 2,
+    "restrictions_after": "adjective, adverb, noun, plural_noun",
+    "restrictions_as_joint": "adjective<joint>noun, noun<joint>adjective, noun<joint>adverb, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "at",
+    "keyword_len": 2,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, verb",
+    "keyword": "be",
+    "keyword_len": 2,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "adverb<joint>verb, verb<joint>adjective, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "because",
+    "keyword_len": 7,
+    "restrictions_after": "noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "but",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "by",
+    "keyword_len": 2,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "can",
+    "keyword_len": 3,
+    "restrictions_after": "adverb, verb",
+    "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "come",
+    "keyword_len": 4,
+    "restrictions_after": "adverb",
+    "restrictions_as_joint": "not_allowed",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "could",
+    "keyword_len": 5,
+    "restrictions_after": "adverb, verb",
+    "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "did",
+    "keyword_len": 3,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "do",
+    "keyword_len": 2,
+    "restrictions_after": "adverb",
+    "restrictions_as_joint": "not_allowed",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "each",
+    "keyword_len": 4,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "either",
+    "keyword_len": 6,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun",
+    "keyword": "else",
+    "keyword_len": 4,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "even",
+    "keyword_len": 4,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "for",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "from",
+    "keyword_len": 4,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "not_allowed",
+    "keyword": "get",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
+    "restrictions_as_joint": "not_allowed",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun",
+    "keyword": "goes",
+    "keyword_len": 4,
+    "restrictions_after": "adverb",
+    "restrictions_as_joint": "noun<joint>adverb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "got",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun",
+    "keyword": "has",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "have",
+    "keyword_len": 4,
+    "restrictions_after": "adjective, adverb, verb",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun",
+    "keyword": "he",
+    "keyword_len": 2,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "her",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "him",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
+    "restrictions_as_joint": "verb<joint>adjective, verb<joint>adverb, verb<joint>noun, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "his",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "how",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "if",
+    "keyword_len": 2,
+    "restrictions_after": "noun, plural_noun",
+    "restrictions_as_joint": "adverb<joint>noun, noun<joint>noun, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "in",
+    "keyword_len": 2,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "into",
+    "keyword_len": 4,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "it",
+    "keyword_len": 2,
+    "restrictions_after": "verb",
+    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "verb",
+    "keyword": "its",
+    "keyword_len": 3,
+    "restrictions_after": "adjective, noun, plural_noun",
+    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
+    "deactivate": "",
+    "shortlist": ""
+  },
+  {
+    "restrictions_before": "noun, plural_noun, verb",
+    "keyword": "just",
+    "keyword_len": 4,
+    "restrictions_after": "adverb, verb",
+    "restrictions_as_joint": "noun<joint>adverb, verb<joint>adverb, verb<joint>verb",
+    "deactivate": "",
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": "adverb, noun, plural_noun, verb",
+    "keyword": "led",
+    "keyword_len": 3,
+    "restrictions_after": "noun, plural_noun",
+    "restrictions_as_joint": "noun<joint>noun",
+    "deactivate": "",
+    "shortlist": "s"
+  }
+]

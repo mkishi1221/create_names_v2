@@ -5,8 +5,8 @@ date
 start_time=`gdate +%s%3N`
 
 # Create required folders
-mkdir -p tmp
-mkdir -p ref/logs
+mkdir -p tmp/logs
+mkdir -p tmp/keyword_generator
 mkdir -p results/
 
 # Check if data with sentences exists
@@ -30,19 +30,23 @@ fi
 
 echo "Source data or script changed. Recompiling source data..."
 # Clear tmp files
-rm -r tmp/*
+rm -r tmp/logs/*
+rm -r tmp/keyword_generator/*
+mkdir -p tmp/logs
+mkdir -p tmp/keyword_generator
+mkdir -p results/
 
 # Collect source data into one tmp file each for sentences and for keywords
 echo "Collect source data into tmp files..."
 sh modules/collect_source_data.sh ${sentences} ${keywords}
 
 # Generate word list from source text
-# Words to be sorted by POS, length and other factors in the future to accomodate more complex name-generating name_styles.
+# Words to be sorted by POS, length and other factors in the future to accomodate more complex name-generating algorithms.
 echo "Creating word list..."
 python3 keyword_generator.py \
-    tmp/user_sentences.tsv \
-    tmp/user_keywords.tsv \
-    results/keywords.json
+    tmp/keyword_generator/user_sentences.tsv \
+    tmp/keyword_generator/user_keywords.tsv \
+    tmp/keyword_generator/keywords.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

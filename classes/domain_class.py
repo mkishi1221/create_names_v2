@@ -4,6 +4,7 @@
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 from classes.name_class import Etymology
+from classes.name_class import Graded_name
 from typing import List, Dict
 
 @dataclass_json
@@ -36,13 +37,19 @@ class Domain:
 @dataclass_json
 @dataclass
 class NameDomain:
-    name_in_lower: str = None
-    length: int = 0
-    length_score: int = 0
-    total_score: int = 0
-    avail_domains: List[Domain] = field(default_factory=list)
-    not_avail_domains: List[Domain] = field(default_factory=list)
-    etymologies: Dict[str, Etymology] = None
+    name_in_title: Graded_name.name_in_lower = None
+    name_in_lower: Graded_name.name_in_title = None
+    name_type: Graded_name.name_type = None
+    length: Graded_name.length = 0
+    phonetic_grade: Graded_name.phonetic_grade = None
+    keywords: Graded_name.keywords = None
+    keyword_combinations: Graded_name.keyword_combinations = None
+    pos_combinations: Graded_name.pos_combinations = None
+    modifier_combinations: Graded_name.modifier_combinations = None
+    etymologies: Graded_name.etymologies = None
+    avail_domains: List[Domain] = None
+    not_avail_domains: List[Domain] = None
+    grade: Graded_name.grade = None
 
     def __eq__(self, o: object) -> bool:
         return self.name_in_lower == o.name_in_lower
@@ -51,7 +58,7 @@ class NameDomain:
         return self.name_in_lower != o.name_in_lower
 
     def __hash__(self) -> int:
-        return hash((self.name_in_lower, self.length, self.length_score, self.total_score, self.avail_domains, self.not_avail_domains, self.etymologies))
+        return hash((self.name_in_lower, self.length, self.avail_domains, self.not_avail_domains, self.etymologies))
 
     def __repr__(self) -> str:
         return str(

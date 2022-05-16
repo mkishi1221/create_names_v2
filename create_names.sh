@@ -5,13 +5,13 @@ date
 start_time=`gdate +%s%3N`
 
 # Create required folders
-mkdir -p tmp
-mkdir -p ref/logs
+mkdir -p tmp/logs
+mkdir -p tmp/name_generator
 mkdir -p results/
 
 python3 name_generator.py \
     results/keywords_shortlist.xlsx \
-    data/name_styles/name_style_list.xlsx \
+    data/algorithms/algorithm_list.xlsx \
     results/names.json
 
 # Calculate time elapsed
