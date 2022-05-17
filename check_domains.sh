@@ -6,13 +6,13 @@ start_time=`gdate +%s%3N`
 
 # Create required folders
 mkdir -p tmp/logs
-mkdir -p tmp/name_generator
+mkdir -p tmp/domain_checker
 mkdir -p results/
 
-python3 name_generator.py \
-    results/keywords_shortlist.xlsx \
-    data/algorithms/algorithm_list.xlsx \
-    results/names.json
+python3 domain_checker.py \
+    tmp/name_generator/names_shortlist.json \
+    50 \
+    tmp/domain_checker/domains.json
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

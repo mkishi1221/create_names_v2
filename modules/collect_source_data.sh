@@ -10,11 +10,11 @@ if [ "$sentences" == "exists" ]; then
     for f in $FILES
     do
     cat ${f} \
-    >> tmp/user_sentences.tsv
-    echo "" >> tmp/user_sentences.tsv
+    >> tmp/keyword_generator/user_sentences.tsv
+    echo "" >> tmp/keyword_generator/user_sentences.tsv
     done
 else
-    > tmp/user_sentences.tsv
+    > tmp/keyword_generator/user_sentences.tsv
 fi
 
 # Check if data with keywords exists
@@ -24,9 +24,9 @@ if [ "$keywords" == "exists" ]; then
     for f in $FILES
     do
     cat ${f} \
-    >> tmp/user_keywords.tsv
-    echo "" >> tmp/user_keywords.tsv
+    >> tmp/keyword_generator/user_keywords.tsv
+    echo "" >> tmp/keyword_generator/user_keywords.tsv
     done
 else
-    > tmp/user_keywords.tsv
+    > tmp/keyword_generator/user_keywords.tsv
 fi

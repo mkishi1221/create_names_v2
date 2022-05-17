@@ -1,0 +1,57 @@
+{
+	"ing":
+		{
+			"replacement_1": "",
+			"replacement_2": "e",
+			"possible_pos": ["verb", "adjective"]    	
+		},
+	"est":
+		{
+			"replacement_1": "",
+			"replacement_2": null,
+			"possible_pos": ["adjective", "adverb"]    	
+		},
+	"ies":
+		{
+			"replacement_1": "y",
+			"replacement_2": "",
+			"possible_pos": ["noun", "verb"]    	
+		},
+	"ier":
+		{
+			"replacement_1": "y",
+			"replacement_2": "",
+			"possible_pos": ["adjective", "adverb"]    	
+		},
+	"ed":
+		{
+			"replacement_1": "",
+			"replacement_2": "e",
+			"possible_pos": ["adjective", "verb"]    	
+		},
+	"er":
+		{
+			"replacement_1": "",
+			"replacement_2": null,
+			"possible_pos": ["adjective", "adverb"]    	
+		},
+	"es":
+		{
+			"replacement_1": "",
+			"replacement_2": "e",
+			"possible_pos": ["noun", "verb"]    	
+		},
+	"s":
+		{
+			"replacement_1": "",
+			"replacement_2": null,
+			"possible_pos": ["noun"]    	
+		},
+	"t":
+		{
+			"replacement_1": "",
+			"replacement_2": null,
+			"possible_pos": ["verb"]    	
+		}
+}
+
