@@ -102,7 +102,7 @@ def fetch_pos_wordAPI(keyword_list: List[str], spacy_pos, wordapi_data: dict) ->
     # Get all "parts of speech" (pos) associated with each keyword.
     # If keyword is None or not in wordsAPI dictionary, return pos as None.
     numbers_as_str = [
-        "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+        "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
         "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"
     ]
     all_pos = set()

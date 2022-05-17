@@ -12,8 +12,6 @@ from classes.keyword_class import Modword
 from modules.grade_phonetic import grade_phonetic
 from modules.word_plausible import word_plausability
 from modules.generate_hard_lemma import generate_hard_lemma
-from modules.pull_wordsAPI import pull_wordsAPI_dict
-from modules.find_contained_words import find_contained_words
 
 def is_word(name: str, wordsAPI_data: dict):
 
