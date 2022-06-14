@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 from classes.algorithm_class import Algorithm
 from classes.algorithm_class import Component
+from modules.convert_excel_to_json import convert_excel_to_json
 import orjson as json
 from typing import List
 
@@ -16,9 +17,12 @@ def exchange_comp(comp):
     return value
 
 # Input is a file path
-def collect_algorithms(algorithms_fp: str) -> List[Algorithm]:
+def collect_algorithms() -> List[Algorithm]:
 
     # Import Algorithm list from xlsx file
+    algorithm_excel_fp = f"name_generator/dict/algorithms/algorithm_list.xlsx"
+    sheet_name = "algorithms"
+    algorithms_fp = convert_excel_to_json(algorithm_excel_fp, target_sheet=sheet_name)
     with open(algorithms_fp) as algorithms_file:
         algorithm_data = json.loads(algorithms_file.read())
 
@@ -40,8 +44,5 @@ def collect_algorithms(algorithms_fp: str) -> List[Algorithm]:
                     components=comp_list
                 )
             )
-
-    with open("tmp/name_generator/collected_algorithms.json", "wb+") as out_file:
-        out_file.write(json.dumps(list(algorithms), option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     return list(algorithms)

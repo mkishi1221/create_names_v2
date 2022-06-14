@@ -3,7 +3,7 @@
 import yake
 import orjson as json
 
-def keyword_extractor(sentences: str = None, keywords: list = None, ref_output: str = "tmp/keyword_generator/yake_keywords.json"):
+def keyword_extractor(output_fp: str, sentences: str = None, keywords: list = None):
 
     if keywords == None:
         text = sentences
@@ -32,7 +32,7 @@ def keyword_extractor(sentences: str = None, keywords: list = None, ref_output: 
     else:
         ranked_keywords = None
 
-    with open(ref_output, "wb+") as out_file:
+    with open(output_fp, "wb+") as out_file:
         out_file.write(json.dumps(ranked_keywords, option=json.OPT_INDENT_2))
     
     return ranked_keywords

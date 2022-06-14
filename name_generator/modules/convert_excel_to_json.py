@@ -4,7 +4,7 @@ from typing import List
 import pandas as pd
 import orjson as json
 
-def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheets: List[str] = None):
+def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheets: List[str] = None, output_json_fp: str = None):
 
     if target_sheet is None and target_sheets is None:
         sheet_list = ["Sheet1"]
@@ -32,7 +32,9 @@ def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheet
         list_of_dict.extend(excel_data_df.to_dict(orient='records'))
 
     # Create output file path (save as .json file as same name in same location)
-    output_json_fp = "".join([input_excel_fp[:-5], ".json"])
+    if output_json_fp is None:
+        output_json_fp = "".join([input_excel_fp[:-5], ".json"])
+    
     # Save json file
     with open(output_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(list_of_dict, option=json.OPT_INDENT_2))

@@ -1,18 +1,35 @@
 #!/bin/bash
 
+project_id=$1
+
+if [ -z "$project_id" ]
+then
+    printf "Enter project ID or press enter to escape: "
+    read -r  project_id
+
+    if [ -z "$project_id" ]
+    then
+        exit
+    fi
+fi
+
+project_path="projects/$project_id"
+
 # Calculate time elapsed
 date
 start_time=`gdate +%s%3N`
 
 # Create required folders
-mkdir -p tmp/logs
-mkdir -p tmp/name_generator
-mkdir -p results/
+# Clear tmp files
+rm -rf $project_path/tmp/name_generator/*
+rm -rf $project_path/tmp/domain_checker
+rm -rf $project_path/results/domains.xlsx
+mkdir -p $project_path/tmp/logs
+mkdir -p $project_path/tmp/name_generator
+mkdir -p $project_path/results/
 
-python3 name_generator.py \
-    results/keywords_shortlist.xlsx \
-    data/algorithms/algorithm_list.xlsx \
-    results/names.json
+python3 name_generator/name_generator.py \
+    $project_id
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

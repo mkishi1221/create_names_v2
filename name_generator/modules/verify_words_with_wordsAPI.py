@@ -97,7 +97,7 @@ def fetch_pos_wordAPI_w_hardlemma(hard_lemma: dict, wordapi_data: dict) -> list[
     
     return all_pos
 
-def fetch_pos_wordAPI(keyword_list: List[str], spacy_pos, wordapi_data: dict) -> list[str]:
+def fetch_pos_wordAPI(keyword_list: List[str], wordapi_data: dict) -> list[str]:
 
     # Get all "parts of speech" (pos) associated with each keyword.
     # If keyword is None or not in wordsAPI dictionary, return pos as None.
@@ -117,9 +117,6 @@ def fetch_pos_wordAPI(keyword_list: List[str], spacy_pos, wordapi_data: dict) ->
             else:
                 # Check if keyword and it's definition/pos data is in wordsAPI dictionary.
                 all_pos.update(check_wordsAPI_dict(keyword, wordapi_data))
-        
-        if spacy_pos in all_pos:
-            all_pos = [spacy_pos]
 
         if len(all_pos) == 0:
             all_pos = None
@@ -149,25 +146,31 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
 
         # Collect all pos possibilities
         keyword_list = [keyword_obj.keyword, keyword_obj.spacy_lemma]
-        pos_list = fetch_pos_wordAPI(keyword_list, spacy_pos, wordsAPI_data)
+        wordsapi_pos_list = fetch_pos_wordAPI(keyword_list, wordsAPI_data)
 
         # If no pos is returned, use lemmatizer approximated lemma to generate pos.
-        if pos_list is None:
-            pos_list = fetch_pos_wordAPI([nltk_lemma], spacy_pos, wordsAPI_data)
+        if wordsapi_pos_list is None:
+            wordsapi_pos_list = fetch_pos_wordAPI([nltk_lemma], wordsAPI_data)
 
         # If still no pos is returned, use hard_lemma to generate pos.
-        if pos_list is None:
+        if wordsapi_pos_list is None:
             hard_lemma = generate_hard_lemma(keyword_obj.keyword)
             if hard_lemma is not None:
-                pos_list = fetch_pos_wordAPI_w_hardlemma(hard_lemma, wordsAPI_data)
+                wordsapi_pos_list = fetch_pos_wordAPI_w_hardlemma(hard_lemma, wordsAPI_data)
 
         # If still no pos is returned, use spacy_pos
-        if pos_list is None:
-            pos_list = [spacy_pos]
+        if wordsapi_pos_list is None:
+            wordsapi_pos_list = [spacy_pos]
 
         # Add all pos variants of keyword to keyword list
-        if pos_list is not None:
-            for pos_str in pos_list:
+        if wordsapi_pos_list is not None:
+
+            if spacy_pos in wordsapi_pos_list:
+                all_pos = [spacy_pos]
+            else:
+                all_pos = wordsapi_pos_list
+
+            for pos_str in all_pos:
                 valid_pos = {"noun", "adjective", "verb", "adverb"}
                 
                 # generate final lemma to set as keyword
@@ -182,7 +185,7 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword]) -> List[Keyword]:
                 # Create keyword object with updated data
                 keyword_obj_update = copy.deepcopy(keyword_obj)
                 keyword_obj_update.keyword = keyword
-                keyword_obj_update.wordsAPI_pos = pos_str
+                keyword_obj_update.wordsAPI_pos = sorted(wordsapi_pos_list)
                 keyword_obj_update.pos = pos_str
                 keyword_obj_update.nltk_lemma = nltk_lemma
                 keyword_obj_update.hard_lemma = hard_lemma

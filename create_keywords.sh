@@ -1,18 +1,60 @@
 #!/bin/bash
 
+project_id=$1
+
+if [ -z "$project_id" ]
+then
+    printf "Enter project ID or press enter to escape: "
+    read -r  project_id
+
+    if [ -z "$project_id" ]
+    then
+        exit
+    fi
+fi
+
+project_path="projects/$project_id"
+
+if [ ! -d $project_path ];
+then
+    printf "Project files with name \"$project_id\" not detected. Press Y to create new project files, press N to look for existing project or press enter to escape: "
+    read -r  affirm
+
+    if [[ $affirm == "Y" || $afirm == "y" ]];
+    then
+        mkdir -p $project_path/data/keywords/others
+        mkdir -p $project_path/data/sentences/others
+
+        echo "Project folders created: place relevant data in data folder and run script again."
+        exit
+    
+    elif [[ $affirm == "N" || $afirm == "n" ]];
+    then
+        printf "Enter project ID or press enter to escape: "
+        read -r  project_id
+        project_path="projects/$project_id"
+
+        if [ -z "$project_id" ]
+        then
+            exit
+        elif [ ! -d $project_path ]
+        then
+            echo "Project files with name $project_id not found. Exiting script..."
+        fi
+
+    else
+        exit
+    fi
+fi
+
 # Calculate time elapsed
 date
 start_time=`gdate +%s%3N`
 
-# Create required folders
-mkdir -p tmp/logs
-mkdir -p tmp/keyword_generator
-mkdir -p results/
-
 # Check if data with sentences exists
-sentences="$(sh modules/check_for_sentences.sh)"
+sentences="$(sh name_generator/modules/check_for_sentences.sh $project_id)"
 # Check if data with keywords exists
-keywords="$(sh modules/check_for_keywords.sh)"
+keywords="$(sh name_generator/modules/check_for_keywords.sh $project_id)"
 
 # Exit script if no sentences or keywords detected.
 if [ "$sentences" == "exists" -a "$keywords" == "exists" ]; then
@@ -24,29 +66,27 @@ elif [ "$sentences" == "none"  -a "$keywords" == "exists" ]; then
 elif [ "$keywords" == "none"  -a "$sentences" == "none" ]; then
     echo "No sentences and keywords detetcted! Please add source data in txt format to the \"data\" folder."
     exit
-else echo "Error: returned sentence and keyword availability indictor values not valid"
-    exit
 fi
 
-echo "Source data or script changed. Recompiling source data..."
 # Clear tmp files
-rm -r tmp/logs/*
-rm -r tmp/keyword_generator/*
-mkdir -p tmp/logs
-mkdir -p tmp/keyword_generator
-mkdir -p results/
+rm -rf $project_path/tmp/keyword_generator/*
+rm -rf $project_path/tmp/name_generator/*
+rm -rf $project_path/tmp/domain_checker/*
+rm -rf $project_path/results/names.xlsx
+rm -rf $project_path/results/domains.xlsx
+mkdir -p $project_path/tmp/keyword_generator
+mkdir -p $project_path/tmp/logs
+mkdir -p $project_path/results/
 
 # Collect source data into one tmp file each for sentences and for keywords
 echo "Collect source data into tmp files..."
-sh modules/collect_source_data.sh ${sentences} ${keywords}
+sh name_generator/modules/collect_source_data.sh $sentences $keywords $project_id
 
 # Generate word list from source text
 # Words to be sorted by POS, length and other factors in the future to accomodate more complex name-generating algorithms.
 echo "Creating word list..."
-python3 keyword_generator.py \
-    tmp/keyword_generator/user_sentences.tsv \
-    tmp/keyword_generator/user_keywords.tsv \
-    tmp/keyword_generator/keywords.json
+python3 name_generator/keyword_generator.py \
+    $project_id
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

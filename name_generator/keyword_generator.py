@@ -16,20 +16,37 @@ from modules.yake_keyword_extractor import keyword_extractor
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
 
-
 # "text_file" input is a filepath
 # "user_keywords_file" input is a filepath
 # "output" input is a filepath
-def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str):
+def generate_word_list(project_id):
 
+    project_path: str = f"projects/{project_id}"
+
+    # input file filepaths and filenames:
+    keyword_list_tsv_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_user_keywords.tsv"
+    sentences_tsv_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_user_sentences.tsv"
+    keyword_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords.json"
+
+    # tmp file filepaths and filenames:
+    keyword_list_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_keyword-list.json"
+    sentences_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_sentences.json"
+    rated_kw_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_all_keywords.json"
+    yake_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_yake_keywords.json"
+    keywords_shortlist_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords_shortlist.json"
+
+    # output filepaths and filenames:
+    excel_output_fp: str = f"{project_path}/results/{project_id}_keywords_shortlist.xlsx"
+
+    # Set variable defaults
     all_keywords: List[Keyword] = []
     all_keywords_dict: Dict[str, Dict[str, Keyword]] = {}
     keyword_list = None
     sentences = None
 
     # Check if keywords exists
-    if os.path.exists(keyword_list_fp):
-        keyword_list = open(keyword_list_fp, "r").read().splitlines()
+    if os.path.exists(keyword_list_tsv_fp):
+        keyword_list = open(keyword_list_tsv_fp, "r").read().splitlines()
         if len(keyword_list) != 0:
             print("Extracting keywords from keyword list and processing them through spacy......")
             # Spacy is used here as well to generate "lemma" values - this form is more commonly found in wordsAPI dictionary
@@ -38,12 +55,15 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
                 keyword.origin, keyword.spacy_pos, keyword.pos, keyword.spacy_occurrence = ["keyword_list"], None, None, None
             print("Getting keyword pos using wordAPI dictionary......")
             keyword_list_keywords = verify_words_with_wordsAPI(user_keywords)
-            with open("tmp/keyword_generator/keywords_from_keyword-list.json", "wb+") as out_file:
+            with open(keyword_list_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
+        else:
+            keyword_list_keywords = []
 
     # Check if sentences exists
-    if os.path.exists(sentences_fp):
-        sentences = open(sentences_fp, "r").read()
+    sentence_keywords = []
+    if os.path.exists(sentences_tsv_fp):
+        sentences = open(sentences_tsv_fp, "r").read()
 
         if len(sentences) != 0:
             # Filter out unique lines from source data containing sentences
@@ -57,7 +77,7 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
                 keyword.origin = ["sentences"]
             print("Verifying keyword pos using wordAPI dictionary......")
             sentence_keywords = verify_words_with_wordsAPI(sentence_keywords)
-            with open("tmp/keyword_generator/keywords_from_sentences.json", "wb+") as out_file:
+            with open(sentences_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
 
     # Quit if both files are empty
@@ -89,18 +109,15 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
     # Rank keywords using Yake:
     print("Extracting keywords using yake...")
-    yake_keywords_dict = keyword_extractor(sentences=sentences, keywords=keyword_list)
+    yake_keywords_dict = keyword_extractor(output_fp=yake_tmp_json_fp, sentences=sentences, keywords=keyword_list)
     all_keywords_rated = []
     for kw in all_keywords:
         if kw.keyword in yake_keywords_dict.keys():
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
             all_keywords_rated.append(kw)
     all_keywords_rated = sorted(all_keywords_rated, key=lambda d: (d.yake_rank, d.keyword))
-    with open("tmp/keyword_generator/all_keywords.json", "wb+") as out_file:
+    with open(rated_kw_tmp_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_keywords_rated, option=json.OPT_INDENT_2))
-
-    df1 = pd.DataFrame.from_dict(all_keywords_rated, orient="columns")
-    df1.to_excel("tmp/keyword_generator/all_keywords.xlsx")
 
     # Run keywords through keywords filter
     print("Running keywords through keyword filter...")
@@ -118,16 +135,12 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
     # Shortlist keywords if keyword shortlist exists
     # Excel input for prototype only: for production, import directly from json
-    excel_output_fp = json_output.replace(".json", f"_shortlist.xlsx").replace("tmp/keyword_generator/", f"results/")
-    if os.path.exists(excel_output_fp):
-        
+    if os.path.exists(excel_output_fp):        
         sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-        old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets)
+        old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets, output_json_fp=keywords_shortlist_json_fp)
         with open(old_data_fp) as keyword_file:
             keyword_data = json.loads(keyword_file.read())
-
         keyword_shortlist = generate_keyword_shortlist(keyword_data)
-
         for keyword_obj in keyword_shortlist:
             keyword_str = keyword_obj.keyword
             pos_str = keyword_obj.pos
@@ -137,7 +150,7 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
 
     print("Sorting keywords and exporting files...")
     sorted_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
-    with open(json_output, "wb+") as out_file:
+    with open(keyword_tmp_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(sorted_keywords_dict, option=json.OPT_INDENT_2))
 
     # Excel output for reference only: remove for production
@@ -178,4 +191,4 @@ def generate_word_list(sentences_fp: str, keyword_list_fp: str, json_output: str
     writer.save()
 
 if __name__ == "__main__":
-    generate_word_list(sys.argv[1], sys.argv[2], sys.argv[3])
+    generate_word_list(sys.argv[1])

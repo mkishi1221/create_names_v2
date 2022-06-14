@@ -4,9 +4,11 @@ import sys
 import orjson as json
 import os
 import copy
+import regex as re
 from typing import List
 from pattern3.text.en import pluralize
 from classes.keyword_class import Keyword
+from classes.keyword_class import Modword
 from classes.name_class import Etymology, Name
 from classes.name_class import Graded_name
 from modules.make_names import make_names
@@ -19,13 +21,32 @@ from modules.pull_wordsAPI import pull_wordsAPI_dict
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
 
-def grade_name(name_type, phonetic_grade, word_plaus, is_it_word, name_length, contained_words, if_wiki_title):
+def grade_name(name_type, phonetic_grade, non_plausable, is_it_word, name_length, contained_words, if_wiki_title):
 
     grade_str = None
 
     if name_type == "cut_name":
         if (
-            word_plaus == "yes" 
+            non_plausable == 0
+            and is_it_word == "no"
+            and name_length > 4
+            and name_length < 11
+            and contained_words == None
+            and if_wiki_title == None
+        ):
+            if phonetic_grade == "Phonetic_A":
+                grade_str = "Grade_A"
+            elif phonetic_grade == "Phonetic_B":
+                grade_str = "Grade_B"
+            elif phonetic_grade == "Phonetic_C":
+                grade_str = "Grade_C"
+            else:
+                grade_str = "Grade_D"
+    
+
+    elif name_type == "pref_suff_name":
+        if (
+            non_plausable <= 4
             and is_it_word == "no"
             and name_length > 4
             and name_length < 11
@@ -41,10 +62,12 @@ def grade_name(name_type, phonetic_grade, word_plaus, is_it_word, name_length, c
             else:
                 grade_str = "Grade_D"
 
+
     elif name_type == "no_cut_name" or name_type == "text_comp_name":
 
         if (
-            is_it_word == "no"
+            non_plausable <= 4
+            and is_it_word == "no"
             and name_length > 4
             and contained_words == None
             and if_wiki_title == None
@@ -83,17 +106,59 @@ def isNone(variable):
         result = variable
     return result
 
+
+def keyword_modifier(keyword_obj: Keyword, kw_modifier: str) -> Modword:
+    keyword = keyword_obj.keyword
+    try:
+        num = int(kw_modifier[-1])
+    except ValueError:
+        num = 0
+    final_modword = keyword_obj.keyword
+
+    # "cut_f4" means "cut out first 4 letters"
+    # "cut_r5" means "cut out rear 5 letters"
+    if len(keyword) > num:
+        if re.search(r'cut_f', kw_modifier):
+            final_modword = keyword[:num]
+        elif re.search(r'cut_r', kw_modifier):
+            num = num * -1
+            final_modword = keyword[num:]
+
+        modword = Modword(
+            origin=keyword_obj.origin,
+            source_word=keyword_obj.source_word,
+            spacy_lemma=keyword_obj.spacy_lemma,
+            hard_lemma=keyword_obj.hard_lemma,
+            keyword=keyword_obj.keyword,
+            keyword_len=keyword_obj.keyword_len,
+            spacy_pos=keyword_obj.spacy_pos,
+            wordsAPI_pos=keyword_obj.wordsAPI_pos,
+            pos=keyword_obj.pos,
+            spacy_occurrence=keyword_obj.spacy_occurrence,
+            yake_rank=keyword_obj.yake_rank,
+            restrictions_before=keyword_obj.restrictions_before,
+            restrictions_after=keyword_obj.restrictions_after,
+            restrictions_as_joint=keyword_obj.restrictions_as_joint,
+            modifier=kw_modifier,
+            modword=final_modword,
+            modword_len=len(final_modword)
+        )
+    else:
+        modword = None
+
+    return modword
+
 # "dictionary_fp" input is a filepath
 def pull_dictionary(dictionary_fp: str, pos_str: str) -> List[Keyword]:
 
     with open(dictionary_fp) as dictionary_file:
         dictionary_data = json.loads(dictionary_file.read())
 
-    target_list = []
+    target_list = set()
     for data in dictionary_data:
         if data["shortlist"] is not None and data["shortlist"] != "":
-            target_list.append(
-                Keyword(
+            target_list.add(
+                Modword(
                     origin="dictionary",
                     keyword=data["keyword"],
                     keyword_len=data["keyword_len"],
@@ -101,145 +166,164 @@ def pull_dictionary(dictionary_fp: str, pos_str: str) -> List[Keyword]:
                     restrictions_before=isNone(data["restrictions_before"].replace(",","").split()),
                     restrictions_after=isNone(data["restrictions_after"].replace(",","").split()),
                     restrictions_as_joint=isNone(data["restrictions_as_joint"].replace(",","").split()),
-                    shortlist=data["shortlist"]
+                    shortlist=data["shortlist"],
+                    modword=data["keyword"],
+                    modword_len=data["keyword_len"],
                 )
         )
-    return target_list
+    return list(target_list)
 
 # Generate name ideas
 # "keyword_fp", "algorithm_fp", "json_output_fp", "xlsx_output_fp" inputs are filepaths
-def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
+def generate_names(project_id: str):
 
-    # Convert algorithm excel file to json file (remove when excel files not used anymore)
-    sheet_name = "algorithms"
-    algorithm_fp = convert_excel_to_json(algorithm_fp, target_sheet=sheet_name)
+    project_path = f"projects/{project_id}"
+
+    # input file filepaths and filenames:
+    keyword_fp = f"{project_path}/results/{project_id}_keywords_shortlist.xlsx"
+    previous_domain_output_fp = f"{project_path}/results/{project_id}_domains.json"
+
+    # dict resource paths and filenames:
+    text_components_data_xlsx_fp = "name_generator/dict/text_components.xlsx"
+    wiki_titles_data_fp = "../wikipedia_extract_titles/results/wiki_titles_combined_list_filtered.tsv"
+
+    # tmp file filepaths and filenames:
+    required_comps_tsv_fp = f"{project_path}/tmp/name_generator/{project_id}_comps.tsv"
+    keyword_dict_json_fp = f"{project_path}/tmp/name_generator/{project_id}_keyword_dict.json"
+    json_ungraded_output_fp = f"{project_path}/tmp/name_generator/{project_id}_ungraded_names.json"
+    json_graded_output_fp = f"{project_path}/tmp/name_generator/{project_id}_graded_names.json"
+    remaining_shortlist_json_fp = f"{project_path}/tmp/name_generator/{project_id}_remaining_shortlist.json"
+    json_sl_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_shortlist.json"
+    json_stats_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_raw_stats.json"
+    keywords_shortlist_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords_shortlist.json"
+
+    # output filepaths and filenames:
+    excel_output_fp = f"{project_path}/results/{project_id}_names.xlsx"
 
     # Get all algorithms
     print("Loading algorithms...")
-    algorithms = collect_algorithms(algorithm_fp)
-    comp_list_types = []
-    required_comps = []
+    raw_algorithms = collect_algorithms()
+    required_comps = {}
 
-    for algorithm in algorithms:
-        comp_list_type = sorted([component.pos for component in algorithm.components])
-        if comp_list_type not in comp_list_types:
-            comp_list_types.append(comp_list_type)
+    for algorithm in raw_algorithms:
+        for component in algorithm.components:
+            if component.pos not in required_comps.keys():
+                required_comps[component.pos] = {component.modifier}
+            elif component.modifier not in required_comps[component.pos]:
+                required_comps[component.pos].add(component.modifier)
 
-    # Get all elements used in comp_list
-    for comp_list_type in comp_list_types:
-        for comp in comp_list_type:
-            if comp not in required_comps:
-                required_comps.append(comp)
+    with open(required_comps_tsv_fp, "wb+") as out_file:
+        out_file.write(str(required_comps).encode())
 
     # Access keyword list and sort words into verbs, nouns or adjectives
     # Excel input for prototype only: for production, import directly from json
+    keyword_dict = {}
+    pos_conversion = {
+        "adjective": "adje",
+        "adverb": "advb",
+    }
+    for pos, modifier_list in required_comps.items():
+        for kw_modifier in modifier_list:
+            if pos in pos_conversion.keys():
+                pos = pos_conversion[pos]
+            key = f"{pos}|{kw_modifier}"
+            keyword_dict[key] = set()
 
     sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-    old_data_fp = convert_excel_to_json(keyword_fp, target_sheets=sheets)
-    with open(old_data_fp) as keyword_file:
+    keywords_shortlist_json_fp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_shortlist_json_fp)
+    with open(keywords_shortlist_json_fp) as keyword_file:
         keyword_data = json.loads(keyword_file.read())
     keyword_shortlist = generate_keyword_shortlist(keyword_data)
-
-    verbs = []
-    nouns = []
-    plural_nouns = []
-    adjectives = []
-    adverbs = []
 
     print("Fetching keywords...")
     if len(keyword_shortlist) == 0:
         print("No keywords shortlisted!")
         exit()
 
+    required_pos = {"head", "join", "tail", "suff", "pref"}
     for keyword_obj in keyword_shortlist:
+        pos = keyword_obj.pos
+        if pos in pos_conversion.keys():
+            pos = pos_conversion[pos]
+        required_pos.add(pos)
+        modifier_list = required_comps[pos]
+        for kw_modifier in modifier_list:
+            key = f"{pos}|{kw_modifier}"
+            modword = keyword_modifier(keyword_obj, kw_modifier)
+            if modword is not None:
+                keyword_dict[key].add(modword)
 
-        if keyword_obj.pos == "noun":
-            nouns.append(keyword_obj)
-
-            # Generate plural:
+        # Generate plural:
+        if pos == "noun":
+            pos = "plrn"
+            required_pos.add(pos)
             plural_noun_str = pluralize(keyword_obj.keyword)
             keyword_obj: Keyword = copy.deepcopy(keyword_obj)
             keyword_obj.keyword = plural_noun_str
-            plural_nouns.append(keyword_obj)
+            modifier_list = required_comps[pos]
+            for kw_modifier in modifier_list:
+                key = f"{pos}|{kw_modifier}"
+                modword = keyword_modifier(keyword_obj, kw_modifier)
+                if modword is not None:
+                    keyword_dict[key].add(modword)
 
-        elif keyword_obj.pos == "verb":
-            verbs.append(keyword_obj)
-        elif keyword_obj.pos == "adjective":
-            adjectives.append(keyword_obj)
-        elif keyword_obj.pos == "adverb":
-            adverbs.append(keyword_obj)
+    algorithms = set()
+    for algorithm in raw_algorithms:
+        status = "used"
+        for component in algorithm.components:
+            if component.pos not in required_pos:
+                status = "not_used"
+        if status == "used":
+            algorithms.add(algorithm)
+        else:
+            print(f"Algorithm '{algorithm}' removed!")
 
     # Pull required dictionaries
     print("Pulling required dictionaries...")
-    if "pref" in required_comps:
-        prefix_fp = "dict/text_components.xlsx"
+    if "pref" in required_comps.keys():
         pos = "prefix"
         sheet_name = "prefixes"
-        prefix_file = convert_excel_to_json(prefix_fp, sheet_name)   
-        prefixes = pull_dictionary(prefix_file, pos)
-    else:
-        prefixes = []
+        prefix_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name)   
+        keyword_dict["pref|no_cut"] = set(pull_dictionary(prefix_file, pos))
 
-    if "suff" in required_comps:
-        data_fp = "dict/text_components.xlsx"
+    if "suff" in required_comps.keys():
         pos = "suffix"
         sheet_name = "suffixes"
-        json_file = convert_excel_to_json(data_fp, sheet_name)  
-        suffixes = pull_dictionary(json_file, pos)
-    else:
-        suffixes = []
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name)  
+        keyword_dict["suff|no_cut"] = set(pull_dictionary(json_file, pos))
 
-    if "head" in required_comps:
-        data_fp = "dict/text_components.xlsx"
+    if "head" in required_comps.keys():
         pos = "head"
         sheet_name = "heads"
-        json_file = convert_excel_to_json(data_fp, sheet_name)  
-        heads = pull_dictionary(json_file, pos)
-    else:
-        heads = []
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name)  
+        keyword_dict["head|no_cut"] = set(pull_dictionary(json_file, pos))
 
-    if "tail" in required_comps:
-        data_fp = "dict/text_components.xlsx"
+    if "tail" in required_comps.keys():
         pos = "tail"
         sheet_name = "tails"
-        json_file = convert_excel_to_json(data_fp, sheet_name)  
-        tails = pull_dictionary(json_file, pos)
-    else:
-        tails = []
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name)  
+        keyword_dict["tail|no_cut"] = set(pull_dictionary(json_file, pos))
 
-    if "join" in required_comps:
-        data_fp = "dict/text_components.xlsx"
+    if "join" in required_comps.keys():
         pos = "join"
         sheet_name = "joints"
-        json_file = convert_excel_to_json(data_fp, sheet_name)  
-        joints = pull_dictionary(json_file, pos)
-    else:
-        joints = []
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name)  
+        keyword_dict["join|no_cut"] = set(pull_dictionary(json_file, pos))
 
-    # Add all lists into dict form
-    keyword_dict = {
-        "verb": verbs,
-        "noun": nouns,
-        "plrn": plural_nouns,
-        "adje": adjectives,
-        "advb": adverbs,
-        "pref": prefixes,
-        "suff": suffixes,
-        "head": heads,
-        "join": joints,
-        "tail": tails,
-    }
-    with open("tmp/keyword_generator/keyword_shortlist.json", "wb+") as out_file:
-        out_file.write(json.dumps(keyword_dict, option=json.OPT_INDENT_2))
+    keyword_dict_json = {}
+    for key, item in keyword_dict.items():
+        keyword_dict_json[key] = list(item)
+
+    with open(keyword_dict_json_fp, "wb+") as out_file:
+        out_file.write(json.dumps(keyword_dict_json, option=json.OPT_INDENT_2))
     
     # Pull wordsAPI data
     wordsapi_data = pull_wordsAPI_dict()
-    wiki_titles_data = set(open("../wikipedia_extract_titles/results/wiki_titles_combined_list_filtered.tsv", "r").read().splitlines())
+    wiki_titles_data = set(open(wiki_titles_data_fp, "r").read().splitlines())
 
     # Generate names
     all_names = make_names(algorithms, keyword_dict, wordsapi_data)
     print("Exporting ungraded_names.json to tmp folder...")
-    json_ungraded_output_fp = json_output_fp.replace("results/", f"tmp/name_generator/ungraded_")
     with open(json_ungraded_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
@@ -263,7 +347,7 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
 
                 keywords_list = sorted(set(etymology_data.keyword_tuple))
                 contained_words_list = find_contained_words(name_in_title_str, wordsapi_data, keywords_list)
-                grade_str = grade_name(name_type_str, name.phonetic_grade, name.word_plausibility, name.is_word, name.length, contained_words_list, wiki_title_check)
+                grade_str = grade_name(name_type_str, name.phonetic_grade, name.non_plaus_letter_combs, name.is_word, name.length, contained_words_list, wiki_title_check)
 
                 graded_names[key] = Graded_name(
                     name_in_lower = name_in_lower_str,
@@ -271,7 +355,7 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
                     name_type = name_type_str,
                     length = name.length,
                     phonetic_grade = name.phonetic_grade,
-                    word_plausibility = name.word_plausibility,
+                    non_plaus_letter_combs = name.non_plaus_letter_combs,
                     is_word = name.is_word,
                     contained_words = contained_words_list,
                     wiki_title = wiki_title_check,
@@ -287,7 +371,7 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
                 data:Graded_name = copy.deepcopy(graded_names[key])
                 keywords_list = sorted(set(data.keywords + list(etymology_data.keyword_tuple)))
                 contained_words_list = find_contained_words(name_in_title_str, wordsapi_data, keywords_list)
-                grade_str = grade_name(name_type_str, name.phonetic_grade, name.word_plausibility, name.is_word, name.length, contained_words_list, wiki_title_check)
+                grade_str = grade_name(name_type_str, name.phonetic_grade, name.non_plaus_letter_combs, name.is_word, name.length, contained_words_list, wiki_title_check)
                 data.contained_words = contained_words_list
                 data.keywords = keywords_list
                 data.keyword_combinations = sorted(set(data.keyword_combinations + [keyword_combination]))
@@ -298,15 +382,12 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
                 graded_names[key] = data
 
     # Removing previously generated names and domains 
-    tmp_file="tmp/name_generator/remaining_shortlist.json"
-    if os.path.exists(tmp_file):
-        os.remove(tmp_file)
-    previous_domain_output_fp = "results/domains.json"
+    if os.path.exists(remaining_shortlist_json_fp):
+        os.remove(remaining_shortlist_json_fp)
     if os.path.exists(previous_domain_output_fp):
         os.remove(previous_domain_output_fp)
 
     print("Exporting names.json...")
-    json_graded_output_fp = json_output_fp.replace("results/", f"tmp/name_generator/graded_")
     with open(json_graded_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(graded_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
@@ -314,16 +395,17 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
     cut_name = []
     text_comp_name = []
     no_cut_name = []
+    pref_suff_name = []
     shortlisted_names = {}
     shortlisted_names["cut_name"] = {}
     shortlisted_names["text_comp_name"] = {}
+    shortlisted_names["pref_suff_name"] = {}
     shortlisted_names["no_cut_name"] = {}
 
-    name_types = ["cut_name", "cn_percentage", "text_comp_name", "tcn_percentage", "no_cut_name", "ncn_percentage"]
+    name_types = ["cut_name", "cn_percentage", "text_comp_name", "tcn_percentage", "pref_suff_name", "psn_percentage", "no_cut_name", "ncn_percentage"]
     raw_statistics = {}
     for name_type in name_types:
         raw_statistics[name_type] = {}
-
     for key, data in graded_names.items():
         name_in_title = data.name_in_title
         grade = data.grade if data.grade is not None else "Discarded"
@@ -338,17 +420,23 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
             cut_name.append(data)
         elif name_type == "text_comp_name":
             text_comp_name.append(data)
+        elif name_type == "pref_suff_name":
+            pref_suff_name.append(data)
         elif name_type == "no_cut_name":
             no_cut_name.append(data)
 
     print("Exporting shortlisted_names.json...")
-    json_sl_output_fp = json_output_fp.replace(".json", f"_shortlist.json").replace("results/", f"tmp/name_generator/")
     with open(json_sl_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(shortlisted_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
+
+    print("Exporting raw_stats.json...")
+    with open(json_stats_output_fp, "wb+") as out_file:
+        out_file.write(json.dumps(raw_statistics, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     print("Exporting names.xlsx...")
     # Excel output for prototype only: for production, remove code below
     cut_names_len = len(cut_name)
+    pref_suff_names_len = len(pref_suff_name)
     text_comp_names_len = len(text_comp_name)
     no_cut_names_len = len(no_cut_name)
     grades = ["Grade_A", "Grade_B", "Grade_C", "Grade_D", "Graded", "Discarded", "Total"]
@@ -359,19 +447,26 @@ def generate_names(keyword_fp: str, algorithm_fp: str, json_output_fp: str):
             try:
                 statistics[name_type][grade] = raw_statistics[name_type][grade]
             except KeyError:
-                statistics[name_type][grade] = str(round(raw_statistics[name_types[index-1]][grade]/raw_statistics[name_types[index-1]]["Total"]*100,2)) + "%"
+                try:
+                    statistics[name_type][grade] = str(round(raw_statistics[name_types[index-1]][grade]/raw_statistics[name_types[index-1]]["Total"]*100,2)) + "%"
+                except KeyError:
+                    if name_type in ["cn_percentage", "tcn_percentage", "ncn_percentage", "psn_percentage"]:
+                        statistics[name_type][grade] = "0%"
+                    else:
+                        statistics[name_type][grade] = 0
 
     df1 = pd.DataFrame.from_dict(cut_name, orient="columns")
-    df2 = pd.DataFrame.from_dict(text_comp_name, orient="columns")
-    df3 = pd.DataFrame.from_dict(no_cut_name, orient="columns")
-    df4 = pd.DataFrame.from_dict(statistics)
-    excel_output_fp = json_output_fp.replace(".json", ".xlsx")
+    df2 = pd.DataFrame.from_dict(pref_suff_name, orient="columns")
+    df3 = pd.DataFrame.from_dict(text_comp_name, orient="columns")
+    df4 = pd.DataFrame.from_dict(no_cut_name, orient="columns")
+    df5 = pd.DataFrame.from_dict(statistics)
     writer = pd.ExcelWriter(excel_output_fp)
     df1.to_excel(writer, sheet_name=f'cut names ({cut_names_len})')
-    df2.to_excel(writer, sheet_name=f'text comp names ({text_comp_names_len})')
-    df3.to_excel(writer, sheet_name=f'no cut names ({no_cut_names_len})')
-    df4.to_excel(writer, sheet_name=f'statistics')
+    df2.to_excel(writer, sheet_name=f'pref suff names ({pref_suff_names_len})')
+    df3.to_excel(writer, sheet_name=f'text comp names ({text_comp_names_len})')
+    df4.to_excel(writer, sheet_name=f'no cut names ({no_cut_names_len})')
+    df5.to_excel(writer, sheet_name=f'statistics')
     writer.save()
 
 if __name__ == "__main__":
-    generate_names(sys.argv[1], sys.argv[2], sys.argv[3])
+    generate_names(sys.argv[1])

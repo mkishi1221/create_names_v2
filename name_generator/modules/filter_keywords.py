@@ -21,7 +21,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
     - Not contain any characters except alphabets
     - Word is at least 3 letters
     """
-    default_blacklist_fp = "dict/default_blacklist.txt"
+    default_blacklist_fp = "name_generator/dict/default_blacklist.txt"
     blacklist = open(default_blacklist_fp, "r").read().splitlines()
     approved_pos = ["noun", "verb", "adjective", "adverb"]
     illegal_char = re.compile(r"[^a-zA-Z]")
