@@ -6,7 +6,6 @@ from classes.name_class import Graded_name
 from modules.get_whois import get_whois, DomainStates
 import sys
 import time
-import random
 import orjson as json
 import pandas as pd
 from datetime import datetime
@@ -32,20 +31,31 @@ def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain
     )
 
 # Checks domain availability using whois
-def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
+def check_domains(project_id: str, limit: int):
 
-    limit = int(limit)
-    domain_log_fp = "tmp/domain_checker/domain_log.json"
-    remaining_names_fp = "tmp/domain_checker/remaining_shortlist.json"
+    project_path = f"projects/{project_id}"
+
+    # input file filepaths and filenames:
+    sl_namelist_fp: str = f"{project_path}/tmp/name_generator/{project_id}_names_shortlist.json"
+
+    # dict resource paths and filenames:
+    domain_log_fp = "name_generator/dict/domain_log.json"
+
+    # tmp file filepaths and filenames:
+    json_output_fp: str = f"{project_path}/tmp/domain_checker/{project_id}_domains.json"
+    json_ndl_output_fp = f"{project_path}/tmp/domain_checker/{project_id}_namedomain_list_domains.json"
+    remaining_names_fp = f"{project_path}/tmp/domain_checker/{project_id}_remaining_name_shortlist.json"
+
+    # output filepaths and filenames:
+    excel_output_fp = f"{project_path}/results/{project_id}_domains.xlsx"
+
+    limit = int(limit)    
     domain_log = {}
 
     if os.path.exists(domain_log_fp):
-
         print("Domain log found - adding items to domain log...")
-
         with open(domain_log_fp) as domain_log_file:
             domain_log_raw = json.loads(domain_log_file.read())
-
         for domain, data in domain_log_raw.items():
             if data["data_valid_till"] > datetime.now().timestamp():
                 domain_log[domain] = Domain(
@@ -88,6 +98,7 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
             NameDomain_dict_raw: dict = json.loads(NameDomain_file.read())
         NameDomain_dict = {}
         NameDomain_dict["cut_name"] = {}
+        NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
         name_list: dict
@@ -107,10 +118,15 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
     else:
         NameDomain_dict = {}
         NameDomain_dict["cut_name"] = {}
+        NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
 
     tld_list = [".com"] #TODO: Change to file source
+
+    json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
+    with open(json_ndl_output_fp, "wb+") as out_file:
+        out_file.write(json.dumps(names_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     counter = 0
     for name_type in names_dict.keys():
@@ -118,93 +134,78 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
         print(f"Checking domains for {name_type}s...")
 
         name_list = list(names_dict[name_type].keys())
-        random.shuffle(name_list)
+        # random.shuffle(name_list)
         available = 0
-        error_count = 0
+        domain_log_use = ""
 
         # Check names from top of the shuffled name list until it reaches the desired number of available names
         # Skip names that are already in the domain_check_log.
         # Desired number of available names is specified by the "limit" variable in bash file "create_names.sh"
         name_str: str
+        dict_len = len(NameDomain_dict[name_type])
         for name_str in name_list:
+            if name_str not in NameDomain_dict[name_type]:
+                name_data = Graded_name(**names_dict[name_type][name_str])
+                avail_domain_list = set()
+                not_avail_domain_list = set()
 
-            if error_count == 5:
-                print("Connection unstable: check your internet connection.")
-                break
-            elif available == limit:
-                break
+                for tld in tld_list:
+                    domain_str = name_str.lower() + tld
+                    print(f"Checking {domain_str}...", end = "\r")
 
-            name_data = Graded_name(**names_dict[name_type][name_str])
-            avail_domain_list = []
-            not_avail_domain_list = []
-            skip = None
+                    # Skip name if name is in domain_check_log
+                    if domain_str not in domain_log.keys():
+                        # Access whois API and add result to domain log
+                        domain_obj: Domain = get_whois(domain_str)
+                        domain_log[domain_str] = domain_obj
+                    else:
+                        domain_obj: Domain = domain_log[domain_str]
+                        domain_log_use = " (Domain already checked!)"
 
-            for tld in tld_list:
-                domain_str = name_str.lower() + tld
-                print(f"Checking {domain_str}...", end = "\r")
+                    sys.stdout.write("\033[K")
 
-                # Skip name if name is in domain_check_log
-                if domain_str in domain_log.keys():
-                    print(f"'{domain_str}' already checked")
-                    valid_till = domain_log[domain_str].data_valid_till
-                    print(f"Expiration date: {time.strftime('%d-%b-%Y (%H:%M:%S)').format(valid_till)}")
-                    print(
-                            f"Date checked: {time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain_log[domain_str].last_checked)}"
-                        )
-                    skip = "skipped"
-
-                else:
-                    # Access whois API and add result to domain log
-                    domain_obj: Domain = get_whois(domain_str)
-                    domain_log[domain_str] = domain_obj
                     # If domain is available: add domain obj to avail_domain_list
                     if domain_obj.availability == DomainStates.AVAIL:
-                        avail_domain_list.append(domain_obj)
-                        print(f"{domain_str} available")
+                        avail_domain_list.add(domain_obj)
+                        condition = "available"
                     # If domain is not available: add domain obj to not_avail_domain_list
                     elif domain_obj.availability == DomainStates.NOT_AVAIL:
-                        not_avail_domain_list.append(domain_obj)
-                        print(f"{domain_str} not available.")
-                        print(
-                            f"Expiration date: {time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain_obj.data_valid_till)}"
-                        )
-                    # If connection error
-                    elif domain_obj.availability == DomainStates.UNKNOWN:
-                        error_count += 1
+                        not_avail_domain_list.add(domain_obj)
+                        condition = "not available"
 
-                sys.stdout.write("\033[K")
+                    print(f"'{domain_str}' {condition}{domain_log_use}")
 
-            del names_dict[name_type][name_str]
-            NameDomain_obj = create_NameDomain_obj(name_data, avail_domain_list, not_avail_domain_list)
-            NameDomain_dict[name_type][name_str] = NameDomain_obj
+                del names_dict[name_type][name_str]
+                NameDomain_obj = create_NameDomain_obj(name_data, list(avail_domain_list), list(not_avail_domain_list))
+                NameDomain_dict[name_type][name_str] = NameDomain_obj
 
-            if len(avail_domain_list) > 0:
-                available += 1
+                if len(avail_domain_list) > 0:
+                    available += 1
 
-            if skip == None:
+                print(f"Names processed: {counter}\nNames available: {available} + {dict_len}\n")
+
                 counter += 1
-            print(f"Names processed: {counter}\nNames available: {available}\n")
-
+                if available == limit:
+                    break
 
         if available == 0:
             print(
-                "No available domains collected. Check your internet connection or add more source data."
+                "No available domains collected. Add more source data and generate new names."
             )
             sys.exit()
 
     with open(json_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(NameDomain_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
-
-    with open("tmp/domain_checker/remaining_name_shortlist.json", "wb+") as out_file:
+    with open(remaining_names_fp, "wb+") as out_file:
         out_file.write(json.dumps(names_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
-
     with open(domain_log_fp, "wb+") as out_file:
         out_file.write(json.dumps(domain_log, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     # Export to excel file
-    excel_output_fp = json_output_fp.replace(".json", ".xlsx").replace("tmp/domain_checker/", "results/")
     cut_name_avail = []
     cut_name_not_avail = []
+    pref_suff_name_avail = []
+    pref_suff_name_not_avail = []
     text_comp_name_avail = []
     text_comp_name_not_avail = []
     no_cut_name_avail = []
@@ -228,13 +229,15 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
                     "modifier_combinations": data.modifier_combinations,
                     "etymologies": data.etymologies,
                     "grade": data.grade,
-                    "last_checked": domain.last_checked,
-                    "data_valid_till": domain.data_valid_till,
+                    "last_checked": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.last_checked),
+                    "data_valid_till": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.data_valid_till),
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }
                 if name_type == "cut_name":
                     cut_name_avail.append(excel_domain)
+                elif name_type == "pref_suff_name":
+                    pref_suff_name_avail.append(excel_domain)
                 elif name_type == "text_comp_name":
                     text_comp_name_avail.append(excel_domain)
                 elif name_type == "no_cut_name":
@@ -256,13 +259,15 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
                     "etymologies": data.etymologies,
                     "grade": data.grade,
                     "domain": domain.domain,
-                    "last_checked": domain.last_checked,
-                    "data_valid_till": domain.data_valid_till,
+                    "last_checked": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.last_checked),
+                    "data_valid_till": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.data_valid_till),
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }
                 if name_type == "cut_name":
                     cut_name_not_avail.append(excel_domain)
+                elif name_type == "pref_suff_name":
+                    pref_suff_name_not_avail.append(excel_domain)
                 elif name_type == "text_comp_name":
                     text_comp_name_not_avail.append(excel_domain)
                 elif name_type == "no_cut_name":
@@ -270,6 +275,8 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
 
     cut_name_avail = sorted(cut_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
     cut_name_not_avail = sorted(cut_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
+    pref_suff_name_avail = sorted(pref_suff_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
+    pref_suff_name_not_avail = sorted(pref_suff_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
     text_comp_name_avail = sorted(text_comp_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
     text_comp_name_not_avail = sorted(text_comp_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
     no_cut_name_avail = sorted(no_cut_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
@@ -277,28 +284,34 @@ def check_domains(sl_namelist_fp: str, limit: int, json_output_fp: str):
 
     cut_name_avail_len = len(cut_name_avail)
     cut_name_not_avail_len = len(cut_name_not_avail)
+    pref_suff_name_avail_len = len(pref_suff_name_avail)
+    pref_suff_name_not_avail_len = len(pref_suff_name_not_avail)
     text_comp_name_avail_len = len(text_comp_name_avail)
     text_comp_name_not_avail_len = len(text_comp_name_not_avail)
     no_cut_name_avail_len = len(no_cut_name_avail)
     no_cut_name_not_avail_len = len(no_cut_name_not_avail)
 
     df1 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
-    df2 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
-    df3 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
-    df4 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
-    df5 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
-    df6 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
+    df2 = pd.DataFrame.from_dict(pref_suff_name_avail, orient="columns")
+    df3 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
+    df4 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
+    df5 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
+    df6 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
+    df7 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
+    df8 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
 
     writer = pd.ExcelWriter(excel_output_fp)
     df1.to_excel(writer, sheet_name=f'avail cut names ({cut_name_avail_len})')
-    df2.to_excel(writer, sheet_name=f'avail text comp names ({text_comp_name_avail_len})')
-    df3.to_excel(writer, sheet_name=f'avail no cut names ({no_cut_name_avail_len})')
-    df4.to_excel(writer, sheet_name=f'unavail cut names ({cut_name_not_avail_len})')
-    df5.to_excel(writer, sheet_name=f'unavail text comp names ({text_comp_name_not_avail_len})')
-    df6.to_excel(writer, sheet_name=f'unavail no cut names ({no_cut_name_not_avail_len})')
+    df2.to_excel(writer, sheet_name=f'avail pref suff names ({pref_suff_name_avail_len})')
+    df3.to_excel(writer, sheet_name=f'avail text comp names ({text_comp_name_avail_len})')
+    df4.to_excel(writer, sheet_name=f'avail no cut names ({no_cut_name_avail_len})')
+    df5.to_excel(writer, sheet_name=f'unavail cut names ({cut_name_not_avail_len})')
+    df6.to_excel(writer, sheet_name=f'unavail pref suff names ({pref_suff_name_not_avail_len})')
+    df7.to_excel(writer, sheet_name=f'unavail text comp names ({text_comp_name_not_avail_len})')
+    df8.to_excel(writer, sheet_name=f'unavail no cut names ({no_cut_name_not_avail_len})')
     writer.save()
 
 if __name__ == "__main__":
-    check_domains(sys.argv[1], sys.argv[2], sys.argv[3])
+    check_domains(sys.argv[1], sys.argv[2])
 
 

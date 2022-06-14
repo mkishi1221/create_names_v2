@@ -11,14 +11,11 @@ def word_plausability(word):
         end = start + length
         letters_list.add(word[start:end])
 
-    plausable = None
+    non_plausable = 0
     for comb in letters_list:
-        if comb in letter_sets:
-            plausable = "yes"
-        elif comb not in letter_sets:
-            plausable = "no"
-            break
+        if comb not in letter_sets:
+            non_plausable = non_plausable + 1
     
-    return plausable
+    return non_plausable
 
 

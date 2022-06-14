@@ -1,30 +1,7 @@
 .DS_Store
-
-tmp/
-tmp/*
-results/
-results/*
-test.sh
-tmp_keyw/
-tmp_keyw/*
-tmp_sents/
-tmp_sents/*
-dict/wikipedia_word_count/wikipedia-en-words-cumulative.json
-dict/wikipedia_word_count/wikipedia-en-words-cumulative.tsv
-dict/wikipedia_word_count/original_data/wikipedia-en-words.tsv
-
-keywords/
-keywords/*
-
-data/keywords/other/
-data/sentences/other/
-
-in_progress/
-modules/__pycache__
-dict/prefixes_and_suffixes/*
-
-db_creds.env
-login_creds.json
+projects/
+projects/*
+name_generator/modules/__pycache__/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python

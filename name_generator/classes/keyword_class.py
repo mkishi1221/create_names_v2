@@ -15,18 +15,18 @@ class Keyword:
     spacy_lemma: str = None
     nltk_lemma: str = None
     hard_lemma: Dict[str, str] = None
-    keyword: str = None
-    keyword_len: int = 0
     spacy_pos: str = None
-    wordsAPI_pos: str = None
-    pos: str = None
+    wordsAPI_pos: List[str] = None
+    keyword_len: int = 0
     spacy_occurrence: int = 0
     contained_words: List[str] = None
     phonetic_grade: str = None
-    yake_rank: Tuple = None
     restrictions_before: List[str] = None
     restrictions_after: List[str] = None
     restrictions_as_joint: List[str] = None
+    yake_rank: Tuple = None
+    keyword: str = None
+    pos: str = None
     shortlist: str = None
 
     def __eq__(self, o: object) -> bool:
@@ -50,15 +50,15 @@ class Keyword:
 @dataclass_json
 @dataclass
 class Modword(Keyword):
-    modifier: str = "no_mod"
+    modifier: str = "no_cut"
     modword: str = ""
     modword_len: int = 0
 
     def __eq__(self, o: object) -> bool:
-        return self.modword == o.modword and self.keyword == o.keyword and self.wordsAPI_pos == o.wordsAPI_pos
+        return self.modword == o.modword and self.keyword == o.keyword and self.pos == o.pos
 
     def __ne__(self, o: object) -> bool:
-        return self.modword != o.modword and self.keyword != o.keyword and self.wordsAPI_pos != o.wordsAPI_pos
+        return self.modword != o.modword and self.keyword != o.keyword and self.pos != o.pos
 
     def __hash__(self) -> int:
         return hash((self.source_word, self.keyword_len, self.keyword, self.modword, self.origin))

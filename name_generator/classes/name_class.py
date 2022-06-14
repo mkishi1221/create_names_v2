@@ -58,7 +58,7 @@ class Name:
     name_in_lower: str = None
     length: int = 0
     phonetic_grade: str = None
-    word_plausibility: str = None
+    non_plaus_letter_combs: int = None
     is_word: str = None
     contained_words: str = None
     etymologies: Dict[str, Etymology] = None
@@ -94,7 +94,7 @@ class Graded_name:
     name_type: Etymology.name_type = None
     length: Name.length = 0
     phonetic_grade: Name.phonetic_grade = None
-    word_plausibility: Name.word_plausibility = None
+    non_plaus_letter_combs: Name.non_plaus_letter_combs = None
     is_word: Name.is_word = None
     contained_words: Name.contained_words = None
     wiki_title: str = None

@@ -5,9 +5,9 @@ import orjson as json
 def generate_hard_lemma(keyword: str, data: str=None) -> dict:
 
     if data == None:
-        hard_lemma_conversion_dict_fp = "dict/hard_lemma_conversions.json"
+        hard_lemma_conversion_dict_fp = "name_generator/dict/hard_lemma_conversions.json"
     else:
-        hard_lemma_conversion_dict_fp = "dict/hard_lemma_conversions_short.json"
+        hard_lemma_conversion_dict_fp = "name_generator/dict/hard_lemma_conversions_short.json"
 
     with open(hard_lemma_conversion_dict_fp) as hard_lemma_conversion_dict_file:
         hl_conversion_dict = json.loads(hard_lemma_conversion_dict_file.read())
