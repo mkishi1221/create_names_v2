@@ -7230,13 +7230,6 @@
     "data_valid_till": 1700350873,
     "shortlist": null
   },
-  "prochan.com": {
-    "domain": "prochan.com",
-    "availability": "not available",
-    "last_checked": 1653148987,
-    "data_valid_till": 1655209738,
-    "shortlist": null
-  },
   "sealize.com": {
     "domain": "sealize.com",
     "availability": "not available",
@@ -16764,13 +16757,6 @@
     "data_valid_till": 1655232446,
     "shortlist": null
   },
-  "bemakedo.com": {
-    "domain": "bemakedo.com",
-    "availability": "not available",
-    "last_checked": 1655146046,
-    "data_valid_till": 1649874453,
-    "shortlist": null
-  },
   "bemakeit.com": {
     "domain": "bemakeit.com",
     "availability": "available",
@@ -17471,13 +17457,6 @@
     "data_valid_till": 1655232460,
     "shortlist": null
   },
-  "makeschange.com": {
-    "domain": "makeschange.com",
-    "availability": "not available",
-    "last_checked": 1655146060,
-    "data_valid_till": 1650472180,
-    "shortlist": null
-  },
   "changelocals.com": {
     "domain": "changelocals.com",
     "availability": "available",
@@ -17791,6 +17770,209 @@
     "availability": "available",
     "last_checked": 1655146067,
     "data_valid_till": 1655232467,
+    "shortlist": null
+  },
+  "lomatures.com": {
+    "domain": "lomatures.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "localomanu.com": {
+    "domain": "localomanu.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "locarings.com": {
+    "domain": "locarings.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "lochamanu.com": {
+    "domain": "lochamanu.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "locurings.com": {
+    "domain": "locurings.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "lolorings.com": {
+    "domain": "lolorings.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "lomanchan.com": {
+    "domain": "lomanchan.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "lomanings.com": {
+    "domain": "lomanings.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "lomanture.com": {
+    "domain": "lomanture.com",
+    "availability": "available",
+    "last_checked": 1655217132,
+    "data_valid_till": 1655303532,
+    "shortlist": null
+  },
+  "machamanu.com": {
+    "domain": "machamanu.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "malorings.com": {
+    "domain": "malorings.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "manacture.com": {
+    "domain": "manacture.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "manchaman.com": {
+    "domain": "manchaman.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "manctures.com": {
+    "domain": "manctures.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "regerings.com": {
+    "domain": "regerings.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "chamatures.com": {
+    "domain": "chamatures.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "localanges.com": {
+    "domain": "localanges.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "foremakes.com": {
+    "domain": "foremakes.com",
+    "availability": "available",
+    "last_checked": 1655217133,
+    "data_valid_till": 1655303533,
+    "shortlist": null
+  },
+  "hypomakes.com": {
+    "domain": "hypomakes.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "localonym.com": {
+    "domain": "localonym.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "localular.com": {
+    "domain": "localular.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "monolocal.com": {
+    "domain": "monolocal.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "monomakes.com": {
+    "domain": "monomakes.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "paramakes.com": {
+    "domain": "paramakes.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "semimakes.com": {
+    "domain": "semimakes.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "telemakes.com": {
+    "domain": "telemakes.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "localuous.com": {
+    "domain": "localuous.com",
+    "availability": "available",
+    "last_checked": 1655217134,
+    "data_valid_till": 1655303534,
+    "shortlist": null
+  },
+  "bemakedo.com": {
+    "domain": "bemakedo.com",
+    "availability": "not available",
+    "last_checked": 1655217313,
+    "data_valid_till": 1649874453,
+    "shortlist": null
+  },
+  "makeschange.com": {
+    "domain": "makeschange.com",
+    "availability": "not available",
+    "last_checked": 1655217313,
+    "data_valid_till": 1650472180,
     "shortlist": null
   }
 }

@@ -63,10 +63,12 @@ def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
 
     unique_words = []
     for keyword in keywords:
-        if keyword.source_word != "" and keyword not in unique_words:
+        not_valid = [None, ""]
+        if keyword.keyword not in not_valid and keyword not in unique_words:
             unique_words.append(keyword)
 
     # Count occurrence of unique word
+    unique_word: Keyword
     for unique_word in unique_words:
         unique_word.spacy_occurrence = keywords.count(unique_word)
 

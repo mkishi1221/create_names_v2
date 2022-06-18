@@ -189,9 +189,7 @@ def check_domains(project_id: str, limit: int):
                     break
 
         if available == 0:
-            print(
-                "No available domains collected. Add more source data and generate new names."
-            )
+            print("No available domains collected. Add more source data and generate new names.")
             sys.exit()
 
     with open(json_output_fp, "wb+") as out_file:
@@ -272,15 +270,6 @@ def check_domains(project_id: str, limit: int):
                     text_comp_name_not_avail.append(excel_domain)
                 elif name_type == "no_cut_name":
                     no_cut_name_not_avail.append(excel_domain)
-
-    cut_name_avail = sorted(cut_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    cut_name_not_avail = sorted(cut_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    pref_suff_name_avail = sorted(pref_suff_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    pref_suff_name_not_avail = sorted(pref_suff_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    text_comp_name_avail = sorted(text_comp_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    text_comp_name_not_avail = sorted(text_comp_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    no_cut_name_avail = sorted(no_cut_name_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
-    no_cut_name_not_avail = sorted(no_cut_name_not_avail, key=lambda d: (d['length'], d['grade'], d['domain']))
 
     cut_name_avail_len = len(cut_name_avail)
     cut_name_not_avail_len = len(cut_name_not_avail)

@@ -72,8 +72,8 @@ fi
 rm -rf $project_path/tmp/keyword_generator/*
 rm -rf $project_path/tmp/name_generator/*
 rm -rf $project_path/tmp/domain_checker/*
-rm -rf $project_path/results/names.xlsx
-rm -rf $project_path/results/domains.xlsx
+rm -rf $project_path/results/${project_id}_names.xlsx
+rm -rf $project_path/results/${project_id}_domains.xlsx
 mkdir -p $project_path/tmp/keyword_generator
 mkdir -p $project_path/tmp/logs
 mkdir -p $project_path/results/

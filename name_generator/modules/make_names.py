@@ -2,7 +2,6 @@
 # -*- coding:utf-8 -*-
 from typing import List
 from typing import Dict
-import regex as re
 import copy
 from classes.algorithm_class import Algorithm
 from classes.name_class import Etymology

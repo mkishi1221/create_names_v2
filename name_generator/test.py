@@ -1,38 +1,47 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-from typing import List
-import regex as re
-from modules.pull_wordsAPI import pull_wordsAPI_dict
+import orjson as json
+import pandas as pd
 
-def find_contained_words(keyword: str, wordsAPI_dict: dict, exempt: List[str]=None) -> List[str]:
+data_fp = "test_keyword_dict.json"
+with open(data_fp) as data_file:
+    data: dict = json.loads(data_file.read())
 
-    if exempt == None:
-        exempt = []
+keyword_dict = []
+required = ["noun", "plrn", "verb", "adje", "advb"]
+for key in data.keys():
+    if key[:4] in required:
+        for keyword_obj in data[key]:
+            desired_order_list = [
+                "origin",
+                "source_word",
+                "spacy_pos",
+                "wordsAPI_pos",
+                "keyword_len",
+                "contained_words",
+                "phonetic_grade",
+                "yake_rank",
+                "modifier",
+                "modword_len",
+                "pos",
+                "keyword",
+                "modword",
+                "shortlist",
+            ]
+            reordered_keyword_obj = {k: keyword_obj[k] for k in desired_order_list}
+            keyword_dict.append(reordered_keyword_obj)
 
-    wordsAPI_words = wordsAPI_dict.keys()
-    contained_words = []
-    length = len(keyword)
-    print(length)
-    capitals = re.compile("[A-Z]")
+keyword_dict_sorted = sorted(keyword_dict, key=lambda d: [d['keyword'], d['pos'], d['modifier']]) 
 
-    try:
-        position = length - keyword.find(re.findall(capitals, keyword)[-1]) - 1
-        print(position)
-        if position <= 4:
-            position = 4
-    except IndexError:
-        position = 4
+output_json_fp = "test_keywords_list.json"
+with open(output_json_fp, "wb+") as out_file:
+    out_file.write(json.dumps(keyword_dict_sorted, option=json.OPT_INDENT_2))
 
-    for start in range(1, length-position):
-        word = keyword[start:].lower()
-        if word in wordsAPI_words and word not in exempt:
-            contained_words.append((word, f"start: {start}", f"length: {length}", f"position: {position}"))
-    
-    if len(contained_words) == 0:
-        contained_words = None
-
-    return contained_words
-
-print(find_contained_words("IdeaIdeaDo", pull_wordsAPI_dict()))
-print(find_contained_words("MakeiDentity", pull_wordsAPI_dict()))
-print(find_contained_words("MakeiDentity", pull_wordsAPI_dict()))
+excel_output_fp = "test_keywords_list.xlsx"
+df1 = pd.DataFrame.from_dict(keyword_dict_sorted, orient="columns")
+writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
+df1.to_excel(writer, sheet_name='shortlisted keywords')
+workbook  = writer.book
+worksheet = writer.sheets['shortlisted keywords']
+worksheet.set_column(1, 14, 15)
+writer.save()

@@ -14,25 +14,27 @@ def generate_keyword_shortlist(keyword_data):
     shortlist = []
 
     for keyword in keyword_data:
-
-        if keyword["shortlist"] is not None and keyword["shortlist"] != "":
-
+        not_valid = [None, ""]
+        if keyword["shortlist"] not in not_valid:
             keyword_obj = Keyword(
                 origin=keyword["origin"],
                 source_word=keyword["source_word"],
                 spacy_lemma=keyword["spacy_lemma"],
+                nltk_lemma=keyword["nltk_lemma"],
                 hard_lemma=keyword["hard_lemma"],
-                keyword=keyword["keyword"],
-                keyword_len=keyword["keyword_len"],
                 spacy_pos=keyword["spacy_pos"],
                 wordsAPI_pos=keyword["wordsAPI_pos"],
-                pos=keyword["pos"],
+                preferred_pos=keyword["preferred_pos"],
+                keyword_len=keyword["keyword_len"],
                 spacy_occurrence=keyword["spacy_occurrence"],
+                contained_words=keyword["contained_words"],
                 phonetic_grade=keyword["phonetic_grade"],
-                yake_rank=keyword["yake_rank"],
                 restrictions_before=isNone(keyword["restrictions_before"].replace(",","").split()),
                 restrictions_after=isNone(keyword["restrictions_after"].replace(",","").split()),
                 restrictions_as_joint=isNone(keyword["restrictions_as_joint"].replace(",","").split()),
+                yake_rank=keyword["yake_rank"],
+                keyword=keyword["keyword"],
+                pos=keyword["pos"],
                 shortlist=keyword["shortlist"]
             )
 
