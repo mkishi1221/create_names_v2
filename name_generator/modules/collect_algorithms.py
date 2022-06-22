@@ -27,15 +27,15 @@ def collect_algorithms() -> List[Algorithm]:
         algorithm_data = json.loads(algorithms_file.read())
 
     algorithms = set()
-
     for algorithm in algorithm_data:
-        if algorithm["deactivate"] == "":
+        not_valid = [None, ""]
+        if algorithm["deactivate"] in not_valid:
             comp_list = []
-            if algorithm["pos_1"] != "":
+            if algorithm["pos_1"] not in not_valid:
                 comp_list.append(Component(pos=algorithm["pos_1"], modifier=exchange_comp(algorithm["modifier_1"])))
-            if algorithm["pos_2"] != "":
+            if algorithm["pos_2"] not in not_valid:
                 comp_list.append(Component(pos=algorithm["pos_2"], modifier=exchange_comp(algorithm["modifier_2"])))
-            if algorithm["pos_3"] != "":
+            if algorithm["pos_3"] not in not_valid:
                 comp_list.append(Component(pos=algorithm["pos_3"], modifier=exchange_comp(algorithm["modifier_3"])))
 
             algorithms.add(

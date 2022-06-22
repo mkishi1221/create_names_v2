@@ -16,12 +16,17 @@ def generate_hard_lemma(keyword: str, data: str=None) -> dict:
     hard_lemma_2 = None
     possible_pos = []
 
-    ending_1 = keyword[-1]
-    ending_2 = keyword[-2:]
-    ending_3 = keyword[-3:]
-    word_cut_1 = keyword[:-1]
-    word_cut_2 = keyword[:-2]
-    word_cut_3 = keyword[:-3]
+    try:
+        ending_1 = keyword[-1]
+        ending_2 = keyword[-2:]
+        ending_3 = keyword[-3:]
+        word_cut_1 = keyword[:-1]
+        word_cut_2 = keyword[:-2]
+        word_cut_3 = keyword[:-3]
+    except IndexError:
+        print("IndexError: string index out of range")
+        print(f"keyword is: {keyword}")
+        exit()
 
     if ending_3 in hl_conversion_dict.keys():
         replacement_1 = hl_conversion_dict[ending_3]["replacement_1"]

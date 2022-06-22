@@ -3,31 +3,32 @@
 
 def grade_phonetic(text):
 
-    phonetic_pattern = []
-
+    phonetic_pattern = ""
     vowels = "aeiou"
     middle = "yw"
-    numbers = "12"
 
+    last_index = len(text) - 1
     prev_letter = ""
-    for letter in text:
-        if letter in numbers:
-            phonetic_pattern.append(letter)
+    for index, letter in enumerate(text):
+        if index != last_index and letter == text[index+1]:
+            pattern = "_"
         elif letter in vowels:
-            phonetic_pattern.append("1")
+            pattern = "1"
         elif letter in middle:
             if prev_letter in vowels:
-                phonetic_pattern.append("2")
+                pattern = "2"
             else:
-                phonetic_pattern.append("1")
+                pattern = "1"
         else:
-            phonetic_pattern.append("2")
-        prev_letter = letter
-    
-    phonetic_pattern = "".join(phonetic_pattern)
+            pattern = "2"
+        phonetic_pattern = phonetic_pattern + pattern
+        if pattern != "x":
+            prev_letter = letter
 
-    vowel_count = phonetic_pattern.count("11")
-    consonant_count = phonetic_pattern.count("22")
+    eval_pattern = phonetic_pattern.replace("_", "")
+
+    vowel_count = eval_pattern.count("11")
+    consonant_count = eval_pattern.count("22")
 
     if (
         consonant_count == 0
@@ -49,4 +50,4 @@ def grade_phonetic(text):
         phonetic_grade = "Phonetic_D"
 
 
-    return phonetic_grade
+    return phonetic_grade, phonetic_pattern
