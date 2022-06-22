@@ -22,10 +22,11 @@ from modules.pull_wordsAPI import pull_wordsAPI_dict
 from modules.process_user_keywords import process_user_keywords_dict
 from modules.verify_words_with_wordsAPI import verify_words_with_wordsAPI
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
+from modules.keyword_modifier import keyword_modifier
+from modules.grade_phonetic import grade_phonetic
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
-
 
 
 def process_additional_keywords(additional_keyword_list_fp, project_path):
@@ -53,18 +54,18 @@ def grade_name(name_type, phonetic_grade, non_plausable, is_it_word, name_length
 
     if name_type == "cut_name":
         if (
-            non_plausable == 0
+            non_plausable <= 4
             and is_it_word == "no"
             and name_length > 4
             and name_length < 11
             and contained_words == None
             and if_wiki_title == None
         ):
-            if phonetic_grade == "Phonetic_A":
+            if phonetic_grade == "Phonetic_A" and non_plausable == 0:
                 grade_str = "Grade_A"
-            elif phonetic_grade == "Phonetic_B":
+            elif phonetic_grade == "Phonetic_B" and non_plausable <= 1:
                 grade_str = "Grade_B"
-            elif phonetic_grade == "Phonetic_C":
+            elif phonetic_grade == "Phonetic_C" and non_plausable <= 2:
                 grade_str = "Grade_C"
             else:
                 grade_str = "Grade_D"
@@ -132,52 +133,6 @@ def isNone(variable):
         result = variable
     return result
 
-
-def keyword_modifier(keyword_obj: Keyword, kw_modifier: str) -> Modword:
-    keyword = keyword_obj.keyword
-    try:
-        num = int(kw_modifier[-1])
-    except ValueError:
-        num = 0
-    final_modword = keyword_obj.keyword
-
-    # "cut_f4" means "cut out first 4 letters"
-    # "cut_r5" means "cut out rear 5 letters"
-    if len(keyword) > num:
-        if re.search(r'cut_f', kw_modifier):
-            final_modword = keyword[:num]
-        elif re.search(r'cut_r', kw_modifier):
-            num = num * -1
-            final_modword = keyword[num:]
-
-        modword = Modword(
-            origin=keyword_obj.origin,
-            source_word=keyword_obj.source_word,
-            spacy_lemma=keyword_obj.spacy_lemma,
-            nltk_lemma=keyword_obj.nltk_lemma,
-            hard_lemma=keyword_obj.hard_lemma,
-            spacy_pos=keyword_obj.spacy_pos,
-            wordsAPI_pos=keyword_obj.wordsAPI_pos,
-            preferred_pos=keyword_obj.preferred_pos,
-            keyword_len=keyword_obj.keyword_len,
-            spacy_occurrence=keyword_obj.spacy_occurrence,
-            contained_words=keyword_obj.contained_words,
-            phonetic_grade=keyword_obj.phonetic_grade,
-            restrictions_before=keyword_obj.restrictions_before,
-            restrictions_after=keyword_obj.restrictions_after,
-            restrictions_as_joint=keyword_obj.restrictions_as_joint,
-            yake_rank=keyword_obj.yake_rank,
-            keyword=keyword_obj.keyword,
-            pos=keyword_obj.pos,
-            shortlist=keyword_obj.shortlist,
-            modifier=kw_modifier,
-            modword=final_modword,
-            modword_len=len(final_modword)
-        )
-    else:
-        modword = None
-
-    return modword
 
 # "dictionary_fp" input is a filepath
 def pull_dictionary(dictionary_fp: str, pos_str: str) -> List[Keyword]:
@@ -296,9 +251,9 @@ def generate_names(project_id: str):
         modifier_list = required_comps[pos]
         for kw_modifier in modifier_list:
             key = f"{pos}|{kw_modifier}"
-            modword = keyword_modifier(keyword_obj, kw_modifier)
-            if modword is not None:
-                keyword_dict[key].add(modword)
+            modword_list = keyword_modifier(keyword_obj, kw_modifier)
+            for modword_obj in modword_list:
+                keyword_dict[key].add(modword_obj)
 
         # Generate plural:
         if pos == "noun":
@@ -308,12 +263,13 @@ def generate_names(project_id: str):
             keyword_obj: Keyword = copy.deepcopy(keyword_obj)
             keyword_obj.keyword = plural_noun_str
             keyword_obj.pos = "plural_noun"
+            keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
             modifier_list = required_comps[pos]
             for kw_modifier in modifier_list:
                 key = f"{pos}|{kw_modifier}"
-                modword = keyword_modifier(keyword_obj, kw_modifier)
-                if modword is not None:
-                    keyword_dict[key].add(modword)
+                modword_list = keyword_modifier(keyword_obj, kw_modifier)
+                for modword_obj in modword_list:
+                    keyword_dict[key].add(modword_obj)
 
     algorithms = set()
     for algorithm in raw_algorithms:
@@ -509,8 +465,12 @@ def generate_names(project_id: str):
         out_file.write(json.dumps(shortlisted_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     print("Exporting raw_stats.json...")
-    with open(json_stats_output_fp, "wb+") as out_file:
-        out_file.write(json.dumps(raw_statistics, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
+    try:
+        with open(json_stats_output_fp, "wb+") as out_file:
+            out_file.write(json.dumps(raw_statistics, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
+    except TypeError:
+        pass
+
 
     print("Exporting names.xlsx...")
     # Excel output for prototype only: for production, remove code below

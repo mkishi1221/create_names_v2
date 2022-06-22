@@ -112,18 +112,19 @@ def generate_word_list(project_id):
     # Rank keywords using Yake:
     print("Extracting keywords using yake...")
     yake_keywords_dict = keyword_extractor(output_fp=yake_tmp_json_fp, sentences=sentences, keywords=keyword_list)
-    all_keywords_rated = []
+    all_keywords_list = []
     for kw in all_keywords:
         if kw.keyword in yake_keywords_dict.keys():
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
-            all_keywords_rated.append(kw)
-    all_keywords_rated = sorted(all_keywords_rated, key=lambda d: (d.yake_rank, d.keyword))
+        all_keywords_list.append(kw)
+
+    all_keywords_list = sorted(all_keywords_list, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
     with open(rated_kw_tmp_json_fp, "wb+") as out_file:
-        out_file.write(json.dumps(all_keywords_rated, option=json.OPT_INDENT_2))
+        out_file.write(json.dumps(all_keywords_list, option=json.OPT_INDENT_2))
 
     # Run keywords through keywords filter
     print("Running keywords through keyword filter...")
-    keywords, other_keywords = filter_keywords(all_keywords_rated)
+    keywords, other_keywords = filter_keywords(all_keywords_list)
 
     # Convert keyword list into keyword dict
     for keyword_obj in keywords:
@@ -172,11 +173,11 @@ def generate_word_list(project_id):
             elif pos == "adverb": 
                 excel_output_list_adverb.append(data)
 
-    excel_output_list_noun = sorted(excel_output_list_noun, key=lambda d: (d.yake_rank, d.keyword))
-    excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (d.yake_rank, d.keyword))
-    excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (d.yake_rank, d.keyword))
-    excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (d.yake_rank, d.keyword))
-    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (d.yake_rank, d.keyword))
+    excel_output_list_noun = sorted(excel_output_list_noun, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
 
     # Add sheet for additional keywords
     excel_output_list_additional_keywords = []

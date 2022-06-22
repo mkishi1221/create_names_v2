@@ -223,7 +223,6 @@ def check_domains(project_id: str, limit: int):
                     "keywords": data.keywords,
                     "keyword_combinations": data.keyword_combinations,
                     "pos_combinations": data.pos_combinations,
-                    "pos_combinations": data.pos_combinations,
                     "modifier_combinations": data.modifier_combinations,
                     "etymologies": data.etymologies,
                     "grade": data.grade,
@@ -289,15 +288,32 @@ def check_domains(project_id: str, limit: int):
     df7 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
     df8 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
 
-    writer = pd.ExcelWriter(excel_output_fp)
-    df1.to_excel(writer, sheet_name=f'avail cut names ({cut_name_avail_len})')
-    df2.to_excel(writer, sheet_name=f'avail pref suff names ({pref_suff_name_avail_len})')
-    df3.to_excel(writer, sheet_name=f'avail text comp names ({text_comp_name_avail_len})')
-    df4.to_excel(writer, sheet_name=f'avail no cut names ({no_cut_name_avail_len})')
-    df5.to_excel(writer, sheet_name=f'unavail cut names ({cut_name_not_avail_len})')
-    df6.to_excel(writer, sheet_name=f'unavail pref suff names ({pref_suff_name_not_avail_len})')
-    df7.to_excel(writer, sheet_name=f'unavail text comp names ({text_comp_name_not_avail_len})')
-    df8.to_excel(writer, sheet_name=f'unavail no cut names ({no_cut_name_not_avail_len})')
+    writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
+
+    # Set sheet names:
+    sheet_names = [
+        f'avail cut names ({cut_name_avail_len})',
+        f'avail pref suff names ({pref_suff_name_avail_len})',
+        f'avail text comp names ({text_comp_name_avail_len})',
+        f'avail no cut names ({no_cut_name_avail_len})',
+        f'unavail cut names ({cut_name_not_avail_len})',
+        f'unavail pref suff names ({pref_suff_name_not_avail_len})',
+        f'unavail text comp names ({text_comp_name_not_avail_len})',
+        f'unavail no cut names ({no_cut_name_not_avail_len})'
+    ]
+
+    df1.to_excel(writer, sheet_name=sheet_names[0])
+    df2.to_excel(writer, sheet_name=sheet_names[1])
+    df3.to_excel(writer, sheet_name=sheet_names[2])
+    df4.to_excel(writer, sheet_name=sheet_names[3])
+    df5.to_excel(writer, sheet_name=sheet_names[4])
+    df6.to_excel(writer, sheet_name=sheet_names[5])
+    df7.to_excel(writer, sheet_name=sheet_names[6])
+    df8.to_excel(writer, sheet_name=sheet_names[7])
+    workbook  = writer.book
+    for sheet_name in sheet_names:
+        worksheet = writer.sheets[sheet_name]
+        worksheet.set_column(1, 15, 20)
     writer.save()
 
 if __name__ == "__main__":

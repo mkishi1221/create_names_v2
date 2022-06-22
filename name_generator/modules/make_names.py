@@ -108,11 +108,13 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, wordsAPI_data: di
 
     name_lower = etymology_obj.name_in_title.lower()
     if name_lower not in name_dict.keys():
-        
+
+        phonetic_grade, phonetic_pattern = grade_phonetic(name_lower)
+
         name_dict[name_lower] = Name(
             name_in_lower=name_lower,
             length=len(name_lower),
-            phonetic_grade=grade_phonetic(name_lower),
+            phonetic_grade=phonetic_grade,
             non_plaus_letter_combs=word_plausability(name_lower),
             is_word=is_word(name_lower, wordsAPI_data),
             etymologies={etymology_obj}

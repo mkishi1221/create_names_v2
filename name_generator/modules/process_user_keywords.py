@@ -7,6 +7,13 @@ import regex as re
 import pandas as pd
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
 
+def convert_to_list(string: str):
+    if len(str(string or "")) > 0:
+        str_list = string.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
+    else:
+        str_list = None
+    return str_list
+
 def create_keyword(word_str: str, keyword_str: str, pos_str_list: list, shortlist_str: str = None) -> Keyword:
 
     return Keyword(
@@ -91,8 +98,7 @@ def process_user_keywords_dict(user_keywords: List[dict], project_path) -> List[
         not_valid = [None, "", []]
         if keyword_obj["keyword"] not in not_valid:
             if keyword_obj["preferred_pos"] not in not_valid:
-                pos_str: str = keyword_obj["preferred_pos"]
-                pos_str_list = pos_str.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
+                pos_str_list = convert_to_list(keyword_obj["preferred_pos"])
                 preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["additional_keywords"])
                 if preferred_keyword not in user_keyword_bank_list:
                     user_keyword_bank_list.append(preferred_keyword)

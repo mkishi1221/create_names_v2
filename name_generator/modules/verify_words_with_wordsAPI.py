@@ -2,13 +2,15 @@
 # -*- coding:utf-8 -*-
 from typing import List
 from classes.keyword_class import Keyword
+from classes.keyword_class import Preferred_Keyword
 import regex as re
-import copy
+from nltk.stem import WordNetLemmatizer
 from modules.generate_hard_lemma import generate_hard_lemma
 from modules.pull_wordsAPI import pull_wordsAPI_dict
-from nltk.stem import WordNetLemmatizer
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
-from classes.keyword_class import Preferred_Keyword
+from modules.grade_phonetic import grade_phonetic
+from modules.keyword_abbreviator import keyword_abbreviator
+from modules.find_contained_words import find_contained_words
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -140,15 +142,17 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
         wordsapi_pos_list.update(fetch_pos_wordAPI(keyword_obj.spacy_lemma, wordsAPI_data))
 
         # If no pos is returned, use lemmatizer approximated lemma to generate pos.
+        nltk_lemma = None
         lemmatizer = WordNetLemmatizer()
         nltk_lemma = lemmatizer.lemmatize(keyword_obj.keyword)
+        keyword_obj.nltk_lemma = nltk_lemma
         if len(wordsapi_pos_list) == 0:
             wordsapi_pos_list.update(fetch_pos_wordAPI(nltk_lemma, wordsAPI_data))
 
-        not_valid = [None, "", []]
+        invalid = [None, "", []]
 
         # Create spacy_pos
-        if keyword_obj.spacy_pos not in not_valid:
+        if keyword_obj.spacy_pos not in invalid:
             spacy_pos = convert_spacy_pos(keyword_obj.spacy_pos)
         else:
             spacy_pos = None
@@ -161,24 +165,36 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
             none_value = [None, ""]
             if user_keyword.disable in none_value:
                 preferred_pos = user_keyword.preferred_pos
+                keyword_obj.preferred_pos = preferred_pos
 
         # If still no pos is returned, use hard_lemma to generate pos.
         if len(wordsapi_pos_list) == 0:
             hard_lemma = generate_hard_lemma(keyword_obj.keyword)
             if hard_lemma is not None:
                 wordsapi_pos_list.update(fetch_pos_wordAPI_w_hardlemma(hard_lemma, wordsAPI_data))
+                keyword_obj.hard_lemma = hard_lemma
+                if hard_lemma["hard_lemma_1"] + "s" == keyword_obj.keyword:
+                    keyword_obj.keyword = hard_lemma["hard_lemma_1"]
+
+        # Generate phonetic grade, pattern
+        keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(keyword_obj.keyword)
+
+        # Generate possible abbreviations
+        keyword_obj.abbreviations = keyword_abbreviator(keyword_obj.keyword, keyword_obj.phonetic_pattern)
+
+        # Find any contained words
+        keyword_obj.contained_words = find_contained_words(keyword_obj.keyword, wordsAPI_data, keyword_analysis="yes")
 
         # Add all pos variants of keyword to keyword list. If there is a preferred pos or the spacy pos is in wordsapi_pos_list, use them instead.
-        all_pos = []
-
-        if preferred_pos not in not_valid:
+        all_pos = set()
+        if len(list(preferred_pos or [])) > 0:
             all_pos = preferred_pos
-        elif str(spacy_pos or "") in wordsapi_pos_list:
-            all_pos = [spacy_pos]
-        elif wordsapi_pos_list is not None:
+        elif str(spacy_pos or "invalid") in wordsapi_pos_list:
+            all_pos = {spacy_pos}
+        elif len(list(wordsapi_pos_list or [])) > 0:
             all_pos = wordsapi_pos_list
-        elif spacy_pos is not None:
-            all_pos = [spacy_pos]
+        else:
+            all_pos = {spacy_pos}
 
         if len(all_pos) != 0:
             for pos_str in all_pos:
@@ -187,23 +203,17 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
                 # generate final lemma to set as keyword
                 if pos_str in valid_pos:
                     nltk_lemma = lemmatizer.lemmatize(keyword_obj.keyword,  pos=convert_to_nltk_pos(pos_str))
-
-                if nltk_lemma not in wordsAPI_data.keys():
-                    keyword = keyword_obj.keyword
-                else:
-                    keyword = nltk_lemma
-
-                # Create keyword object with updated data
-                keyword_obj_update = copy.deepcopy(keyword_obj)
-                keyword_obj_update.keyword = keyword
-                keyword_obj_update.preferred_pos = preferred_pos
-                keyword_obj_update.wordsAPI_pos = sorted(wordsapi_pos_list)
-                keyword_obj_update.pos = pos_str
-                keyword_obj_update.nltk_lemma = nltk_lemma
-                keyword_obj_update.hard_lemma = hard_lemma
-
-                updated_keywords_db.append(keyword_obj_update)
+                if nltk_lemma in wordsAPI_data.keys():
+                    keyword_obj.keyword = nltk_lemma
+                keyword_obj.wordsAPI_pos = sorted(wordsapi_pos_list)
+                keyword_obj.pos = pos_str
+                updated_keywords_db.append(keyword_obj)
+ 
         else:
+            if keyword_obj.spacy_lemma not in invalid:
+                keyword_obj.keyword = keyword_obj.spacy_lemma
+            else:
+                keyword_obj.keyword = keyword_obj.source_word
             updated_keywords_db.append(keyword_obj)
 
     return updated_keywords_db

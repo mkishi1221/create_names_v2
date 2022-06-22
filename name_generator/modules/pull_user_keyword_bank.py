@@ -5,6 +5,13 @@ from classes.keyword_class import Preferred_Keyword
 import os.path
 import orjson as json
 
+def convert_to_list(string: str):
+    if len(str(string or "")) > 0:
+        str_list = string.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
+    else:
+        str_list = None
+    return str_list
+
 def pull_user_keyword_bank(project_path):
 
     user_keyword_bank_list = []
@@ -16,10 +23,8 @@ def pull_user_keyword_bank(project_path):
         for kw_obj in raw_user_keyword_bank_list:
             not_valid = [None, ""]
             if kw_obj["keyword"] not in not_valid:
-                pos_list: str =  kw_obj["preferred_pos"]
-                pos_list = pos_list.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
-                origin_list: str =  kw_obj["origin"]
-                origin_list = origin_list.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
+                pos_list = convert_to_list(kw_obj["preferred_pos"])
+                origin_list =  convert_to_list(kw_obj["origin"])
                 user_keyword_bank_list.append(Preferred_Keyword(keyword=kw_obj["keyword"], preferred_pos=pos_list, origin=origin_list, disable=kw_obj["disable"]))
 
     return user_keyword_bank_list

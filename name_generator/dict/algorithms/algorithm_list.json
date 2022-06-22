@@ -1,4466 +1,1055 @@
 [
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f2",
+    "modifier_1": "ab_cut",
     "pos_2": "noun",
-    "modifier_2": "cut_f3",
+    "modifier_2": "ab_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f3",
+    "modifier_1": "ab_cut",
     "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "verb",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "verb",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
+    "modifier_1": "no_cut",
     "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "verb",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "verb",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "verb",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "no_cut",
     "pos_2": "noun",
-    "modifier_2": "cut_f2",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "adje",
-    "modifier_1": "cut_f2",
+    "modifier_1": "ab_cut",
     "pos_2": "noun",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "ab_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "adje",
-    "modifier_1": "cut_f2",
+    "modifier_1": "ab_cut",
     "pos_2": "noun",
-    "modifier_2": "cut_r5",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "adje",
-    "modifier_1": "cut_f2",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "pref",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
     "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
     "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "verb",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "verb",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "verb",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_f2",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "pref",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
     "pos_2": "verb",
-    "modifier_2": "cut_f2",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
+    "modifier_2": "ab_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
+    "modifier_1": "ab_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
+    "modifier_1": "no_cut",
     "pos_2": "verb",
-    "modifier_2": "cut_r6",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
+    "pos_1": "pref",
+    "modifier_1": "no_cut",
     "pos_2": "verb",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
+    "pos_1": "head",
+    "modifier_1": "no_cut",
     "pos_2": "verb",
-    "modifier_2": "cut_r5",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "pref",
+    "modifier_1": "no_cut",
+    "pos_2": "adje",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "adje",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "pref",
+    "modifier_1": "no_cut",
+    "pos_2": "advb",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "advb",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "verb",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r4",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "ab_cut",
     "pos_2": "suff",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "tail",
-    "modifier_2": "no_cut_5",
+    "modifier_1": "ab_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "suff",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "advb",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "ab_cut",
     "pos_2": "suff",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "advb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "tail",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "adje",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "advb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "no_cut",
     "pos_2": "suff",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "noun",
-    "modifier_1": "no_cut_5",
+    "modifier_1": "ab_cut",
     "pos_2": "tail",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
     "deactivate": ""
   },
   {
     "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "suff",
-    "modifier_2": "no_cut_5",
+    "modifier_1": "no_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
     "pos_3": "",
     "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "advb",
+    "modifier_1": "ab_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "advb",
+    "modifier_1": "no_cut",
+    "pos_2": "tail",
+    "modifier_2": "no_cut",
+    "pos_3": "",
+    "modifier_3": "",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "noun",
+    "modifier_3": "ab_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
     "deactivate": ""
   },
   {
     "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "tail",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
     "deactivate": ""
   },
   {
-    "pos_1": "pref",
-    "modifier_1": "no_cut_5",
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
     "pos_2": "adje",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
     "deactivate": ""
   },
   {
-    "pos_1": "pref",
-    "modifier_1": "no_cut_5",
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "noun",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "adje",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "plrn",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "verb",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "verb",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "verb",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "verb",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "join",
+    "modifier_2": "no_cut",
+    "pos_3": "verb",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "ab_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "noun",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "verb",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "ab_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "adje",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "plrn",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "verb",
+    "modifier_2": "ab_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "ab_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "noun",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "plrn",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "verb",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
+    "pos_2": "adje",
+    "modifier_2": "no_cut",
+    "pos_3": "tail",
+    "modifier_3": "no_cut",
+    "deactivate": ""
+  },
+  {
+    "pos_1": "head",
+    "modifier_1": "no_cut",
     "pos_2": "advb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "pref",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "pref",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "pref",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "suff",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "tail",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "verb",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r5",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "cut_r6",
-    "pos_3": "",
-    "modifier_3": "",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f2",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f2",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f2",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f3",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f3",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f3",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_f4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r4",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "adje",
-    "modifier_2": "no_cut_5",
+    "modifier_2": "no_cut",
     "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "advb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "adje",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "adje",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "adje",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "verb",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "verb",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "verb",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "verb",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "head",
-    "modifier_1": "no_cut_5",
-    "pos_2": "verb",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "join",
-    "modifier_2": "no_cut_3",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "verb",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "tail",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "cut_f4",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "noun",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "noun",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "cut_f4",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r6",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "noun",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "noun",
-    "modifier_3": "cut_r5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "no_cut_5",
-    "deactivate": ""
-  },
-  {
-    "pos_1": "plrn",
-    "modifier_1": "no_cut_5",
-    "pos_2": "plrn",
-    "modifier_2": "no_cut_5",
-    "pos_3": "plrn",
-    "modifier_3": "cut_r5",
+    "modifier_3": "no_cut",
     "deactivate": ""
   }
 ]
