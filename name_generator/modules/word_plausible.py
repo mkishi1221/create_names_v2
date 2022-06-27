@@ -11,11 +11,11 @@ def word_plausability(word):
         end = start + length
         letters_list.add(word[start:end])
 
-    non_plausable = 0
+    implaus_chars = 0
     for comb in letters_list:
         if comb not in letter_sets:
-            non_plausable = non_plausable + 1
+            implaus_chars = implaus_chars + 1
     
-    return non_plausable
+    return implaus_chars
 
 

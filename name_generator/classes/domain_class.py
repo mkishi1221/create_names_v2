@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from classes.name_class import Etymology
 from classes.name_class import Graded_name
-from typing import List, Dict
+from typing import List
 
 @dataclass_json
 @dataclass

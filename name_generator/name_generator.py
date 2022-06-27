@@ -4,7 +4,7 @@ import sys
 import orjson as json
 import os
 import copy
-import regex as re
+import pandas as pd
 from typing import List
 from pattern3.text.en import pluralize
 import dataclasses
@@ -24,9 +24,7 @@ from modules.verify_words_with_wordsAPI import verify_words_with_wordsAPI
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
 from modules.keyword_modifier import keyword_modifier
 from modules.grade_phonetic import grade_phonetic
-
-# Pandas input/output for prototype only: remove for production
-import pandas as pd
+from modules.grade_name import grade_name
 
 
 def process_additional_keywords(additional_keyword_list_fp, project_path):
@@ -48,68 +46,6 @@ def process_additional_keywords(additional_keyword_list_fp, project_path):
 
     return additional_keywords
 
-def grade_name(name_type, phonetic_grade, non_plausable, is_it_word, name_length, contained_words, if_wiki_title):
-
-    grade_str = None
-
-    if name_type == "cut_name":
-        if (
-            non_plausable <= 4
-            and is_it_word == "no"
-            and name_length > 4
-            and name_length < 11
-            and contained_words == None
-            and if_wiki_title == None
-        ):
-            if phonetic_grade == "Phonetic_A" and non_plausable == 0:
-                grade_str = "Grade_A"
-            elif phonetic_grade == "Phonetic_B" and non_plausable <= 1:
-                grade_str = "Grade_B"
-            elif phonetic_grade == "Phonetic_C" and non_plausable <= 2:
-                grade_str = "Grade_C"
-            else:
-                grade_str = "Grade_D"
-    
-
-    elif name_type == "pref_suff_name":
-        if (
-            non_plausable <= 4
-            and is_it_word == "no"
-            and name_length > 4
-            and name_length < 11
-            and contained_words == None
-            and if_wiki_title == None
-        ):
-            if phonetic_grade == "Phonetic_A":
-                grade_str = "Grade_A"
-            elif phonetic_grade == "Phonetic_B":
-                grade_str = "Grade_B"
-            elif phonetic_grade == "Phonetic_C":
-                grade_str = "Grade_C"
-            else:
-                grade_str = "Grade_D"
-
-
-    elif name_type == "no_cut_name" or name_type == "text_comp_name":
-
-        if (
-            non_plausable <= 4
-            and is_it_word == "no"
-            and name_length > 4
-            and contained_words == None
-            and if_wiki_title == None
-        ):
-            if name_length < 11:
-                grade_str = "Grade_A"
-            elif name_length < 13:
-                grade_str = "Grade_B"
-            elif name_length < 17:
-                grade_str = "Grade_C"
-            elif name_length < 20:
-                grade_str = "Grade_D"
-
-    return grade_str
-
 def check_if_wiki_title(is_word, name_in_lower: str, wiki_titles_list: list[str]):
 
     if is_word == "yes":
@@ -124,7 +60,6 @@ def check_if_wiki_title(is_word, name_in_lower: str, wiki_titles_list: list[str]
         value = None
 
     return value
-
 
 def isNone(variable):
     if len(variable) == 0 or variable == "" or variable == None:
@@ -181,11 +116,16 @@ def generate_names(project_id: str):
     json_graded_output_fp = f"{project_path}/tmp/name_generator/{project_id}_graded_names.json"
     remaining_shortlist_json_fp = f"{project_path}/tmp/name_generator/{project_id}_remaining_shortlist.json"
     json_sl_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_shortlist.json"
-    json_stats_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_raw_stats.json"
+    json_stats_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_statistics.json"
     keywords_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords.json"
 
     # output filepaths and filenames:
     excel_output_fp = f"{project_path}/results/{project_id}_names.xlsx"
+
+    # Pull wordsAPI data
+    wordsapi_data: dict = pull_wordsAPI_dict()
+    wordsAPI_words: list = wordsapi_data.keys()
+    wiki_titles_data = set(open(wiki_titles_data_fp, "r").read().splitlines())
 
     # Get all algorithms
     print("Loading algorithms...")
@@ -257,19 +197,21 @@ def generate_names(project_id: str):
 
         # Generate plural:
         if pos == "noun":
-            pos = "plrn"
-            required_pos.add(pos)
             plural_noun_str = pluralize(keyword_obj.keyword)
-            keyword_obj: Keyword = copy.deepcopy(keyword_obj)
-            keyword_obj.keyword = plural_noun_str
-            keyword_obj.pos = "plural_noun"
-            keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
-            modifier_list = required_comps[pos]
-            for kw_modifier in modifier_list:
-                key = f"{pos}|{kw_modifier}"
-                modword_list = keyword_modifier(keyword_obj, kw_modifier)
-                for modword_obj in modword_list:
-                    keyword_dict[key].add(modword_obj)
+            if plural_noun_str[:-2] != "ss":
+                pos = "plrn"
+                required_pos.add(pos)
+                keyword_obj: Keyword = copy.deepcopy(keyword_obj)
+                keyword_obj.keyword = plural_noun_str
+                keyword_obj.pos = "plural_noun"
+                keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
+                keyword_obj.contained_words = find_contained_words(plural_noun_str, wordsAPI_words)
+                modifier_list = required_comps[pos]
+                for kw_modifier in modifier_list:
+                    key = f"{pos}|{kw_modifier}"
+                    modword_list = keyword_modifier(keyword_obj, kw_modifier)
+                    for modword_obj in modword_list:
+                        keyword_dict[key].add(modword_obj)
 
     algorithms = set()
     for algorithm in raw_algorithms:
@@ -347,10 +289,6 @@ def generate_names(project_id: str):
                 shortlisted_keyword_dict.append(reordered_keyword_dict)
     keyword_dict_sorted = sorted(shortlisted_keyword_dict, key=lambda d: [d['keyword'], d['pos'], d['modifier']])
 
-    # Pull wordsAPI data
-    wordsapi_data = pull_wordsAPI_dict()
-    wiki_titles_data = set(open(wiki_titles_data_fp, "r").read().splitlines())
-
     # Removing previously generated names and domains 
     if os.path.exists(remaining_shortlist_json_fp):
         os.remove(remaining_shortlist_json_fp)
@@ -378,23 +316,27 @@ def generate_names(project_id: str):
             etymology_repr = repr(etymology_data)
             key = f"{name_in_title_str}({name_type_str})"
             wiki_title_check = check_if_wiki_title(name.is_word, name_in_lower_str, wiki_titles_data)
+            exempt_contained_list = list(name.exempt_contained) if name.exempt_contained else None
+            contained_words_list = find_contained_words(keyword=name_in_title_str, wordsAPI_words=wordsAPI_words, exempt=exempt_contained_list)
 
-            if not key in graded_names.keys():
-
+            if key not in graded_names.keys():
+                modwords_list = sorted(set(etymology_data.modword_tuple))
                 keywords_list = sorted(set(etymology_data.keyword_tuple))
-                contained_words_list = find_contained_words(name_in_title_str, wordsapi_data, keywords_list)
-                grade_str = grade_name(name_type_str, name.phonetic_grade, name.non_plaus_letter_combs, name.is_word, name.length, contained_words_list, wiki_title_check)
+                grade_str = grade_name(name_type_str, name.phonetic_grade, name.implaus_chars, name.is_word, name.length, contained_words_list, wiki_title_check)
 
                 graded_names[key] = Graded_name(
                     name_in_lower = name_in_lower_str,
                     name_in_title = name_in_title_str,
                     name_type = name_type_str,
                     length = name.length,
+                    phonetic_pattern= name.phonetic_pattern,
                     phonetic_grade = name.phonetic_grade,
-                    non_plaus_letter_combs = name.non_plaus_letter_combs,
+                    implaus_chars = name.implaus_chars,
                     is_word = name.is_word,
-                    contained_words = contained_words_list,
+                    exempt_contained = exempt_contained_list,
+                    contained_words = list(contained_words_list) if contained_words_list else None,
                     wiki_title = wiki_title_check,
+                    modwords = modwords_list,
                     keywords = keywords_list,
                     keyword_combinations = [keyword_combination],
                     pos_combinations = [pos_combination],
@@ -405,15 +347,30 @@ def generate_names(project_id: str):
 
             else:
                 data:Graded_name = copy.deepcopy(graded_names[key])
-                keywords_list = sorted(set(data.keywords + list(etymology_data.keyword_tuple)))
-                contained_words_list = find_contained_words(name_in_title_str, wordsapi_data, keywords_list)
-                grade_str = grade_name(name_type_str, name.phonetic_grade, name.non_plaus_letter_combs, name.is_word, name.length, contained_words_list, wiki_title_check)
+                modwords_list = sorted(set(list(data.modwords) + list(etymology_data.modword_tuple)))
+                keywords_list = sorted(set(list(data.keywords) + list(etymology_data.keyword_tuple)))
+                exempt_contained_list = sorted(set(data.exempt_contained + name.exempt_contained))
+                contained_words_list = find_contained_words(keyword=name_in_title_str, wordsAPI_words=wordsAPI_words, exempt=exempt_contained_list)
+                grade_str = grade_name(name_type_str, name.phonetic_grade, name.implaus_chars, name.is_word, name.length, contained_words_list, wiki_title_check)
+
+                contained_words = []
+                if data.contained_words is not None:
+                    contained_words = contained_words + data.contained_words
+                if contained_words_list is not None:
+                    contained_words = contained_words + contained_words_list
+                if len(contained_words) > 0:
+                    contained_words = sorted(set(contained_words))
+                else:
+                    contained_words = None
+
                 data.contained_words = contained_words_list
                 data.keywords = keywords_list
                 data.keyword_combinations = sorted(set(data.keyword_combinations + [keyword_combination]))
                 data.pos_combinations = sorted(set(data.pos_combinations + [pos_combination]))
                 data.modifier_combinations = sorted(set(data.modifier_combinations + [modifier_combination]))
                 data.etymologies = sorted(set(data.etymologies + [repr(etymology_data)]))
+                data.exempt_contained = exempt_contained_list
+                data.contained_words = contained_words
                 data.grade = grade_str
                 graded_names[key] = data
 
@@ -428,30 +385,43 @@ def generate_names(project_id: str):
         out_file.write(json.dumps(sorted_graded_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     print("Preparing data for export...")
+    repeating_name = []
+    fit_name = []
     cut_name = []
     text_comp_name = []
     no_cut_name = []
     pref_suff_name = []
     shortlisted_names = {}
+    shortlisted_names["repeating_name"] = {}
+    shortlisted_names["fit_name"] = {}
     shortlisted_names["cut_name"] = {}
     shortlisted_names["text_comp_name"] = {}
     shortlisted_names["pref_suff_name"] = {}
     shortlisted_names["no_cut_name"] = {}
 
-    name_types = ["cut_name", "cn_percentage", "text_comp_name", "tcn_percentage", "pref_suff_name", "psn_percentage", "no_cut_name", "ncn_percentage"]
+    name_types = ["repeating_name", "rpn_percentage", "fit_name", "fn_percentage", "cut_name", "cn_percentage", "text_comp_name", "tcn_percentage", "pref_suff_name", "psn_percentage", "no_cut_name", "ncn_percentage"]
     raw_statistics = {}
     for name_type in name_types:
         raw_statistics[name_type] = {}
     for key, data in sorted_graded_names.items():
         name_in_title = data.name_in_title
         grade = data.grade if data.grade is not None else "Discarded"
-        name_type = data.name_type
+        if data.name_type[:4] == "fit_":
+            name_type = "fit_name"
+        elif data.name_type[:10] == "repeating_":
+            name_type = "repeating_name"
+        else:
+            name_type = data.name_type
         raw_statistics[name_type][grade] = raw_statistics[name_type].get(grade, 0) + 1
         raw_statistics[name_type]["Total"] = raw_statistics[name_type].get("Total", 0) + 1
         if grade != "Discarded":
             raw_statistics[name_type]["Graded"] = raw_statistics[name_type].get("Graded", 0) + 1
             shortlisted_names[name_type][name_in_title] = data
-        if name_type == "cut_name":
+        if name_type == "repeating_name":
+            repeating_name.append(data)
+        elif name_type == "fit_name":
+            fit_name.append(data)
+        elif name_type == "cut_name":
             cut_name.append(data)
         elif name_type == "text_comp_name":
             text_comp_name.append(data)
@@ -464,20 +434,9 @@ def generate_names(project_id: str):
     with open(json_sl_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(shortlisted_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
-    print("Exporting raw_stats.json...")
-    try:
-        with open(json_stats_output_fp, "wb+") as out_file:
-            out_file.write(json.dumps(raw_statistics, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
-    except TypeError:
-        pass
+    print(f"Exporting {project_id}_names.xlsx...")
 
-
-    print("Exporting names.xlsx...")
-    # Excel output for prototype only: for production, remove code below
-    cut_names_len = len(cut_name)
-    pref_suff_names_len = len(pref_suff_name)
-    text_comp_names_len = len(text_comp_name)
-    no_cut_names_len = len(no_cut_name)
+    print(f"Exporting {project_id}_names_statistics.json...")
     grades = ["Grade_A", "Grade_B", "Grade_C", "Grade_D", "Graded", "Discarded", "Total"]
     statistics = {}
     for index, name_type in enumerate(name_types):
@@ -489,38 +448,61 @@ def generate_names(project_id: str):
                 try:
                     statistics[name_type][grade] = str(round(raw_statistics[name_types[index-1]][grade]/raw_statistics[name_types[index-1]]["Total"]*100,2)) + "%"
                 except KeyError:
-                    if name_type in ["cn_percentage", "tcn_percentage", "ncn_percentage", "psn_percentage"]:
+                    if name_type in ["rpn_percentage", "fn_percentage", "cn_percentage", "tcn_percentage", "ncn_percentage", "psn_percentage"]:
                         statistics[name_type][grade] = "0%"
                     else:
                         statistics[name_type][grade] = 0
+    try:
+        with open(json_stats_output_fp, "wb+") as out_file:
+            out_file.write(json.dumps(statistics, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
+    except TypeError:
+        print("raw_statistics encountered TypeError!")
+        with open(json_stats_output_fp, 'r') as file:
+            file.write(str(statistics).encode())
 
+    print(f"Exporting {project_id}_names.xlsx...")
     df1 = pd.DataFrame.from_dict(keyword_dict_sorted, orient="columns")
-    df2 = pd.DataFrame.from_dict(cut_name, orient="columns")
-    df3 = pd.DataFrame.from_dict(pref_suff_name, orient="columns")
-    df4 = pd.DataFrame.from_dict(text_comp_name, orient="columns")
-    df5 = pd.DataFrame.from_dict(no_cut_name, orient="columns")
-    df6 = pd.DataFrame.from_dict(statistics)
+    df2 = pd.DataFrame.from_dict(repeating_name, orient="columns")
+    df3 = pd.DataFrame.from_dict(fit_name, orient="columns")
+    df4 = pd.DataFrame.from_dict(cut_name, orient="columns")
+    df5 = pd.DataFrame.from_dict(pref_suff_name, orient="columns")
+    df6 = pd.DataFrame.from_dict(text_comp_name, orient="columns")
+    df7 = pd.DataFrame.from_dict(no_cut_name, orient="columns")
+    df8 = pd.DataFrame.from_dict(statistics)
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
-    df1.to_excel(writer, sheet_name=f'shortlisted keywords')
-    df2.to_excel(writer, sheet_name=f'cut names ({cut_names_len})')
-    df3.to_excel(writer, sheet_name=f'pref suff names ({pref_suff_names_len})')
-    df4.to_excel(writer, sheet_name=f'text comp names ({text_comp_names_len})')
-    df5.to_excel(writer, sheet_name=f'no cut names ({no_cut_names_len})')
-    df6.to_excel(writer, sheet_name=f'statistics')
+
+    repeating_names_len = len(repeating_name)
+    fit_names_len = len(fit_name)
+    cut_names_len = len(cut_name)
+    pref_suff_names_len = len(pref_suff_name)
+    text_comp_names_len = len(text_comp_name)
+    no_cut_names_len = len(no_cut_name)
+
+    sheet_names = [
+        f'shortlisted keywords',
+        f'repeating names ({repeating_names_len})',
+        f'fit names ({fit_names_len})',
+        f'cut names ({cut_names_len})',
+        f'pref suff names ({pref_suff_names_len})',
+        f'text comp names ({text_comp_names_len})',
+        f'no cut names ({no_cut_names_len})',
+        f'statistics'
+    ]
+
+    df1.to_excel(writer, sheet_name=sheet_names[0])
+    df2.to_excel(writer, sheet_name=sheet_names[1])
+    df3.to_excel(writer, sheet_name=sheet_names[2])
+    df4.to_excel(writer, sheet_name=sheet_names[3])
+    df5.to_excel(writer, sheet_name=sheet_names[4])
+    df6.to_excel(writer, sheet_name=sheet_names[5])
+    df7.to_excel(writer, sheet_name=sheet_names[6])
+    df8.to_excel(writer, sheet_name=sheet_names[7])
+
     workbook  = writer.book
-    worksheet = writer.sheets['shortlisted keywords']
-    worksheet.set_column(1, 14, 15)
-    worksheet = writer.sheets[f'cut names ({cut_names_len})']
-    worksheet.set_column(1, 15, 15)
-    worksheet = writer.sheets[f'pref suff names ({pref_suff_names_len})']
-    worksheet.set_column(1, 15, 15)
-    worksheet = writer.sheets[f'text comp names ({text_comp_names_len})']
-    worksheet.set_column(1, 15, 15)
-    worksheet = writer.sheets[f'no cut names ({no_cut_names_len})']
-    worksheet.set_column(1, 15, 15)
-    worksheet = writer.sheets['statistics']
-    worksheet.set_column(1, 8, 15)
+    for sheet_name in sheet_names:
+        worksheet = writer.sheets[sheet_name]
+        worksheet.set_column(1, 15, 15)
     writer.save()
 
 if __name__ == "__main__":

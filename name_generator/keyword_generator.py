@@ -157,6 +157,7 @@ def generate_word_list(project_id):
         out_file.write(json.dumps(sorted_keywords_dict, option=json.OPT_INDENT_2))
 
     # Excel output for reference only: remove for production
+    print(f"Exporting {project_id}_keywords.xlsx...")
     excel_output_list_noun = []
     excel_output_list_verb = []
     excel_output_list_adjective = []
@@ -200,25 +201,28 @@ def generate_word_list(project_id):
     df6 = pd.DataFrame.from_dict(excel_output_list_additional_keywords, orient="columns")
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
-    df1.to_excel(writer, sheet_name='nouns')
-    df2.to_excel(writer, sheet_name='verbs')
-    df3.to_excel(writer, sheet_name='adjectives')
-    df4.to_excel(writer, sheet_name='adverbs')
-    df5.to_excel(writer, sheet_name='other')
-    df6.to_excel(writer, sheet_name='additional keywords')
+
+    sheet_names = [
+        'nouns',
+        'verbs',
+        'adjectives',
+        'adverbs',
+        'other',
+        'additional keywords'
+    ]
+
+    df1.to_excel(writer, sheet_name=sheet_names[0])
+    df2.to_excel(writer, sheet_name=sheet_names[1])
+    df3.to_excel(writer, sheet_name=sheet_names[2])
+    df4.to_excel(writer, sheet_name=sheet_names[3])
+    df5.to_excel(writer, sheet_name=sheet_names[4])
+    df6.to_excel(writer, sheet_name=sheet_names[5])
+
     workbook  = writer.book
-    worksheet = writer.sheets['nouns']
-    worksheet.set_column(1, 19, 15)
-    worksheet = writer.sheets['verbs']
-    worksheet.set_column(1, 19, 15)
-    worksheet = writer.sheets['adjectives']
-    worksheet.set_column(1, 19, 15)
-    worksheet = writer.sheets['adverbs']
-    worksheet.set_column(1, 19, 15)
-    worksheet = writer.sheets['other']
-    worksheet.set_column(1, 19, 15)
-    worksheet = writer.sheets['additional keywords']
-    worksheet.set_column(1, 3, 15)
+
+    for sheet_name in sheet_names:
+        worksheet = writer.sheets[sheet_name]
+        worksheet.set_column(1, 19, 15)
     writer.save()
 
 if __name__ == "__main__":

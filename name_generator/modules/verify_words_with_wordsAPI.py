@@ -114,7 +114,7 @@ def fetch_pos_wordAPI(keyword, wordapi_data: dict) -> list[str]:
     if keyword not in not_valid:
         # Check if keyword is a number (Integer and float). If number, pos is NUM.
         # Potential bug: non-number things are also being flagged as NUM
-        if re.match(r'^[\d|\d\.\d]*$', keyword) or keyword.lower() in numbers_as_str:
+        if re.match('.*\d.*', keyword) or keyword.lower() in numbers_as_str:
             all_pos.add("number")
         else:
             # Check if keyword and it's definition/pos data is in wordsAPI dictionary.
@@ -125,6 +125,7 @@ def fetch_pos_wordAPI(keyword, wordapi_data: dict) -> list[str]:
 def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List[Keyword]:
 
     wordsAPI_data: dict = pull_wordsAPI_dict()
+    wordsAPI_words: list = wordsAPI_data.keys()
     user_keyword_bank_list  = pull_user_keyword_bank(project_path)
 
     # Take in keyword list created by spacy and add wordAPI pos data as well as other pos variations.
@@ -173,7 +174,7 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
             if hard_lemma is not None:
                 wordsapi_pos_list.update(fetch_pos_wordAPI_w_hardlemma(hard_lemma, wordsAPI_data))
                 keyword_obj.hard_lemma = hard_lemma
-                if hard_lemma["hard_lemma_1"] + "s" == keyword_obj.keyword:
+                if hard_lemma["hard_lemma_1"] + "s" == keyword_obj.keyword and len(hard_lemma["hard_lemma_1"]) > 1:
                     keyword_obj.keyword = hard_lemma["hard_lemma_1"]
 
         # Generate phonetic grade, pattern
@@ -181,9 +182,6 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
 
         # Generate possible abbreviations
         keyword_obj.abbreviations = keyword_abbreviator(keyword_obj.keyword, keyword_obj.phonetic_pattern)
-
-        # Find any contained words
-        keyword_obj.contained_words = find_contained_words(keyword_obj.keyword, wordsAPI_data, keyword_analysis="yes")
 
         # Add all pos variants of keyword to keyword list. If there is a preferred pos or the spacy pos is in wordsapi_pos_list, use them instead.
         all_pos = set()
@@ -205,6 +203,7 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
                     nltk_lemma = lemmatizer.lemmatize(keyword_obj.keyword,  pos=convert_to_nltk_pos(pos_str))
                 if nltk_lemma in wordsAPI_data.keys():
                     keyword_obj.keyword = nltk_lemma
+                keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words)
                 keyword_obj.wordsAPI_pos = sorted(wordsapi_pos_list)
                 keyword_obj.pos = pos_str
                 updated_keywords_db.append(keyword_obj)
@@ -214,6 +213,7 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
                 keyword_obj.keyword = keyword_obj.spacy_lemma
             else:
                 keyword_obj.keyword = keyword_obj.source_word
+            keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words)
             updated_keywords_db.append(keyword_obj)
 
     return updated_keywords_db

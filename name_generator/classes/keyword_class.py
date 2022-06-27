@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from typing import Dict, Tuple
+from typing import Dict
 from typing import List
 
 @dataclass_json

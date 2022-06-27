@@ -3,10 +3,7 @@
 from typing import List
 from classes.keyword_class import Keyword
 import regex as re
-import copy
 from pattern3.text.en import singularize
-from modules.pull_wordsAPI import pull_wordsAPI_dict
-from modules.find_contained_words import find_contained_words
 
 def isplural(pluralForm):
      singularForm = singularize(pluralForm)

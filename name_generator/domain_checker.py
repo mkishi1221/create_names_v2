@@ -97,6 +97,8 @@ def check_domains(project_id: str, limit: int):
         with open(json_output_fp, "rb") as NameDomain_file:
             NameDomain_dict_raw: dict = json.loads(NameDomain_file.read())
         NameDomain_dict = {}
+        NameDomain_dict["repeating_name"] = {}
+        NameDomain_dict["fit_name"] = {}
         NameDomain_dict["cut_name"] = {}
         NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
@@ -117,6 +119,8 @@ def check_domains(project_id: str, limit: int):
 
     else:
         NameDomain_dict = {}
+        NameDomain_dict["repeating_name"] = {}
+        NameDomain_dict["fit_name"] = {}
         NameDomain_dict["cut_name"] = {}
         NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
@@ -129,6 +133,7 @@ def check_domains(project_id: str, limit: int):
         out_file.write(json.dumps(names_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     counter = 0
+    all_available = 0
     for name_type in names_dict.keys():
 
         print(f"Checking domains for {name_type}s...")
@@ -181,6 +186,7 @@ def check_domains(project_id: str, limit: int):
 
                 if len(avail_domain_list) > 0:
                     available += 1
+                    all_available += 1
 
                 print(f"Names processed: {counter}\nNames available: {available} + {dict_len}\n")
 
@@ -189,8 +195,11 @@ def check_domains(project_id: str, limit: int):
                     break
 
         if available == 0:
-            print("No available domains collected. Add more source data and generate new names.")
-            sys.exit()
+            print(f"No available domains collected for {name_type}s... Moving on to next name type...")
+
+    if all_available == 0:
+        print(f"No available domains collected! Add more keyword to generate more names.")
+        sys.exit()
 
     with open(json_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(NameDomain_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
@@ -200,6 +209,10 @@ def check_domains(project_id: str, limit: int):
         out_file.write(json.dumps(domain_log, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     # Export to excel file
+    repeating_name_avail = []
+    repeating_name_not_avail = []
+    fit_name_avail = []
+    fit_name_not_avail = []
     cut_name_avail = []
     cut_name_not_avail = []
     pref_suff_name_avail = []
@@ -231,7 +244,11 @@ def check_domains(project_id: str, limit: int):
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }
-                if name_type == "cut_name":
+                if name_type == "repeating_name":
+                    repeating_name_avail.append(excel_domain)
+                elif name_type == "fit_name":
+                    fit_name_avail.append(excel_domain)
+                elif name_type == "cut_name":
                     cut_name_avail.append(excel_domain)
                 elif name_type == "pref_suff_name":
                     pref_suff_name_avail.append(excel_domain)
@@ -261,7 +278,11 @@ def check_domains(project_id: str, limit: int):
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }
-                if name_type == "cut_name":
+                if name_type == "repeating_name":
+                    repeating_name_not_avail.append(excel_domain)
+                elif name_type == "fit_name":
+                    fit_name_not_avail.append(excel_domain)
+                elif name_type == "cut_name":
                     cut_name_not_avail.append(excel_domain)
                 elif name_type == "pref_suff_name":
                     pref_suff_name_not_avail.append(excel_domain)
@@ -270,6 +291,10 @@ def check_domains(project_id: str, limit: int):
                 elif name_type == "no_cut_name":
                     no_cut_name_not_avail.append(excel_domain)
 
+    repeating_name_avail_len = len(repeating_name_avail)
+    repeating_name_not_avail_len = len(repeating_name_not_avail)
+    fit_name_avail_len = len(fit_name_avail)
+    fit_name_not_avail_len = len(fit_name_not_avail)
     cut_name_avail_len = len(cut_name_avail)
     cut_name_not_avail_len = len(cut_name_not_avail)
     pref_suff_name_avail_len = len(pref_suff_name_avail)
@@ -279,23 +304,31 @@ def check_domains(project_id: str, limit: int):
     no_cut_name_avail_len = len(no_cut_name_avail)
     no_cut_name_not_avail_len = len(no_cut_name_not_avail)
 
-    df1 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
-    df2 = pd.DataFrame.from_dict(pref_suff_name_avail, orient="columns")
-    df3 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
-    df4 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
-    df5 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
-    df6 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
-    df7 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
-    df8 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
+    df1 = pd.DataFrame.from_dict(repeating_name_avail, orient="columns")
+    df2 = pd.DataFrame.from_dict(fit_name_avail, orient="columns")
+    df3 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
+    df4 = pd.DataFrame.from_dict(pref_suff_name_avail, orient="columns")
+    df5 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
+    df6 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
+    df7 = pd.DataFrame.from_dict(repeating_name_not_avail, orient="columns")
+    df8 = pd.DataFrame.from_dict(fit_name_not_avail, orient="columns")
+    df9 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
+    df10 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
+    df11 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
+    df12 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
 
     # Set sheet names:
     sheet_names = [
+        f'avail repeating names ({repeating_name_avail_len})',
+        f'avail fit names ({fit_name_avail_len})',
         f'avail cut names ({cut_name_avail_len})',
         f'avail pref suff names ({pref_suff_name_avail_len})',
         f'avail text comp names ({text_comp_name_avail_len})',
         f'avail no cut names ({no_cut_name_avail_len})',
+        f'unavail repeating names ({repeating_name_not_avail_len})',
+        f'unavail fit names ({fit_name_not_avail_len})',
         f'unavail cut names ({cut_name_not_avail_len})',
         f'unavail pref suff names ({pref_suff_name_not_avail_len})',
         f'unavail text comp names ({text_comp_name_not_avail_len})',
@@ -310,6 +343,10 @@ def check_domains(project_id: str, limit: int):
     df6.to_excel(writer, sheet_name=sheet_names[5])
     df7.to_excel(writer, sheet_name=sheet_names[6])
     df8.to_excel(writer, sheet_name=sheet_names[7])
+    df9.to_excel(writer, sheet_name=sheet_names[8])
+    df10.to_excel(writer, sheet_name=sheet_names[9])
+    df11.to_excel(writer, sheet_name=sheet_names[10])
+    df12.to_excel(writer, sheet_name=sheet_names[11])
     workbook  = writer.book
     for sheet_name in sheet_names:
         worksheet = writer.sheets[sheet_name]
