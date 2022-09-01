@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 from typing import List
-import regex as re
+import os
+import orjson as json
 
-def find_contained_words(keyword: str, wordsAPI_words: list, exempt: List[str] = None) -> List[str]:
+def find_contained_words(keyword: str, wordsAPI_words: list, type: str, exempt: List[str] = None) -> List[str]:
 
     # The "exempt" variable removes specific contained words if necessary.
     if exempt == None:
@@ -13,7 +14,14 @@ def find_contained_words(keyword: str, wordsAPI_words: list, exempt: List[str] =
     contained_words_list = set()
     keyword_len = len(keyword)
 
-    min_size = 4
+    if type == "keyword":
+        min_size = 2
+    elif type == "name":
+        min_size = 4
+    else:
+        raise Exception(f"Variable 'type' can only be 'keyword or 'name'. Type of '{type}' specified instead.")
+    
+
     for index, letter in enumerate(keyword):
         for length in range(min_size, keyword_len+1):
             contained_word = keyword[index:length]
@@ -22,7 +30,7 @@ def find_contained_words(keyword: str, wordsAPI_words: list, exempt: List[str] =
                     contained_words_list.add(contained_word)
 
     contained_words_list = sorted(contained_words_list)
-    
+
     if len(contained_words_list) == 0:
         contained_words_list = None
 

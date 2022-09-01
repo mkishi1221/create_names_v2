@@ -45,6 +45,7 @@ def generate_keyword_shortlist(keyword_data):
                 yake_rank=keyword["yake_rank"],
                 keyword=keyword["keyword"],
                 pos=keyword["pos"],
+                keyword_class="prime",
                 shortlist=keyword["shortlist"]
             )
 

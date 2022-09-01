@@ -14,6 +14,7 @@ class Etymology:
     pos_tuple: Tuple[Component.pos] = None
     modifier_tuple: Tuple[Component.modifier] = None
     exempt_contained: List[str] = None
+    keyword_classes: List[str] = None
     name_type: str = None
 
     def __eq__(self, o: object) -> bool:
@@ -64,10 +65,12 @@ class Name:
     length: int = 0
     phonetic_pattern: str = None
     phonetic_grade: str = None
-    implaus_chars: int = None
+    implaus_chars: list[str] = None
+    end_valid: str = None
     is_word: str = None
     exempt_contained: List[str] = None
     contained_words: List[str] = None
+    keyword_classes: List[str] = None
     etymologies: Dict[str, Etymology] = None
 
 
@@ -104,6 +107,7 @@ class Graded_name:
     phonetic_pattern: Name.phonetic_pattern = None
     phonetic_grade: Name.phonetic_grade = None
     implaus_chars: Name.implaus_chars = None
+    end_valid: str = None
     is_word: Name.is_word = None
     exempt_contained: Name.exempt_contained = None
     contained_words: List[str] = None
@@ -112,9 +116,14 @@ class Graded_name:
     keywords: List[str] = None
     keyword_combinations: List[str] = None
     pos_combinations: List[str] = None
+    keyword_pos_combos: dict = None
     modifier_combinations: List[str] = None
+    keyword_classes: List[str] = None
     etymologies: List[Etymology] = None
+    etymology_count: int = None
     grade: str = None
+    name_class: str = None
+    reject_reason: str = None
 
     def __eq__(self, o: object) -> bool:
         return self.name_in_title == o.name_in_title and self.name_type == o.name_type

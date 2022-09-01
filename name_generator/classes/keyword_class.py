@@ -22,6 +22,7 @@ class Keyword:
     contained_words: List[str] = None
     phonetic_pattern: str = None
     phonetic_grade: str = None
+    components: str = None
     abbreviations: List[str] = None
     restrictions_before: List[str] = None
     restrictions_after: List[str] = None
@@ -30,6 +31,7 @@ class Keyword:
     keyword: str = None
     pos: str = None
     preferred_pos: List[str] = None
+    keyword_class: str = None
     shortlist: str = None
 
     def __eq__(self, o: object) -> bool:
@@ -81,6 +83,7 @@ class Preferred_Keyword:
     keyword: str = None
     preferred_pos: List[str] = None
     origin: List[str] = None
+    keyword_class: str = None
     disable: str = None
 
     def __eq__(self, o: object) -> bool:

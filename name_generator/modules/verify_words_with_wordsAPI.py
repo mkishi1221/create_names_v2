@@ -11,6 +11,7 @@ from modules.pull_user_keyword_bank import pull_user_keyword_bank
 from modules.grade_phonetic import grade_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
+from modules.pull_eng_dict import pull_eng_dict
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -122,11 +123,13 @@ def fetch_pos_wordAPI(keyword, wordapi_data: dict) -> list[str]:
 
     return list(all_pos)
 
-def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List[Keyword]:
+def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path: str, exempt_contained_kw: list) -> List[Keyword]:
 
     wordsAPI_data: dict = pull_wordsAPI_dict()
-    wordsAPI_words: list = wordsAPI_data.keys()
+    wordsAPI_words: list = list(wordsAPI_data.keys())
     user_keyword_bank_list  = pull_user_keyword_bank(project_path)
+    eng_dict = pull_eng_dict()
+    curated_eng_word_list = set(open("name_generator/curated_eng_word_list.txt", "r").read().splitlines())
 
     # Take in keyword list created by spacy and add wordAPI pos data as well as other pos variations.
     # Get all possible pos using the fetch_pos_wordAPI function and add different pos variations to keyword list.
@@ -181,7 +184,9 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
         keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(keyword_obj.keyword)
 
         # Generate possible abbreviations
-        keyword_obj.abbreviations = keyword_abbreviator(keyword_obj.keyword, keyword_obj.phonetic_pattern)
+        if keyword_obj.keyword in eng_dict.keys():
+            keyword_obj.components = eng_dict[keyword_obj.keyword]["component_list"]
+            keyword_obj.abbreviations = keyword_abbreviator(keyword_obj.keyword, keyword_obj.components, curated_eng_word_list)
 
         # Add all pos variants of keyword to keyword list. If there is a preferred pos or the spacy pos is in wordsapi_pos_list, use them instead.
         all_pos = set()
@@ -203,7 +208,7 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
                     nltk_lemma = lemmatizer.lemmatize(keyword_obj.keyword,  pos=convert_to_nltk_pos(pos_str))
                 if nltk_lemma in wordsAPI_data.keys():
                     keyword_obj.keyword = nltk_lemma
-                keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words)
+                keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words, type="keyword", exempt=exempt_contained_kw)
                 keyword_obj.wordsAPI_pos = sorted(wordsapi_pos_list)
                 keyword_obj.pos = pos_str
                 updated_keywords_db.append(keyword_obj)
@@ -213,7 +218,8 @@ def verify_words_with_wordsAPI(keywords_db: List[Keyword], project_path) -> List
                 keyword_obj.keyword = keyword_obj.spacy_lemma
             else:
                 keyword_obj.keyword = keyword_obj.source_word
-            keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words)
+            keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, wordsAPI_words=wordsAPI_words, type="keyword", exempt=exempt_contained_kw)
             updated_keywords_db.append(keyword_obj)
 
     return updated_keywords_db
+

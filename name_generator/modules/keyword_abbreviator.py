@@ -1,28 +1,43 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-def keyword_abbreviator(keyword: str, phonetic_pattern: str):
+def keyword_abbreviator(keyword: str, component_list: str, curated_eng_list: list):
     
-    consonant_count = 0
-    vowel_count = 0
     illegal_len = [1, len(keyword)]
-    prev_pattern = ""
-    modword_str_list = None
+    modword_str_list = set()
+    vowels = "aiueo"
 
-    if len(keyword) > 3:
-        modword_str_list = []
-        for index, pattern in enumerate(phonetic_pattern):
-            # 1 represents a vowel character and "2" represents a consonant character.
-            if pattern == "1" and pattern != prev_pattern:
-                vowel_count = vowel_count + 1
-                modword_str = keyword[:index+1]
-                if len(modword_str) not in illegal_len:
-                    modword_str_list.append(modword_str)
-            elif pattern == "2" and pattern != prev_pattern:
-                consonant_count = consonant_count + 1
-                modword_str = keyword[:index+1]
-                if len(modword_str) not in illegal_len:
-                    modword_str_list.append(modword_str)
-            prev_pattern = pattern
-
-    return modword_str_list
+    if component_list is not None:
+        for components in component_list:
+            split_components = components.split("·")
+            abbreviation = ""
+            for index, component in enumerate(split_components):
+                if index != len(split_components)-1:
+                    abbreviation = abbreviation + component
+                    abbreviations = [abbreviation]
+                    try:
+                        abbreviations.append(abbreviation[:-1])
+                    except IndexError:
+                        pass
+                    try:
+                        i = 0
+                        x = split_components[index+1][i]
+                        s = split_components[index+1][0:i+1]
+                        abbreviations.append(abbreviation + split_components[index+1][0])
+                        try:
+                            while x not in vowels:
+                                i = i + 1
+                                x = split_components[index+1][i]
+                                s = split_components[index+1][0:i+1]
+                            abbreviations.append(abbreviation + s)
+                        except IndexError:
+                            pass
+                    except IndexError:
+                        pass
+                    for ab in abbreviations:
+                        if len(ab) not in illegal_len:
+                            if len(ab) == 2 and ab not in curated_eng_list:
+                                modword_str_list.add(ab)
+                            elif len(ab) > 2:
+                                modword_str_list.add(ab)
+    return sorted(modword_str_list)

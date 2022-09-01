@@ -51,7 +51,7 @@ def process_user_keywords_str(user_keywords: List[str], project_path) -> List[Ke
             keyword_str = re.sub(r"\W+$", "", keyword_str)
             if len(keyword_and_pos) > 1:
                 pos_str_list = keyword_and_pos[1:]
-                preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["keyword_list"])
+                preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["keyword_list"], keyword_class="prime")
                 if preferred_keyword not in user_keyword_bank_list:
                     user_keyword_bank_list.append(preferred_keyword)
                 else:
@@ -99,7 +99,7 @@ def process_user_keywords_dict(user_keywords: List[dict], project_path) -> List[
         if keyword_obj["keyword"] not in not_valid:
             if keyword_obj["preferred_pos"] not in not_valid:
                 pos_str_list = convert_to_list(keyword_obj["preferred_pos"])
-                preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["additional_keywords"])
+                preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["additional_keywords"], keyword_class="prime")
                 if preferred_keyword not in user_keyword_bank_list:
                     user_keyword_bank_list.append(preferred_keyword)
                 else:

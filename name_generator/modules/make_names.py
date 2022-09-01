@@ -40,14 +40,13 @@ def categorize_name(modifiers, pos_list, fit = None):
     elif any(comp in pos_list for comp in pref_suff_comps):
         name_type = "pref_suff_name"
     elif all(p == "no_cut" for p in modifiers) and len(modifiers) > 0:
-        name_type = "no_cut_name"  
-    elif not all(p == "no_cut" for p in modifiers) and len(modifiers) > 0:
+        name_type = "no_cut_name"
+    elif "no_cut" in modifiers and "ab_cut" in modifiers:
+        name_type = "part_cut_name"
+    elif all(p == "ab_cut" for p in modifiers) and len(modifiers) > 0:
         name_type = "cut_name"
     else:
-        print("ERROR: Name type classification failed!")
-        print(f"Modifiers: {modifiers}")
-        print(f"Modifiers: {pos_list}")
-        exit()
+        raise Exception(f"ERROR: Name type classification failed! Modifiers: {modifiers} / Pos list: {pos_list}")
 
     if fit != None:
         name_type = fit + name_type
@@ -60,6 +59,8 @@ def combine_1_word(modword_1_obj: Modword) -> Name:
     modifiers = (modword_1_obj.modifier)
     name_type = categorize_name(modifiers, pos_list)
 
+    print(modword_1_obj.keyword, modword_1_obj.keyword_class)
+
     return Etymology(
         name_in_title=modword_1_obj.modword.title(),
         modword_tuple=(modword_1_obj.modword),
@@ -67,6 +68,7 @@ def combine_1_word(modword_1_obj: Modword) -> Name:
         pos_tuple=pos_list,
         modifier_tuple=modifiers,
         exempt_contained= sorted(set(modword_1_obj.contained_words + [modword_1_obj.keyword])),
+        keyword_classes= [modword_1_obj.keyword_class],
         name_type=name_type
     )
 
@@ -90,7 +92,6 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: Li
             ]
         )
         name_type = categorize_name(modifiers, pos_list, fit)
-
     exempt_contained_words = sorted(set(list(modword_1_obj.contained_words or []) + list(modword_2_obj.contained_words or []) + [modword_1_obj.keyword, modword_2_obj.keyword]))
 
     return Etymology(
@@ -100,6 +101,7 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: Li
         pos_tuple=pos_list,
         modifier_tuple=modifiers,
         exempt_contained=exempt_contained_words,
+        keyword_classes= sorted(set([modword_1_obj.keyword_class, modword_2_obj.keyword_class])),
         name_type=name_type
     )
 
@@ -133,6 +135,7 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
         pos_tuple=pos_list,
         modifier_tuple=modifiers,
         exempt_contained=exempt_contained_words,
+        keyword_classes= sorted(set([modword_1_obj.keyword_class, modword_2_obj.keyword_class, modword_3_obj.keyword_class])),
         name_type=name_type
     )
 
@@ -141,18 +144,22 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, wordsAPI_words: l
     name_lower = etymology_obj.name_in_title.lower()
     if name_lower not in name_dict.keys():
         phonetic_grade, phonetic_pattern = grade_phonetic(name_lower)
+        implaus_chars_list, end_valid_str = word_plausability(name_lower)
         name_dict[name_lower] = Name(
             name_in_lower=name_lower,
             length=len(name_lower),
             phonetic_pattern=phonetic_pattern,
             phonetic_grade=phonetic_grade,
-            implaus_chars=word_plausability(name_lower),
+            implaus_chars=implaus_chars_list,
+            end_valid=end_valid_str,
             is_word=is_word(name_lower, wordsAPI_words),
             exempt_contained=set(etymology_obj.exempt_contained),
+            keyword_classes=etymology_obj.keyword_classes,
             etymologies={etymology_obj}
         )
     else:
         name_dict[name_lower].etymologies.add(etymology_obj)
+        name_dict[name_lower].keyword_classes = sorted(set(name_dict[name_lower].keyword_classes + etymology_obj.keyword_classes))
         name_dict[name_lower].exempt_contained.update(etymology_obj.exempt_contained)
     
     return name_dict
