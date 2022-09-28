@@ -8,7 +8,7 @@ from typing import List, Dict
 import copy
 import os.path
 from modules.process_text_with_spacy import process_text_with_spacy
-from modules.verify_words_with_wordsAPI import verify_words_with_wordsAPI
+from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.filter_keywords import filter_keywords
@@ -59,7 +59,7 @@ def generate_word_list(project_id):
             for keyword in user_keywords:
                 keyword.origin = ["keyword_list"]
             print("Getting keyword pos using wordAPI dictionary......")
-            keyword_list_keywords = verify_words_with_wordsAPI(user_keywords, project_path, master_exempt_contained_words)
+            keyword_list_keywords = verify_words_with_eng_dict(user_keywords, project_path, master_exempt_contained_words)
             with open(keyword_list_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
         else:
@@ -80,7 +80,7 @@ def generate_word_list(project_id):
             for keyword in sentence_keywords:
                 keyword.origin = ["sentences"]
             print("Verifying keyword pos using wordAPI dictionary......")
-            sentence_keywords = verify_words_with_wordsAPI(sentence_keywords, project_path, master_exempt_contained_words)
+            sentence_keywords = verify_words_with_eng_dict(sentence_keywords, project_path, master_exempt_contained_words)
             with open(sentences_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
 
@@ -140,10 +140,10 @@ def generate_word_list(project_id):
             all_keywords_dict[keyword_str][pos_str] = keyword_obj
 
     # Shortlist keywords if keyword shortlist exists
-    # Excel input for prototype only: for production, import directly from json
+    print("Shortlisting keywords...")
     if os.path.exists(excel_output_fp):        
         sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-        old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets, output_json_fp=keywords_json_fp)
+        old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
         with open(old_data_fp) as keyword_file:
             keyword_data = json.loads(keyword_file.read())
         keyword_shortlist = generate_keyword_shortlist(keyword_data)
@@ -153,6 +153,29 @@ def generate_word_list(project_id):
             keyword_shortlist_str = keyword_obj.shortlist
             if keyword_str in all_keywords_dict.keys() and pos_str in all_keywords_dict[keyword_str].keys():
                 all_keywords_dict[keyword_str][pos_str].shortlist = keyword_shortlist_str
+    else:
+        shortlist = {}
+        shortlist["noun"] = 0
+        shortlist["noun_limit"] = 20
+        shortlist["verb"] = 0
+        shortlist["verb_limit"] = 10
+        shortlist["adjective"] = 0
+        shortlist["adjective_limit"] = 10
+        required_pos = ["noun", "verb", "adjective"]
+
+        for keyword_str, keyword_obj in all_keywords_dict.items():
+            pos_list = list(keyword_obj.keys())
+            try:
+                eng_dict_pos = keyword_obj[pos_list[0]].eng_dict_pos[0]
+            except IndexError:
+                eng_dict_pos = None
+            if eng_dict_pos in required_pos and eng_dict_pos in pos_list:
+                all_keywords_dict[keyword_str][eng_dict_pos].shortlist = "s"
+                shortlist[eng_dict_pos] = shortlist[eng_dict_pos] + 1
+                if shortlist[eng_dict_pos] == shortlist[eng_dict_pos + "_limit"]:
+                    required_pos.remove(eng_dict_pos)
+            if len(required_pos) == 0:
+                break
 
     print("Sorting keywords and exporting files...")
     sorted_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
@@ -169,7 +192,7 @@ def generate_word_list(project_id):
     excel_output_list_adjective = []
     excel_output_list_adverb = []
 
-    for keyword_data in sorted_keywords_dict.values():
+    for keyword_data in all_keywords_dict.values():
         for pos, data in keyword_data.items():
             if pos == "noun":
                 excel_output_list_noun.append(data)
@@ -180,10 +203,10 @@ def generate_word_list(project_id):
             elif pos == "adverb": 
                 excel_output_list_adverb.append(data)
 
-    excel_output_list_noun = sorted(excel_output_list_noun, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    # excel_output_list_noun = sorted(excel_output_list_noun, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    # excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    # excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    # excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
     excel_output_other_keywords = sorted(other_keywords, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
 
     # Add sheet for additional keywords

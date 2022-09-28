@@ -20,7 +20,7 @@ from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.find_contained_words import find_contained_words
 from modules.pull_wordsAPI import pull_wordsAPI_dict
 from modules.process_user_keywords import process_user_keywords_dict
-from modules.verify_words_with_wordsAPI import verify_words_with_wordsAPI
+from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
 from modules.keyword_modifier import keyword_modifier
 from modules.grade_phonetic import grade_phonetic
@@ -40,7 +40,7 @@ def process_additional_keywords(additional_keyword_list_fp, project_path, master
         for keyword in additional_keywords:
             keyword.origin = ["additional_user_keywords"]
         print("Getting keyword pos using wordAPI dictionary......")
-        additional_keywords = verify_words_with_wordsAPI(additional_keywords, project_path, master_exempt_contained_words)
+        additional_keywords = verify_words_with_eng_dict(additional_keywords, project_path, master_exempt_contained_words)
     else:
         additional_keywords = []
     return additional_keywords
@@ -97,6 +97,7 @@ def generate_names(project_id: str):
     # dict resource paths and filenames:
     text_components_data_xlsx_fp = "name_generator/dict/text_components.xlsx"
     wiki_titles_data_fp = "../wikipedia_extract_titles/results/wiki_titles_combined_list_filtered.tsv"
+    curated_eng_list_fp = "name_generator/curated_eng_word_list.txt"
 
     # tmp file filepaths and filenames:
     required_comps_tsv_fp = f"{project_path}/tmp/name_generator/{project_id}_comps.tsv"
@@ -114,8 +115,9 @@ def generate_names(project_id: str):
 
     # Pull wordsAPI data
     wordsapi_data: dict = pull_wordsAPI_dict()
-    wordsAPI_words: list = wordsapi_data.keys()
-    wiki_titles_data = set(open(wiki_titles_data_fp, "r").read().splitlines())
+    wordsAPI_words: set = set(list(wordsapi_data.keys()))
+    wiki_titles_data: set = set(open(wiki_titles_data_fp, "r").read().splitlines())
+    curated_eng_list = set(open(curated_eng_list_fp, "r").read().splitlines())
 
     # Pull master exempt contained words list
     master_exempt_contained_words = pull_master_exempt()
@@ -151,8 +153,8 @@ def generate_names(project_id: str):
             keyword_dict[key] = set()
 
     sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-    keywords_json_fp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp)
-    with open(keywords_json_fp) as keyword_file:
+    keywords_json_mfp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp)
+    with open(keywords_json_mfp) as keyword_file:
         keyword_data = json.loads(keyword_file.read())
     raw_keyword_shortlist = generate_keyword_shortlist(keyword_data) + process_additional_keywords(keyword_fp, project_path, master_exempt_contained_words)
     user_keyword_bank_list = pull_user_keyword_bank(project_path)
@@ -201,7 +203,7 @@ def generate_names(project_id: str):
                 keyword_obj.keyword = plural_noun_str
                 keyword_obj.pos = "plural_noun"
                 keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
-                keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, wordsAPI_words=wordsAPI_words, type="keyword", exempt=master_exempt_contained_words)
+                keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_list, type="keyword", exempt=master_exempt_contained_words)
                 keyword_obj.keyword_class = "prime"
                 modifier_list = required_comps[pos]
                 for kw_modifier in modifier_list:
@@ -271,10 +273,13 @@ def generate_names(project_id: str):
                     "origin",
                     "source_word",
                     "spacy_pos",
-                    "wordsAPI_pos",
+                    "eng_dict_pos",
                     "keyword_len",
                     "contained_words",
+                    "phonetic_pattern",
                     "phonetic_grade",
+                    "components",
+                    "abbreviations",
                     "yake_rank",
                     "modifier",
                     "modword_len",
@@ -320,7 +325,7 @@ def generate_names(project_id: str):
                 modwords_list = sorted(set(etymology_data.modword_tuple))
                 keywords_list = sorted(set(etymology_data.keyword_tuple))
                 exempt_contained_list = sorted(set(list(name.exempt_contained) + list(exempt_contained_list))) if name.exempt_contained else list(exempt_contained_list)
-                contained_words_list = find_contained_words(keyword=name_in_title_str, wordsAPI_words=wordsAPI_words, type="name", exempt=exempt_contained_list)
+                contained_words_list = find_contained_words(keyword=name_in_title_str, curated_eng_list=curated_eng_list, type="name", exempt=exempt_contained_list)
                 grade_str, reject_reason = grade_name(name_type_str, name.phonetic_grade, name.implaus_chars, name.end_valid, name.is_word, name.length, contained_words_list, wiki_title_check)
                 if name.keyword_classes == ['prime']:
                     name_class_str = "Class_1"
@@ -361,7 +366,7 @@ def generate_names(project_id: str):
                 modwords_list = sorted(set(list(data.modwords) + list(etymology_data.modword_tuple)))
                 keywords_list = sorted(set(list(data.keywords) + list(etymology_data.keyword_tuple)))
                 exempt_contained_list = sorted(set(list(data.exempt_contained) + list(name.exempt_contained) + list(exempt_contained_list))) if name.exempt_contained else sorted(set(list(data.exempt_contained) + list(exempt_contained_list)))
-                contained_words_list = find_contained_words(keyword=name_in_title_str, wordsAPI_words=wordsAPI_words, type="name", exempt=exempt_contained_list)
+                contained_words_list = find_contained_words(keyword=name_in_title_str, curated_eng_list=curated_eng_list, type="name", exempt=exempt_contained_list)
                 grade_str, reject_reason = grade_name(name_type_str, name.phonetic_grade, name.implaus_chars, name.end_valid, name.is_word, name.length, contained_words_list, wiki_title_check)
 
                 contained_words = []

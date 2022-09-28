@@ -31,7 +31,7 @@ def generate_keyword_shortlist(keyword_data):
                 nltk_lemma=keyword["nltk_lemma"],
                 hard_lemma=keyword["hard_lemma"],
                 spacy_pos=keyword["spacy_pos"],
-                wordsAPI_pos=convert_to_list(keyword["wordsAPI_pos"]),
+                eng_dict_pos=convert_to_list(keyword["eng_dict_pos"]),
                 preferred_pos=convert_to_list(keyword["preferred_pos"]),
                 keyword_len=keyword["keyword_len"],
                 spacy_occurrence=keyword["spacy_occurrence"],

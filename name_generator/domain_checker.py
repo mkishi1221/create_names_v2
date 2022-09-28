@@ -5,7 +5,6 @@ from classes.domain_class import NameDomain
 from classes.name_class import Graded_name
 from modules.get_whois import get_whois, DomainStates
 import sys
-import time
 import orjson as json
 import pandas as pd
 from datetime import datetime
@@ -67,7 +66,8 @@ def check_domains(project_id: str, limit: int):
                 )
             else:
                 valid_till = data["data_valid_till"]
-                print(f"{domain} check validity expired! Expired in {time.strftime('%d-%b-%Y (%H:%M:%S)').format(valid_till)} Removing from list...")
+                expired_time = datetime.fromtimestamp(valid_till).strftime("%d-%b-%Y (%H:%M:%S)")
+                print(f"{domain} check validity expired! Expired in {expired_time} Removing from list...")
     else:
         print("Domain log not found - creating new domain log...")
 
@@ -149,7 +149,7 @@ def check_domains(project_id: str, limit: int):
 
         domain_log_list = set(domain_log.keys())
 
-        # Check names from top of the shuffled name list until it reaches the desired number of available names
+        # Check the shortest names from top of the name list until it reaches the desired number of available names
         # Skip names that are already in the domain_check_log.
         # Desired number of available names is specified by the "limit" variable in bash file "create_names.sh"
         name_str: str
@@ -248,8 +248,8 @@ def check_domains(project_id: str, limit: int):
                     "modifier_combinations": data.modifier_combinations,
                     "etymologies": data.etymologies,
                     "grade": data.grade,
-                    "last_checked": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.last_checked),
-                    "data_valid_till": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.data_valid_till),
+                    "last_checked": datetime.fromtimestamp(domain.last_checked).strftime("%d-%b-%Y (%H:%M:%S)"),
+                    "data_valid_till": datetime.fromtimestamp(domain.data_valid_till).strftime("%d-%b-%Y (%H:%M:%S)"),
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }
@@ -284,8 +284,8 @@ def check_domains(project_id: str, limit: int):
                     "etymologies": data.etymologies,
                     "grade": data.grade,
                     "domain": domain.domain,
-                    "last_checked": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.last_checked),
-                    "data_valid_till": time.strftime('%d-%b-%Y (%H:%M:%S)').format(domain.data_valid_till),
+                    "last_checked": datetime.fromtimestamp(domain.last_checked).strftime("%d-%b-%Y (%H:%M:%S)"),
+                    "data_valid_till": datetime.fromtimestamp(domain.data_valid_till).strftime("%d-%b-%Y (%H:%M:%S)"),
                     "availability": domain.availability,
                     "shortlist": domain.shortlist,
                 }

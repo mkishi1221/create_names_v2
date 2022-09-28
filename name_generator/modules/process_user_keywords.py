@@ -87,6 +87,7 @@ def process_user_keywords_str(user_keywords: List[str], project_path) -> List[Ke
 
 def process_user_keywords_dict(user_keywords: List[dict], project_path) -> List[Keyword]:
 
+    valid_pos = ["adjective", "noun", "verb", "adverb"]
     user_keyword_bank_list: list[Preferred_Keyword]
     user_keyword_bank_list = pull_user_keyword_bank(project_path)
     keywords: List[Keyword] = []
@@ -98,7 +99,7 @@ def process_user_keywords_dict(user_keywords: List[dict], project_path) -> List[
         not_valid = [None, "", []]
         if keyword_obj["keyword"] not in not_valid:
             if keyword_obj["preferred_pos"] not in not_valid:
-                pos_str_list = convert_to_list(keyword_obj["preferred_pos"])
+                pos_str_list = [x for x in convert_to_list(keyword_obj["preferred_pos"]) if x in valid_pos]
                 preferred_keyword = Preferred_Keyword(keyword=keyword_str, preferred_pos=pos_str_list, origin=["additional_keywords"], keyword_class="prime")
                 if preferred_keyword not in user_keyword_bank_list:
                     user_keyword_bank_list.append(preferred_keyword)

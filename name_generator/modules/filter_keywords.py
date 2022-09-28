@@ -39,4 +39,4 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
         else:
             other_keywords.append(keyword)
 
-    return list(set(approved_keywords)), list(set(other_keywords))
+    return approved_keywords, other_keywords

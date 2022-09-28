@@ -16,7 +16,7 @@ class Keyword:
     nltk_lemma: str = None
     hard_lemma: Dict[str, str] = None
     spacy_pos: str = None
-    wordsAPI_pos: List[str] = None
+    eng_dict_pos: List[str] = None
     keyword_len: int = 0
     spacy_occurrence: int = 0
     contained_words: List[str] = None
@@ -28,10 +28,11 @@ class Keyword:
     restrictions_after: List[str] = None
     restrictions_as_joint: List[str] = None
     yake_rank: int = None
+    keyword_class: str = None
     keyword: str = None
     pos: str = None
     preferred_pos: List[str] = None
-    keyword_class: str = None
+
     shortlist: str = None
 
     def __eq__(self, o: object) -> bool:
