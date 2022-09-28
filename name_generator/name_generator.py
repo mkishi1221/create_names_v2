@@ -153,7 +153,7 @@ def generate_names(project_id: str):
             keyword_dict[key] = set()
 
     sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-    keywords_json_mfp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp)
+    keywords_json_mfp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
     with open(keywords_json_mfp) as keyword_file:
         keyword_data = json.loads(keyword_file.read())
     raw_keyword_shortlist = generate_keyword_shortlist(keyword_data) + process_additional_keywords(keyword_fp, project_path, master_exempt_contained_words)

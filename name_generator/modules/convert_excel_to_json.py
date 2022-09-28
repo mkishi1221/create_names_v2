@@ -8,7 +8,9 @@ def convert_to_list(string: str):
     if len(str(string or "")) > 0:
         try:
             str_list = string.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
-            # str_list = list(filter(None, str_list))
+            str_list = list(filter(None, str_list))
+            if len(str_list) == None:
+                str_list = None
         except AttributeError:
             raise Exception(f"Attribute error: {string}")
     else:
@@ -49,6 +51,8 @@ def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheet
                     if type(item) == str and item.startswith("[") and item.endswith("]"):
                         new_item = convert_to_list(item)
                         new_dict_obj[key] = new_item
+                    if type(item) == str and len(item) == 0:
+                        new_dict_obj[key] = None
                     else:
                         new_dict_obj[key] = item
                 list_of_dict.append(new_dict_obj)

@@ -10,10 +10,10 @@ def isNone(variable):
     return result
 
 def convert_to_list(string: str):
-    if len(str(string or "")) > 0:
-        str_list = string.replace('[', '').replace(']', '').replace('\"', '').replace(' ', '').replace('\'', '').split(",")
-    else:
+    if len(string) == 0:
         str_list = None
+    else:
+        str_list = string
     return str_list
 
 def generate_keyword_shortlist(keyword_data):
@@ -25,23 +25,23 @@ def generate_keyword_shortlist(keyword_data):
         if keyword["shortlist"] not in not_valid:
 
             keyword_obj = Keyword(
-                origin=convert_to_list(keyword["origin"]),
+                origin=keyword["origin"],
                 source_word=keyword["source_word"],
                 spacy_lemma=keyword["spacy_lemma"],
                 nltk_lemma=keyword["nltk_lemma"],
                 hard_lemma=keyword["hard_lemma"],
                 spacy_pos=keyword["spacy_pos"],
-                eng_dict_pos=convert_to_list(keyword["eng_dict_pos"]),
-                preferred_pos=convert_to_list(keyword["preferred_pos"]),
+                eng_dict_pos=keyword["eng_dict_pos"],
+                preferred_pos=keyword["preferred_pos"],
                 keyword_len=keyword["keyword_len"],
                 spacy_occurrence=keyword["spacy_occurrence"],
-                contained_words=convert_to_list(keyword["contained_words"]),
+                contained_words=keyword["contained_words"],
                 phonetic_pattern=keyword["phonetic_pattern"],
                 phonetic_grade=keyword["phonetic_grade"],
-                abbreviations=convert_to_list(keyword["abbreviations"]),
-                restrictions_before=convert_to_list(keyword["restrictions_before"]),
-                restrictions_after=convert_to_list(keyword["restrictions_after"]),
-                restrictions_as_joint=convert_to_list(keyword["restrictions_as_joint"]),
+                abbreviations=keyword["abbreviations"],
+                restrictions_before=keyword["restrictions_before"],
+                restrictions_after=keyword["restrictions_after"],
+                restrictions_as_joint=keyword["restrictions_as_joint"],
                 yake_rank=keyword["yake_rank"],
                 keyword=keyword["keyword"],
                 pos=keyword["pos"],

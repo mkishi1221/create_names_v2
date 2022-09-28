@@ -1,158 +1,558 @@
 {
-  "ks": {
-    "word": "ks",
-    "len": 2,
-    "pos_list": "['abbreviation']",
+  "gnar": {
+    "word": "gnar",
+    "len": 4,
+    "pos_list": "['verb']",
     "frequency": 0,
-    "count": 1,
+    "count": 64,
     "exempt": ""
   },
-  "oj": {
-    "word": "oj",
-    "len": 2,
+  "sita": {
+    "word": "sita",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 1,
+    "count": 54,
     "exempt": ""
   },
-  "pd": {
-    "word": "pd",
-    "len": 2,
-    "pos_list": "['abbreviation', 'symbol']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "tn": {
-    "word": "tn",
-    "len": 2,
-    "pos_list": "['abbreviation']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "yb": {
-    "word": "yb",
-    "len": 2,
-    "pos_list": "['abbreviation', 'symbol']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "dem": {
-    "word": "dem",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'determiner', 'noun', 'pronoun']",
-    "frequency": 0,
-    "count": 2,
-    "exempt": ""
-  },
-  "reb": {
-    "word": "reb",
-    "len": 3,
+  "cama": {
+    "word": "cama",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 2,
+    "count": 44,
     "exempt": ""
   },
-  "ssa": {
-    "word": "ssa",
-    "len": 3,
-    "pos_list": "['abbreviation']",
-    "frequency": 0,
-    "count": 2,
-    "exempt": ""
-  },
-  "cio": {
-    "word": "cio",
-    "len": 3,
-    "pos_list": "['abbreviation']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "dma": {
-    "word": "dma",
-    "len": 3,
-    "pos_list": "['abbreviation']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "dyn": {
-    "word": "dyn",
-    "len": 3,
-    "pos_list": "['abbreviation']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "nef": {
-    "word": "nef",
-    "len": 3,
+  "ragu": {
+    "word": "ragu",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 1,
+    "count": 42,
     "exempt": ""
   },
-  "pda": {
-    "word": "pda",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 0,
-    "count": 1,
-    "exempt": ""
-  },
-  "rha": {
-    "word": "rha",
-    "len": 3,
+  "imap": {
+    "word": "imap",
+    "len": 4,
     "pos_list": "['abbreviation']",
     "frequency": 0,
-    "count": 1,
+    "count": 40,
     "exempt": ""
   },
-  "roi": {
-    "word": "roi",
-    "len": 3,
+  "voip": {
+    "word": "voip",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 37,
+    "exempt": ""
+  },
+  "tegu": {
+    "word": "tegu",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 33,
+    "exempt": ""
+  },
+  "marc": {
+    "word": "marc",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 30,
+    "exempt": ""
+  },
+  "pome": {
+    "word": "pome",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 29,
+    "exempt": ""
+  },
+  "gena": {
+    "word": "gena",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 28,
+    "exempt": ""
+  },
+  "perp": {
+    "word": "perp",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 24,
+    "exempt": ""
+  },
+  "yapp": {
+    "word": "yapp",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 24,
+    "exempt": ""
+  },
+  "caca": {
+    "word": "caca",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 22,
+    "exempt": ""
+  },
+  "deco": {
+    "word": "deco",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 22,
+    "exempt": ""
+  },
+  "otto": {
+    "word": "otto",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 21,
+    "exempt": ""
+  },
+  "seif": {
+    "word": "seif",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 20,
+    "exempt": ""
+  },
+  "vena": {
+    "word": "vena",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 20,
+    "exempt": ""
+  },
+  "marm": {
+    "word": "marm",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 19,
+    "exempt": ""
+  },
+  "croc": {
+    "word": "croc",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 18,
+    "exempt": ""
+  },
+  "braw": {
+    "word": "braw",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 17,
+    "exempt": ""
+  },
+  "gini": {
+    "word": "gini",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 17,
+    "exempt": ""
+  },
+  "deme": {
+    "word": "deme",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 14,
+    "exempt": ""
+  },
+  "mede": {
+    "word": "mede",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 14,
+    "exempt": ""
+  },
+  "puri": {
+    "word": "puri",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 13,
+    "exempt": ""
+  },
+  "derp": {
+    "word": "derp",
+    "len": 4,
+    "pos_list": "['exclamation', 'noun']",
+    "frequency": 0,
+    "count": 12,
+    "exempt": ""
+  },
+  "gras": {
+    "word": "gras",
+    "len": 4,
     "pos_list": "['abbreviation']",
     "frequency": 0,
-    "count": 1,
+    "count": 10,
     "exempt": ""
   },
-  "sil": {
-    "word": "sil",
-    "len": 3,
+  "nipa": {
+    "word": "nipa",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 1,
+    "count": 10,
     "exempt": ""
   },
-  "vas": {
-    "word": "vas",
-    "len": 3,
+  "seel": {
+    "word": "seel",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 10,
+    "exempt": ""
+  },
+  "degu": {
+    "word": "degu",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 1,
+    "count": 9,
     "exempt": ""
   },
-  "culm": {
-    "word": "culm",
+  "acca": {
+    "word": "acca",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 8,
+    "exempt": ""
+  },
+  "tapa": {
+    "word": "tapa",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 8,
+    "exempt": ""
+  },
+  "lase": {
+    "word": "lase",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 6,
+    "exempt": ""
+  },
+  "olde": {
+    "word": "olde",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 6,
+    "exempt": ""
+  },
+  "quag": {
+    "word": "quag",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 6,
+    "exempt": ""
+  },
+  "vato": {
+    "word": "vato",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 6,
+    "exempt": ""
+  },
+  "agal": {
+    "word": "agal",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "impi": {
+    "word": "impi",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "lolo": {
+    "word": "lolo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "lory": {
+    "word": "lory",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "pavo": {
+    "word": "pavo",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "diel": {
+    "word": "diel",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "prat": {
+    "word": "prat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "tiwa": {
+    "word": "tiwa",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "bort": {
+    "word": "bort",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "camo": {
+    "word": "camo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "delt": {
+    "word": "delt",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "pent": {
+    "word": "pent",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "puro": {
+    "word": "puro",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "bidi": {
+    "word": "bidi",
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
     "count": 2,
     "exempt": ""
   },
-  "icky": {
-    "word": "icky",
+  "bolo": {
+    "word": "bolo",
+    "len": 4,
+    "pos_list": "['abbreviation', 'noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "brio": {
+    "word": "brio",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "ebit": {
+    "word": "ebit",
+    "len": 4,
+    "pos_list": "['abbreviation']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "gapa": {
+    "word": "gapa",
+    "len": 4,
+    "pos_list": "['abbreviation']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "genu": {
+    "word": "genu",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "lipa": {
+    "word": "lipa",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "maoi": {
+    "word": "maoi",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "pipa": {
+    "word": "pipa",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "pplo": {
+    "word": "pplo",
+    "len": 4,
+    "pos_list": "['abbreviation']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "brer": {
+    "word": "brer",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "bris": {
+    "word": "bris",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "bual": {
+    "word": "bual",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "diol": {
+    "word": "diol",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "ebon": {
+    "word": "ebon",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "jeon": {
+    "word": "jeon",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "kern": {
+    "word": "kern",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "olio": {
+    "word": "olio",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "ropy": {
+    "word": "ropy",
     "len": 4,
     "pos_list": "['adjective']",
     "frequency": 0,
     "count": 1,
     "exempt": ""
   },
-  "tard": {
-    "word": "tard",
+  "titi": {
+    "word": "titi",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "udon": {
+    "word": "udon",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "vatu": {
+    "word": "vatu",
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 0,
@@ -164,19 +564,467 @@
     "len": 5,
     "pos_list": "['noun', 'verb']",
     "frequency": 0,
+    "count": 1589,
+    "exempt": ""
+  },
+  "saudi": {
+    "word": "saudi",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 156,
+    "exempt": ""
+  },
+  "forme": {
+    "word": "forme",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 31,
+    "exempt": ""
+  },
+  "gibus": {
+    "word": "gibus",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 21,
+    "exempt": ""
+  },
+  "arepa": {
+    "word": "arepa",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 20,
+    "exempt": ""
+  },
+  "ascap": {
+    "word": "ascap",
+    "len": 5,
+    "pos_list": "['abbreviation']",
+    "frequency": 0,
+    "count": 20,
+    "exempt": ""
+  },
+  "grats": {
+    "word": "grats",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 10,
+    "exempt": ""
+  },
+  "agist": {
+    "word": "agist",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 0,
+    "count": 8,
+    "exempt": ""
+  },
+  "crema": {
+    "word": "crema",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 8,
+    "exempt": ""
+  },
+  "finca": {
+    "word": "finca",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 8,
+    "exempt": ""
+  },
+  "brant": {
+    "word": "brant",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "pervo": {
+    "word": "pervo",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "tanto": {
+    "word": "tanto",
+    "len": 5,
+    "pos_list": "['adverb', 'noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "brane": {
+    "word": "brane",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
     "count": 3,
     "exempt": ""
   },
-  "targe": {
-    "word": "targe",
+  "campo": {
+    "word": "campo",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "galla": {
+    "word": "galla",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "plano": {
+    "word": "plano",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "aglet": {
+    "word": "aglet",
     "len": 5,
     "pos_list": "['noun']",
     "frequency": 0,
     "count": 2,
     "exempt": ""
   },
+  "genal": {
+    "word": "genal",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "paseo": {
+    "word": "paseo",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "prase": {
+    "word": "prase",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "abled": {
+    "word": "abled",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "anion": {
+    "word": "anion",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "aroid": {
+    "word": "aroid",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "brail": {
+    "word": "brail",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "brony": {
+    "word": "brony",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "coati": {
+    "word": "coati",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "color": {
+    "word": "color",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "defat": {
+    "word": "defat",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "genic": {
+    "word": "genic",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "gilet": {
+    "word": "gilet",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "limen": {
+    "word": "limen",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "mesic": {
+    "word": "mesic",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "mocap": {
+    "word": "mocap",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "morel": {
+    "word": "morel",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "ninon": {
+    "word": "ninon",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "rebab": {
+    "word": "rebab",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "urial": {
+    "word": "urial",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "replan": {
+    "word": "replan",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 35,
+    "exempt": ""
+  },
+  "bouton": {
+    "word": "bouton",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 31,
+    "exempt": ""
+  },
+  "delist": {
+    "word": "delist",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 7,
+    "exempt": ""
+  },
+  "impost": {
+    "word": "impost",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 7,
+    "exempt": ""
+  },
+  "imager": {
+    "word": "imager",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "voicer": {
+    "word": "voicer",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 4,
+    "exempt": ""
+  },
+  "aboral": {
+    "word": "aboral",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "colima": {
+    "word": "colima",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "intima": {
+    "word": "intima",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "oology": {
+    "word": "oology",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "tearer": {
+    "word": "tearer",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 3,
+    "exempt": ""
+  },
+  "subweb": {
+    "word": "subweb",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "audial": {
+    "word": "audial",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "dement": {
+    "word": "dement",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "laical": {
+    "word": "laical",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "lanner": {
+    "word": "lanner",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "magian": {
+    "word": "magian",
+    "len": 6,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "pointe": {
+    "word": "pointe",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "prolog": {
+    "word": "prolog",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
   "signer": {
     "word": "signer",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "tegula": {
+    "word": "tegula",
     "len": 6,
     "pos_list": "['noun']",
     "frequency": 0,
@@ -188,7 +1036,7 @@
     "len": 7,
     "pos_list": "['noun']",
     "frequency": 0,
-    "count": 3,
+    "count": 1817,
     "exempt": ""
   },
   "rebrand": {
@@ -196,15 +1044,855 @@
     "len": 7,
     "pos_list": "['verb']",
     "frequency": 0,
+    "count": 1491,
+    "exempt": ""
+  },
+  "semipro": {
+    "word": "semipro",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 5,
+    "exempt": ""
+  },
+  "ostmark": {
+    "word": "ostmark",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "overage": {
+    "word": "overage",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "preplan": {
+    "word": "preplan",
+    "len": 7,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "planula": {
+    "word": "planula",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 0,
     "count": 1,
     "exempt": ""
   },
-  "overarch": {
-    "word": "overarch",
+  "syntone": {
+    "word": "syntone",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "tinware": {
+    "word": "tinware",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "interweb": {
+    "word": "interweb",
     "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "minicamp": {
+    "word": "minicamp",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "reimport": {
+    "word": "reimport",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "repurpose": {
+    "word": "repurpose",
+    "len": 9,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 27,
+    "exempt": ""
+  },
+  "underprop": {
+    "word": "underprop",
+    "len": 9,
+    "pos_list": "['verb']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "microtone": {
+    "word": "microtone",
+    "len": 9,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "positional": {
+    "word": "positional",
+    "len": 10,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 32,
+    "exempt": ""
+  },
+  "afterimage": {
+    "word": "afterimage",
+    "len": 10,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 30,
+    "exempt": ""
+  },
+  "aftermarket": {
+    "word": "aftermarket",
+    "len": 11,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 32,
+    "exempt": ""
+  },
+  "countermark": {
+    "word": "countermark",
+    "len": 11,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 2,
+    "exempt": ""
+  },
+  "megaproject": {
+    "word": "megaproject",
+    "len": 11,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "propositional": {
+    "word": "propositional",
+    "len": 13,
+    "pos_list": "['adjective']",
+    "frequency": 0,
+    "count": 31,
+    "exempt": ""
+  },
+  "microbusiness": {
+    "word": "microbusiness",
+    "len": 13,
+    "pos_list": "['noun']",
+    "frequency": 0,
+    "count": 1,
+    "exempt": ""
+  },
+  "fineable": {
+    "word": "fineable",
+    "len": 8,
+    "pos_list": "['adjective']",
+    "frequency": 380,
+    "count": 1,
+    "exempt": ""
+  },
+  "cyme": {
+    "word": "cyme",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 637,
+    "count": 2,
+    "exempt": ""
+  },
+  "devoice": {
+    "word": "devoice",
+    "len": 7,
+    "pos_list": "['verb']",
+    "frequency": 763,
+    "count": 5,
+    "exempt": ""
+  },
+  "gaud": {
+    "word": "gaud",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1420,
+    "count": 66,
+    "exempt": ""
+  },
+  "encyst": {
+    "word": "encyst",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 2320,
+    "count": 2,
+    "exempt": ""
+  },
+  "anent": {
+    "word": "anent",
+    "len": 5,
+    "pos_list": "['preposition']",
+    "frequency": 2400,
+    "count": 1,
+    "exempt": ""
+  },
+  "elide": {
+    "word": "elide",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 2670,
+    "count": 7,
+    "exempt": ""
+  },
+  "eatable": {
+    "word": "eatable",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 3640,
+    "count": 1,
+    "exempt": ""
+  },
+  "copra": {
+    "word": "copra",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 3710,
+    "count": 1,
+    "exempt": ""
+  },
+  "elision": {
+    "word": "elision",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 4100,
+    "count": 1,
+    "exempt": ""
+  },
+  "chide": {
+    "word": "chide",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 4250,
+    "count": 4,
+    "exempt": ""
+  },
+  "encage": {
+    "word": "encage",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 4420,
+    "count": 13,
+    "exempt": ""
+  },
+  "encamp": {
+    "word": "encamp",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 4590,
+    "count": 16,
+    "exempt": ""
+  },
+  "ideate": {
+    "word": "ideate",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 4630,
+    "count": 1,
+    "exempt": ""
+  },
+  "lateen": {
+    "word": "lateen",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 5020,
+    "count": 1,
+    "exempt": ""
+  },
+  "diene": {
+    "word": "diene",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 5390,
+    "count": 2,
+    "exempt": ""
+  },
+  "caul": {
+    "word": "caul",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 7130,
+    "count": 1,
+    "exempt": ""
+  },
+  "castrate": {
+    "word": "castrate",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7500,
+    "count": 7,
+    "exempt": ""
+  },
+  "defile": {
+    "word": "defile",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 8190,
+    "count": 1,
+    "exempt": ""
+  },
+  "relator": {
+    "word": "relator",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 9830,
+    "count": 1,
+    "exempt": ""
+  },
+  "boor": {
+    "word": "boor",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 9980,
+    "count": 1,
+    "exempt": ""
+  },
+  "uncap": {
+    "word": "uncap",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 10100,
+    "count": 1,
+    "exempt": ""
+  },
+  "annul": {
+    "word": "annul",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 10700,
+    "count": 1,
+    "exempt": ""
+  },
+  "chiton": {
+    "word": "chiton",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 10800,
+    "count": 2,
+    "exempt": ""
+  },
+  "recreative": {
+    "word": "recreative",
+    "len": 10,
+    "pos_list": "['adjective']",
+    "frequency": 11200,
+    "count": 2,
+    "exempt": ""
+  },
+  "geas": {
+    "word": "geas",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 12400,
+    "count": 40,
+    "exempt": ""
+  },
+  "libran": {
+    "word": "libran",
+    "len": 6,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 12500,
+    "count": 3,
+    "exempt": ""
+  },
+  "decamp": {
+    "word": "decamp",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 13200,
+    "count": 9,
+    "exempt": ""
+  },
+  "semitone": {
+    "word": "semitone",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 15500,
+    "count": 1,
+    "exempt": ""
+  },
+  "croton": {
+    "word": "croton",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 16800,
+    "count": 6,
+    "exempt": ""
+  },
+  "atone": {
+    "word": "atone",
+    "len": 5,
     "pos_list": "['verb']",
     "frequency": 17200,
+    "count": 72,
+    "exempt": ""
+  },
+  "sinless": {
+    "word": "sinless",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 18900,
     "count": 1,
+    "exempt": ""
+  },
+  "apse": {
+    "word": "apse",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 19400,
+    "count": 4,
+    "exempt": ""
+  },
+  "bole": {
+    "word": "bole",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 19700,
+    "count": 1,
+    "exempt": ""
+  },
+  "audile": {
+    "word": "audile",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 20300,
+    "count": 3,
+    "exempt": ""
+  },
+  "afters": {
+    "word": "afters",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 20600,
+    "count": 64,
+    "exempt": ""
+  },
+  "captor": {
+    "word": "captor",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 21200,
+    "count": 1,
+    "exempt": ""
+  },
+  "sego": {
+    "word": "sego",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 21300,
+    "count": 30,
+    "exempt": ""
+  },
+  "guidon": {
+    "word": "guidon",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 22400,
+    "count": 1,
+    "exempt": ""
+  },
+  "gnat": {
+    "word": "gnat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 22600,
+    "count": 42,
+    "exempt": ""
+  },
+  "deform": {
+    "word": "deform",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 22600,
+    "count": 4,
+    "exempt": ""
+  },
+  "forego": {
+    "word": "forego",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 22700,
+    "count": 1,
+    "exempt": ""
+  },
+  "cede": {
+    "word": "cede",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 23400,
+    "count": 8,
+    "exempt": ""
+  },
+  "cyma": {
+    "word": "cyma",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 23400,
+    "count": 2,
+    "exempt": ""
+  },
+  "guile": {
+    "word": "guile",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 23800,
+    "count": 3,
+    "exempt": ""
+  },
+  "megaton": {
+    "word": "megaton",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 24300,
+    "count": 2,
+    "exempt": ""
+  },
+  "desist": {
+    "word": "desist",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 24400,
+    "count": 7,
+    "exempt": ""
+  },
+  "disintegrate": {
+    "word": "disintegrate",
+    "len": 12,
+    "pos_list": "['verb']",
+    "frequency": 24700,
+    "count": 1,
+    "exempt": ""
+  },
+  "antic": {
+    "word": "antic",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 25600,
+    "count": 6,
+    "exempt": ""
+  },
+  "toneme": {
+    "word": "toneme",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 26000,
+    "count": 2,
+    "exempt": ""
+  },
+  "pule": {
+    "word": "pule",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 26400,
+    "count": 3,
+    "exempt": ""
+  },
+  "borage": {
+    "word": "borage",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 27300,
+    "count": 7,
+    "exempt": ""
+  },
+  "gyre": {
+    "word": "gyre",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 31900,
+    "count": 3,
+    "exempt": ""
+  },
+  "jeer": {
+    "word": "jeer",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 32600,
+    "count": 1,
+    "exempt": ""
+  },
+  "ratable": {
+    "word": "ratable",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 32600,
+    "count": 1,
+    "exempt": ""
+  },
+  "annular": {
+    "word": "annular",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 33400,
+    "count": 1,
+    "exempt": ""
+  },
+  "elated": {
+    "word": "elated",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 34000,
+    "count": 2,
+    "exempt": ""
+  },
+  "bren": {
+    "word": "bren",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 34200,
+    "count": 1,
+    "exempt": ""
+  },
+  "genial": {
+    "word": "genial",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 36500,
+    "count": 1,
+    "exempt": ""
+  },
+  "stria": {
+    "word": "stria",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 37100,
+    "count": 2,
+    "exempt": ""
+  },
+  "gens": {
+    "word": "gens",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 37600,
+    "count": 13,
+    "exempt": ""
+  },
+  "maraud": {
+    "word": "maraud",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 38800,
+    "count": 6,
+    "exempt": ""
+  },
+  "dingo": {
+    "word": "dingo",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 39000,
+    "count": 2,
+    "exempt": ""
+  },
+  "strad": {
+    "word": "strad",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 39400,
+    "count": 18,
+    "exempt": ""
+  },
+  "sago": {
+    "word": "sago",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 41600,
+    "count": 3,
+    "exempt": ""
+  },
+  "sinew": {
+    "word": "sinew",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 41600,
+    "count": 10,
+    "exempt": ""
+  },
+  "deft": {
+    "word": "deft",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 42000,
+    "count": 3,
+    "exempt": ""
+  },
+  "digicam": {
+    "word": "digicam",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 43700,
+    "count": 6,
+    "exempt": ""
+  },
+  "erode": {
+    "word": "erode",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 44700,
+    "count": 4,
+    "exempt": ""
+  },
+  "brag": {
+    "word": "brag",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 45700,
+    "count": 24,
+    "exempt": ""
+  },
+  "minicam": {
+    "word": "minicam",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 45800,
+    "count": 2,
+    "exempt": ""
+  },
+  "piton": {
+    "word": "piton",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 46200,
+    "count": 2,
+    "exempt": ""
+  },
+  "prelate": {
+    "word": "prelate",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 47400,
+    "count": 3,
+    "exempt": ""
+  },
+  "overtone": {
+    "word": "overtone",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 49300,
+    "count": 1,
+    "exempt": ""
+  },
+  "bode": {
+    "word": "bode",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 53200,
+    "count": 6,
+    "exempt": ""
+  },
+  "ageless": {
+    "word": "ageless",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 53300,
+    "count": 2,
+    "exempt": ""
+  },
+  "dime": {
+    "word": "dime",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 53800,
+    "count": 27,
+    "exempt": ""
+  },
+  "envoi": {
+    "word": "envoi",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 55000,
+    "count": 8,
+    "exempt": ""
+  },
+  "apropos": {
+    "word": "apropos",
+    "len": 7,
+    "pos_list": "['adjective', 'preposition']",
+    "frequency": 55000,
+    "count": 165,
+    "exempt": ""
+  },
+  "gust": {
+    "word": "gust",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 55500,
+    "count": 7,
+    "exempt": ""
+  },
+  "elation": {
+    "word": "elation",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 57200,
+    "count": 2,
+    "exempt": ""
+  },
+  "tritone": {
+    "word": "tritone",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 58200,
+    "count": 1,
+    "exempt": ""
+  },
+  "cyst": {
+    "word": "cyst",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 59500,
+    "count": 2,
+    "exempt": ""
+  },
+  "abort": {
+    "word": "abort",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 59600,
+    "count": 3,
+    "exempt": ""
+  },
+  "ramen": {
+    "word": "ramen",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 61000,
+    "count": 2,
+    "exempt": ""
+  },
+  "intone": {
+    "word": "intone",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 65100,
+    "count": 43,
     "exempt": ""
   },
   "gist": {
@@ -212,6 +1900,14 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 66300,
+    "count": 24,
+    "exempt": ""
+  },
+  "livable": {
+    "word": "livable",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 68100,
     "count": 1,
     "exempt": ""
   },
@@ -220,23 +1916,247 @@
     "len": 7,
     "pos_list": "['noun']",
     "frequency": 68700,
+    "count": 2,
+    "exempt": ""
+  },
+  "purim": {
+    "word": "purim",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 70400,
+    "count": 4,
+    "exempt": ""
+  },
+  "geode": {
+    "word": "geode",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 71200,
+    "count": 4,
+    "exempt": ""
+  },
+  "crypt": {
+    "word": "crypt",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 71600,
+    "count": 60,
+    "exempt": ""
+  },
+  "maim": {
+    "word": "maim",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 73000,
+    "count": 10,
+    "exempt": ""
+  },
+  "fable": {
+    "word": "fable",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 75400,
     "count": 1,
     "exempt": ""
   },
-  "consul": {
-    "word": "consul",
+  "terse": {
+    "word": "terse",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 79000,
+    "count": 36,
+    "exempt": ""
+  },
+  "esau": {
+    "word": "esau",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 79300,
+    "count": 47,
+    "exempt": ""
+  },
+  "guider": {
+    "word": "guider",
     "len": 6,
     "pos_list": "['noun']",
-    "frequency": 80900,
+    "frequency": 80200,
+    "count": 4,
+    "exempt": ""
+  },
+  "inure": {
+    "word": "inure",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 80800,
+    "count": 2,
+    "exempt": ""
+  },
+  "languid": {
+    "word": "languid",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 82100,
+    "count": 3,
+    "exempt": ""
+  },
+  "applaud": {
+    "word": "applaud",
+    "len": 7,
+    "pos_list": "['verb']",
+    "frequency": 82400,
+    "count": 6,
+    "exempt": ""
+  },
+  "laic": {
+    "word": "laic",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 83100,
     "count": 1,
     "exempt": ""
   },
-  "commend": {
-    "word": "commend",
-    "len": 7,
-    "pos_list": "['verb']",
-    "frequency": 89900,
+  "polyp": {
+    "word": "polyp",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 84600,
+    "count": 12,
+    "exempt": ""
+  },
+  "elam": {
+    "word": "elam",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 84800,
+    "count": 19,
+    "exempt": ""
+  },
+  "sabra": {
+    "word": "sabra",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 84800,
+    "count": 4,
+    "exempt": ""
+  },
+  "bile": {
+    "word": "bile",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 85100,
     "count": 1,
+    "exempt": ""
+  },
+  "chimp": {
+    "word": "chimp",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 85700,
+    "count": 2,
+    "exempt": ""
+  },
+  "undertone": {
+    "word": "undertone",
+    "len": 9,
+    "pos_list": "['noun']",
+    "frequency": 87300,
+    "count": 1,
+    "exempt": ""
+  },
+  "collaborator": {
+    "word": "collaborator",
+    "len": 12,
+    "pos_list": "['noun']",
+    "frequency": 88500,
+    "count": 1,
+    "exempt": ""
+  },
+  "brander": {
+    "word": "brander",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 88700,
+    "count": 1,
+    "exempt": ""
+  },
+  "crag": {
+    "word": "crag",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 91200,
+    "count": 5,
+    "exempt": ""
+  },
+  "sinuous": {
+    "word": "sinuous",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 92200,
+    "count": 1,
+    "exempt": ""
+  },
+  "fang": {
+    "word": "fang",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 92400,
+    "count": 5,
+    "exempt": ""
+  },
+  "lapp": {
+    "word": "lapp",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 92600,
+    "count": 24,
+    "exempt": ""
+  },
+  "prostrate": {
+    "word": "prostrate",
+    "len": 9,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 93000,
+    "count": 6,
+    "exempt": ""
+  },
+  "antifa": {
+    "word": "antifa",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 93700,
+    "count": 1,
+    "exempt": ""
+  },
+  "brae": {
+    "word": "brae",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 95000,
+    "count": 3,
+    "exempt": ""
+  },
+  "agate": {
+    "word": "agate",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 96000,
+    "count": 2,
+    "exempt": ""
+  },
+  "teary": {
+    "word": "teary",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 96500,
+    "count": 2,
+    "exempt": ""
+  },
+  "emit": {
+    "word": "emit",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 98500,
+    "count": 2,
     "exempt": ""
   },
   "orator": {
@@ -247,12 +2167,180 @@
     "count": 1,
     "exempt": ""
   },
+  "hypermarket": {
+    "word": "hypermarket",
+    "len": 11,
+    "pos_list": "['noun']",
+    "frequency": 103000,
+    "count": 2,
+    "exempt": ""
+  },
+  "brim": {
+    "word": "brim",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 107000,
+    "count": 9,
+    "exempt": ""
+  },
+  "agar": {
+    "word": "agar",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 110000,
+    "count": 5,
+    "exempt": ""
+  },
+  "ovolo": {
+    "word": "ovolo",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 111000,
+    "count": 1,
+    "exempt": ""
+  },
+  "clog": {
+    "word": "clog",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 113000,
+    "count": 4,
+    "exempt": ""
+  },
+  "osier": {
+    "word": "osier",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 114000,
+    "count": 1,
+    "exempt": ""
+  },
+  "pupa": {
+    "word": "pupa",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 115000,
+    "count": 2,
+    "exempt": ""
+  },
+  "chime": {
+    "word": "chime",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 115000,
+    "count": 2,
+    "exempt": ""
+  },
+  "gasp": {
+    "word": "gasp",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 117000,
+    "count": 20,
+    "exempt": ""
+  },
+  "neap": {
+    "word": "neap",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 118000,
+    "count": 5,
+    "exempt": ""
+  },
+  "brat": {
+    "word": "brat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 120000,
+    "count": 7,
+    "exempt": ""
+  },
+  "taint": {
+    "word": "taint",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 120000,
+    "count": 1,
+    "exempt": ""
+  },
+  "gory": {
+    "word": "gory",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 121000,
+    "count": 1,
+    "exempt": ""
+  },
+  "gules": {
+    "word": "gules",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 121000,
+    "count": 1,
+    "exempt": ""
+  },
+  "forage": {
+    "word": "forage",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 126000,
+    "count": 31,
+    "exempt": ""
+  },
+  "saag": {
+    "word": "saag",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 127000,
+    "count": 7,
+    "exempt": ""
+  },
   "bran": {
     "word": "bran",
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 128000,
-    "count": 4,
+    "count": 4425,
+    "exempt": ""
+  },
+  "guise": {
+    "word": "guise",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 131000,
+    "count": 2,
+    "exempt": ""
+  },
+  "bate": {
+    "word": "bate",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 133000,
+    "count": 1,
+    "exempt": ""
+  },
+  "bony": {
+    "word": "bony",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 134000,
+    "count": 1,
+    "exempt": ""
+  },
+  "eros": {
+    "word": "eros",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 136000,
+    "count": 5,
+    "exempt": ""
+  },
+  "secam": {
+    "word": "secam",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 136000,
+    "count": 3,
     "exempt": ""
   },
   "grated": {
@@ -260,7 +2348,31 @@
     "len": 6,
     "pos_list": "['adjective']",
     "frequency": 136000,
+    "count": 119,
+    "exempt": ""
+  },
+  "laud": {
+    "word": "laud",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 137000,
+    "count": 50,
+    "exempt": ""
+  },
+  "viol": {
+    "word": "viol",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 137000,
     "count": 1,
+    "exempt": ""
+  },
+  "teton": {
+    "word": "teton",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 141000,
+    "count": 18,
     "exempt": ""
   },
   "grate": {
@@ -268,7 +2380,175 @@
     "len": 5,
     "pos_list": "['noun', 'verb']",
     "frequency": 142000,
+    "count": 239,
+    "exempt": ""
+  },
+  "scamp": {
+    "word": "scamp",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 142000,
+    "count": 154,
+    "exempt": ""
+  },
+  "posey": {
+    "word": "posey",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 147000,
     "count": 1,
+    "exempt": ""
+  },
+  "imago": {
+    "word": "imago",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 149000,
+    "count": 3,
+    "exempt": ""
+  },
+  "dingle": {
+    "word": "dingle",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 159000,
+    "count": 1,
+    "exempt": ""
+  },
+  "uric": {
+    "word": "uric",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 166000,
+    "count": 1,
+    "exempt": ""
+  },
+  "acme": {
+    "word": "acme",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 167000,
+    "count": 9,
+    "exempt": ""
+  },
+  "baud": {
+    "word": "baud",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 169000,
+    "count": 23,
+    "exempt": ""
+  },
+  "digs": {
+    "word": "digs",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 169000,
+    "count": 10,
+    "exempt": ""
+  },
+  "proposer": {
+    "word": "proposer",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 170000,
+    "count": 1,
+    "exempt": ""
+  },
+  "reintegrate": {
+    "word": "reintegrate",
+    "len": 11,
+    "pos_list": "['verb']",
+    "frequency": 177000,
+    "count": 2,
+    "exempt": ""
+  },
+  "gable": {
+    "word": "gable",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 184000,
+    "count": 1,
+    "exempt": ""
+  },
+  "monotone": {
+    "word": "monotone",
+    "len": 8,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 184000,
+    "count": 1,
+    "exempt": ""
+  },
+  "roti": {
+    "word": "roti",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 191000,
+    "count": 1,
+    "exempt": ""
+  },
+  "purl": {
+    "word": "purl",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 194000,
+    "count": 4,
+    "exempt": ""
+  },
+  "sitar": {
+    "word": "sitar",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 195000,
+    "count": 4,
+    "exempt": ""
+  },
+  "reapply": {
+    "word": "reapply",
+    "len": 7,
+    "pos_list": "['verb']",
+    "frequency": 195000,
+    "count": 22,
+    "exempt": ""
+  },
+  "dearest": {
+    "word": "dearest",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 197000,
+    "count": 1,
+    "exempt": ""
+  },
+  "prow": {
+    "word": "prow",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 203000,
+    "count": 12,
+    "exempt": ""
+  },
+  "rind": {
+    "word": "rind",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 203000,
+    "count": 1,
+    "exempt": ""
+  },
+  "pious": {
+    "word": "pious",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 203000,
+    "count": 3,
+    "exempt": ""
+  },
+  "berg": {
+    "word": "berg",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 209000,
+    "count": 3,
     "exempt": ""
   },
   "crib": {
@@ -279,19 +2559,83 @@
     "count": 1,
     "exempt": ""
   },
-  "goo": {
-    "word": "goo",
-    "len": 3,
+  "pail": {
+    "word": "pail",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 215000,
-    "count": 1,
+    "count": 5,
     "exempt": ""
   },
-  "gag": {
-    "word": "gag",
-    "len": 3,
+  "crease": {
+    "word": "crease",
+    "len": 6,
     "pos_list": "['noun', 'verb']",
-    "frequency": 227000,
+    "frequency": 215000,
+    "count": 2,
+    "exempt": ""
+  },
+  "osage": {
+    "word": "osage",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 220000,
+    "count": 14,
+    "exempt": ""
+  },
+  "rafter": {
+    "word": "rafter",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 222000,
+    "count": 20,
+    "exempt": ""
+  },
+  "coma": {
+    "word": "coma",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 223000,
+    "count": 10,
+    "exempt": ""
+  },
+  "rasp": {
+    "word": "rasp",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 242000,
+    "count": 5,
+    "exempt": ""
+  },
+  "tinge": {
+    "word": "tinge",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 253000,
+    "count": 45,
+    "exempt": ""
+  },
+  "vole": {
+    "word": "vole",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 274000,
+    "count": 3,
+    "exempt": ""
+  },
+  "teat": {
+    "word": "teat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 277000,
+    "count": 106,
+    "exempt": ""
+  },
+  "misguide": {
+    "word": "misguide",
+    "len": 8,
+    "pos_list": "['verb']",
+    "frequency": 288000,
     "count": 1,
     "exempt": ""
   },
@@ -300,7 +2644,95 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 294000,
+    "count": 19,
+    "exempt": ""
+  },
+  "pogo": {
+    "word": "pogo",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 303000,
     "count": 1,
+    "exempt": ""
+  },
+  "ketone": {
+    "word": "ketone",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 304000,
+    "count": 4,
+    "exempt": ""
+  },
+  "liven": {
+    "word": "liven",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 305000,
+    "count": 1,
+    "exempt": ""
+  },
+  "purr": {
+    "word": "purr",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 307000,
+    "count": 14,
+    "exempt": ""
+  },
+  "idem": {
+    "word": "idem",
+    "len": 4,
+    "pos_list": "['adverb']",
+    "frequency": 310000,
+    "count": 9,
+    "exempt": ""
+  },
+  "outage": {
+    "word": "outage",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 324000,
+    "count": 31,
+    "exempt": ""
+  },
+  "buss": {
+    "word": "buss",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 325000,
+    "count": 13,
+    "exempt": ""
+  },
+  "vend": {
+    "word": "vend",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 326000,
+    "count": 40,
+    "exempt": ""
+  },
+  "amish": {
+    "word": "amish",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 330000,
+    "count": 1,
+    "exempt": ""
+  },
+  "tingle": {
+    "word": "tingle",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 347000,
+    "count": 23,
+    "exempt": ""
+  },
+  "improv": {
+    "word": "improv",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 351000,
+    "count": 3,
     "exempt": ""
   },
   "sear": {
@@ -308,23 +2740,175 @@
     "len": 4,
     "pos_list": "['adjective', 'verb']",
     "frequency": 362000,
+    "count": 32,
+    "exempt": ""
+  },
+  "portage": {
+    "word": "portage",
+    "len": 7,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 370000,
+    "count": 7,
+    "exempt": ""
+  },
+  "seared": {
+    "word": "seared",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 373000,
+    "count": 3,
+    "exempt": ""
+  },
+  "pager": {
+    "word": "pager",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 377000,
+    "count": 3,
+    "exempt": ""
+  },
+  "oratory": {
+    "word": "oratory",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 383000,
     "count": 1,
     "exempt": ""
   },
-  "comb": {
-    "word": "comb",
+  "postmark": {
+    "word": "postmark",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 391000,
+    "count": 2,
+    "exempt": ""
+  },
+  "overt": {
+    "word": "overt",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 394000,
+    "count": 2,
+    "exempt": ""
+  },
+  "arles": {
+    "word": "arles",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 396000,
+    "count": 1,
+    "exempt": ""
+  },
+  "chit": {
+    "word": "chit",
     "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 405000,
+    "count": 2,
+    "exempt": ""
+  },
+  "strategist": {
+    "word": "strategist",
+    "len": 10,
+    "pos_list": "['noun']",
+    "frequency": 410000,
+    "count": 7,
+    "exempt": ""
+  },
+  "seton": {
+    "word": "seton",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 413000,
+    "count": 3,
+    "exempt": ""
+  },
+  "provo": {
+    "word": "provo",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 417000,
+    "count": 10,
+    "exempt": ""
+  },
+  "poser": {
+    "word": "poser",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 417000,
+    "count": 5,
+    "exempt": ""
+  },
+  "redefine": {
+    "word": "redefine",
+    "len": 8,
+    "pos_list": "['verb']",
+    "frequency": 420000,
+    "count": 22,
+    "exempt": ""
+  },
+  "lament": {
+    "word": "lament",
+    "len": 6,
     "pos_list": "['noun', 'verb']",
     "frequency": 422000,
     "count": 2,
     "exempt": ""
   },
-  "duct": {
-    "word": "duct",
+  "biome": {
+    "word": "biome",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 430000,
+    "count": 1,
+    "exempt": ""
+  },
+  "cyan": {
+    "word": "cyan",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 431000,
+    "count": 31,
+    "exempt": ""
+  },
+  "seer": {
+    "word": "seer",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 431000,
+    "count": 1,
+    "exempt": ""
+  },
+  "sled": {
+    "word": "sled",
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 444000,
-    "count": 1,
+    "count": 29,
+    "exempt": ""
+  },
+  "imam": {
+    "word": "imam",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 447000,
+    "count": 18,
+    "exempt": ""
+  },
+  "veto": {
+    "word": "veto",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 451000,
+    "count": 4,
+    "exempt": ""
+  },
+  "maul": {
+    "word": "maul",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 455000,
+    "count": 2,
     "exempt": ""
   },
   "cess": {
@@ -332,46 +2916,126 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 461000,
+    "count": 8,
+    "exempt": ""
+  },
+  "posy": {
+    "word": "posy",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 471000,
     "count": 2,
     "exempt": ""
   },
-  "lair": {
-    "word": "lair",
+  "llama": {
+    "word": "llama",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 473000,
+    "count": 9,
+    "exempt": ""
+  },
+  "omen": {
+    "word": "omen",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 476000,
+    "count": 3,
+    "exempt": ""
+  },
+  "planar": {
+    "word": "planar",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 483000,
+    "count": 1,
+    "exempt": ""
+  },
+  "meson": {
+    "word": "meson",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 484000,
+    "count": 1,
+    "exempt": ""
+  },
+  "stun": {
+    "word": "stun",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 490000,
+    "count": 1,
+    "exempt": ""
+  },
+  "anima": {
+    "word": "anima",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 510000,
+    "count": 20,
+    "exempt": ""
+  },
+  "triage": {
+    "word": "triage",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 512000,
+    "count": 2,
+    "exempt": ""
+  },
+  "loin": {
+    "word": "loin",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 529000,
+    "count": 1,
+    "exempt": ""
+  },
+  "silo": {
+    "word": "silo",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 515000,
-    "count": 1,
+    "frequency": 537000,
+    "count": 4,
     "exempt": ""
   },
-  "orc": {
-    "word": "orc",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 544000,
-    "count": 1,
-    "exempt": ""
-  },
-  "scribe": {
-    "word": "scribe",
+  "latent": {
+    "word": "latent",
     "len": 6,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 547000,
+    "pos_list": "['adjective']",
+    "frequency": 550000,
     "count": 1,
     "exempt": ""
   },
-  "sal": {
-    "word": "sal",
-    "len": 3,
+  "ebro": {
+    "word": "ebro",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 555000,
+    "frequency": 561000,
+    "count": 2,
+    "exempt": ""
+  },
+  "sigil": {
+    "word": "sigil",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 562000,
     "count": 1,
     "exempt": ""
   },
-  "resent": {
-    "word": "resent",
-    "len": 6,
-    "pos_list": "['verb']",
-    "frequency": 555000,
+  "gent": {
+    "word": "gent",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 564000,
+    "count": 3,
+    "exempt": ""
+  },
+  "superfan": {
+    "word": "superfan",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 595000,
     "count": 1,
     "exempt": ""
   },
@@ -380,31 +3044,23 @@
     "len": 6,
     "pos_list": "['noun', 'verb']",
     "frequency": 606000,
-    "count": 1,
+    "count": 3,
     "exempt": ""
   },
-  "glitch": {
-    "word": "glitch",
+  "ionian": {
+    "word": "ionian",
     "len": 6,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 627000,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 649000,
     "count": 1,
     "exempt": ""
   },
-  "ngo": {
-    "word": "ngo",
-    "len": 3,
+  "magma": {
+    "word": "magma",
+    "len": 5,
     "pos_list": "['noun']",
-    "frequency": 647000,
-    "count": 1,
-    "exempt": ""
-  },
-  "rainstorm": {
-    "word": "rainstorm",
-    "len": 9,
-    "pos_list": "['noun']",
-    "frequency": 653000,
-    "count": 1,
+    "frequency": 674000,
+    "count": 9,
     "exempt": ""
   },
   "simp": {
@@ -412,7 +3068,23 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 678000,
-    "count": 1,
+    "count": 3,
+    "exempt": ""
+  },
+  "arse": {
+    "word": "arse",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 687000,
+    "count": 2,
+    "exempt": ""
+  },
+  "mire": {
+    "word": "mire",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 715000,
+    "count": 3,
     "exempt": ""
   },
   "dire": {
@@ -420,15 +3092,79 @@
     "len": 4,
     "pos_list": "['adjective']",
     "frequency": 716000,
+    "count": 14,
+    "exempt": ""
+  },
+  "plato": {
+    "word": "plato",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 725000,
     "count": 2,
     "exempt": ""
   },
-  "ledge": {
-    "word": "ledge",
+  "prim": {
+    "word": "prim",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 743000,
+    "count": 4,
+    "exempt": ""
+  },
+  "planer": {
+    "word": "planer",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 748000,
+    "count": 1,
+    "exempt": ""
+  },
+  "gram": {
+    "word": "gram",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 750000,
+    "count": 18,
+    "exempt": ""
+  },
+  "anal": {
+    "word": "anal",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 751000,
+    "count": 5,
+    "exempt": ""
+  },
+  "trait": {
+    "word": "trait",
     "len": 5,
     "pos_list": "['noun']",
-    "frequency": 738000,
+    "frequency": 751000,
     "count": 1,
+    "exempt": ""
+  },
+  "mime": {
+    "word": "mime",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 762000,
+    "count": 2,
+    "exempt": ""
+  },
+  "ionic": {
+    "word": "ionic",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 762000,
+    "count": 1,
+    "exempt": ""
+  },
+  "meme": {
+    "word": "meme",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 781000,
+    "count": 8,
     "exempt": ""
   },
   "collab": {
@@ -436,7 +3172,71 @@
     "len": 6,
     "pos_list": "['noun', 'verb']",
     "frequency": 803000,
+    "count": 2060,
+    "exempt": ""
+  },
+  "perk": {
+    "word": "perk",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 806000,
+    "count": 2,
+    "exempt": ""
+  },
+  "agile": {
+    "word": "agile",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 817000,
+    "count": 5,
+    "exempt": ""
+  },
+  "noun": {
+    "word": "noun",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 833000,
     "count": 3,
+    "exempt": ""
+  },
+  "pate": {
+    "word": "pate",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 840000,
+    "count": 3,
+    "exempt": ""
+  },
+  "underage": {
+    "word": "underage",
+    "len": 8,
+    "pos_list": "['adjective']",
+    "frequency": 842000,
+    "count": 2,
+    "exempt": ""
+  },
+  "veal": {
+    "word": "veal",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 847000,
+    "count": 1,
+    "exempt": ""
+  },
+  "paged": {
+    "word": "paged",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 868000,
+    "count": 16,
+    "exempt": ""
+  },
+  "telemark": {
+    "word": "telemark",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 871000,
+    "count": 2,
     "exempt": ""
   },
   "digit": {
@@ -444,7 +3244,7 @@
     "len": 5,
     "pos_list": "['noun']",
     "frequency": 875000,
-    "count": 2,
+    "count": 362,
     "exempt": ""
   },
   "poke": {
@@ -455,52 +3255,156 @@
     "count": 1,
     "exempt": ""
   },
-  "apt": {
-    "word": "apt",
-    "len": 3,
-    "pos_list": "['adjective']",
-    "frequency": 915000,
-    "count": 2,
+  "marketer": {
+    "word": "marketer",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 894000,
+    "count": 1,
     "exempt": ""
   },
-  "sag": {
-    "word": "sag",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 935000,
-    "count": 2,
-    "exempt": ""
-  },
-  "pact": {
-    "word": "pact",
+  "lore": {
+    "word": "lore",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 1110000,
+    "frequency": 901000,
+    "count": 3,
+    "exempt": ""
+  },
+  "ideology": {
+    "word": "ideology",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 925000,
     "count": 1,
     "exempt": ""
   },
-  "itchy": {
-    "word": "itchy",
-    "len": 5,
-    "pos_list": "['adjective']",
-    "frequency": 1150000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tinker": {
-    "word": "tinker",
-    "len": 6,
+  "pimp": {
+    "word": "pimp",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
+    "frequency": 952000,
+    "count": 1,
+    "exempt": ""
+  },
+  "colt": {
+    "word": "colt",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 957000,
+    "count": 3,
+    "exempt": ""
+  },
+  "voile": {
+    "word": "voile",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 989000,
+    "count": 3,
+    "exempt": ""
+  },
+  "nome": {
+    "word": "nome",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 992000,
+    "count": 6,
+    "exempt": ""
+  },
+  "tore": {
+    "word": "tore",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1020000,
+    "count": 12,
+    "exempt": ""
+  },
+  "tito": {
+    "word": "tito",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1040000,
+    "count": 16,
+    "exempt": ""
+  },
+  "fade": {
+    "word": "fade",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1040000,
+    "count": 5,
+    "exempt": ""
+  },
+  "ebony": {
+    "word": "ebony",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 1060000,
+    "count": 1,
+    "exempt": ""
+  },
+  "voiced": {
+    "word": "voiced",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 1090000,
+    "count": 16,
+    "exempt": ""
+  },
+  "thermos": {
+    "word": "thermos",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 1100000,
+    "count": 5,
+    "exempt": ""
+  },
+  "saul": {
+    "word": "saul",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1140000,
+    "count": 1,
+    "exempt": ""
+  },
+  "capo": {
+    "word": "capo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1150000,
+    "count": 2,
+    "exempt": ""
+  },
+  "libra": {
+    "word": "libra",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 1160000,
+    "count": 4,
+    "exempt": ""
+  },
+  "fino": {
+    "word": "fino",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1180000,
+    "count": 2,
+    "exempt": ""
+  },
+  "multipurpose": {
+    "word": "multipurpose",
+    "len": 12,
+    "pos_list": "['adjective']",
     "frequency": 1180000,
     "count": 1,
     "exempt": ""
   },
-  "itch": {
-    "word": "itch",
-    "len": 4,
+  "recap": {
+    "word": "recap",
+    "len": 5,
     "pos_list": "['noun', 'verb']",
     "frequency": 1190000,
-    "count": 1,
+    "count": 22,
     "exempt": ""
   },
   "rein": {
@@ -508,183 +3412,407 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 1220000,
-    "count": 1,
+    "count": 2,
     "exempt": ""
   },
-  "sly": {
-    "word": "sly",
-    "len": 3,
-    "pos_list": "['adjective']",
-    "frequency": 1290000,
-    "count": 1,
-    "exempt": ""
-  },
-  "rink": {
-    "word": "rink",
+  "maud": {
+    "word": "maud",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 1300000,
+    "frequency": 1240000,
+    "count": 47,
+    "exempt": ""
+  },
+  "reap": {
+    "word": "reap",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 1250000,
+    "count": 55,
+    "exempt": ""
+  },
+  "amine": {
+    "word": "amine",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 1250000,
     "count": 1,
     "exempt": ""
   },
-  "roach": {
-    "word": "roach",
+  "roper": {
+    "word": "roper",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 1280000,
+    "count": 1,
+    "exempt": ""
+  },
+  "andes": {
+    "word": "andes",
     "len": 5,
     "pos_list": "['noun']",
     "frequency": 1320000,
+    "count": 31,
+    "exempt": ""
+  },
+  "projecting": {
+    "word": "projecting",
+    "len": 10,
+    "pos_list": "['adjective']",
+    "frequency": 1330000,
     "count": 1,
     "exempt": ""
   },
-  "arc": {
-    "word": "arc",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 1340000,
-    "count": 2,
-    "exempt": ""
-  },
-  "consist": {
-    "word": "consist",
-    "len": 7,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 1470000,
-    "count": 1,
-    "exempt": ""
-  },
-  "bark": {
-    "word": "bark",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 1540000,
-    "count": 1,
-    "exempt": ""
-  },
-  "amp": {
-    "word": "amp",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 1770000,
-    "count": 1,
-    "exempt": ""
-  },
-  "outro": {
-    "word": "outro",
+  "cobra": {
+    "word": "cobra",
     "len": 5,
     "pos_list": "['noun']",
-    "frequency": 1810000,
-    "count": 1,
-    "exempt": ""
-  },
-  "lick": {
-    "word": "lick",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 1920000,
-    "count": 1,
-    "exempt": ""
-  },
-  "ark": {
-    "word": "ark",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 1940000,
-    "count": 3,
-    "exempt": ""
-  },
-  "potent": {
-    "word": "potent",
-    "len": 6,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 1960000,
-    "count": 1,
-    "exempt": ""
-  },
-  "flex": {
-    "word": "flex",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 2050000,
-    "count": 1,
-    "exempt": ""
-  },
-  "forge": {
-    "word": "forge",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 2050000,
-    "count": 1,
-    "exempt": ""
-  },
-  "bloc": {
-    "word": "bloc",
-    "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 2080000,
-    "count": 1,
-    "exempt": ""
-  },
-  "fig": {
-    "word": "fig",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 2110000,
-    "count": 1,
-    "exempt": ""
-  },
-  "fin": {
-    "word": "fin",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 2230000,
+    "frequency": 1360000,
     "count": 5,
     "exempt": ""
   },
-  "tally": {
-    "word": "tally",
+  "stint": {
+    "word": "stint",
     "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 2230000,
+    "frequency": 1390000,
     "count": 1,
     "exempt": ""
   },
-  "mend": {
-    "word": "mend",
+  "midst": {
+    "word": "midst",
+    "len": 5,
+    "pos_list": "['noun', 'preposition']",
+    "frequency": 1420000,
+    "count": 3,
+    "exempt": ""
+  },
+  "marl": {
+    "word": "marl",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 2340000,
+    "frequency": 1440000,
+    "count": 4,
+    "exempt": ""
+  },
+  "ransom": {
+    "word": "ransom",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1510000,
     "count": 1,
     "exempt": ""
   },
-  "oder": {
-    "word": "oder",
+  "chap": {
+    "word": "chap",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1520000,
+    "count": 21,
+    "exempt": ""
+  },
+  "herb": {
+    "word": "herb",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 2460000,
-    "count": 1,
+    "frequency": 1520000,
+    "count": 20,
     "exempt": ""
   },
-  "git": {
-    "word": "git",
-    "len": 3,
+  "substrate": {
+    "word": "substrate",
+    "len": 9,
     "pos_list": "['noun']",
-    "frequency": 2620000,
+    "frequency": 1540000,
+    "count": 3,
+    "exempt": ""
+  },
+  "omnibus": {
+    "word": "omnibus",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 1550000,
     "count": 2,
     "exempt": ""
   },
-  "cod": {
-    "word": "cod",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'noun', 'verb']",
-    "frequency": 2680000,
+  "collagen": {
+    "word": "collagen",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 1550000,
+    "count": 5,
+    "exempt": ""
+  },
+  "roar": {
+    "word": "roar",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1580000,
+    "count": 2,
+    "exempt": ""
+  },
+  "inward": {
+    "word": "inward",
+    "len": 6,
+    "pos_list": "['adjective', 'adverb']",
+    "frequency": 1610000,
+    "count": 4,
+    "exempt": ""
+  },
+  "lame": {
+    "word": "lame",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 1620000,
+    "count": 29,
+    "exempt": ""
+  },
+  "stony": {
+    "word": "stony",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 1650000,
     "count": 1,
     "exempt": ""
   },
-  "sigh": {
-    "word": "sigh",
+  "herd": {
+    "word": "herd",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 2730000,
+    "frequency": 1680000,
+    "count": 50,
+    "exempt": ""
+  },
+  "oiled": {
+    "word": "oiled",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 1690000,
     "count": 1,
+    "exempt": ""
+  },
+  "hype": {
+    "word": "hype",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1730000,
+    "count": 63,
+    "exempt": ""
+  },
+  "cami": {
+    "word": "cami",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1730000,
+    "count": 13,
+    "exempt": ""
+  },
+  "recreate": {
+    "word": "recreate",
+    "len": 8,
+    "pos_list": "['verb']",
+    "frequency": 1730000,
+    "count": 22,
+    "exempt": ""
+  },
+  "telemarketing": {
+    "word": "telemarketing",
+    "len": 13,
+    "pos_list": "['noun']",
+    "frequency": 1740000,
+    "count": 1,
+    "exempt": ""
+  },
+  "lama": {
+    "word": "lama",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 1810000,
+    "count": 27,
+    "exempt": ""
+  },
+  "redesign": {
+    "word": "redesign",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1830000,
+    "count": 27,
+    "exempt": ""
+  },
+  "hermes": {
+    "word": "hermes",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 1900000,
+    "count": 10,
+    "exempt": ""
+  },
+  "raft": {
+    "word": "raft",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1920000,
+    "count": 20,
+    "exempt": ""
+  },
+  "jest": {
+    "word": "jest",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 1940000,
+    "count": 8,
+    "exempt": ""
+  },
+  "shaver": {
+    "word": "shaver",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 1960000,
+    "count": 3,
+    "exempt": ""
+  },
+  "iced": {
+    "word": "iced",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 1980000,
+    "count": 16,
+    "exempt": ""
+  },
+  "collage": {
+    "word": "collage",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 2050000,
+    "count": 6,
+    "exempt": ""
+  },
+  "remark": {
+    "word": "remark",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2100000,
+    "count": 37,
+    "exempt": ""
+  },
+  "sift": {
+    "word": "sift",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2130000,
+    "count": 1,
+    "exempt": ""
+  },
+  "plage": {
+    "word": "plage",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 2160000,
+    "count": 9,
+    "exempt": ""
+  },
+  "talc": {
+    "word": "talc",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2180000,
+    "count": 2,
+    "exempt": ""
+  },
+  "bore": {
+    "word": "bore",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2190000,
+    "count": 1,
+    "exempt": ""
+  },
+  "rotor": {
+    "word": "rotor",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 2420000,
+    "count": 3,
+    "exempt": ""
+  },
+  "randy": {
+    "word": "randy",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 2430000,
+    "count": 1,
+    "exempt": ""
+  },
+  "designing": {
+    "word": "designing",
+    "len": 9,
+    "pos_list": "['adjective']",
+    "frequency": 2480000,
+    "count": 1,
+    "exempt": ""
+  },
+  "camper": {
+    "word": "camper",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 2510000,
+    "count": 1,
+    "exempt": ""
+  },
+  "perm": {
+    "word": "perm",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2530000,
+    "count": 8,
+    "exempt": ""
+  },
+  "crab": {
+    "word": "crab",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2540000,
+    "count": 1,
+    "exempt": ""
+  },
+  "bravo": {
+    "word": "bravo",
+    "len": 5,
+    "pos_list": "['exclamation', 'noun']",
+    "frequency": 2590000,
+    "count": 9,
+    "exempt": ""
+  },
+  "inlet": {
+    "word": "inlet",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 2620000,
+    "count": 4,
+    "exempt": ""
+  },
+  "bless": {
+    "word": "bless",
+    "len": 5,
+    "pos_list": "['verb']",
+    "frequency": 2650000,
+    "count": 1,
+    "exempt": ""
+  },
+  "defined": {
+    "word": "defined",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 2660000,
+    "count": 2,
+    "exempt": ""
+  },
+  "acre": {
+    "word": "acre",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 2680000,
+    "count": 50,
     "exempt": ""
   },
   "lent": {
@@ -692,39 +3820,79 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 2780000,
-    "count": 1,
+    "count": 5,
     "exempt": ""
   },
-  "livery": {
-    "word": "livery",
-    "len": 6,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 2780000,
-    "count": 1,
+  "tame": {
+    "word": "tame",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 2790000,
+    "count": 29,
     "exempt": ""
   },
-  "consult": {
-    "word": "consult",
-    "len": 7,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 2910000,
-    "count": 1,
-    "exempt": ""
-  },
-  "ale": {
-    "word": "ale",
-    "len": 3,
+  "deer": {
+    "word": "deer",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 3000000,
+    "frequency": 2810000,
     "count": 2,
     "exempt": ""
   },
-  "mecha": {
-    "word": "mecha",
+  "seine": {
+    "word": "seine",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2840000,
+    "count": 1,
+    "exempt": ""
+  },
+  "disk": {
+    "word": "disk",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 2900000,
+    "count": 1,
+    "exempt": ""
+  },
+  "asap": {
+    "word": "asap",
+    "len": 4,
+    "pos_list": "['abbreviation']",
+    "frequency": 3080000,
+    "count": 20,
+    "exempt": ""
+  },
+  "crest": {
+    "word": "crest",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 3150000,
+    "count": 7,
+    "exempt": ""
+  },
+  "triton": {
+    "word": "triton",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 3200000,
+    "count": 2,
+    "exempt": ""
+  },
+  "seoul": {
+    "word": "seoul",
     "len": 5,
     "pos_list": "['noun']",
-    "frequency": 3190000,
+    "frequency": 3220000,
     "count": 1,
+    "exempt": ""
+  },
+  "lure": {
+    "word": "lure",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 3280000,
+    "count": 5,
     "exempt": ""
   },
   "aging": {
@@ -732,63 +3900,143 @@
     "len": 5,
     "pos_list": "['adjective', 'noun']",
     "frequency": 3290000,
-    "count": 1,
+    "count": 1381,
     "exempt": ""
   },
-  "spar": {
-    "word": "spar",
+  "prose": {
+    "word": "prose",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 3380000,
+    "count": 4,
+    "exempt": ""
+  },
+  "grim": {
+    "word": "grim",
     "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 3510000,
-    "count": 1,
+    "pos_list": "['adjective']",
+    "frequency": 3400000,
+    "count": 5,
     "exempt": ""
   },
-  "nag": {
-    "word": "nag",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 3570000,
+  "impose": {
+    "word": "impose",
+    "len": 6,
+    "pos_list": "['verb']",
+    "frequency": 3690000,
     "count": 2,
     "exempt": ""
   },
-  "tack": {
-    "word": "tack",
+  "vent": {
+    "word": "vent",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 3750000,
-    "count": 1,
+    "frequency": 3710000,
+    "count": 3,
     "exempt": ""
   },
-  "urn": {
-    "word": "urn",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 3830000,
-    "count": 1,
-    "exempt": ""
-  },
-  "formation": {
-    "word": "formation",
-    "len": 9,
+  "mast": {
+    "word": "mast",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 4000000,
-    "count": 1,
+    "frequency": 3790000,
+    "count": 15,
     "exempt": ""
   },
-  "concept": {
-    "word": "concept",
+  "minibus": {
+    "word": "minibus",
     "len": 7,
     "pos_list": "['noun']",
-    "frequency": 4050000,
+    "frequency": 3790000,
+    "count": 2,
+    "exempt": ""
+  },
+  "deaf": {
+    "word": "deaf",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 3830000,
+    "count": 53,
+    "exempt": ""
+  },
+  "weber": {
+    "word": "weber",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 3990000,
     "count": 1,
     "exempt": ""
   },
-  "haul": {
-    "word": "haul",
+  "sigma": {
+    "word": "sigma",
+    "len": 5,
+    "pos_list": "['noun', 'symbol']",
+    "frequency": 4060000,
+    "count": 9,
+    "exempt": ""
+  },
+  "idle": {
+    "word": "idle",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 4210000,
+    "count": 4,
+    "exempt": ""
+  },
+  "orca": {
+    "word": "orca",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 4260000,
+    "count": 47,
+    "exempt": ""
+  },
+  "sync": {
+    "word": "sync",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4260000,
+    "count": 6,
+    "exempt": ""
+  },
+  "coin": {
+    "word": "coin",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4260000,
+    "count": 1,
+    "exempt": ""
+  },
+  "urine": {
+    "word": "urine",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 4280000,
+    "count": 1,
+    "exempt": ""
+  },
+  "tire": {
+    "word": "tire",
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 4300000,
-    "count": 1,
+    "count": 34,
+    "exempt": ""
+  },
+  "nile": {
+    "word": "nile",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 4340000,
+    "count": 15,
+    "exempt": ""
+  },
+  "spur": {
+    "word": "spur",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4350000,
+    "count": 156,
     "exempt": ""
   },
   "integrate": {
@@ -796,6 +4044,22 @@
     "len": 9,
     "pos_list": "['verb']",
     "frequency": 4350000,
+    "count": 239,
+    "exempt": ""
+  },
+  "rake": {
+    "word": "rake",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4380000,
+    "count": 6,
+    "exempt": ""
+  },
+  "coal": {
+    "word": "coal",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4490000,
     "count": 1,
     "exempt": ""
   },
@@ -804,95 +4068,191 @@
     "len": 8,
     "pos_list": "['noun']",
     "frequency": 4500000,
-    "count": 1,
+    "count": 953,
     "exempt": ""
   },
-  "techno": {
-    "word": "techno",
+  "caps": {
+    "word": "caps",
+    "len": 4,
+    "pos_list": "['abbreviation']",
+    "frequency": 4600000,
+    "count": 11,
+    "exempt": ""
+  },
+  "dial": {
+    "word": "dial",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4630000,
+    "count": 6,
+    "exempt": ""
+  },
+  "mist": {
+    "word": "mist",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4680000,
+    "count": 8,
+    "exempt": ""
+  },
+  "ginger": {
+    "word": "ginger",
     "len": 6,
-    "pos_list": "['noun']",
-    "frequency": 4560000,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 4680000,
     "count": 1,
     "exempt": ""
   },
-  "rib": {
-    "word": "rib",
-    "len": 3,
+  "campaigner": {
+    "word": "campaigner",
+    "len": 10,
+    "pos_list": "['noun']",
+    "frequency": 4700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "fist": {
+    "word": "fist",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 4740000,
+    "count": 8,
+    "exempt": ""
+  },
+  "rode": {
+    "word": "rode",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 4760000,
+    "count": 43,
+    "exempt": ""
+  },
+  "iowa": {
+    "word": "iowa",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 4760000,
+    "count": 2,
+    "exempt": ""
+  },
+  "maine": {
+    "word": "maine",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 4770000,
     "count": 1,
     "exempt": ""
   },
-  "delicate": {
-    "word": "delicate",
-    "len": 8,
-    "pos_list": "['adjective', 'noun']",
+  "vase": {
+    "word": "vase",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 4790000,
+    "count": 2,
+    "exempt": ""
+  },
+  "gene": {
+    "word": "gene",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 4840000,
+    "count": 2,
+    "exempt": ""
+  },
+  "pint": {
+    "word": "pint",
+    "len": 4,
+    "pos_list": "['noun']",
     "frequency": 4850000,
     "count": 1,
     "exempt": ""
   },
-  "pea": {
-    "word": "pea",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 4860000,
-    "count": 1,
-    "exempt": ""
-  },
-  "ah": {
-    "word": "ah",
-    "len": 2,
-    "pos_list": "['abbreviation', 'exclamation']",
-    "frequency": 4940000,
-    "count": 1,
-    "exempt": ""
-  },
-  "woo": {
-    "word": "woo",
-    "len": 3,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 5300000,
-    "count": 1,
-    "exempt": ""
-  },
-  "dig": {
-    "word": "dig",
-    "len": 3,
+  "dare": {
+    "word": "dare",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 5350000,
+    "frequency": 5070000,
+    "count": 30,
+    "exempt": ""
+  },
+  "dive": {
+    "word": "dive",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 5140000,
     "count": 2,
     "exempt": ""
   },
-  "rust": {
-    "word": "rust",
+  "coke": {
+    "word": "coke",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 5420000,
+    "frequency": 5310000,
     "count": 1,
     "exempt": ""
   },
-  "tailed": {
-    "word": "tailed",
+  "cain": {
+    "word": "cain",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 5350000,
+    "count": 1,
+    "exempt": ""
+  },
+  "viable": {
+    "word": "viable",
     "len": 6,
     "pos_list": "['adjective']",
-    "frequency": 5570000,
+    "frequency": 5380000,
     "count": 1,
     "exempt": ""
   },
-  "pear": {
-    "word": "pear",
+  "onward": {
+    "word": "onward",
+    "len": 6,
+    "pos_list": "['adjective', 'adverb']",
+    "frequency": 5410000,
+    "count": 1,
+    "exempt": ""
+  },
+  "bent": {
+    "word": "bent",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 5420000,
+    "count": 2,
+    "exempt": ""
+  },
+  "guido": {
+    "word": "guido",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 5510000,
+    "count": 4,
+    "exempt": ""
+  },
+  "pram": {
+    "word": "pram",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 5640000,
-    "count": 1,
+    "frequency": 5580000,
+    "count": 18,
     "exempt": ""
   },
-  "gem": {
-    "word": "gem",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 5760000,
+  "oslo": {
+    "word": "oslo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 5630000,
     "count": 2,
+    "exempt": ""
+  },
+  "undergo": {
+    "word": "undergo",
+    "len": 7,
+    "pos_list": "['verb']",
+    "frequency": 5870000,
+    "count": 1,
     "exempt": ""
   },
   "prop": {
@@ -900,39 +4260,31 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 5880000,
-    "count": 1,
+    "count": 4052,
     "exempt": ""
   },
-  "sap": {
-    "word": "sap",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 6280000,
-    "count": 1,
-    "exempt": ""
-  },
-  "dm": {
-    "word": "dm",
-    "len": 2,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 6300000,
-    "count": 1,
-    "exempt": ""
-  },
-  "goa": {
-    "word": "goa",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 6320000,
-    "count": 1,
-    "exempt": ""
-  },
-  "dust": {
-    "word": "dust",
+  "tang": {
+    "word": "tang",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 6340000,
+    "frequency": 5880000,
+    "count": 5,
+    "exempt": ""
+  },
+  "fiat": {
+    "word": "fiat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 5900000,
     "count": 1,
+    "exempt": ""
+  },
+  "verse": {
+    "word": "verse",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 6240000,
+    "count": 4,
     "exempt": ""
   },
   "mage": {
@@ -940,63 +4292,215 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 6340000,
+    "count": 1418,
+    "exempt": ""
+  },
+  "pike": {
+    "word": "pike",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 6400000,
     "count": 1,
     "exempt": ""
   },
-  "sonic": {
-    "word": "sonic",
+  "audit": {
+    "word": "audit",
     "len": 5,
-    "pos_list": "['adjective']",
-    "frequency": 6730000,
-    "count": 1,
-    "exempt": ""
-  },
-  "lend": {
-    "word": "lend",
-    "len": 4,
-    "pos_list": "['verb']",
-    "frequency": 6850000,
-    "count": 1,
-    "exempt": ""
-  },
-  "pill": {
-    "word": "pill",
-    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 7180000,
-    "count": 1,
-    "exempt": ""
-  },
-  "gin": {
-    "word": "gin",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 7190000,
-    "count": 1,
-    "exempt": ""
-  },
-  "ant": {
-    "word": "ant",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 7200000,
+    "frequency": 6400000,
     "count": 2,
     "exempt": ""
   },
-  "ware": {
-    "word": "ware",
+  "dish": {
+    "word": "dish",
     "len": 4,
-    "pos_list": "['adjective', 'exclamation', 'noun']",
-    "frequency": 7210000,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 6490000,
+    "count": 3,
+    "exempt": ""
+  },
+  "hint": {
+    "word": "hint",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 6580000,
+    "count": 2,
+    "exempt": ""
+  },
+  "daft": {
+    "word": "daft",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 6610000,
+    "count": 53,
+    "exempt": ""
+  },
+  "orion": {
+    "word": "orion",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 6620000,
     "count": 1,
     "exempt": ""
   },
-  "owl": {
-    "word": "owl",
-    "len": 3,
+  "lima": {
+    "word": "lima",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 7500000,
+    "frequency": 6670000,
+    "count": 39,
+    "exempt": ""
+  },
+  "bible": {
+    "word": "bible",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 6710000,
+    "count": 2,
+    "exempt": ""
+  },
+  "cola": {
+    "word": "cola",
+    "len": 4,
+    "pos_list": "['abbreviation', 'noun']",
+    "frequency": 6780000,
+    "count": 17,
+    "exempt": ""
+  },
+  "cage": {
+    "word": "cage",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 6910000,
+    "count": 41,
+    "exempt": ""
+  },
+  "dine": {
+    "word": "dine",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 6970000,
+    "count": 4,
+    "exempt": ""
+  },
+  "guided": {
+    "word": "guided",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 6990000,
+    "count": 16,
+    "exempt": ""
+  },
+  "sore": {
+    "word": "sore",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 7050000,
+    "count": 63,
+    "exempt": ""
+  },
+  "dino": {
+    "word": "dino",
+    "len": 4,
+    "pos_list": "['abbreviation', 'noun']",
+    "frequency": 7080000,
+    "count": 2,
+    "exempt": ""
+  },
+  "void": {
+    "word": "void",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 7130000,
+    "count": 17,
+    "exempt": ""
+  },
+  "dell": {
+    "word": "dell",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 7230000,
     "count": 1,
+    "exempt": ""
+  },
+  "tram": {
+    "word": "tram",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 7280000,
+    "count": 34,
+    "exempt": ""
+  },
+  "pile": {
+    "word": "pile",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7280000,
+    "count": 3,
+    "exempt": ""
+  },
+  "coat": {
+    "word": "coat",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7290000,
+    "count": 1,
+    "exempt": ""
+  },
+  "abode": {
+    "word": "abode",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7330000,
+    "count": 6,
+    "exempt": ""
+  },
+  "idol": {
+    "word": "idol",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 7410000,
+    "count": 1,
+    "exempt": ""
+  },
+  "galway": {
+    "word": "galway",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 7410000,
+    "count": 30,
+    "exempt": ""
+  },
+  "agony": {
+    "word": "agony",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 7470000,
+    "count": 3,
+    "exempt": ""
+  },
+  "puma": {
+    "word": "puma",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 7600000,
+    "count": 8,
+    "exempt": ""
+  },
+  "butt": {
+    "word": "butt",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7670000,
+    "count": 20,
+    "exempt": ""
+  },
+  "proton": {
+    "word": "proton",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 7690000,
+    "count": 4,
     "exempt": ""
   },
   "liver": {
@@ -1004,7 +4508,31 @@
     "len": 5,
     "pos_list": "['noun']",
     "frequency": 7730000,
+    "count": 919,
+    "exempt": ""
+  },
+  "dent": {
+    "word": "dent",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7740000,
     "count": 2,
+    "exempt": ""
+  },
+  "toner": {
+    "word": "toner",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 7770000,
+    "count": 3,
+    "exempt": ""
+  },
+  "hike": {
+    "word": "hike",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 7820000,
+    "count": 1,
     "exempt": ""
   },
   "crow": {
@@ -1012,14 +4540,22 @@
     "len": 4,
     "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 7880000,
-    "count": 1,
+    "count": 6,
     "exempt": ""
   },
-  "rid": {
-    "word": "rid",
-    "len": 3,
+  "propose": {
+    "word": "propose",
+    "len": 7,
     "pos_list": "['verb']",
-    "frequency": 7990000,
+    "frequency": 7940000,
+    "count": 6,
+    "exempt": ""
+  },
+  "liable": {
+    "word": "liable",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 8020000,
     "count": 1,
     "exempt": ""
   },
@@ -1028,62 +4564,150 @@
     "len": 4,
     "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 8050000,
+    "count": 60,
+    "exempt": ""
+  },
+  "essay": {
+    "word": "essay",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 8140000,
+    "count": 1,
+    "exempt": ""
+  },
+  "purse": {
+    "word": "purse",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 8370000,
     "count": 2,
     "exempt": ""
   },
-  "ear": {
-    "word": "ear",
-    "len": 3,
+  "webcam": {
+    "word": "webcam",
+    "len": 6,
     "pos_list": "['noun']",
-    "frequency": 8230000,
-    "count": 4,
+    "frequency": 8400000,
+    "count": 6,
     "exempt": ""
   },
-  "sting": {
-    "word": "sting",
+  "protocol": {
+    "word": "protocol",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 8490000,
+    "count": 1,
+    "exempt": ""
+  },
+  "tide": {
+    "word": "tide",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 8780000,
+    "count": 62,
+    "exempt": ""
+  },
+  "gate": {
+    "word": "gate",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9010000,
+    "count": 9,
+    "exempt": ""
+  },
+  "tear": {
+    "word": "tear",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9040000,
+    "count": 34,
+    "exempt": ""
+  },
+  "pony": {
+    "word": "pony",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9070000,
+    "count": 3,
+    "exempt": ""
+  },
+  "chip": {
+    "word": "chip",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9080000,
+    "count": 12,
+    "exempt": ""
+  },
+  "rinse": {
+    "word": "rinse",
     "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 8270000,
+    "frequency": 9240000,
     "count": 1,
     "exempt": ""
   },
-  "engage": {
-    "word": "engage",
-    "len": 6,
-    "pos_list": "['verb']",
-    "frequency": 8340000,
-    "count": 1,
-    "exempt": ""
-  },
-  "eco": {
-    "word": "eco",
-    "len": 3,
-    "pos_list": "['adjective']",
-    "frequency": 8370000,
-    "count": 1,
-    "exempt": ""
-  },
-  "cove": {
-    "word": "cove",
+  "rope": {
+    "word": "rope",
     "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 8510000,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9390000,
+    "count": 2,
+    "exempt": ""
+  },
+  "tile": {
+    "word": "tile",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9410000,
+    "count": 13,
+    "exempt": ""
+  },
+  "contrast": {
+    "word": "contrast",
+    "len": 8,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9420000,
+    "count": 3,
+    "exempt": ""
+  },
+  "trap": {
+    "word": "trap",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9440000,
+    "count": 94,
+    "exempt": ""
+  },
+  "vile": {
+    "word": "vile",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 9440000,
     "count": 1,
     "exempt": ""
   },
-  "rat": {
-    "word": "rat",
-    "len": 3,
-    "pos_list": "['exclamation', 'noun', 'verb']",
-    "frequency": 8620000,
-    "count": 8,
+  "abortion": {
+    "word": "abortion",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 9470000,
+    "count": 1,
     "exempt": ""
   },
-  "ali": {
-    "word": "ali",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 9230000,
+  "disco": {
+    "word": "disco",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 9510000,
+    "count": 1,
+    "exempt": ""
+  },
+  "captive": {
+    "word": "captive",
+    "len": 7,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 9600000,
     "count": 1,
     "exempt": ""
   },
@@ -1092,23 +4716,39 @@
     "len": 4,
     "pos_list": "['adverb', 'noun']",
     "frequency": 9910000,
-    "count": 1,
+    "count": 14,
     "exempt": ""
   },
-  "careful": {
-    "word": "careful",
-    "len": 7,
-    "pos_list": "['adjective']",
-    "frequency": 10400000,
-    "count": 1,
-    "exempt": ""
-  },
-  "spec": {
-    "word": "spec",
+  "sail": {
+    "word": "sail",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 10500000,
-    "count": 2,
+    "frequency": 9930000,
+    "count": 1,
+    "exempt": ""
+  },
+  "ample": {
+    "word": "ample",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 10100000,
+    "count": 3,
+    "exempt": ""
+  },
+  "grade": {
+    "word": "grade",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 10300000,
+    "count": 6,
+    "exempt": ""
+  },
+  "mead": {
+    "word": "mead",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 10400000,
+    "count": 1,
     "exempt": ""
   },
   "nest": {
@@ -1116,7 +4756,47 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 10500000,
+    "count": 21,
+    "exempt": ""
+  },
+  "magical": {
+    "word": "magical",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 10500000,
     "count": 1,
+    "exempt": ""
+  },
+  "pine": {
+    "word": "pine",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 10600000,
+    "count": 3,
+    "exempt": ""
+  },
+  "jade": {
+    "word": "jade",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 10700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "tray": {
+    "word": "tray",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 10700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "interim": {
+    "word": "interim",
+    "len": 7,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 10700000,
+    "count": 3,
     "exempt": ""
   },
   "ratio": {
@@ -1124,7 +4804,7 @@
     "len": 5,
     "pos_list": "['noun']",
     "frequency": 10900000,
-    "count": 1,
+    "count": 4,
     "exempt": ""
   },
   "chin": {
@@ -1132,15 +4812,79 @@
     "len": 4,
     "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 11100000,
+    "count": 2,
+    "exempt": ""
+  },
+  "cape": {
+    "word": "cape",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 11100000,
     "count": 1,
     "exempt": ""
   },
-  "critic": {
-    "word": "critic",
-    "len": 6,
+  "apology": {
+    "word": "apology",
+    "len": 7,
     "pos_list": "['noun']",
-    "frequency": 11300000,
+    "frequency": 11100000,
     "count": 1,
+    "exempt": ""
+  },
+  "rift": {
+    "word": "rift",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 11200000,
+    "count": 1,
+    "exempt": ""
+  },
+  "neat": {
+    "word": "neat",
+    "len": 4,
+    "pos_list": "['abbreviation', 'adjective', 'noun']",
+    "frequency": 11400000,
+    "count": 43,
+    "exempt": ""
+  },
+  "prom": {
+    "word": "prom",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 11400000,
+    "count": 23,
+    "exempt": ""
+  },
+  "lime": {
+    "word": "lime",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 11400000,
+    "count": 10,
+    "exempt": ""
+  },
+  "wage": {
+    "word": "wage",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 11400000,
+    "count": 10,
+    "exempt": ""
+  },
+  "calm": {
+    "word": "calm",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 11400000,
+    "count": 4,
+    "exempt": ""
+  },
+  "fort": {
+    "word": "fort",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 11500000,
+    "count": 31,
     "exempt": ""
   },
   "tent": {
@@ -1148,39 +4892,119 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 11500000,
+    "count": 5,
+    "exempt": ""
+  },
+  "lego": {
+    "word": "lego",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 11700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "genre": {
+    "word": "genre",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 11800000,
+    "count": 14,
+    "exempt": ""
+  },
+  "straw": {
+    "word": "straw",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 11800000,
+    "count": 10,
+    "exempt": ""
+  },
+  "prep": {
+    "word": "prep",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 12000000,
+    "count": 13,
+    "exempt": ""
+  },
+  "nike": {
+    "word": "nike",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 12100000,
+    "count": 3,
+    "exempt": ""
+  },
+  "brit": {
+    "word": "brit",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 12200000,
+    "count": 1,
+    "exempt": ""
+  },
+  "neon": {
+    "word": "neon",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 12400000,
     "count": 2,
     "exempt": ""
   },
-  "bow": {
-    "word": "bow",
-    "len": 3,
+  "invoice": {
+    "word": "invoice",
+    "len": 7,
     "pos_list": "['noun', 'verb']",
-    "frequency": 11600000,
+    "frequency": 12400000,
+    "count": 43,
+    "exempt": ""
+  },
+  "laboratory": {
+    "word": "laboratory",
+    "len": 10,
+    "pos_list": "['noun']",
+    "frequency": 12400000,
     "count": 1,
     "exempt": ""
   },
-  "wool": {
-    "word": "wool",
+  "saga": {
+    "word": "saga",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 11600000,
+    "frequency": 12500000,
+    "count": 27,
+    "exempt": ""
+  },
+  "grab": {
+    "word": "grab",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 12500000,
+    "count": 13,
+    "exempt": ""
+  },
+  "oval": {
+    "word": "oval",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 13000000,
     "count": 1,
     "exempt": ""
   },
-  "hon": {
-    "word": "hon",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 12600000,
-    "count": 1,
-    "exempt": ""
-  },
-  "alter": {
-    "word": "alter",
+  "shave": {
+    "word": "shave",
     "len": 5,
-    "pos_list": "['verb']",
-    "frequency": 12900000,
-    "count": 1,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 13100000,
+    "count": 10,
+    "exempt": ""
+  },
+  "mama": {
+    "word": "mama",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 13400000,
+    "count": 17,
     "exempt": ""
   },
   "ally": {
@@ -1188,29 +5012,37 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 13500000,
-    "count": 4,
+    "count": 430,
     "exempt": ""
   },
-  "bra": {
-    "word": "bra",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 14200000,
-    "count": 5,
-    "exempt": ""
-  },
-  "mat": {
-    "word": "mat",
-    "len": 3,
+  "ease": {
+    "word": "ease",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 14400000,
+    "frequency": 13500000,
     "count": 2,
     "exempt": ""
   },
-  "tail": {
-    "word": "tail",
-    "len": 4,
+  "desire": {
+    "word": "desire",
+    "len": 6,
     "pos_list": "['noun', 'verb']",
+    "frequency": 13700000,
+    "count": 13,
+    "exempt": ""
+  },
+  "dean": {
+    "word": "dean",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 14000000,
+    "count": 31,
+    "exempt": ""
+  },
+  "fraud": {
+    "word": "fraud",
+    "len": 5,
+    "pos_list": "['noun']",
     "frequency": 14400000,
     "count": 2,
     "exempt": ""
@@ -1220,23 +5052,31 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 14500000,
-    "count": 1,
+    "count": 10,
     "exempt": ""
   },
-  "lit": {
-    "word": "lit",
-    "len": 3,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 14600000,
-    "count": 4,
-    "exempt": ""
-  },
-  "custom": {
-    "word": "custom",
+  "proven": {
+    "word": "proven",
     "len": 6,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 14900000,
+    "pos_list": "['adjective']",
+    "frequency": 14500000,
     "count": 1,
+    "exempt": ""
+  },
+  "trio": {
+    "word": "trio",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 14700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "core": {
+    "word": "core",
+    "len": 4,
+    "pos_list": "['abbreviation', 'noun', 'verb']",
+    "frequency": 14900000,
+    "count": 3,
     "exempt": ""
   },
   "quest": {
@@ -1244,55 +5084,119 @@
     "len": 5,
     "pos_list": "['noun', 'verb']",
     "frequency": 15200000,
-    "count": 1,
+    "count": 2,
     "exempt": ""
   },
-  "cam": {
-    "word": "cam",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun']",
-    "frequency": 15400000,
-    "count": 1,
-    "exempt": ""
-  },
-  "raid": {
-    "word": "raid",
+  "bust": {
+    "word": "bust",
     "len": 4,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 15700000,
-    "count": 1,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 15300000,
+    "count": 9,
     "exempt": ""
   },
-  "era": {
-    "word": "era",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun']",
-    "frequency": 16100000,
-    "count": 1,
-    "exempt": ""
-  },
-  "pie": {
-    "word": "pie",
-    "len": 3,
+  "goods": {
+    "word": "goods",
+    "len": 5,
     "pos_list": "['noun']",
-    "frequency": 16600000,
+    "frequency": 15300000,
+    "count": 4,
+    "exempt": ""
+  },
+  "pole": {
+    "word": "pole",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 15500000,
+    "count": 6,
+    "exempt": ""
+  },
+  "creator": {
+    "word": "creator",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 15600000,
     "count": 1,
     "exempt": ""
   },
-  "format": {
-    "word": "format",
+  "rage": {
+    "word": "rage",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 15800000,
+    "count": 164,
+    "exempt": ""
+  },
+  "auto": {
+    "word": "auto",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 15900000,
+    "count": 2,
+    "exempt": ""
+  },
+  "tier": {
+    "word": "tier",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 15900000,
+    "count": 2,
+    "exempt": ""
+  },
+  "oven": {
+    "word": "oven",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 15900000,
+    "count": 1,
+    "exempt": ""
+  },
+  "toned": {
+    "word": "toned",
+    "len": 5,
+    "pos_list": "['adjective']",
+    "frequency": 16000000,
+    "count": 16,
+    "exempt": ""
+  },
+  "dear": {
+    "word": "dear",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'exclamation', 'noun']",
+    "frequency": 16100000,
+    "count": 33,
+    "exempt": ""
+  },
+  "mint": {
+    "word": "mint",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 16400000,
+    "count": 2,
+    "exempt": ""
+  },
+  "epic": {
+    "word": "epic",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 16700000,
+    "count": 6,
+    "exempt": ""
+  },
+  "strain": {
+    "word": "strain",
     "len": 6,
     "pos_list": "['noun', 'verb']",
-    "frequency": 17200000,
+    "frequency": 16700000,
     "count": 1,
     "exempt": ""
   },
-  "inform": {
-    "word": "inform",
-    "len": 6,
-    "pos_list": "['verb']",
-    "frequency": 17200000,
-    "count": 1,
+  "ivory": {
+    "word": "ivory",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 16900000,
+    "count": 2,
     "exempt": ""
   },
   "pose": {
@@ -1300,31 +5204,47 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 17400000,
-    "count": 1,
+    "count": 1361,
     "exempt": ""
   },
-  "cap": {
-    "word": "cap",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 17600000,
+  "mart": {
+    "word": "mart",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 17400000,
     "count": 2,
     "exempt": ""
   },
-  "ace": {
-    "word": "ace",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'noun', 'verb']",
-    "frequency": 17900000,
-    "count": 1,
+  "pale": {
+    "word": "pale",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 17500000,
+    "count": 3,
     "exempt": ""
   },
-  "skill": {
-    "word": "skill",
+  "fame": {
+    "word": "fame",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 17600000,
+    "count": 8,
+    "exempt": ""
+  },
+  "scan": {
+    "word": "scan",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 17700000,
+    "count": 10,
+    "exempt": ""
+  },
+  "teach": {
+    "word": "teach",
     "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 18200000,
-    "count": 1,
+    "frequency": 18100000,
+    "count": 10,
     "exempt": ""
   },
   "sing": {
@@ -1332,7 +5252,15 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 18800000,
-    "count": 1,
+    "count": 6,
+    "exempt": ""
+  },
+  "trim": {
+    "word": "trim",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 18900000,
+    "count": 12,
     "exempt": ""
   },
   "aware": {
@@ -1340,47 +5268,47 @@
     "len": 5,
     "pos_list": "['adjective']",
     "frequency": 18900000,
-    "count": 1,
+    "count": 8,
     "exempt": ""
   },
-  "rod": {
-    "word": "rod",
-    "len": 3,
+  "forest": {
+    "word": "forest",
+    "len": 6,
     "pos_list": "['noun']",
-    "frequency": 19300000,
-    "count": 2,
+    "frequency": 19100000,
+    "count": 3,
     "exempt": ""
   },
-  "earl": {
-    "word": "earl",
-    "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 19300000,
-    "count": 1,
-    "exempt": ""
-  },
-  "intel": {
-    "word": "intel",
+  "props": {
+    "word": "props",
     "len": 5,
     "pos_list": "['noun']",
-    "frequency": 20200000,
-    "count": 1,
+    "frequency": 19600000,
+    "count": 13,
     "exempt": ""
   },
-  "lay": {
-    "word": "lay",
-    "len": 3,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 20300000,
-    "count": 1,
+  "actual": {
+    "word": "actual",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 19600000,
+    "count": 430,
     "exempt": ""
   },
-  "ton": {
-    "word": "ton",
-    "len": 3,
+  "scam": {
+    "word": "scam",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 20100000,
+    "count": 163,
+    "exempt": ""
+  },
+  "brad": {
+    "word": "brad",
+    "len": 4,
     "pos_list": "['noun']",
     "frequency": 20600000,
-    "count": 1,
+    "count": 24,
     "exempt": ""
   },
   "native": {
@@ -1388,103 +5316,135 @@
     "len": 6,
     "pos_list": "['adjective', 'noun']",
     "frequency": 20600000,
-    "count": 1,
+    "count": 3,
     "exempt": ""
   },
-  "sin": {
-    "word": "sin",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 20900000,
-    "count": 2,
-    "exempt": ""
-  },
-  "fully": {
-    "word": "fully",
-    "len": 5,
-    "pos_list": "['adverb']",
-    "frequency": 21100000,
-    "count": 1,
-    "exempt": ""
-  },
-  "pot": {
-    "word": "pot",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 21300000,
-    "count": 1,
-    "exempt": ""
-  },
-  "comp": {
-    "word": "comp",
+  "ford": {
+    "word": "ford",
     "len": 4,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 21300000,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 20700000,
+    "count": 31,
+    "exempt": ""
+  },
+  "lion": {
+    "word": "lion",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 20700000,
+    "count": 5,
+    "exempt": ""
+  },
+  "strap": {
+    "word": "strap",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 20900000,
+    "count": 41,
+    "exempt": ""
+  },
+  "neither": {
+    "word": "neither",
+    "len": 7,
+    "pos_list": "['adverb', 'determiner', 'pronoun']",
+    "frequency": 20900000,
+    "count": 39,
+    "exempt": ""
+  },
+  "gain": {
+    "word": "gain",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 21000000,
     "count": 1,
     "exempt": ""
   },
-  "mic": {
-    "word": "mic",
-    "len": 3,
+  "cold": {
+    "word": "cold",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 21100000,
+    "count": 6,
+    "exempt": ""
+  },
+  "count": {
+    "word": "count",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 21200000,
+    "count": 63,
+    "exempt": ""
+  },
+  "signal": {
+    "word": "signal",
+    "len": 6,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 21200000,
+    "count": 32,
+    "exempt": ""
+  },
+  "usage": {
+    "word": "usage",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 21300000,
+    "count": 6,
+    "exempt": ""
+  },
+  "planner": {
+    "word": "planner",
+    "len": 7,
     "pos_list": "['noun']",
     "frequency": 21600000,
     "count": 1,
     "exempt": ""
   },
-  "develop": {
-    "word": "develop",
-    "len": 7,
-    "pos_list": "['verb']",
-    "frequency": 21600000,
-    "count": 1,
-    "exempt": ""
-  },
-  "hop": {
-    "word": "hop",
-    "len": 3,
+  "crew": {
+    "word": "crew",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 21800000,
-    "count": 1,
+    "count": 7,
     "exempt": ""
   },
-  "hang": {
-    "word": "hang",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 22500000,
-    "count": 1,
-    "exempt": ""
-  },
-  "deliver": {
-    "word": "deliver",
+  "signage": {
+    "word": "signage",
     "len": 7,
-    "pos_list": "['verb']",
-    "frequency": 22600000,
-    "count": 1,
+    "pos_list": "['noun']",
+    "frequency": 22200000,
+    "count": 3,
     "exempt": ""
   },
-  "vice": {
-    "word": "vice",
+  "aide": {
+    "word": "aide",
     "len": 4,
-    "pos_list": "['noun', 'preposition']",
-    "frequency": 23000000,
-    "count": 1,
+    "pos_list": "['noun']",
+    "frequency": 22800000,
+    "count": 15,
     "exempt": ""
   },
-  "edge": {
-    "word": "edge",
+  "diet": {
+    "word": "diet",
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 23300000,
-    "count": 1,
+    "count": 2,
     "exempt": ""
   },
-  "wire": {
-    "word": "wire",
+  "papa": {
+    "word": "papa",
     "len": 4,
-    "pos_list": "['noun', 'verb']",
+    "pos_list": "['noun']",
     "frequency": 23500000,
-    "count": 1,
+    "count": 2,
+    "exempt": ""
+  },
+  "supermarket": {
+    "word": "supermarket",
+    "len": 11,
+    "pos_list": "['noun']",
+    "frequency": 23500000,
+    "count": 2,
     "exempt": ""
   },
   "file": {
@@ -1495,52 +5455,84 @@
     "count": 1,
     "exempt": ""
   },
-  "ski": {
-    "word": "ski",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 24000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tale": {
-    "word": "tale",
-    "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 24000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "luck": {
-    "word": "luck",
-    "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 24300000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tick": {
-    "word": "tick",
+  "soap": {
+    "word": "soap",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 24900000,
+    "frequency": 23900000,
+    "count": 21,
+    "exempt": ""
+  },
+  "hide": {
+    "word": "hide",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 24100000,
+    "count": 4,
+    "exempt": ""
+  },
+  "strategic": {
+    "word": "strategic",
+    "len": 9,
+    "pos_list": "['adjective']",
+    "frequency": 24100000,
     "count": 1,
     "exempt": ""
   },
-  "ate": {
-    "word": "ate",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 25000000,
-    "count": 13,
+  "gary": {
+    "word": "gary",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 24400000,
+    "count": 9,
     "exempt": ""
   },
-  "lab": {
-    "word": "lab",
-    "len": 3,
-    "pos_list": "['noun']",
+  "trail": {
+    "word": "trail",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 24400000,
+    "count": 1,
+    "exempt": ""
+  },
+  "gear": {
+    "word": "gear",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 24800000,
+    "count": 66,
+    "exempt": ""
+  },
+  "chic": {
+    "word": "chic",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 24800000,
+    "count": 6,
+    "exempt": ""
+  },
+  "oral": {
+    "word": "oral",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
     "frequency": 25000000,
     "count": 3,
+    "exempt": ""
+  },
+  "arab": {
+    "word": "arab",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 25100000,
+    "count": 4,
+    "exempt": ""
+  },
+  "polo": {
+    "word": "polo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 25400000,
+    "count": 5,
     "exempt": ""
   },
   "vast": {
@@ -1548,47 +5540,31 @@
     "len": 4,
     "pos_list": "['adjective', 'noun']",
     "frequency": 25600000,
-    "count": 1,
+    "count": 8,
     "exempt": ""
   },
-  "aid": {
-    "word": "aid",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 26000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "thin": {
-    "word": "thin",
-    "len": 4,
-    "pos_list": "['adjective', 'adverb', 'verb']",
-    "frequency": 26300000,
-    "count": 2,
-    "exempt": ""
-  },
-  "lace": {
-    "word": "lace",
+  "nose": {
+    "word": "nose",
     "len": 4,
     "pos_list": "['noun', 'verb']",
+    "frequency": 26300000,
+    "count": 6,
+    "exempt": ""
+  },
+  "prove": {
+    "word": "prove",
+    "len": 5,
+    "pos_list": "['verb']",
     "frequency": 26400000,
     "count": 1,
     "exempt": ""
   },
-  "tan": {
-    "word": "tan",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'noun', 'verb']",
-    "frequency": 26500000,
-    "count": 5,
-    "exempt": ""
-  },
-  "sight": {
-    "word": "sight",
-    "len": 5,
+  "parade": {
+    "word": "parade",
+    "len": 6,
     "pos_list": "['noun', 'verb']",
-    "frequency": 26700000,
-    "count": 1,
+    "frequency": 26400000,
+    "count": 4,
     "exempt": ""
   },
   "import": {
@@ -1596,7 +5572,15 @@
     "len": 6,
     "pos_list": "['noun', 'verb']",
     "frequency": 26800000,
-    "count": 2,
+    "count": 500,
+    "exempt": ""
+  },
+  "meat": {
+    "word": "meat",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 26900000,
+    "count": 1,
     "exempt": ""
   },
   "camp": {
@@ -1604,15 +5588,39 @@
     "len": 4,
     "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 27200000,
+    "count": 2930,
+    "exempt": ""
+  },
+  "proposal": {
+    "word": "proposal",
+    "len": 8,
+    "pos_list": "['noun']",
+    "frequency": 27900000,
     "count": 1,
     "exempt": ""
   },
-  "spoke": {
-    "word": "spoke",
+  "plane": {
+    "word": "plane",
     "len": 5,
-    "pos_list": "['noun', 'verb']",
+    "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 28000000,
-    "count": 1,
+    "count": 2,
+    "exempt": ""
+  },
+  "anna": {
+    "word": "anna",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 28300000,
+    "count": 27,
+    "exempt": ""
+  },
+  "tory": {
+    "word": "tory",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 28300000,
+    "count": 5,
     "exempt": ""
   },
   "mess": {
@@ -1620,39 +5628,23 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 28400000,
+    "count": 3295,
+    "exempt": ""
+  },
+  "mate": {
+    "word": "mate",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 28900000,
     "count": 2,
     "exempt": ""
   },
-  "lock": {
-    "word": "lock",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 28700000,
-    "count": 1,
-    "exempt": ""
-  },
-  "lie": {
-    "word": "lie",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 28800000,
-    "count": 1,
-    "exempt": ""
-  },
-  "inter": {
-    "word": "inter",
+  "cream": {
+    "word": "cream",
     "len": 5,
-    "pos_list": "['verb']",
-    "frequency": 28900000,
-    "count": 1,
-    "exempt": ""
-  },
-  "ink": {
-    "word": "ink",
-    "len": 3,
     "pos_list": "['noun', 'verb']",
-    "frequency": 29200000,
-    "count": 4,
+    "frequency": 29100000,
+    "count": 19,
     "exempt": ""
   },
   "anne": {
@@ -1660,15 +5652,15 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 29200000,
-    "count": 1,
+    "count": 2,
     "exempt": ""
   },
-  "eat": {
-    "word": "eat",
-    "len": 3,
+  "debut": {
+    "word": "debut",
+    "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 29600000,
-    "count": 5,
+    "frequency": 29700000,
+    "count": 30,
     "exempt": ""
   },
   "fine": {
@@ -1676,79 +5668,143 @@
     "len": 4,
     "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
     "frequency": 29800000,
-    "count": 2,
+    "count": 920,
     "exempt": ""
   },
-  "bin": {
-    "word": "bin",
-    "len": 3,
+  "seal": {
+    "word": "seal",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 30200000,
-    "count": 2,
+    "frequency": 29900000,
+    "count": 32,
     "exempt": ""
   },
-  "bus": {
-    "word": "bus",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 30200000,
-    "count": 1,
-    "exempt": ""
-  },
-  "addition": {
-    "word": "addition",
-    "len": 8,
+  "peru": {
+    "word": "peru",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 30600000,
+    "frequency": 29900000,
+    "count": 2,
+    "exempt": ""
+  },
+  "button": {
+    "word": "button",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 29900000,
+    "count": 20,
+    "exempt": ""
+  },
+  "boat": {
+    "word": "boat",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 30500000,
     "count": 1,
     "exempt": ""
   },
-  "rob": {
-    "word": "rob",
-    "len": 3,
-    "pos_list": "['verb']",
+  "marked": {
+    "word": "marked",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 30700000,
+    "count": 17,
+    "exempt": ""
+  },
+  "lying": {
+    "word": "lying",
+    "len": 5,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 30800000,
+    "count": 1,
+    "exempt": ""
+  },
+  "keen": {
+    "word": "keen",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 30900000,
     "count": 1,
     "exempt": ""
   },
-  "hear": {
-    "word": "hear",
+  "vale": {
+    "word": "vale",
     "len": 4,
-    "pos_list": "['verb']",
-    "frequency": 33400000,
+    "pos_list": "['exclamation', 'noun']",
+    "frequency": 30900000,
     "count": 1,
     "exempt": ""
   },
-  "additional": {
-    "word": "additional",
-    "len": 10,
+  "diary": {
+    "word": "diary",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 30900000,
+    "count": 1,
+    "exempt": ""
+  },
+  "leap": {
+    "word": "leap",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 31700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "pure": {
+    "word": "pure",
+    "len": 4,
     "pos_list": "['adjective']",
-    "frequency": 34400000,
+    "frequency": 31900000,
+    "count": 18,
+    "exempt": ""
+  },
+  "sand": {
+    "word": "sand",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 32000000,
+    "count": 30,
+    "exempt": ""
+  },
+  "meal": {
+    "word": "meal",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 32300000,
     "count": 1,
     "exempt": ""
   },
-  "storm": {
-    "word": "storm",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 35700000,
+  "else": {
+    "word": "else",
+    "len": 4,
+    "pos_list": "['adverb']",
+    "frequency": 33800000,
+    "count": 4,
+    "exempt": ""
+  },
+  "signing": {
+    "word": "signing",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 33800000,
     "count": 1,
     "exempt": ""
   },
-  "stick": {
-    "word": "stick",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
+  "designer": {
+    "word": "designer",
+    "len": 8,
+    "pos_list": "['adjective', 'noun']",
     "frequency": 35800000,
     "count": 1,
     "exempt": ""
   },
-  "fit": {
-    "word": "fit",
-    "len": 3,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 36700000,
-    "count": 1,
+  "plant": {
+    "word": "plant",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 36600000,
+    "count": 2,
     "exempt": ""
   },
   "pain": {
@@ -1759,20 +5815,28 @@
     "count": 1,
     "exempt": ""
   },
-  "pen": {
-    "word": "pen",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 37200000,
+  "proper": {
+    "word": "proper",
+    "len": 6,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 36900000,
     "count": 1,
     "exempt": ""
   },
-  "cat": {
-    "word": "cat",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 37400000,
-    "count": 2,
+  "superb": {
+    "word": "superb",
+    "len": 6,
+    "pos_list": "['adjective']",
+    "frequency": 37200000,
+    "count": 4,
+    "exempt": ""
+  },
+  "plain": {
+    "word": "plain",
+    "len": 5,
+    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
+    "frequency": 37500000,
+    "count": 1,
     "exempt": ""
   },
   "brain": {
@@ -1783,68 +5847,108 @@
     "count": 1,
     "exempt": ""
   },
-  "ill": {
-    "word": "ill",
-    "len": 3,
-    "pos_list": "['adjective', 'adverb', 'noun']",
-    "frequency": 38700000,
+  "mars": {
+    "word": "mars",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 37900000,
+    "count": 13,
+    "exempt": ""
+  },
+  "mile": {
+    "word": "mile",
+    "len": 4,
+    "pos_list": "['adverb', 'noun']",
+    "frequency": 38200000,
     "count": 2,
     "exempt": ""
   },
-  "object": {
-    "word": "object",
-    "len": 6,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 38700000,
-    "count": 1,
-    "exempt": ""
-  },
-  "kill": {
-    "word": "kill",
+  "crop": {
+    "word": "crop",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 39100000,
-    "count": 1,
+    "frequency": 38300000,
+    "count": 36,
     "exempt": ""
   },
-  "talent": {
-    "word": "talent",
-    "len": 6,
-    "pos_list": "['noun']",
-    "frequency": 39100000,
-    "count": 1,
-    "exempt": ""
-  },
-  "detail": {
-    "word": "detail",
-    "len": 6,
+  "hire": {
+    "word": "hire",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 39800000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tin": {
-    "word": "tin",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 40800000,
+    "frequency": 39300000,
     "count": 3,
     "exempt": ""
   },
-  "build": {
-    "word": "build",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 42200000,
+  "mine": {
+    "word": "mine",
+    "len": 4,
+    "pos_list": "['determiner', 'noun', 'possessive', 'pronoun', 'verb']",
+    "frequency": 39700000,
     "count": 2,
     "exempt": ""
   },
-  "fan": {
-    "word": "fan",
-    "len": 3,
+  "cause": {
+    "word": "cause",
+    "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 43400000,
+    "frequency": 40700000,
+    "count": 20,
+    "exempt": ""
+  },
+  "honor": {
+    "word": "honor",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 42300000,
+    "count": 3,
+    "exempt": ""
+  },
+  "rome": {
+    "word": "rome",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 43500000,
+    "count": 55,
+    "exempt": ""
+  },
+  "cool": {
+    "word": "cool",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 43600000,
     "count": 1,
+    "exempt": ""
+  },
+  "lose": {
+    "word": "lose",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 44000000,
+    "count": 2,
+    "exempt": ""
+  },
+  "magic": {
+    "word": "magic",
+    "len": 5,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 44900000,
+    "count": 1,
+    "exempt": ""
+  },
+  "jean": {
+    "word": "jean",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 45000000,
+    "count": 1,
+    "exempt": ""
+  },
+  "rant": {
+    "word": "rant",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 45300000,
+    "count": 5,
     "exempt": ""
   },
   "rain": {
@@ -1852,53 +5956,69 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 45700000,
-    "count": 2,
+    "count": 8,
     "exempt": ""
   },
-  "actor": {
-    "word": "actor",
-    "len": 5,
-    "pos_list": "['noun']",
-    "frequency": 47200000,
+  "nine": {
+    "word": "nine",
+    "len": 4,
+    "pos_list": "['cardinal', 'number']",
+    "frequency": 45900000,
+    "count": 14,
+    "exempt": ""
+  },
+  "tiny": {
+    "word": "tiny",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 46200000,
     "count": 1,
     "exempt": ""
   },
-  "sit": {
-    "word": "sit",
-    "len": 3,
+  "fall": {
+    "word": "fall",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 46700000,
+    "count": 1,
+    "exempt": ""
+  },
+  "award": {
+    "word": "award",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 48000000,
+    "count": 8,
+    "exempt": ""
+  },
+  "rail": {
+    "word": "rail",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 48900000,
-    "count": 3,
-    "exempt": ""
-  },
-  "produce": {
-    "word": "produce",
-    "len": 7,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 50600000,
-    "count": 1,
-    "exempt": ""
-  },
-  "nation": {
-    "word": "nation",
-    "len": 6,
-    "pos_list": "['noun']",
-    "frequency": 51700000,
     "count": 2,
     "exempt": ""
   },
-  "ben": {
-    "word": "ben",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 54700000,
+  "cast": {
+    "word": "cast",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 50400000,
+    "count": 15,
+    "exempt": ""
+  },
+  "trial": {
+    "word": "trial",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 55100000,
     "count": 1,
     "exempt": ""
   },
-  "hall": {
-    "word": "hall",
-    "len": 4,
-    "pos_list": "['noun']",
+  "vision": {
+    "word": "vision",
+    "len": 6,
+    "pos_list": "['noun', 'verb']",
     "frequency": 55900000,
     "count": 1,
     "exempt": ""
@@ -1908,7 +6028,7 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 56000000,
-    "count": 2,
+    "count": 4,
     "exempt": ""
   },
   "ride": {
@@ -1916,15 +6036,47 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 56900000,
-    "count": 1,
+    "count": 4,
     "exempt": ""
   },
-  "row": {
-    "word": "row",
-    "len": 3,
+  "ball": {
+    "word": "ball",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 57100000,
-    "count": 2,
+    "frequency": 57200000,
+    "count": 3,
+    "exempt": ""
+  },
+  "marker": {
+    "word": "marker",
+    "len": 6,
+    "pos_list": "['noun']",
+    "frequency": 59200000,
+    "count": 15,
+    "exempt": ""
+  },
+  "purple": {
+    "word": "purple",
+    "len": 6,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 59400000,
+    "count": 3,
+    "exempt": ""
+  },
+  "gift": {
+    "word": "gift",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 59800000,
+    "count": 4,
+    "exempt": ""
+  },
+  "tony": {
+    "word": "tony",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 60500000,
+    "count": 6,
     "exempt": ""
   },
   "mall": {
@@ -1932,7 +6084,7 @@
     "len": 4,
     "pos_list": "['noun']",
     "frequency": 60800000,
-    "count": 1,
+    "count": 2,
     "exempt": ""
   },
   "code": {
@@ -1940,6 +6092,22 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 61100000,
+    "count": 9,
+    "exempt": ""
+  },
+  "pair": {
+    "word": "pair",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 61500000,
+    "count": 14,
+    "exempt": ""
+  },
+  "mike": {
+    "word": "mike",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 62100000,
     "count": 1,
     "exempt": ""
   },
@@ -1948,39 +6116,23 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 62800000,
-    "count": 3,
+    "count": 500,
     "exempt": ""
   },
-  "tea": {
-    "word": "tea",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 65300000,
-    "count": 2,
-    "exempt": ""
-  },
-  "hand": {
-    "word": "hand",
+  "seat": {
+    "word": "seat",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 66000000,
-    "count": 1,
+    "frequency": 64300000,
+    "count": 21,
     "exempt": ""
   },
-  "tab": {
-    "word": "tab",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 66600000,
-    "count": 1,
-    "exempt": ""
-  },
-  "appear": {
-    "word": "appear",
-    "len": 6,
-    "pos_list": "['verb']",
-    "frequency": 67700000,
-    "count": 1,
+  "postage": {
+    "word": "postage",
+    "len": 7,
+    "pos_list": "['noun']",
+    "frequency": 66900000,
+    "count": 2,
     "exempt": ""
   },
   "brand": {
@@ -1988,31 +6140,39 @@
     "len": 5,
     "pos_list": "['noun', 'verb']",
     "frequency": 67800000,
-    "count": 3,
+    "count": 2462,
     "exempt": ""
   },
-  "design": {
-    "word": "design",
-    "len": 6,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 67900000,
-    "count": 1,
-    "exempt": ""
-  },
-  "die": {
-    "word": "die",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
+  "aged": {
+    "word": "aged",
+    "len": 4,
+    "pos_list": "['adjective']",
     "frequency": 68000000,
+    "count": 49,
+    "exempt": ""
+  },
+  "mode": {
+    "word": "mode",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 69000000,
+    "count": 4,
+    "exempt": ""
+  },
+  "lane": {
+    "word": "lane",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 69000000,
     "count": 2,
     "exempt": ""
   },
-  "min": {
-    "word": "min",
-    "len": 3,
+  "apple": {
+    "word": "apple",
+    "len": 5,
     "pos_list": "['noun']",
     "frequency": 69600000,
-    "count": 2,
+    "count": 3,
     "exempt": ""
   },
   "ring": {
@@ -2023,84 +6183,100 @@
     "count": 1,
     "exempt": ""
   },
-  "pub": {
-    "word": "pub",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 75200000,
-    "count": 1,
-    "exempt": ""
-  },
-  "manage": {
-    "word": "manage",
-    "len": 6,
-    "pos_list": "['verb']",
-    "frequency": 75400000,
-    "count": 2,
-    "exempt": ""
-  },
-  "vat": {
-    "word": "vat",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 77200000,
-    "count": 2,
-    "exempt": ""
-  },
-  "direct": {
-    "word": "direct",
-    "len": 6,
-    "pos_list": "['adjective', 'adverb', 'verb']",
-    "frequency": 77800000,
-    "count": 2,
-    "exempt": ""
-  },
-  "fact": {
-    "word": "fact",
+  "mary": {
+    "word": "mary",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 80600000,
+    "frequency": 70500000,
+    "count": 2,
+    "exempt": ""
+  },
+  "male": {
+    "word": "male",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 70900000,
+    "count": 6,
+    "exempt": ""
+  },
+  "rose": {
+    "word": "rose",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 71300000,
+    "count": 16,
+    "exempt": ""
+  },
+  "wear": {
+    "word": "wear",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 72800000,
     "count": 1,
     "exempt": ""
   },
-  "pro": {
-    "word": "pro",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'noun', 'preposition']",
-    "frequency": 82600000,
-    "count": 9,
+  "dead": {
+    "word": "dead",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb']",
+    "frequency": 75700000,
+    "count": 2,
     "exempt": ""
   },
-  "act": {
-    "word": "act",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 86200000,
-    "count": 4,
-    "exempt": ""
-  },
-  "bar": {
-    "word": "bar",
-    "len": 3,
-    "pos_list": "['noun', 'preposition', 'verb']",
-    "frequency": 87600000,
-    "count": 1,
-    "exempt": ""
-  },
-  "trust": {
-    "word": "trust",
+  "stone": {
+    "word": "stone",
     "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 90400000,
-    "count": 1,
+    "frequency": 78100000,
+    "count": 122,
     "exempt": ""
   },
-  "ice": {
-    "word": "ice",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 94600000,
-    "count": 3,
+  "came": {
+    "word": "came",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 78900000,
+    "count": 20,
+    "exempt": ""
+  },
+  "ideal": {
+    "word": "ideal",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 80500000,
+    "count": 53,
+    "exempt": ""
+  },
+  "rise": {
+    "word": "rise",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 91100000,
+    "count": 2,
+    "exempt": ""
+  },
+  "frame": {
+    "word": "frame",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 92100000,
+    "count": 2,
+    "exempt": ""
+  },
+  "area": {
+    "word": "area",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 92400000,
+    "count": 60,
+    "exempt": ""
+  },
+  "seven": {
+    "word": "seven",
+    "len": 5,
+    "pos_list": "['cardinal', 'number']",
+    "frequency": 92700000,
+    "count": 10,
     "exempt": ""
   },
   "rent": {
@@ -2108,15 +6284,15 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 96100000,
-    "count": 1,
+    "count": 5,
     "exempt": ""
   },
-  "stand": {
-    "word": "stand",
+  "audio": {
+    "word": "audio",
     "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 97700000,
-    "count": 1,
+    "pos_list": "['noun']",
+    "frequency": 96100000,
+    "count": 4,
     "exempt": ""
   },
   "form": {
@@ -2124,15 +6300,15 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 99600000,
-    "count": 1,
+    "count": 62,
     "exempt": ""
   },
-  "ten": {
-    "word": "ten",
-    "len": 3,
-    "pos_list": "['cardinal', 'number']",
-    "frequency": 102000000,
-    "count": 4,
+  "train": {
+    "word": "train",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 100000000,
+    "count": 5,
     "exempt": ""
   },
   "late": {
@@ -2140,7 +6316,15 @@
     "len": 4,
     "pos_list": "['adjective', 'adverb']",
     "frequency": 102000000,
-    "count": 1,
+    "count": 946,
+    "exempt": ""
+  },
+  "agent": {
+    "word": "agent",
+    "len": 5,
+    "pos_list": "['noun']",
+    "frequency": 104000000,
+    "count": 2,
     "exempt": ""
   },
   "care": {
@@ -2148,7 +6332,23 @@
     "len": 4,
     "pos_list": "['abbreviation', 'noun', 'verb']",
     "frequency": 106000000,
-    "count": 1,
+    "count": 13,
+    "exempt": ""
+  },
+  "stage": {
+    "word": "stage",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 106000000,
+    "count": 11,
+    "exempt": ""
+  },
+  "fast": {
+    "word": "fast",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
+    "frequency": 108000000,
+    "count": 7,
     "exempt": ""
   },
   "rest": {
@@ -2156,78 +6356,46 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 109000000,
-    "count": 1,
+    "count": 41,
     "exempt": ""
   },
-  "ok": {
-    "word": "ok",
-    "len": 2,
-    "pos_list": "['abbreviation', 'adjective', 'adverb', 'exclamation', 'noun', 'verb']",
-    "frequency": 110000000,
-    "count": 2,
-    "exempt": ""
-  },
-  "art": {
-    "word": "art",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 115000000,
-    "count": 2,
-    "exempt": ""
-  },
-  "tom": {
-    "word": "tom",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 115000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "spa": {
-    "word": "spa",
-    "len": 3,
+  "idea": {
+    "word": "idea",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 118000000,
-    "count": 1,
+    "frequency": 113000000,
+    "count": 336,
     "exempt": ""
   },
-  "app": {
-    "word": "app",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 127000000,
-    "count": 3,
+  "paid": {
+    "word": "paid",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 114000000,
+    "count": 17,
     "exempt": ""
   },
-  "ward": {
-    "word": "ward",
+  "miss": {
+    "word": "miss",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 127000000,
-    "count": 1,
+    "frequency": 118000000,
+    "count": 5,
     "exempt": ""
   },
-  "age": {
-    "word": "age",
-    "len": 3,
+  "land": {
+    "word": "land",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 128000000,
-    "count": 8,
+    "frequency": 123000000,
+    "count": 17,
     "exempt": ""
   },
-  "car": {
-    "word": "car",
-    "len": 3,
+  "icon": {
+    "word": "icon",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 131000000,
-    "count": 2,
-    "exempt": ""
-  },
-  "force": {
-    "word": "force",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 132000000,
+    "frequency": 130000000,
     "count": 1,
     "exempt": ""
   },
@@ -2236,30 +6404,78 @@
     "len": 8,
     "pos_list": "['noun', 'verb']",
     "frequency": 133000000,
+    "count": 1346,
+    "exempt": ""
+  },
+  "cost": {
+    "word": "cost",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 134000000,
+    "count": 10,
+    "exempt": ""
+  },
+  "case": {
+    "word": "case",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 135000000,
+    "count": 4,
+    "exempt": ""
+  },
+  "deal": {
+    "word": "deal",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 143000000,
+    "count": 54,
+    "exempt": ""
+  },
+  "lost": {
+    "word": "lost",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 143000000,
+    "count": 3,
+    "exempt": ""
+  },
+  "role": {
+    "word": "role",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 143000000,
+    "count": 3,
+    "exempt": ""
+  },
+  "final": {
+    "word": "final",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 145000000,
+    "count": 1,
+    "exempt": ""
+  },
+  "teen": {
+    "word": "teen",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 147000000,
+    "count": 6,
+    "exempt": ""
+  },
+  "game": {
+    "word": "game",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 150000000,
     "count": 2,
     "exempt": ""
   },
-  "add": {
-    "word": "add",
-    "len": 3,
-    "pos_list": "['abbreviation', 'verb']",
-    "frequency": 146000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tag": {
-    "word": "tag",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 146000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "son": {
-    "word": "son",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 153000000,
+  "olive": {
+    "word": "olive",
+    "len": 5,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 150000000,
     "count": 1,
     "exempt": ""
   },
@@ -2268,47 +6484,31 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 153000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "unique": {
-    "word": "unique",
-    "len": 6,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 159000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "log": {
-    "word": "log",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 160000000,
     "count": 3,
     "exempt": ""
   },
-  "word": {
-    "word": "word",
+  "bike": {
+    "word": "bike",
     "len": 4,
-    "pos_list": "['exclamation', 'noun', 'verb']",
-    "frequency": 161000000,
-    "count": 1,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 157000000,
+    "count": 2,
     "exempt": ""
   },
-  "sea": {
-    "word": "sea",
-    "len": 3,
+  "unit": {
+    "word": "unit",
+    "len": 4,
     "pos_list": "['noun']",
-    "frequency": 163000000,
-    "count": 1,
+    "frequency": 158000000,
+    "count": 4,
     "exempt": ""
   },
-  "head": {
-    "word": "head",
+  "item": {
+    "word": "item",
     "len": 4,
-    "pos_list": "['adjective', 'noun', 'verb']",
+    "pos_list": "['adverb', 'noun']",
     "frequency": 164000000,
-    "count": 1,
+    "count": 4,
     "exempt": ""
   },
   "rate": {
@@ -2316,95 +6516,87 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 167000000,
-    "count": 5,
+    "count": 3470,
     "exempt": ""
   },
-  "led": {
-    "word": "led",
-    "len": 3,
-    "pos_list": "['noun']",
-    "frequency": 171000000,
-    "count": 3,
-    "exempt": ""
-  },
-  "interest": {
-    "word": "interest",
-    "len": 8,
+  "give": {
+    "word": "give",
+    "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 183000000,
+    "frequency": 182000000,
     "count": 1,
     "exempt": ""
   },
-  "once": {
-    "word": "once",
+  "seen": {
+    "word": "seen",
     "len": 4,
-    "pos_list": "['adverb', 'conjunction']",
-    "frequency": 193000000,
-    "count": 2,
+    "pos_list": "['verb']",
+    "frequency": 187000000,
+    "count": 1,
     "exempt": ""
   },
-  "sure": {
-    "word": "sure",
+  "user": {
+    "word": "user",
     "len": 4,
-    "pos_list": "['adjective', 'adverb']",
+    "pos_list": "['noun']",
     "frequency": 196000000,
     "count": 1,
     "exempt": ""
   },
-  "am": {
-    "word": "am",
-    "len": 2,
-    "pos_list": "['abbreviation', 'symbol', 'verb']",
-    "frequency": 197000000,
-    "count": 4,
+  "come": {
+    "word": "come",
+    "len": 4,
+    "pos_list": "['noun', 'preposition', 'verb']",
+    "frequency": 201000000,
+    "count": 11,
     "exempt": ""
   },
-  "sent": {
-    "word": "sent",
+  "trip": {
+    "word": "trip",
     "len": 4,
-    "pos_list": "['noun']",
-    "frequency": 202000000,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 206000000,
+    "count": 12,
+    "exempt": ""
+  },
+  "test": {
+    "word": "test",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 207000000,
+    "count": 42,
+    "exempt": ""
+  },
+  "provided": {
+    "word": "provided",
+    "len": 8,
+    "pos_list": "['conjunction']",
+    "frequency": 212000000,
     "count": 2,
     "exempt": ""
   },
-  "tell": {
-    "word": "tell",
-    "len": 4,
+  "model": {
+    "word": "model",
+    "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 204000000,
+    "frequency": 216000000,
     "count": 1,
     "exempt": ""
   },
-  "air": {
-    "word": "air",
-    "len": 3,
+  "table": {
+    "word": "table",
+    "len": 5,
     "pos_list": "['noun', 'verb']",
-    "frequency": 219000000,
-    "count": 1,
+    "frequency": 223000000,
+    "count": 5,
     "exempt": ""
   },
-  "visual": {
-    "word": "visual",
-    "len": 6,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 221000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "book": {
-    "word": "book",
+  "sale": {
+    "word": "sale",
     "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 229000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "each": {
-    "word": "each",
-    "len": 4,
-    "pos_list": "['adverb', 'determiner', 'pronoun']",
-    "frequency": 229000000,
-    "count": 1,
+    "pos_list": "['noun']",
+    "frequency": 228000000,
+    "count": 3,
     "exempt": ""
   },
   "plan": {
@@ -2412,15 +6604,7 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 234000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "war": {
-    "word": "war",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 235000000,
-    "count": 2,
+    "count": 2871,
     "exempt": ""
   },
   "side": {
@@ -2428,22 +6612,14 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 241000000,
-    "count": 1,
+    "count": 63,
     "exempt": ""
   },
-  "move": {
-    "word": "move",
+  "five": {
+    "word": "five",
     "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 255000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "going": {
-    "word": "going",
-    "len": 5,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 259000000,
+    "pos_list": "['cardinal', 'number']",
+    "frequency": 247000000,
     "count": 1,
     "exempt": ""
   },
@@ -2452,15 +6628,15 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 261000000,
-    "count": 1,
+    "count": 3269,
     "exempt": ""
   },
-  "shop": {
-    "word": "shop",
-    "len": 4,
+  "message": {
+    "word": "message",
+    "len": 7,
     "pos_list": "['noun', 'verb']",
-    "frequency": 262000000,
-    "count": 1,
+    "frequency": 275000000,
+    "count": 8,
     "exempt": ""
   },
   "market": {
@@ -2468,47 +6644,31 @@
     "len": 6,
     "pos_list": "['noun', 'verb']",
     "frequency": 277000000,
+    "count": 2521,
+    "exempt": ""
+  },
+  "point": {
+    "word": "point",
+    "len": 5,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 279000000,
     "count": 1,
     "exempt": ""
   },
-  "end": {
-    "word": "end",
-    "len": 3,
+  "version": {
+    "word": "version",
+    "len": 7,
     "pos_list": "['noun', 'verb']",
-    "frequency": 287000000,
-    "count": 3,
-    "exempt": ""
-  },
-  "park": {
-    "word": "park",
-    "len": 4,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 296000000,
+    "frequency": 290000000,
     "count": 1,
     "exempt": ""
   },
-  "high": {
-    "word": "high",
+  "east": {
+    "word": "east",
     "len": 4,
     "pos_list": "['adjective', 'adverb', 'noun']",
-    "frequency": 299000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "let": {
-    "word": "let",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 301000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "digital": {
-    "word": "digital",
-    "len": 7,
-    "pos_list": "['adjective']",
-    "frequency": 308000000,
-    "count": 1,
+    "frequency": 320000000,
+    "count": 22,
     "exempt": ""
   },
   "star": {
@@ -2524,15 +6684,15 @@
     "len": 4,
     "pos_list": "['adjective']",
     "frequency": 328000000,
-    "count": 2,
+    "count": 1,
     "exempt": ""
   },
-  "think": {
-    "word": "think",
-    "len": 5,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 335000000,
-    "count": 1,
+  "past": {
+    "word": "past",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun', 'preposition']",
+    "frequency": 331000000,
+    "count": 8,
     "exempt": ""
   },
   "line": {
@@ -2540,14 +6700,6 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 339000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "key": {
-    "word": "key",
-    "len": 3,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 341000000,
     "count": 1,
     "exempt": ""
   },
@@ -2559,36 +6711,60 @@
     "count": 1,
     "exempt": ""
   },
-  "red": {
-    "word": "red",
-    "len": 3,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 346000000,
-    "count": 2,
+  "near": {
+    "word": "near",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'preposition', 'verb']",
+    "frequency": 343000000,
+    "count": 34,
     "exempt": ""
   },
-  "info": {
-    "word": "info",
+  "data": {
+    "word": "data",
     "len": 4,
     "pos_list": "['noun']",
-    "frequency": 349000000,
-    "count": 2,
+    "frequency": 343000000,
+    "count": 4,
     "exempt": ""
   },
-  "experience": {
-    "word": "experience",
-    "len": 10,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 367000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "play": {
-    "word": "play",
+  "find": {
+    "word": "find",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 374000000,
-    "count": 1,
+    "frequency": 348000000,
+    "count": 7,
+    "exempt": ""
+  },
+  "same": {
+    "word": "same",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun', 'pronoun']",
+    "frequency": 351000000,
+    "count": 10,
+    "exempt": ""
+  },
+  "west": {
+    "word": "west",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 352000000,
+    "count": 7,
+    "exempt": ""
+  },
+  "term": {
+    "word": "term",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 356000000,
+    "count": 72,
+    "exempt": ""
+  },
+  "times": {
+    "word": "times",
+    "len": 5,
+    "pos_list": "['preposition']",
+    "frequency": 389000000,
+    "count": 52,
     "exempt": ""
   },
   "call": {
@@ -2596,31 +6772,23 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 405000000,
+    "count": 4,
+    "exempt": ""
+  },
+  "logo": {
+    "word": "logo",
+    "len": 4,
+    "pos_list": "['noun']",
+    "frequency": 414000000,
     "count": 1,
     "exempt": ""
   },
-  "know": {
-    "word": "know",
+  "mail": {
+    "word": "mail",
     "len": 4,
-    "pos_list": "['verb']",
-    "frequency": 406000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "tech": {
-    "word": "tech",
-    "len": 4,
-    "pos_list": "['adjective', 'noun']",
-    "frequency": 416000000,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 426000000,
     "count": 2,
-    "exempt": ""
-  },
-  "must": {
-    "word": "must",
-    "len": 4,
-    "pos_list": "['adjective', 'modal', 'noun', 'verb']",
-    "frequency": 427000000,
-    "count": 1,
     "exempt": ""
   },
   "sign": {
@@ -2628,7 +6796,15 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 438000000,
-    "count": 3,
+    "count": 1351,
+    "exempt": ""
+  },
+  "real": {
+    "word": "real",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun']",
+    "frequency": 452000000,
+    "count": 4,
     "exempt": ""
   },
   "list": {
@@ -2636,55 +6812,39 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 465000000,
-    "count": 1,
+    "count": 8,
     "exempt": ""
   },
-  "go": {
-    "word": "go",
-    "len": 2,
-    "pos_list": "['adjective', 'noun', 'verb']",
-    "frequency": 469000000,
-    "count": 5,
-    "exempt": ""
-  },
-  "map": {
-    "word": "map",
-    "len": 3,
-    "pos_list": "['abbreviation', 'noun', 'verb']",
-    "frequency": 489000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "very": {
-    "word": "very",
+  "post": {
+    "word": "post",
     "len": 4,
-    "pos_list": "['adjective', 'adverb']",
-    "frequency": 534000000,
+    "pos_list": "['adverb', 'noun', 'preposition', 'verb']",
+    "frequency": 469000000,
+    "count": 35,
+    "exempt": ""
+  },
+  "blog": {
+    "word": "blog",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 477000000,
     "count": 1,
     "exempt": ""
   },
-  "he": {
-    "word": "he",
-    "len": 2,
-    "pos_list": "['abbreviation', 'noun', 'pronoun', 'symbol']",
-    "frequency": 542000000,
-    "count": 4,
+  "used": {
+    "word": "used",
+    "len": 4,
+    "pos_list": "['adjective']",
+    "frequency": 478000000,
+    "count": 1,
     "exempt": ""
   },
-  "me": {
-    "word": "me",
-    "len": 2,
-    "pos_list": "['abbreviation', 'noun', 'pronoun']",
-    "frequency": 546000000,
-    "count": 11,
-    "exempt": ""
-  },
-  "man": {
-    "word": "man",
-    "len": 3,
-    "pos_list": "['exclamation', 'noun', 'verb']",
-    "frequency": 590000000,
-    "count": 4,
+  "open": {
+    "word": "open",
+    "len": 4,
+    "pos_list": "['adjective', 'noun', 'verb']",
+    "frequency": 583000000,
+    "count": 1,
     "exempt": ""
   },
   "live": {
@@ -2692,55 +6852,63 @@
     "len": 4,
     "pos_list": "['adjective', 'adverb', 'verb']",
     "frequency": 606000000,
+    "count": 1152,
+    "exempt": ""
+  },
+  "related": {
+    "word": "related",
+    "len": 7,
+    "pos_list": "['adjective']",
+    "frequency": 606000000,
     "count": 2,
     "exempt": ""
   },
-  "part": {
-    "word": "part",
-    "len": 4,
-    "pos_list": "['adverb', 'noun', 'verb']",
-    "frequency": 632000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "work": {
-    "word": "work",
+  "take": {
+    "word": "take",
     "len": 4,
     "pos_list": "['noun', 'verb']",
-    "frequency": 633000000,
+    "frequency": 613000000,
     "count": 1,
     "exempt": ""
   },
-  "old": {
-    "word": "old",
-    "len": 3,
-    "pos_list": "['adjective']",
-    "frequency": 647000000,
-    "count": 1,
+  "main": {
+    "word": "main",
+    "len": 4,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 638000000,
+    "count": 2,
     "exempt": ""
   },
-  "under": {
-    "word": "under",
+  "were": {
+    "word": "were",
+    "len": 4,
+    "pos_list": "['verb']",
+    "frequency": 649000000,
+    "count": 13,
+    "exempt": ""
+  },
+  "video": {
+    "word": "video",
     "len": 5,
-    "pos_list": "['adjective', 'adverb', 'preposition']",
-    "frequency": 668000000,
-    "count": 1,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 656000000,
+    "count": 2,
     "exempt": ""
   },
-  "web": {
-    "word": "web",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 706000000,
-    "count": 1,
+  "made": {
+    "word": "made",
+    "len": 4,
+    "pos_list": "['adjective', 'verb']",
+    "frequency": 678000000,
+    "count": 31,
     "exempt": ""
   },
-  "get": {
-    "word": "get",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 717000000,
-    "count": 3,
+  "last": {
+    "word": "last",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
+    "frequency": 735000000,
+    "count": 24,
     "exempt": ""
   },
   "site": {
@@ -2748,95 +6916,71 @@
     "len": 4,
     "pos_list": "['noun', 'verb']",
     "frequency": 756000000,
-    "count": 1,
+    "count": 1346,
     "exempt": ""
   },
-  "over": {
-    "word": "over",
+  "most": {
+    "word": "most",
     "len": 4,
-    "pos_list": "['adverb', 'noun', 'preposition']",
-    "frequency": 757000000,
+    "pos_list": "['adverb', 'determiner', 'pronoun']",
+    "frequency": 790000000,
     "count": 3,
     "exempt": ""
   },
-  "top": {
-    "word": "top",
-    "len": 3,
-    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
-    "frequency": 802000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "full": {
-    "word": "full",
-    "len": 4,
-    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
-    "frequency": 825000000,
+  "latest": {
+    "word": "latest",
+    "len": 6,
+    "pos_list": "['adjective', 'noun']",
+    "frequency": 794000000,
     "count": 2,
     "exempt": ""
   },
-  "how": {
-    "word": "how",
-    "len": 3,
+  "some": {
+    "word": "some",
+    "len": 4,
+    "pos_list": "['adverb', 'determiner', 'pronoun']",
+    "frequency": 823000000,
+    "count": 11,
+    "exempt": ""
+  },
+  "here": {
+    "word": "here",
+    "len": 4,
     "pos_list": "['adverb', 'exclamation']",
-    "frequency": 855000000,
+    "frequency": 845000000,
+    "count": 60,
+    "exempt": ""
+  },
+  "time": {
+    "word": "time",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 872000000,
+    "count": 59,
+    "exempt": ""
+  },
+  "page": {
+    "word": "page",
+    "len": 4,
+    "pos_list": "['noun', 'verb']",
+    "frequency": 905000000,
+    "count": 31,
+    "exempt": ""
+  },
+  "there": {
+    "word": "there",
+    "len": 5,
+    "pos_list": "['adverb', 'exclamation']",
+    "frequency": 912000000,
+    "count": 60,
+    "exempt": ""
+  },
+  "best": {
+    "word": "best",
+    "len": 4,
+    "pos_list": "['adjective', 'adverb', 'noun', 'verb']",
+    "frequency": 955000000,
     "count": 1,
-    "exempt": ""
-  },
-  "off": {
-    "word": "off",
-    "len": 3,
-    "pos_list": "['adjective', 'adverb', 'noun', 'preposition', 'verb']",
-    "frequency": 869000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "we": {
-    "word": "we",
-    "len": 2,
-    "pos_list": "['pronoun']",
-    "frequency": 883000000,
-    "count": 3,
-    "exempt": ""
-  },
-  "no": {
-    "word": "no",
-    "len": 2,
-    "pos_list": "['adverb', 'determiner', 'exclamation', 'noun', 'symbol']",
-    "frequency": 900000000,
-    "count": 2,
-    "exempt": ""
-  },
-  "all": {
-    "word": "all",
-    "len": 3,
-    "pos_list": "['adverb', 'determiner', 'noun', 'predeterminer', 'pronoun']",
-    "frequency": 915000000,
-    "count": 6,
-    "exempt": ""
-  },
-  "if": {
-    "word": "if",
-    "len": 2,
-    "pos_list": "['abbreviation', 'conjunction', 'noun']",
-    "frequency": 921000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "now": {
-    "word": "now",
-    "len": 3,
-    "pos_list": "['abbreviation', 'adjective', 'adverb', 'conjunction']",
-    "frequency": 956000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "so": {
-    "word": "so",
-    "len": 2,
-    "pos_list": "['adverb', 'conjunction', 'noun']",
-    "frequency": 965000000,
-    "count": 2,
     "exempt": ""
   },
   "read": {
@@ -2844,127 +6988,23 @@
     "len": 4,
     "pos_list": "['adjective', 'noun', 'verb']",
     "frequency": 972000000,
-    "count": 1,
+    "count": 6,
     "exempt": ""
   },
-  "one": {
-    "word": "one",
-    "len": 3,
-    "pos_list": "['cardinal', 'number', 'pronoun']",
-    "frequency": 979000000,
-    "count": 2,
-    "exempt": ""
-  },
-  "up": {
-    "word": "up",
-    "len": 2,
-    "pos_list": "['abbreviation', 'adjective', 'adverb', 'noun', 'preposition', 'verb']",
+  "into": {
+    "word": "into",
+    "len": 4,
+    "pos_list": "['preposition']",
     "frequency": 995000000,
+    "count": 45,
+    "exempt": ""
+  },
+  "more": {
+    "word": "more",
+    "len": 4,
+    "pos_list": "['determiner', 'pronoun']",
+    "frequency": 1140000000,
     "count": 3,
-    "exempt": ""
-  },
-  "search": {
-    "word": "search",
-    "len": 6,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 1020000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "us": {
-    "word": "us",
-    "len": 2,
-    "pos_list": "['abbreviation', 'pronoun']",
-    "frequency": 1060000000,
-    "count": 8,
-    "exempt": ""
-  },
-  "it": {
-    "word": "it",
-    "len": 2,
-    "pos_list": "['noun', 'pronoun']",
-    "frequency": 1120000000,
-    "count": 17,
-    "exempt": ""
-  },
-  "as": {
-    "word": "as",
-    "len": 2,
-    "pos_list": "['abbreviation', 'adverb', 'conjunction', 'noun', 'preposition', 'symbol']",
-    "frequency": 1120000000,
-    "count": 7,
-    "exempt": ""
-  },
-  "be": {
-    "word": "be",
-    "len": 2,
-    "pos_list": "['abbreviation', 'auxiliary', 'symbol', 'verb']",
-    "frequency": 1150000000,
-    "count": 4,
-    "exempt": ""
-  },
-  "are": {
-    "word": "are",
-    "len": 3,
-    "pos_list": "['noun', 'verb']",
-    "frequency": 1170000000,
-    "count": 4,
-    "exempt": ""
-  },
-  "out": {
-    "word": "out",
-    "len": 3,
-    "pos_list": "['adjective', 'adverb', 'noun', 'preposition', 'verb']",
-    "frequency": 1180000000,
-    "count": 1,
-    "exempt": ""
-  },
-  "at": {
-    "word": "at",
-    "len": 2,
-    "pos_list": "['noun', 'preposition', 'symbol']",
-    "frequency": 1220000000,
-    "count": 28,
-    "exempt": ""
-  },
-  "on": {
-    "word": "on",
-    "len": 2,
-    "pos_list": "['abbreviation', 'adverb', 'preposition']",
-    "frequency": 1420000000,
-    "count": 22,
-    "exempt": ""
-  },
-  "in": {
-    "word": "in",
-    "len": 2,
-    "pos_list": "['abbreviation', 'adjective', 'adverb', 'noun', 'preposition', 'symbol']",
-    "frequency": 1430000000,
-    "count": 43,
-    "exempt": ""
-  },
-  "and": {
-    "word": "and",
-    "len": 3,
-    "pos_list": "['conjunction', 'noun']",
-    "frequency": 1520000000,
-    "count": 9,
-    "exempt": ""
-  },
-  "or": {
-    "word": "or",
-    "len": 2,
-    "pos_list": "['abbreviation', 'conjunction', 'noun']",
-    "frequency": 1720000000,
-    "count": 19,
-    "exempt": ""
-  },
-  "to": {
-    "word": "to",
-    "len": 2,
-    "pos_list": "['adverb', 'infinitive', 'preposition']",
-    "frequency": 1720000000,
-    "count": 7,
     "exempt": ""
   }
 }
