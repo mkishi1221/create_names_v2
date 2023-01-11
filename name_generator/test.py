@@ -16,7 +16,7 @@ for key in data.keys():
                 "origin",
                 "source_word",
                 "spacy_pos",
-                "wordsAPI_pos",
+                "eng_dict_pos",
                 "keyword_len",
                 "contained_words",
                 "phonetic_grade",

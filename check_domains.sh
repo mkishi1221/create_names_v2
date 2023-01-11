@@ -25,7 +25,7 @@ mkdir -p $project_path/results/
 
 python3 name_generator/domain_checker.py \
     $project_id \
-    50
+    200
 
 # Calculate time elapsed
 end_time=`gdate +%s%3N`

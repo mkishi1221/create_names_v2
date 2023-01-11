@@ -9,14 +9,18 @@ from typing import List, Dict, Tuple
 @dataclass
 class Etymology:
     name_in_title: str = None
+    modword_tuple: Tuple[str] = None
     keyword_tuple: Tuple[Modword.keyword] = None
     pos_tuple: Tuple[Component.pos] = None
     modifier_tuple: Tuple[Component.modifier] = None
+    exempt_contained: List[str] = None
+    keyword_classes: List[str] = None
     name_type: str = None
 
     def __eq__(self, o: object) -> bool:
         return (
             self.name_in_title == o.name_in_title
+            and self.modword_tuple == o.modword_tuple
             and self.keyword_tuple == o.keyword_tuple
             and self.modifier_tuple == o.modifier_tuple
             and self.pos_tuple == o.pos_tuple
@@ -25,6 +29,7 @@ class Etymology:
     def __ne__(self, o: object) -> bool:
         return (
             self.name_in_title != o.name_in_title
+            and self.modword_tuple != o.modword_tuple
             and self.keyword_tuple != o.keyword_tuple
             and self.modifier_tuple != o.modifier_tuple
             and self.pos_tuple != o.pos_tuple
@@ -34,6 +39,7 @@ class Etymology:
         return hash(
             (
                 self.name_in_title,
+                self.modword_tuple,
                 self.keyword_tuple,
                 self.modifier_tuple,
                 self.pos_tuple,
@@ -45,7 +51,7 @@ class Etymology:
 
         algorithm_list = []
         for index in range(len(self.pos_tuple)):
-            algorithm_list.append(f"{self.keyword_tuple[index]}({self.pos_tuple[index]}|{self.modifier_tuple[index]})")
+            algorithm_list.append(f"{self.modword_tuple[index]}({self.keyword_tuple[index]}|{self.pos_tuple[index]})")
         return "+".join(algorithm_list)
 
 @dataclass
@@ -57,11 +63,16 @@ class Name:
 
     name_in_lower: str = None
     length: int = 0
+    phonetic_pattern: str = None
     phonetic_grade: str = None
-    non_plaus_letter_combs: int = None
+    implaus_chars: list[str] = None
+    end_valid: str = None
     is_word: str = None
-    contained_words: str = None
+    exempt_contained: List[str] = None
+    contained_words: List[str] = None
+    keyword_classes: List[str] = None
     etymologies: Dict[str, Etymology] = None
+
 
     def __eq__(self, o: object) -> bool:
         return self.name_in_lower == o.name_in_lower
@@ -93,17 +104,26 @@ class Graded_name:
     name_in_title: Etymology.name_in_title = None
     name_type: Etymology.name_type = None
     length: Name.length = 0
+    phonetic_pattern: Name.phonetic_pattern = None
     phonetic_grade: Name.phonetic_grade = None
-    non_plaus_letter_combs: Name.non_plaus_letter_combs = None
+    implaus_chars: Name.implaus_chars = None
+    end_valid: str = None
     is_word: Name.is_word = None
-    contained_words: Name.contained_words = None
+    exempt_contained: Name.exempt_contained = None
+    contained_words: List[str] = None
     wiki_title: str = None
+    modwords: List[str] = None
     keywords: List[str] = None
     keyword_combinations: List[str] = None
     pos_combinations: List[str] = None
+    keyword_pos_combos: dict = None
     modifier_combinations: List[str] = None
+    keyword_classes: List[str] = None
     etymologies: List[Etymology] = None
+    etymology_count: int = None
     grade: str = None
+    name_class: str = None
+    reject_reason: str = None
 
     def __eq__(self, o: object) -> bool:
         return self.name_in_title == o.name_in_title and self.name_type == o.name_type
