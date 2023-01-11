@@ -12,7 +12,6 @@ from modules.collect_algorithms import collect_algorithms
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.find_contained_words import find_contained_words
-from modules.pull_wordsAPI import pull_wordsAPI_dict
 from modules.process_user_keywords import process_user_keywords_dict
 from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
@@ -32,7 +31,7 @@ def process_additional_keywords(additional_keyword_list_fp, project_path, master
         additional_keywords = process_user_keywords_dict(additional_keyword_list, project_path)
         for keyword in additional_keywords:
             keyword.origin = ["additional_user_keywords"]
-        print("Getting keyword pos using wordAPI dictionary......")
+        print("Getting keyword pos using eng_dict dictionary......")
         additional_keywords = verify_words_with_eng_dict(additional_keywords, project_path, master_exempt_contained_words)
     else:
         additional_keywords = []
@@ -60,9 +59,6 @@ def generate_modwords(project_id: str):
 
     # output filepaths and filenames:
     excel_output_fp = f"{project_path}/results/{project_id}_modwords.xlsx"
-
-    # Pull wordsAPI data
-    wordsapi_data: dict = pull_wordsAPI_dict()
 
     # Pull master exempt contained words list
     master_exempt_contained_words = pull_master_exempt()
@@ -160,7 +156,6 @@ def generate_modwords(project_id: str):
     keyword_dict_json = {}
     keyword_dict_keys = set()
     for key, keyword_list in keyword_dict.items():
-        reordered_kw_list = []
         keyword_list = sorted(list(keyword_list), key=lambda d: (d.keyword_len, d.keyword, d.modword_len))
         for kw_obj in keyword_list:
             pos_str = kw_obj.pos

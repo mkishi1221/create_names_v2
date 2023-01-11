@@ -1,416 +1,1172 @@
 [
   {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "I",
-    "keyword_len": 1,
-    "restrictions_after": "noun, plural_noun, verb",
-    "restrictions_as_joint": "adverb<joint>verb, noun<joint>noun, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "adverb",
-    "keyword": "a",
-    "keyword_len": 1,
-    "restrictions_after": "noun, plural_noun",
-    "restrictions_as_joint": "adverb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "about",
-    "keyword_len": 5,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "actually",
-    "keyword_len": 8,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "after",
-    "keyword_len": 5,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "adverb<joint>noun, noun<joint>adjective, noun<joint>noun, noun<joint>verb, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "all",
-    "keyword_len": 3,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "also",
-    "keyword_len": 4,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "always",
-    "keyword_len": 6,
-    "restrictions_after": "adjective, verb",
-    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>adjective, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "an",
-    "keyword_len": 2,
-    "restrictions_after": "noun, plural_noun",
-    "restrictions_as_joint": "adverb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "and",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "verb",
-    "keyword": "any",
-    "keyword_len": 3,
-    "restrictions_after": "noun",
-    "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "plural_noun",
-    "keyword": "are",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adjective, noun, plural_noun, verb",
-    "keyword": "as",
-    "keyword_len": 2,
-    "restrictions_after": "adjective, adverb, noun, plural_noun",
-    "restrictions_as_joint": "adjective<joint>noun, noun<joint>adjective, noun<joint>adverb, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "at",
-    "keyword_len": 2,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, verb",
-    "keyword": "be",
-    "keyword_len": 2,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "adverb<joint>verb, verb<joint>adjective, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "because",
+    "restrictions_before": null,
+    "keyword": "panther",
     "keyword_len": 7,
-    "restrictions_after": "noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "but",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "by",
-    "keyword_len": 2,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "restrictions_before": null,
+    "keyword": "wildcat",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "can",
-    "keyword_len": 3,
-    "restrictions_after": "adverb, verb",
-    "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "come",
-    "keyword_len": 4,
-    "restrictions_after": "adverb",
-    "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "could",
+    "restrictions_before": null,
+    "keyword": "tiger",
     "keyword_len": 5,
-    "restrictions_after": "adverb, verb",
-    "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "did",
-    "keyword_len": 3,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "do",
-    "keyword_len": 2,
-    "restrictions_after": "adverb",
-    "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "each",
+    "restrictions_before": null,
+    "keyword": "lion",
     "keyword_len": 4,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "either",
+    "restrictions_before": null,
+    "keyword": "cheetah",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cougar",
     "keyword_len": 6,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "adverb, noun, plural_noun",
-    "keyword": "else",
+    "restrictions_before": null,
+    "keyword": "leopard",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "viper",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cottonmouth",
+    "keyword_len": 11,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "python",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "boa",
+    "keyword_len": 3,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "sidewinder",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cobra",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "grizzly",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "jackal",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "falcon",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "wildebeest",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "gazelle",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "zebra",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "elk",
+    "keyword_len": 3,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "moose",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "deer",
     "keyword_len": 4,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "noun<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "even",
+    "restrictions_before": null,
+    "keyword": "stag",
     "keyword_len": 4,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "for",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "from",
+    "restrictions_before": null,
+    "keyword": "pony",
     "keyword_len": 4,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "not_allowed",
-    "keyword": "get",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
-    "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
+    "restrictions_before": null,
+    "keyword": "koala",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
   },
   {
-    "restrictions_before": "adverb, noun, plural_noun",
-    "keyword": "goes",
+    "restrictions_before": null,
+    "keyword": "sloth",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "horse",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "stallion",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "foal",
     "keyword_len": 4,
-    "restrictions_after": "adverb",
-    "restrictions_as_joint": "noun<joint>adverb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "got",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun",
-    "keyword": "has",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "have",
+    "restrictions_before": null,
+    "keyword": "colt",
     "keyword_len": 4,
-    "restrictions_after": "adjective, adverb, verb",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "adverb, noun, plural_noun",
-    "keyword": "he",
-    "keyword_len": 2,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "verb",
-    "keyword": "her",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "verb",
-    "keyword": "him",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
-    "restrictions_as_joint": "verb<joint>adjective, verb<joint>adverb, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "verb",
-    "keyword": "his",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
-  },
-  {
-    "restrictions_before": "verb",
-    "keyword": "how",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "if",
-    "keyword_len": 2,
-    "restrictions_after": "noun, plural_noun",
-    "restrictions_as_joint": "adverb<joint>noun, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "in",
-    "keyword_len": 2,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": "s"
-  },
-  {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "into",
+    "restrictions_before": null,
+    "keyword": "mare",
     "keyword_len": 4,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "it",
-    "keyword_len": 2,
-    "restrictions_after": "verb",
-    "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
+    "restrictions_before": null,
+    "keyword": "yearling",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
   },
   {
-    "restrictions_before": "verb",
-    "keyword": "its",
-    "keyword_len": 3,
-    "restrictions_after": "adjective, noun, plural_noun",
-    "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "restrictions_before": null,
+    "keyword": "filly",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
   },
   {
-    "restrictions_before": "noun, plural_noun, verb",
-    "keyword": "just",
+    "restrictions_before": null,
+    "keyword": "gelding",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "mermaid",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "unicorn",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "fairy",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "troll",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "yeti",
     "keyword_len": 4,
-    "restrictions_after": "adverb, verb",
-    "restrictions_as_joint": "noun<joint>adverb, verb<joint>adverb, verb<joint>verb",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   },
   {
-    "restrictions_before": "adverb, noun, plural_noun, verb",
-    "keyword": "led",
+    "restrictions_before": null,
+    "keyword": "pegasus",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "griffin",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "dragon",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "nomad",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "wizard",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cleric",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "pilot",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "captain",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "commander",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "general",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "major",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "admiral",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "chef",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "inspector",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "mainframe",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "device",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "motherboard",
+    "keyword_len": 11,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "network",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "transistor",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "packet",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "robot",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "android",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cyborg",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "display",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "battery",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "memory",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "disk",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cartridge",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "tape",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "camera",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "projector",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "octopus",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "lobster",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "crab",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "barnacle",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "hammerhead",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "orca",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "piranha",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "storm",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "thunder",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "lightning",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "rain",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "hail",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "sun",
     "keyword_len": 3,
-    "restrictions_after": "noun, plural_noun",
-    "restrictions_as_joint": "noun<joint>noun",
-    "deactivate": "",
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "drought",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "snow",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "drizzle",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "piano",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "keyboard",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "guitar",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "trumpet",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "trombone",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "flute",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cornet",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "horn",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "tuba",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "clarinet",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "saxophone",
+    "keyword_len": 9,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "piccolo",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "violin",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "harp",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cello",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "drum",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "organ",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "banjo",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "rhythm",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "beat",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "sound",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "song",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "screwdiver",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "sander",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "lathe",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "mill",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "welder",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "mask",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "hammer",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "drill",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "compressor",
+    "keyword_len": 10,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "wrench",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "mixer",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "router",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "vacuum",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "warning",
+    "keyword_len": 7,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "presence",
+    "keyword_len": 8,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "weapon",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "player",
+    "keyword_len": 6,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "ink",
+    "keyword_len": 3,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "case",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "cup",
+    "keyword_len": 3,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "chain",
+    "keyword_len": 5,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
+    "shortlist": "s"
+  },
+  {
+    "restrictions_before": null,
+    "keyword": "door",
+    "keyword_len": 4,
+    "restrictions_after": null,
+    "restrictions_as_joint": null,
+    "deactivate": null,
     "shortlist": "s"
   }
 ]

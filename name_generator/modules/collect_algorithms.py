@@ -22,7 +22,7 @@ def collect_algorithms() -> List[Algorithm]:
     # Import Algorithm list from xlsx file
     algorithm_excel_fp = f"name_generator/dict/algorithms/algorithm_list.xlsx"
     sheet_name = "algorithms"
-    algorithms_fp = convert_excel_to_json(algorithm_excel_fp, target_sheet=sheet_name)
+    algorithms_fp = convert_excel_to_json(algorithm_excel_fp, target_sheet=sheet_name, convert_list=True)
     with open(algorithms_fp) as algorithms_file:
         algorithm_data = json.loads(algorithms_file.read())
 
