@@ -172,7 +172,7 @@ def generate_names(project_id: str):
         print("No keywords shortlisted!")
         exit()
 
-    required_pos = {"head", "join", "tail", "suff", "pref"}
+    required_pos = {"head", "join", "tail", "suff", "pref", "ffun", "rfun"}
     for keyword_obj in keyword_shortlist:
         pos = keyword_obj.pos
         if pos in pos_conversion.keys():
@@ -248,6 +248,18 @@ def generate_names(project_id: str):
         sheet_name = "joints"
         json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
         keyword_dict["join|no_cut"] = set(pull_dictionary(json_file, pos))
+
+    if "ffun" in required_comps.keys():
+        pos = "ffun"
+        sheet_name = "front_fun"
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["ffun|no_cut"] = set(pull_dictionary(json_file, pos))
+
+    if "rfun" in required_comps.keys():
+        pos = "rfun"
+        sheet_name = "rear_fun"
+        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["rfun|no_cut"] = set(pull_dictionary(json_file, pos))
 
     keyword_dict_json = {}
     for key, item in keyword_dict.items():
@@ -415,7 +427,7 @@ def generate_names(project_id: str):
     push_contained_words_list(sorted_graded_names, master_exempt_contained_words)
 
     print("Preparing data for export...")
-    name_types = ["repeating_name", "rpn_percentage", "fit_name", "fn_percentage", "text_comp_name", "tcn_percentage", "pref_suff_name", "psn_percentage", "cut_name", "cn_percentage", "part_cut_name", "pcn_percentage", "no_cut_name", "ncn_percentage"]
+    name_types = ["repeating_name", "rpn_percentage", "fit_name", "fn_percentage", "text_comp_name", "tcn_percentage", "fun_name", "fun_percentage", "pref_suff_name", "psn_percentage", "cut_name", "cn_percentage", "part_cut_name", "pcn_percentage", "no_cut_name", "ncn_percentage"]
     keyword_combos = {}
     keyword_combo_set = set()
     sorted_names = {"keyword_combinations": [], "shortlisted keywords": keyword_dict_sorted}
@@ -473,7 +485,7 @@ def generate_names(project_id: str):
                 try:
                     statistics[name_type][grade] = str(round(raw_statistics[name_types[index-1]][grade]/raw_statistics[name_types[index-1]]["Total"]*100,2)) + "%"
                 except KeyError:
-                    if name_type in ["rpn_percentage", "fn_percentage", "tcn_percentage", "psn_percentage", "cn_percentage", "pcn_percentage", "ncn_percentage"]:
+                    if name_type in ["rpn_percentage", "fn_percentage", "tcn_percentage", "fun_percentage", "psn_percentage", "cn_percentage", "pcn_percentage", "ncn_percentage"]:
                         statistics[name_type][grade] = "0%"
                     else:
                         statistics[name_type][grade] = 0

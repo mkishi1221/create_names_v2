@@ -104,6 +104,7 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["fit_name"] = {}
         NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
+        NameDomain_dict["fun_name"] = {}
         NameDomain_dict["cut_name"] = {}
         NameDomain_dict["part_cut_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
@@ -127,6 +128,7 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["fit_name"] = {}
         NameDomain_dict["pref_suff_name"] = {}
         NameDomain_dict["text_comp_name"] = {}
+        NameDomain_dict["fun_name"] = {}
         NameDomain_dict["cut_name"] = {}
         NameDomain_dict["part_cut_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
@@ -224,6 +226,8 @@ def check_domains(project_id: str, limit: int):
     pref_suff_name_not_avail = []
     text_comp_name_avail = []
     text_comp_name_not_avail = []
+    fun_name_avail = []
+    fun_name_not_avail = []
     cut_name_avail = []
     cut_name_not_avail = []
     part_cut_name_avail = []
@@ -261,6 +265,8 @@ def check_domains(project_id: str, limit: int):
                     pref_suff_name_avail.append(excel_domain)
                 elif name_type == "text_comp_name":
                     text_comp_name_avail.append(excel_domain)
+                elif name_type == "fun_name":
+                    fun_name_avail.append(excel_domain)
                 elif name_type == "cut_name":
                     cut_name_avail.append(excel_domain)
                 elif name_type == "part_cut_name":
@@ -297,6 +303,8 @@ def check_domains(project_id: str, limit: int):
                     pref_suff_name_not_avail.append(excel_domain)
                 elif name_type == "text_comp_name":
                     text_comp_name_not_avail.append(excel_domain)
+                elif name_type == "fun_name":
+                    fun_name_not_avail.append(excel_domain)
                 elif name_type == "cut_name":
                     cut_name_not_avail.append(excel_domain)
                 elif name_type == "part_cut_name":
@@ -312,6 +320,8 @@ def check_domains(project_id: str, limit: int):
     pref_suff_name_not_avail_len = len(pref_suff_name_not_avail)
     text_comp_name_avail_len = len(text_comp_name_avail)
     text_comp_name_not_avail_len = len(text_comp_name_not_avail)
+    fun_name_avail_len = len(text_comp_name_avail)
+    fun_name_not_avail_len = len(text_comp_name_not_avail)
     cut_name_avail_len = len(cut_name_avail)
     cut_name_not_avail_len = len(cut_name_not_avail)
     part_cut_name_avail_len = len(part_cut_name_avail)
@@ -323,16 +333,18 @@ def check_domains(project_id: str, limit: int):
     df2 = pd.DataFrame.from_dict(fit_name_avail, orient="columns")
     df3 = pd.DataFrame.from_dict(pref_suff_name_avail, orient="columns")
     df4 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
-    df5 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
-    df6 = pd.DataFrame.from_dict(part_cut_name_avail, orient="columns")
-    df7 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
-    df8 = pd.DataFrame.from_dict(repeating_name_not_avail, orient="columns")
-    df9 = pd.DataFrame.from_dict(fit_name_not_avail, orient="columns")
-    df10 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
-    df11 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
-    df12 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
-    df13 = pd.DataFrame.from_dict(part_cut_name_not_avail, orient="columns")
-    df14 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
+    df5 = pd.DataFrame.from_dict(fun_name_avail, orient="columns")
+    df6 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
+    df7 = pd.DataFrame.from_dict(part_cut_name_avail, orient="columns")
+    df8 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
+    df9 = pd.DataFrame.from_dict(repeating_name_not_avail, orient="columns")
+    df10 = pd.DataFrame.from_dict(fit_name_not_avail, orient="columns")
+    df11 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
+    df12 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
+    df13 = pd.DataFrame.from_dict(fun_name_not_avail, orient="columns")
+    df14 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
+    df15 = pd.DataFrame.from_dict(part_cut_name_not_avail, orient="columns")
+    df16 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
 
@@ -342,6 +354,7 @@ def check_domains(project_id: str, limit: int):
         f'avail fit names ({fit_name_avail_len})',
         f'avail pref suff names ({pref_suff_name_avail_len})',
         f'avail text comp names ({text_comp_name_avail_len})',
+        f'avail fun names ({fun_name_avail_len})',
         f'avail cut names ({cut_name_avail_len})',
         f'avail part cut names ({part_cut_name_avail_len})',
         f'avail no cut names ({no_cut_name_avail_len})',
@@ -349,6 +362,7 @@ def check_domains(project_id: str, limit: int):
         f'unavail fit names ({fit_name_not_avail_len})',
         f'unavail pref suff names ({pref_suff_name_not_avail_len})',
         f'unavail text comp names ({text_comp_name_not_avail_len})',
+        f'unavail fun names ({fun_name_not_avail_len})',
         f'unavail cut names ({cut_name_not_avail_len})',
         f'unavail part cut names ({part_cut_name_not_avail_len})',
         f'unavail no cut names ({no_cut_name_not_avail_len})'
@@ -368,6 +382,8 @@ def check_domains(project_id: str, limit: int):
     df12.to_excel(writer, sheet_name=sheet_names[11])
     df13.to_excel(writer, sheet_name=sheet_names[12])
     df14.to_excel(writer, sheet_name=sheet_names[13])
+    df15.to_excel(writer, sheet_name=sheet_names[14])
+    df16.to_excel(writer, sheet_name=sheet_names[15])
     workbook  = writer.book
     for sheet_name in sheet_names:
         worksheet = writer.sheets[sheet_name]

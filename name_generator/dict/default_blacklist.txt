@@ -152,8 +152,6 @@ exactly
 example
 except
 f
-far
-few
 fifth
 first
 five
@@ -194,7 +192,6 @@ having
 he
 he's
 hello
-help
 hence
 her
 here
@@ -249,7 +246,6 @@ k
 keep
 keeps
 kept
-know
 knows
 known
 l
@@ -375,7 +371,6 @@ right
 s
 said
 same
-saw
 say
 saying
 says

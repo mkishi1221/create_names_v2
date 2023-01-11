@@ -35,10 +35,13 @@ def categorize_name(modifiers, pos_list, fit = None):
 
     pref_suff_comps = ["prefix", "suffix"]
     text_comps = ["head", "tail", "join"]
+    fun_comps = ["ffun", "rfun"]
     if any(comp in pos_list for comp in text_comps):
         name_type = "text_comp_name"
     elif any(comp in pos_list for comp in pref_suff_comps):
         name_type = "pref_suff_name"
+    elif any(comp in pos_list for comp in fun_comps):
+        name_type = "fun_name"
     elif all(p == "no_cut" for p in modifiers) and len(modifiers) > 0:
         name_type = "no_cut_name"
     elif "no_cut" in modifiers and "ab_cut" in modifiers:
