@@ -5,8 +5,8 @@
     "keyword_len": 1,
     "restrictions_after": "noun, plural_noun, verb",
     "restrictions_as_joint": "adverb<joint>verb, noun<joint>noun, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "adverb",
@@ -14,8 +14,8 @@
     "keyword_len": 1,
     "restrictions_after": "noun, plural_noun",
     "restrictions_as_joint": "adverb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun, verb",
@@ -23,7 +23,7 @@
     "keyword_len": 5,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -32,7 +32,7 @@
     "keyword_len": 8,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -41,7 +41,7 @@
     "keyword_len": 5,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "adverb<joint>noun, noun<joint>adjective, noun<joint>noun, noun<joint>verb, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -50,7 +50,7 @@
     "keyword_len": 3,
     "restrictions_after": "verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -59,7 +59,7 @@
     "keyword_len": 4,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -68,7 +68,7 @@
     "keyword_len": 6,
     "restrictions_after": "adjective, verb",
     "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>adjective, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -77,8 +77,8 @@
     "keyword_len": 2,
     "restrictions_after": "noun, plural_noun",
     "restrictions_as_joint": "adverb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun",
@@ -86,7 +86,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -95,8 +95,8 @@
     "keyword_len": 3,
     "restrictions_after": "noun",
     "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "plural_noun",
@@ -104,7 +104,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -113,7 +113,7 @@
     "keyword_len": 2,
     "restrictions_after": "adjective, adverb, noun, plural_noun",
     "restrictions_as_joint": "adjective<joint>noun, noun<joint>adjective, noun<joint>adverb, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -122,7 +122,7 @@
     "keyword_len": 2,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -131,7 +131,7 @@
     "keyword_len": 2,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "adverb<joint>verb, verb<joint>adjective, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -140,8 +140,8 @@
     "keyword_len": 7,
     "restrictions_after": "noun, plural_noun",
     "restrictions_as_joint": "noun<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun",
@@ -149,7 +149,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -158,7 +158,7 @@
     "keyword_len": 2,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -167,7 +167,7 @@
     "keyword_len": 3,
     "restrictions_after": "adverb, verb",
     "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -176,8 +176,8 @@
     "keyword_len": 4,
     "restrictions_after": "adverb",
     "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun",
@@ -185,7 +185,7 @@
     "keyword_len": 5,
     "restrictions_after": "adverb, verb",
     "restrictions_as_joint": "noun<joint>adverb, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -194,7 +194,7 @@
     "keyword_len": 3,
     "restrictions_after": "verb",
     "restrictions_as_joint": "noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -203,8 +203,8 @@
     "keyword_len": 2,
     "restrictions_after": "adverb",
     "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun, verb",
@@ -212,7 +212,7 @@
     "keyword_len": 4,
     "restrictions_after": "verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -221,7 +221,7 @@
     "keyword_len": 6,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>adjective, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -230,7 +230,7 @@
     "keyword_len": 4,
     "restrictions_after": "verb",
     "restrictions_as_joint": "noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -239,7 +239,7 @@
     "keyword_len": 4,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -248,7 +248,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -257,7 +257,7 @@
     "keyword_len": 4,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -266,8 +266,8 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
     "restrictions_as_joint": "not_allowed",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "adverb, noun, plural_noun",
@@ -275,7 +275,7 @@
     "keyword_len": 4,
     "restrictions_after": "adverb",
     "restrictions_as_joint": "noun<joint>adverb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -284,7 +284,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -293,7 +293,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>noun, noun<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -302,7 +302,7 @@
     "keyword_len": 4,
     "restrictions_after": "adjective, adverb, verb",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>adverb, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -311,8 +311,8 @@
     "keyword_len": 2,
     "restrictions_after": "verb",
     "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "verb",
@@ -320,8 +320,8 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "verb",
@@ -329,8 +329,8 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, adverb, noun, plural_noun, verb",
     "restrictions_as_joint": "verb<joint>adjective, verb<joint>adverb, verb<joint>noun, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "verb",
@@ -338,8 +338,8 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "verb",
@@ -347,7 +347,7 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -356,7 +356,7 @@
     "keyword_len": 2,
     "restrictions_after": "noun, plural_noun",
     "restrictions_as_joint": "adverb<joint>noun, noun<joint>noun, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -365,7 +365,7 @@
     "keyword_len": 2,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -374,7 +374,7 @@
     "keyword_len": 4,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "noun<joint>adjective, noun<joint>noun, verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -383,8 +383,8 @@
     "keyword_len": 2,
     "restrictions_after": "verb",
     "restrictions_as_joint": "adverb<joint>verb, noun<joint>verb, verb<joint>verb",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "verb",
@@ -392,8 +392,8 @@
     "keyword_len": 3,
     "restrictions_after": "adjective, noun, plural_noun",
     "restrictions_as_joint": "verb<joint>adjective, verb<joint>noun",
-    "deactivate": "",
-    "shortlist": ""
+    "deactivate": null,
+    "shortlist": null
   },
   {
     "restrictions_before": "noun, plural_noun, verb",
@@ -401,7 +401,7 @@
     "keyword_len": 4,
     "restrictions_after": "adverb, verb",
     "restrictions_as_joint": "noun<joint>adverb, verb<joint>adverb, verb<joint>verb",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   },
   {
@@ -410,7 +410,7 @@
     "keyword_len": 3,
     "restrictions_after": "noun, plural_noun",
     "restrictions_as_joint": "noun<joint>noun",
-    "deactivate": "",
+    "deactivate": null,
     "shortlist": "s"
   }
 ]

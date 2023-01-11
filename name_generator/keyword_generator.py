@@ -58,7 +58,7 @@ def generate_word_list(project_id):
             user_keywords = process_user_keywords_str(keyword_list, project_path)
             for keyword in user_keywords:
                 keyword.origin = ["keyword_list"]
-            print("Getting keyword pos using wordAPI dictionary......")
+            print("Getting keyword pos using eng_dict dictionary......")
             keyword_list_keywords = verify_words_with_eng_dict(user_keywords, project_path, master_exempt_contained_words)
             with open(keyword_list_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
@@ -79,7 +79,7 @@ def generate_word_list(project_id):
             sentence_keywords = process_text_with_spacy(unique_lines)
             for keyword in sentence_keywords:
                 keyword.origin = ["sentences"]
-            print("Verifying keyword pos using wordAPI dictionary......")
+            print("Verifying keyword pos using eng_dict dictionary......")
             sentence_keywords = verify_words_with_eng_dict(sentence_keywords, project_path, master_exempt_contained_words)
             with open(sentences_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
