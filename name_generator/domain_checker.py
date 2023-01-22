@@ -144,11 +144,9 @@ def check_domains(project_id: str, limit: int):
     for name_type in names_dict.keys():
 
         print(f"Checking domains for {name_type}s...")
-
         name_list = list(names_dict[name_type].keys())
         available = 0
         domain_log_use = ""
-
         domain_log_list = set(domain_log.keys())
 
         # Check the shortest names from top of the name list until it reaches the desired number of available names
@@ -157,7 +155,7 @@ def check_domains(project_id: str, limit: int):
         name_str: str
         dict_len = len(NameDomain_dict[name_type])
         for name_str in name_list:
-            if name_str not in NameDomain_dict[name_type]:
+            if name_str not in NameDomain_dict[name_type] and names_dict[name_type][name_str]["grade"] is not None:
                 name_data = Graded_name(**names_dict[name_type][name_str])
                 avail_domain_list = set()
                 not_avail_domain_list = set()
@@ -320,8 +318,8 @@ def check_domains(project_id: str, limit: int):
     pref_suff_name_not_avail_len = len(pref_suff_name_not_avail)
     text_comp_name_avail_len = len(text_comp_name_avail)
     text_comp_name_not_avail_len = len(text_comp_name_not_avail)
-    fun_name_avail_len = len(text_comp_name_avail)
-    fun_name_not_avail_len = len(text_comp_name_not_avail)
+    fun_name_avail_len = len(fun_name_avail)
+    fun_name_not_avail_len = len(fun_name_not_avail)
     cut_name_avail_len = len(cut_name_avail)
     cut_name_not_avail_len = len(cut_name_not_avail)
     part_cut_name_avail_len = len(part_cut_name_avail)

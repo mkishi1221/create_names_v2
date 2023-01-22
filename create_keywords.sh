@@ -15,6 +15,12 @@ fi
 
 project_path="projects/$project_id"
 
+if [ ! -d $project_path ]
+then 
+    echo "ERROR: Directory \"$project_id\" does not exist. Check the project name and try again."
+    exit
+fi
+
 if [ ! -d $project_path ];
 then
     printf "Project files with name \"$project_id\" not detected. Press Y to create new project files, press N to look for existing project or press enter to escape: "

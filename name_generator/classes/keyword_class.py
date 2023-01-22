@@ -31,9 +31,8 @@ class Keyword:
     keyword_class: str = None
     keyword: str = None
     pos: str = None
-    preferred_pos: List[str] = None
-
     shortlist: str = None
+    preferred_pos: List[str] = None
 
     def __eq__(self, o: object) -> bool:
         return self.source_word == o.source_word and self.keyword == o.keyword and self.pos == o.pos

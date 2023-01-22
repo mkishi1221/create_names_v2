@@ -49,4 +49,4 @@ def get_whois(name) -> Domain:
     return data
 
 # For testing purposes:
-# print(get_whois("google.com"))
+# print(whois.whois(name, flags=flags))
