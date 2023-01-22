@@ -467,7 +467,7 @@ def generate_names(project_id: str):
                     keyword_combos[keyword_combination]["name_count"] = len(keyword_combos[keyword_combination]["names"])
                     keyword_combos[keyword_combination]["names_list"] = names_list
                     keyword_combos[keyword_combination]["names"].append(data)
-                sorted_names[name_type][name_in_title_str] = data
+            sorted_names[name_type][name_in_title_str] = data
 
     print("Exporting keyword_combos.json...")
     with open(json_kc_output_fp, "wb+") as out_file:
