@@ -15,6 +15,12 @@ fi
 
 project_path="projects/$project_id"
 
+if [ ! -d $project_path ]
+then 
+    echo "ERROR: Directory \"$project_id\" does not exist. Check the project name and try again."
+    exit
+fi
+
 # Calculate time elapsed
 date
 start_time=`gdate +%s%3N`
