@@ -11,6 +11,7 @@ from modules.grade_phonetic import grade_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
 from modules.pull_eng_dict import pull_eng_dict
+import copy
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -115,6 +116,7 @@ def fetch_eng_dict_pos(keyword, eng_dict: dict, eng_dict_words: list) -> list[st
     ]
     all_pos_raw = []
     not_valid = [None, ""]
+    all_pos = []
     if keyword not in not_valid:
         # Check if keyword is a number (Integer and float). If number, pos is NUM.
         # Potential bug: non-number things are also being flagged as NUM
@@ -122,7 +124,6 @@ def fetch_eng_dict_pos(keyword, eng_dict: dict, eng_dict_words: list) -> list[st
             all_pos_raw.append("number")
         # Check if keyword and it's definition/pos data is in eng_dict dictionary.
         all_pos_raw.extend(check_eng_dict(keyword, eng_dict, eng_dict_words))
-        all_pos = []
         for pos in all_pos_raw:
             if pos not in all_pos:
                 all_pos.append(pos)
@@ -205,17 +206,17 @@ def verify_words_with_eng_dict(keywords_db: List[Keyword], project_path: str, ex
 
         if len(all_pos) != 0:
             for pos_str in all_pos:
+                keyword_obj_1 = copy.deepcopy(keyword_obj)
                 valid_pos = {"noun", "adjective", "verb", "adverb"}
-                
                 # generate final lemma to set as keyword
                 if pos_str in valid_pos:
-                    nltk_lemma = lemmatizer.lemmatize(keyword_obj.keyword,  pos=convert_to_nltk_pos(pos_str))
+                    nltk_lemma = lemmatizer.lemmatize(keyword_obj_1.keyword,  pos=convert_to_nltk_pos(pos_str))
                 if nltk_lemma in eng_dict_words:
-                    keyword_obj.keyword = nltk_lemma
-                keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, curated_eng_list=curated_eng_word_list, type="keyword", exempt=exempt_contained_kw)
-                keyword_obj.eng_dict_pos = sorted(eng_dict_pos_list)
-                keyword_obj.pos = pos_str
-                updated_keywords_db.append(keyword_obj)
+                    keyword_obj_1.keyword = nltk_lemma
+                keyword_obj_1.contained_words = find_contained_words(keyword=keyword_obj_1.keyword, curated_eng_list=curated_eng_word_list, type="keyword", exempt=exempt_contained_kw)
+                keyword_obj_1.eng_dict_pos = sorted(eng_dict_pos_list)
+                keyword_obj_1.pos = pos_str
+                updated_keywords_db.append(keyword_obj_1)
  
         else:
             if keyword_obj.spacy_lemma not in invalid:
