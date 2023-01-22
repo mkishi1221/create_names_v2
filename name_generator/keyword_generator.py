@@ -52,7 +52,7 @@ def generate_word_list(project_id):
 
     # Check if keywords exists and create keywords from keywords list
     if os.path.exists(keyword_list_tsv_fp):
-        keyword_list = open(keyword_list_tsv_fp, "r").read().splitlines()
+        keyword_list = [s for s in open(keyword_list_tsv_fp, "r").read().replace(" ", "\n").splitlines() if s]
         if len(keyword_list) != 0:
             print("Extracting keywords from keyword list and processing them through spacy......")
             user_keywords = process_user_keywords_str(keyword_list, project_path)
@@ -169,13 +169,15 @@ def generate_word_list(project_id):
                 eng_dict_pos = keyword_obj[pos_list[0]].eng_dict_pos[0]
             except IndexError:
                 eng_dict_pos = None
-            if eng_dict_pos in required_pos and eng_dict_pos in pos_list:
+            origin = keyword_obj[pos_list[0]].origin
+
+            if "keyword_list" in origin and eng_dict_pos in pos_list:
+                all_keywords_dict[keyword_str][eng_dict_pos].shortlist = "s"
+            elif eng_dict_pos in required_pos and eng_dict_pos in pos_list:
                 all_keywords_dict[keyword_str][eng_dict_pos].shortlist = "s"
                 shortlist[eng_dict_pos] = shortlist[eng_dict_pos] + 1
                 if shortlist[eng_dict_pos] == shortlist[eng_dict_pos + "_limit"]:
                     required_pos.remove(eng_dict_pos)
-            if len(required_pos) == 0:
-                break
 
     print("Sorting keywords and exporting files...")
     sorted_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
