@@ -28,6 +28,7 @@ class Keyword:
     restrictions_after: List[str] = None
     restrictions_as_joint: List[str] = None
     yake_rank: int = None
+    latin: str = None
     keyword_class: str = None
     keyword: str = None
     pos: str = None
@@ -57,6 +58,7 @@ class Keyword:
 class Modword(Keyword):
     modifier: str = "no_cut"
     modword: str = ""
+    
     modword_len: int = 0
 
     def __eq__(self, o: object) -> bool:

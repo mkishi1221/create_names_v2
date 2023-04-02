@@ -131,7 +131,6 @@ def generate_names(project_id: str):
         out_file.write(str(required_comps).encode())
 
     # Access keyword list and sort words into verbs, nouns or adjectives
-    # Excel input for prototype only: for production, import directly from json
     keyword_dict = {}
     pos_conversion = {
         "adjective": "adje",

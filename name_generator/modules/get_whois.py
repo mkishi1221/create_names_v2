@@ -11,7 +11,7 @@ class DomainStates:
     NOT_AVAIL = "not available"
     UNKNOWN = "connection error"
 
-def get_whois(name) -> Domain:
+def get_whois(domain_str) -> Domain:
 
     # Call whois API to get domain information
     last_checked_int = None
@@ -25,7 +25,7 @@ def get_whois(name) -> Domain:
         try:
             flags = 0
             flags = flags | whois.NICClient.WHOIS_QUICK
-            w = whois.whois(name, flags=flags)
+            w = whois.whois(domain_str, flags=flags)
             check_expiration = int(w.expiration_date.timestamp())
             last_checked_int = int(datetime.now().timestamp())
             status = DomainStates.NOT_AVAIL
@@ -44,7 +44,7 @@ def get_whois(name) -> Domain:
         print("Connection unstable: check your internet connection and try again.")
         quit()
 
-    data = Domain(domain=name, availability=status, last_checked=last_checked_int, data_valid_till=check_expiration)
+    data = Domain(domain=domain_str, availability=status, last_checked=last_checked_int, data_valid_till=check_expiration)
 
     return data
 

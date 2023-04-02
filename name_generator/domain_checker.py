@@ -161,6 +161,7 @@ def check_domains(project_id: str, limit: int):
                 not_avail_domain_list = set()
 
                 for tld in tld_list:
+                    domain_log_use = ""
                     domain_str = name_str.lower() + tld
                     print(f"Checking {domain_str}...", end = "\r")
 
