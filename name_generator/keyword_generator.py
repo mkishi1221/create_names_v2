@@ -13,6 +13,7 @@ from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.filter_keywords import filter_keywords
 from modules.yake_keyword_extractor import keyword_extractor
+from modules.run_googletrans import get_translation
 from modules.process_user_keywords import process_user_keywords_str
 from modules.pull_user_keyword_bank import pull_user_keyword_bank
 from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
@@ -36,6 +37,7 @@ def generate_word_list(project_id):
     sentences_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_sentences.json"
     rated_kw_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_all_keywords.json"
     yake_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_yake_keywords.json"
+    gootrans_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_google_trans.json"
     keywords_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords.json"
 
     # output filepaths and filenames:
@@ -114,6 +116,15 @@ def generate_word_list(project_id):
     # Rank keywords using Yake:
     print("Extracting keywords using yake...")
     yake_keywords_dict = keyword_extractor(output_fp=yake_tmp_json_fp, sentences=sentences, keywords=keyword_list)
+
+    # Get translated keywords:
+    print("Translating keywords to Latin...")
+    yake_keywords_list = list(yake_keywords_dict.keys())
+    tmp_fp = f"{project_path}/tmp/keyword_generator/{project_id}_tmp.txt"
+    with open(tmp_fp, "wb+") as out_file:
+        out_file.write("\n".join(yake_keywords_list).encode())
+    google_translate_dict = get_translation(yake_keywords_list, gootrans_tmp_json_fp)
+
     all_keywords_list = []
     for kw in all_keywords:
         kw.keyword_class = "prime"

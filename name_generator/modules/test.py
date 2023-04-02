@@ -1,3 +1,7 @@
-import whois
+import requests
+import json
 
-print(whois.whois("www.google.com"))
+from google.cloud import language
+from google.oauth2 import service_account
+from google.cloud.language import enums
+from google.cloud.language import types

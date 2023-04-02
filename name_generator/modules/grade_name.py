@@ -24,7 +24,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
             and end_valid == "valid"
             and is_it_word == "no"
             and name_length > 4
-            and name_length < 10
+            and name_length < 20
             and contained_words == None
             and if_wiki_title == None
             and phonetic_grade in approved_phonetic
@@ -47,8 +47,8 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
                 reject_reason.append("is_word")
             if name_length <= 4:
                 reject_reason.append("under_5_letters")
-            if name_length >= 10:
-                reject_reason.append("over_9_letters")
+            if name_length >= 20:
+                reject_reason.append("over_20_letters")
             if contained_words != None:
                 reject_reason.append("contained_words")
             if if_wiki_title != None:
@@ -61,7 +61,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
         if (
             is_it_word == "no"
             and name_length > 4
-            and name_length < 10
+            and name_length < 20
             and contained_words == None
             and if_wiki_title == None
             and phonetic_grade in approved_phonetic
@@ -80,8 +80,8 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
                 reject_reason.append("is_word")
             if name_length <= 4:
                 reject_reason.append("under_5_letters")
-            if name_length >= 10:
-                reject_reason.append("over_9_letters")
+            if name_length >= 20:
+                reject_reason.append("over_20_letters")
             if contained_words != None:
                 reject_reason.append("contained_words")
             if if_wiki_title != None:
@@ -93,7 +93,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
         if (
             is_it_word == "no"
             and name_length > 4
-            and name_length < 10
+            and name_length < 20
             and contained_words == None
             and if_wiki_title == None
         ):
@@ -111,8 +111,8 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
                 reject_reason.append("is_word")
             if name_length <= 4:
                 reject_reason.append("under_5_letters")
-            if name_length >= 10:
-                reject_reason.append("over_9_letters")
+            if name_length >= 20:
+                reject_reason.append("over_20_letters")
             if contained_words != None:
                 reject_reason.append("contained_words")
             if if_wiki_title != None:
