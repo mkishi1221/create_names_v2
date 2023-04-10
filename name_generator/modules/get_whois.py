@@ -26,9 +26,16 @@ def get_whois(domain_str) -> Domain:
             flags = 0
             flags = flags | whois.NICClient.WHOIS_QUICK
             w = whois.whois(domain_str, flags=flags)
-            check_expiration = int(w.expiration_date.timestamp())
-            last_checked_int = int(datetime.now().timestamp())
-            status = DomainStates.NOT_AVAIL
+
+            if w.domain_name == None:
+                check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
+                last_checked_int = int(datetime.now().timestamp())
+                status = DomainStates.AVAIL
+            else:
+                check_expiration = int(w.expiration_date.timestamp())
+                last_checked_int = int(datetime.now().timestamp())
+                status = DomainStates.NOT_AVAIL
+
         except (whois.parser.PywhoisError):
             check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
             last_checked_int = int(datetime.now().timestamp())
@@ -49,4 +56,8 @@ def get_whois(domain_str) -> Domain:
     return data
 
 # For testing purposes:
-# print(whois.whois(name, flags=flags))
+# flags = 0
+# flags = flags | whois.NICClient.WHOIS_QUICK
+# name="ideide.org"
+# w = whois.whois(name, flags=flags)
+# print(w.domain_name)
