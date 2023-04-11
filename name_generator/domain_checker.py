@@ -159,7 +159,6 @@ def check_domains(project_id: str, limit: int):
                 name_data = Graded_name(**names_dict[name_type][name_str])
                 avail_domain_list = set()
                 not_avail_domain_list = set()
-
                 for tld in tld_list:
                     domain_log_use = ""
                     domain_str = name_str.lower() + tld
@@ -186,9 +185,7 @@ def check_domains(project_id: str, limit: int):
                         not_avail_domain_list.add(domain_obj)
                         condition = "not available"
 
-                    NameDomain_obj = create_NameDomain_obj(name_data, list(avail_domain_list), list(not_avail_domain_list))
-                    NameDomain_dict[name_type][name_str] = NameDomain_obj
-                    if len(avail_domain_list) > 0:
+                    if condition == "available":
                         available += 1
                         all_available += 1
                     counter += 1
@@ -199,6 +196,8 @@ def check_domains(project_id: str, limit: int):
                     if available >= limit:
                         break
 
+                NameDomain_obj = create_NameDomain_obj(name_data, list(avail_domain_list), list(not_avail_domain_list))
+                NameDomain_dict[name_type][name_str] = NameDomain_obj
                 del names_dict[name_type][name_str]
                 if available >= limit:
                     break
