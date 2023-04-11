@@ -133,7 +133,7 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["part_cut_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
 
-    tld_list = [".com", ".co.uk", ".org"] #TODO: Change to file source
+    tld_list = [".com", ".co.uk", ".org", ".co", ".io" ] #TODO: Change to file source
 
     json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
     with open(json_ndl_output_fp, "wb+") as out_file:
