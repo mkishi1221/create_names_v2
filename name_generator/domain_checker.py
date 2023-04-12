@@ -133,7 +133,7 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["part_cut_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
 
-    tld_list = [".com"] #TODO: Change to file source
+    tld_list = [".com", ".co.uk", ".org", ".co", ".io" ] #TODO: Change to file source
 
     json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
     with open(json_ndl_output_fp, "wb+") as out_file:
@@ -159,7 +159,6 @@ def check_domains(project_id: str, limit: int):
                 name_data = Graded_name(**names_dict[name_type][name_str])
                 avail_domain_list = set()
                 not_avail_domain_list = set()
-
                 for tld in tld_list:
                     domain_log_use = ""
                     domain_str = name_str.lower() + tld
@@ -186,20 +185,21 @@ def check_domains(project_id: str, limit: int):
                         not_avail_domain_list.add(domain_obj)
                         condition = "not available"
 
-                    print(f"'{domain_str}' {condition}{domain_log_use}")
+                    if condition == "available":
+                        available += 1
+                        all_available += 1
+                    counter += 1
 
-                del names_dict[name_type][name_str]
+                    print(f"'{domain_str}' {condition}{domain_log_use}")
+                    print(f"Names processed: {counter}")
+                    print(f"Names available: {available} + {dict_len}\n")
+                    if available >= limit:
+                        break
+
                 NameDomain_obj = create_NameDomain_obj(name_data, list(avail_domain_list), list(not_avail_domain_list))
                 NameDomain_dict[name_type][name_str] = NameDomain_obj
-
-                if len(avail_domain_list) > 0:
-                    available += 1
-                    all_available += 1
-
-                print(f"Names processed: {counter}\nNames available: {available} + {dict_len}\n")
-
-                counter += 1
-                if available == limit:
+                del names_dict[name_type][name_str]
+                if available >= limit:
                     break
 
         if available == 0:
