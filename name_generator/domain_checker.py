@@ -75,6 +75,10 @@ def check_domains(project_id: str, limit: int):
     if os.path.exists(remaining_names_fp):
         with open(remaining_names_fp, "rb") as namelist_file:
             names_dict = json.loads(namelist_file.read())
+        k_list = list(names_dict.keys())
+        for k in k_list:
+            if k.endswith("_reject"):
+                del names_dict[k]
         remaining = sum([len(names_dict[name_type]) for name_type in names_dict.keys()])
         if remaining == 0:
             print("No names left - run name generator again!")
@@ -85,6 +89,10 @@ def check_domains(project_id: str, limit: int):
     else:
         with open(sl_namelist_fp, "rb") as namelist_file:
             names_dict = json.loads(namelist_file.read())
+        k_list = list(names_dict.keys())
+        for k in k_list:
+            if k.endswith("_reject"):
+                del names_dict[k]
         del names_dict["shortlisted keywords"]
         del names_dict["keyword_combinations"]
         del names_dict["statistics"]
@@ -110,17 +118,18 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["no_cut_name"] = {}
         name_list: dict
         for name_type, name_list in NameDomain_dict_raw.items():
-            for name_in_title, data in name_list.items():
-                avail_domains_list = []
-                for domain_obj in data["avail_domains"]:
-                    avail_domains_list.append(Domain(**domain_obj))
-                not_avail_domains_list = []
-                for domain_obj in data["not_avail_domains"]:
-                    not_avail_domains_list.append(Domain(**domain_obj))
-                data = copy.deepcopy(data)
-                data["avail_domains"] = avail_domains_list
-                data["not_avail_domains"] = not_avail_domains_list
-                NameDomain_dict[name_type][name_in_title] = NameDomain(**data)
+            if not name_type.endswith("_reject"):
+                for name_in_title, data in name_list.items():
+                    avail_domains_list = []
+                    for domain_obj in data["avail_domains"]:
+                        avail_domains_list.append(Domain(**domain_obj))
+                    not_avail_domains_list = []
+                    for domain_obj in data["not_avail_domains"]:
+                        not_avail_domains_list.append(Domain(**domain_obj))
+                    data = copy.deepcopy(data)
+                    data["avail_domains"] = avail_domains_list
+                    data["not_avail_domains"] = not_avail_domains_list
+                    NameDomain_dict[name_type][name_in_title] = NameDomain(**data)
 
     else:
         NameDomain_dict = {}
@@ -133,7 +142,7 @@ def check_domains(project_id: str, limit: int):
         NameDomain_dict["part_cut_name"] = {}
         NameDomain_dict["no_cut_name"] = {}
 
-    tld_list = [".com", ".co.uk", ".org", ".co", ".io" ] #TODO: Change to file source
+    tld_list = [".com", ".co.uk", ".org", ".io" ] #TODO: Change to file source
 
     json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
     with open(json_ndl_output_fp, "wb+") as out_file:

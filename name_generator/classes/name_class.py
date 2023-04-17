@@ -16,6 +16,7 @@ class Etymology:
     exempt_contained: List[str] = None
     keyword_classes: List[str] = None
     name_type: str = None
+    relevance: float = None
 
     def __eq__(self, o: object) -> bool:
         return (
@@ -72,6 +73,7 @@ class Name:
     contained_words: List[str] = None
     keyword_classes: List[str] = None
     etymologies: Dict[str, Etymology] = None
+    relevance: float = None
 
 
     def __eq__(self, o: object) -> bool:
@@ -121,6 +123,7 @@ class Graded_name:
     keyword_classes: List[str] = None
     etymologies: List[Etymology] = None
     etymology_count: int = None
+    relevance: float = None
     grade: str = None
     name_class: str = None
     reject_reason: str = None

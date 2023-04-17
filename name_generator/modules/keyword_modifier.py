@@ -25,6 +25,7 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
             restrictions_before=keyword_obj.restrictions_before,
             restrictions_after=keyword_obj.restrictions_after,
             restrictions_as_joint=keyword_obj.restrictions_as_joint,
+            yake_score=keyword_obj.yake_score,
             yake_rank=keyword_obj.yake_rank,
             keyword=keyword_obj.keyword,
             pos=keyword_obj.pos,

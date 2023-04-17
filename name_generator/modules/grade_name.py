@@ -38,6 +38,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
             else:
                 grade_str = "Grade_D"
         else:
+            grade_str = "Reject"
             reject_reason = []
             if len(implaus_chars) > 4:
                 reject_reason.append("over_4_implausible_chars")
@@ -75,6 +76,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
             else:
                 grade_str = "Grade_D"
         else:
+            grade_str = "Reject"
             reject_reason = []
             if is_it_word != "no":
                 reject_reason.append("is_word")
@@ -106,6 +108,7 @@ def grade_name(name_type, phonetic_grade, implaus_chars, end_valid, is_it_word, 
             else:
                 grade_str = "Grade_D"
         else:
+            grade_str = "Reject"
             reject_reason = []
             if is_it_word != "no":
                 reject_reason.append("is_word")

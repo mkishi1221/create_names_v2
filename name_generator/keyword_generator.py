@@ -123,12 +123,13 @@ def generate_word_list(project_id):
     tmp_fp = f"{project_path}/tmp/keyword_generator/{project_id}_tmp.txt"
     with open(tmp_fp, "wb+") as out_file:
         out_file.write("\n".join(yake_keywords_list).encode())
-    google_translate_dict = get_translation(yake_keywords_list, gootrans_tmp_json_fp)
+    # google_translate_dict = get_translation(yake_keywords_list, gootrans_tmp_json_fp)
 
     all_keywords_list = []
     for kw in all_keywords:
         kw.keyword_class = "prime"
         if kw.keyword in yake_keywords_dict.keys():
+            kw.yake_score = str(yake_keywords_dict[kw.keyword][1])
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
         all_keywords_list.append(kw)
 

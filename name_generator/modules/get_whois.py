@@ -56,8 +56,10 @@ def get_whois(domain_str) -> Domain:
     return data
 
 # For testing purposes:
-# flags = 0
-# flags = flags | whois.NICClient.WHOIS_QUICK
-# name="ideide.org"
-# w = whois.whois(name, flags=flags)
-# print(w.domain_name)
+# domains = ["brandbrand.co", "messaguides.co", "strategicreativity.co", ]
+# for d in domains:
+#     flags = 0
+#     flags = flags | whois.NICClient.WHOIS_QUICK
+#     name="strategicreativity.co"
+#     w = whois.whois(name, flags=flags)
+#     print(w)

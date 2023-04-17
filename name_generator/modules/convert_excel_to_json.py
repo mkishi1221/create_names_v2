@@ -51,23 +51,24 @@ def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheet
                 new_dict_obj = {}
                 for key, item in dict_obj.items():
 
-                    #testing_start
-                    item_type = type(item)
-                    if item_type is str:
-                        item_starts_with = item.startswith("[")
-                        item_ends_with = item.endswith("]")
-                        item_starts_with_str = f"starts with [: {item_starts_with}"
-                        item_ends_with_str = f"ends with ]: {item_ends_with}"
-                        # print(item_type, "|", item, "|", item_starts_with_str, "|", item_ends_with_str)
-                    #testing_end
-
                     if type(item) == str and item.startswith("[") and item.endswith("]"):
-                        new_item = convert_to_list(item)
-                        new_dict_obj[key] = new_item
+                        item = convert_to_list(item)
+                        new_dict_obj[key] = item
                     if type(item) == str and len(item) == 0:
                         new_dict_obj[key] = None
                     else:
                         new_dict_obj[key] = item
+
+                    #testing_start
+                    # item_type = type(item)
+                    # if item_type is str:
+                    #     item_starts_with = item.startswith("[")
+                    #     item_ends_with = item.endswith("]")
+                    #     item_starts_with_str = f"starts with [: {item_starts_with}"
+                    #     item_ends_with_str = f"ends with ]: {item_ends_with}"
+                    #     print(item_type, "|", item, "|", item_starts_with_str, "|", item_ends_with_str, "|", item)
+                    #testing_end
+
                 list_of_dict.append(new_dict_obj)
         else:
             list_of_dict.extend(excel_data_df.to_dict(orient='records'))
