@@ -1,7 +1,13 @@
-import requests
-import json
+y = 0.9123456
+x = 0.789012
 
-from google.cloud import language
-from google.oauth2 import service_account
-from google.cloud.language import enums
-from google.cloud.language import types
+print(type(y), type(x))
+
+y = str(y)
+x = str(x)
+
+print(type(y), type(x))
+
+status = "yes" if y > x else "no"
+
+print(y > x)

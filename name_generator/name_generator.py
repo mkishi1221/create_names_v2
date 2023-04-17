@@ -284,6 +284,7 @@ def generate_names(project_id: str):
                     "phonetic_grade",
                     "components",
                     "abbreviations",
+                    "yake_score",
                     "yake_rank",
                     "modifier",
                     "modword_len",
@@ -360,6 +361,7 @@ def generate_names(project_id: str):
                     keyword_classes = name.keyword_classes,
                     etymologies = [etymology_repr],
                     etymology_count = 1,
+                    relevance=name.relevance,
                     grade = grade_str,
                     name_class=name_class_str,
                     reject_reason = reject_reason
@@ -397,6 +399,9 @@ def generate_names(project_id: str):
                 else:
                     keyword_pos_combos[keyword_combination] = [pos_combination]
 
+                if float(data.relevance) > float(name.relevance):
+                    data.relevance = name.relevance
+
                 data.contained_words = contained_words_list
                 data.keywords = keywords_list
                 data.keyword_combinations = sorted(set(data.keyword_combinations + [keyword_combination]))
@@ -414,7 +419,7 @@ def generate_names(project_id: str):
                 graded_names[key] = data
 
     # Sort graded names according to grade.
-    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].length, str(graded_names[k].grade or "ZZZZZ"), graded_names[k].name_class, graded_names[k].name_in_lower))
+    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].relevance, graded_names[k].grade, graded_names[k].length, graded_names[k].name_class, graded_names[k].name_in_lower))
     sorted_graded_names = {}
     for name in sorted_graded_names_list:
         sorted_graded_names[name] = graded_names[name]
@@ -435,9 +440,10 @@ def generate_names(project_id: str):
         raw_statistics[name_type] = {}
         if not name_type.endswith("percentage"):
             sorted_names[name_type] = {}
+            sorted_names[name_type + "_reject"] = {}
     for key, data in sorted_graded_names.items():
         name_in_title_str = data.name_in_title
-        grade = data.grade if data.grade is not None else "Discarded"
+        grade = data.grade
         if data.name_type[:4] == "fit_":
             name_type = "fit_name"
         elif data.name_type[:10] == "repeating_":
@@ -448,7 +454,7 @@ def generate_names(project_id: str):
         raw_statistics[name_type]["Total"] = raw_statistics[name_type].get("Total", 0) + 1
         for keyword_combination in data.keyword_combinations:
             pos_combinations = data.keyword_pos_combos[keyword_combination]
-            if grade != "Discarded":
+            if grade != "Reject":
                 raw_statistics[name_type]["Graded"] = raw_statistics[name_type].get("Graded", 0) + 1
                 if keyword_combination not in keyword_combo_set:
                     keyword_combos[keyword_combination] = {}
@@ -466,14 +472,16 @@ def generate_names(project_id: str):
                     keyword_combos[keyword_combination]["name_count"] = len(keyword_combos[keyword_combination]["names"])
                     keyword_combos[keyword_combination]["names_list"] = names_list
                     keyword_combos[keyword_combination]["names"].append(data)
-            sorted_names[name_type][name_in_title_str] = data
+                sorted_names[name_type][name_in_title_str] = data
+            else:
+                sorted_names[name_type + "_reject"][name_in_title_str] = data
 
     print("Exporting keyword_combos.json...")
     with open(json_kc_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(keyword_combos, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     print(f"Exporting {project_id}_names_statistics.json...")
-    grades = ["Grade_A", "Grade_B", "Grade_C", "Grade_D", "Graded", "Discarded", "Total"]
+    grades = ["Grade_A", "Grade_B", "Grade_C", "Grade_D", "Graded", "Reject", "Total"]
     statistics = {}
     for index, name_type in enumerate(name_types):
         statistics[name_type] = {}

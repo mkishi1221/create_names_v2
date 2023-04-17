@@ -42,6 +42,7 @@ def generate_keyword_shortlist(keyword_data):
                 restrictions_before=keyword["restrictions_before"],
                 restrictions_after=keyword["restrictions_after"],
                 restrictions_as_joint=keyword["restrictions_as_joint"],
+                yake_score=keyword["yake_score"],
                 yake_rank=keyword["yake_rank"],
                 keyword=keyword["keyword"],
                 pos=keyword["pos"],
