@@ -22,10 +22,9 @@ from modules.manage_contained_words import pull_master_exempt
 
 def process_additional_keywords(additional_keyword_list_fp, project_path, master_exempt_contained_words):
     keywords_json_fp = f"{project_path}/tmp/keyword_generator/additional_keywords.json"
-    keywords_json_fp = convert_excel_to_json(additional_keyword_list_fp, target_sheet="additional keywords", output_json_fp=keywords_json_fp, convert_list=True)
-    with open(keywords_json_fp) as keyword_file:
-        not_valid = [None, ""]
-        additional_keyword_list = [ kw_obj for kw_obj in json.loads(keyword_file.read()) if kw_obj["keyword"] not in not_valid and kw_obj["disable"] in not_valid ]
+    kw_list, keywords_json_fp = convert_excel_to_json(additional_keyword_list_fp, target_sheet="additional keywords", output_json_fp=keywords_json_fp, convert_list=True)
+    not_valid = [None, ""]
+    additional_keyword_list = [ kw_obj for kw_obj in kw_list if kw_obj["keyword"] not in not_valid and kw_obj["disable"] in not_valid ]
     if len(additional_keyword_list) != 0:
         print("Extracting keywords from keyword list and processing them through spacy......")
         additional_keywords = process_user_keywords_dict(additional_keyword_list, project_path)
@@ -81,9 +80,7 @@ def generate_modwords(project_id: str):
     for pos in pos_list:
         keyword_dict[pos] = []
 
-    keywords_json_fp = convert_excel_to_json(keyword_fp, target_sheets=sheet_names, output_json_fp=keywords_json_fp, convert_list=True)
-    with open(keywords_json_fp) as keyword_file:
-        keyword_data = json.loads(keyword_file.read())
+    keyword_data, keywords_json_fp = convert_excel_to_json(keyword_fp, target_sheets=sheet_names, output_json_fp=keywords_json_fp, convert_list=True)
     raw_keyword_shortlist = generate_keyword_shortlist(keyword_data) + process_additional_keywords(keyword_fp, project_path, master_exempt_contained_words)
     user_keyword_bank_list = pull_user_keyword_bank(project_path)
     keyword_shortlist = []

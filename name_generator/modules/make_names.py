@@ -62,6 +62,7 @@ def combine_1_word(modword_1_obj: Modword) -> Name:
     modifiers = (modword_1_obj.modifier)
     name_type = categorize_name(modifiers, pos_list)
     relevance = modword_1_obj.yake_score if modword_1_obj.yake_score else 1
+    lang = modword_1_obj.lang
 
     return Etymology(
         name_in_title=modword_1_obj.modword.title(),
@@ -72,7 +73,8 @@ def combine_1_word(modword_1_obj: Modword) -> Name:
         exempt_contained= sorted(set(modword_1_obj.contained_words + [modword_1_obj.keyword])),
         keyword_classes= [modword_1_obj.keyword_class],
         name_type=name_type,
-        relevance=str(relevance)
+        relevance=str(relevance),
+        lang_tuple=(lang)
     )
 
 def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: List[str], modifiers: List[str], fit: str = None) -> Name:
@@ -101,6 +103,9 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: Li
     m2_yake = modword_2_obj.yake_score if modword_2_obj.yake_score else 1
     relevance = (m1_yake + m2_yake) / 2
 
+    m1_lang = modword_1_obj.lang
+    m2_lang = modword_2_obj.lang
+    
     return Etymology(
         name_in_title=name_c2w,
         modword_tuple=(modword_1_obj.modword, modword_2_obj.modword),
@@ -110,7 +115,8 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: Li
         exempt_contained=exempt_contained_words,
         keyword_classes= sorted(set([modword_1_obj.keyword_class, modword_2_obj.keyword_class])),
         name_type=name_type,
-        relevance = str(relevance)
+        relevance = str(relevance),
+        lang_tuple=(m1_lang, m2_lang)
     )
 
 def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_obj: Modword, pos_list: List[str], modifiers: List[str], fit: str = None) -> Name:
@@ -141,6 +147,10 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
     m3_yake = modword_3_obj.yake_score if modword_3_obj.yake_score else 1
     relevance = (m1_yake + m2_yake + m3_yake) / 3
 
+    m1_lang = modword_1_obj.lang
+    m2_lang = modword_2_obj.lang
+    m3_lang = modword_3_obj.lang
+
     return Etymology(
         name_in_title=name_c3w,
         modword_tuple=(modword_1_obj.modword, modword_2_obj.modword, modword_3_obj.modword),
@@ -150,7 +160,8 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
         exempt_contained=exempt_contained_words,
         keyword_classes= sorted(set([modword_1_obj.keyword_class, modword_2_obj.keyword_class, modword_3_obj.keyword_class])),
         name_type=name_type,
-        relevance=str(relevance)
+        relevance=str(relevance),
+        lang_tuple=(m1_lang, m2_lang, m3_lang)
     )
 
 def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: list):
@@ -170,7 +181,9 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
             exempt_contained=set(etymology_obj.exempt_contained),
             keyword_classes=etymology_obj.keyword_classes,
             etymologies={etymology_obj},
-            relevance=etymology_obj.relevance
+            relevance=etymology_obj.relevance,
+            lang={"+".join(etymology_obj.lang_tuple)},
+            translated=set(etymology_obj.lang_tuple)
         )
     else:
 
@@ -179,6 +192,8 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
         name_dict[name_lower].etymologies.add(etymology_obj)
         name_dict[name_lower].keyword_classes = sorted(set(name_dict[name_lower].keyword_classes + etymology_obj.keyword_classes))
         name_dict[name_lower].exempt_contained.update(etymology_obj.exempt_contained)
+        name_dict[name_lower].lang.add("+".join(etymology_obj.lang_tuple))
+        name_dict[name_lower].translated.update(set(etymology_obj.lang_tuple))
     
     return name_dict
 
@@ -353,6 +368,8 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
         name_data = copy.deepcopy(name_dict[name_in_lower])
         name_data.etymologies = list(name_data.etymologies)
         name_data.exempt_contained = list(name_data.exempt_contained)
+        name_data.lang = list(name_data.lang)
+        name_data.translated = list(name_data.translated)
         sorted_name_dict[name_in_lower] = name_data
 
     return sorted_name_dict

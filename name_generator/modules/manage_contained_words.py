@@ -20,9 +20,7 @@ def pull_master_exempt():
     sheet_name = "contained_words"
     new_exempt_words = set()
     if os.path.exists(master_exempt_cw_xlsx_fp):
-        master_exempt_cw_json_fp = convert_excel_to_json(master_exempt_cw_xlsx_fp, sheet_name, convert_list=True)
-        with open(master_exempt_cw_json_fp) as master_exempt_cw_file:
-            master_exempt_cw_list = json.loads(master_exempt_cw_file.read())
+        master_exempt_cw_list, master_exempt_cw_json_fp = convert_excel_to_json(master_exempt_cw_xlsx_fp, sheet_name, convert_list=True)
         master_exempt_cw_dict = {}
         for data in master_exempt_cw_list:
             word = data["word"]

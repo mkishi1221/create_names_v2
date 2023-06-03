@@ -59,16 +59,6 @@ def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheet
                     else:
                         new_dict_obj[key] = item
 
-                    #testing_start
-                    # item_type = type(item)
-                    # if item_type is str:
-                    #     item_starts_with = item.startswith("[")
-                    #     item_ends_with = item.endswith("]")
-                    #     item_starts_with_str = f"starts with [: {item_starts_with}"
-                    #     item_ends_with_str = f"ends with ]: {item_ends_with}"
-                    #     print(item_type, "|", item, "|", item_starts_with_str, "|", item_ends_with_str, "|", item)
-                    #testing_end
-
                 list_of_dict.append(new_dict_obj)
         else:
             list_of_dict.extend(excel_data_df.to_dict(orient='records'))
@@ -82,4 +72,4 @@ def convert_excel_to_json(input_excel_fp, target_sheet: str = None, target_sheet
         out_file.write(json.dumps(list_of_dict, option=json.OPT_INDENT_2))
 
     # Return output filepath
-    return output_json_fp
+    return list_of_dict, output_json_fp

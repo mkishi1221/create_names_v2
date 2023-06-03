@@ -133,7 +133,7 @@ def generate_word_list(project_id):
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
         all_keywords_list.append(kw)
 
-    all_keywords_list = sorted(all_keywords_list, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    all_keywords_list = sorted(all_keywords_list, key=lambda d: (d.phonetic_grade, int(d.yake_rank or 1000000000), d.keyword))
     with open(rated_kw_tmp_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_keywords_list, option=json.OPT_INDENT_2))
 
@@ -155,9 +155,7 @@ def generate_word_list(project_id):
     print("Shortlisting keywords...")
     if os.path.exists(excel_output_fp):        
         sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-        old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
-        with open(old_data_fp) as keyword_file:
-            keyword_data = json.loads(keyword_file.read())
+        keyword_data, old_data_fp = convert_excel_to_json(excel_output_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
         keyword_shortlist = generate_keyword_shortlist(keyword_data)
         for keyword_obj in keyword_shortlist:
             keyword_str = keyword_obj.keyword
@@ -221,7 +219,7 @@ def generate_word_list(project_id):
     # excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
     # excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
     # excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
+    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (d.phonetic_grade, int(d.yake_rank or 1000000000), d.keyword))
 
     # Add sheet for additional keywords
     excel_output_list_additional_keywords = []

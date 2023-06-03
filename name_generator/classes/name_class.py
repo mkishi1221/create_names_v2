@@ -12,6 +12,7 @@ class Etymology:
     modword_tuple: Tuple[str] = None
     keyword_tuple: Tuple[Modword.keyword] = None
     pos_tuple: Tuple[Component.pos] = None
+    lang_tuple: Tuple[Modword.lang] = None
     modifier_tuple: Tuple[Component.modifier] = None
     exempt_contained: List[str] = None
     keyword_classes: List[str] = None
@@ -72,6 +73,8 @@ class Name:
     exempt_contained: List[str] = None
     contained_words: List[str] = None
     keyword_classes: List[str] = None
+    translated: List[str] = None
+    lang: List[str] = None
     etymologies: Dict[str, Etymology] = None
     relevance: float = None
 
@@ -118,6 +121,8 @@ class Graded_name:
     keywords: List[str] = None
     keyword_combinations: List[str] = None
     pos_combinations: List[str] = None
+    lang: List[str] = None
+    translated: List[str] = None
     keyword_pos_combos: dict = None
     modifier_combinations: List[str] = None
     keyword_classes: List[str] = None

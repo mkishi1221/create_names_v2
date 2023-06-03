@@ -30,10 +30,9 @@ from modules.manage_contained_words import pull_master_exempt, push_contained_wo
 
 def process_additional_keywords(additional_keyword_list_fp, project_path, master_exempt_contained_words):
     keywords_json_fp = f"{project_path}/tmp/name_generator/additional_keywords.json"
-    keywords_json_fp = convert_excel_to_json(additional_keyword_list_fp, target_sheet="additional keywords", output_json_fp=keywords_json_fp, convert_list=True)
-    with open(keywords_json_fp) as keyword_file:
-        not_valid = [None, ""]
-        additional_keyword_list = [ kw_obj for kw_obj in json.loads(keyword_file.read()) if kw_obj["keyword"] not in not_valid and kw_obj["disable"] in not_valid ]
+    kw_list, keywords_json_fp = convert_excel_to_json(additional_keyword_list_fp, target_sheet="additional keywords", output_json_fp=keywords_json_fp, convert_list=True)
+    not_valid = [None, ""]
+    additional_keyword_list = [ kw_obj for kw_obj in kw_list if kw_obj["keyword"] not in not_valid and kw_obj["disable"] in not_valid ]
     if len(additional_keyword_list) != 0:
         print("Extracting keywords from keyword list and processing them through spacy......")
         additional_keywords = process_user_keywords_dict(additional_keyword_list, project_path)
@@ -53,9 +52,10 @@ def check_if_wiki_title(is_word, name_in_lower: str, wiki_titles_list: list[str]
     return value
 
 # "dictionary_fp" input is a filepath
-def pull_dictionary(dictionary_fp: str, pos_str: str) -> List[Keyword]:
-    with open(dictionary_fp) as dictionary_file:
-        dictionary_data = json.loads(dictionary_file.read())
+def pull_dictionary(pos_str: str, dictionary_data: str =None, dictionary_fp: str = None, ) -> List[Keyword]:
+    if dictionary_data is None:
+        with open(dictionary_fp) as dictionary_file:
+            dictionary_data = json.loads(dictionary_file.read())
     target_list = set()
     for data in dictionary_data:
         not_valid = [None, ""]
@@ -145,9 +145,7 @@ def generate_names(project_id: str):
             keyword_dict[key] = set()
 
     sheets = ["nouns", "verbs", "adjectives", "adverbs"]
-    keywords_json_mfp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
-    with open(keywords_json_mfp) as keyword_file:
-        keyword_data = json.loads(keyword_file.read())
+    keyword_data, keywords_json_mfp = convert_excel_to_json(keyword_fp, target_sheets=sheets, output_json_fp=keywords_json_fp, convert_list=True)
     raw_keyword_shortlist = generate_keyword_shortlist(keyword_data) + process_additional_keywords(keyword_fp, project_path, master_exempt_contained_words)
     user_keyword_bank_list = pull_user_keyword_bank(project_path)
     keyword_shortlist = []
@@ -221,44 +219,44 @@ def generate_names(project_id: str):
     if "pref" in required_comps.keys():
         pos = "prefix"
         sheet_name = "prefixes"
-        prefix_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)   
-        keyword_dict["pref|no_cut"] = set(pull_dictionary(prefix_file, pos))
+        prefix_data, prefix_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)   
+        keyword_dict["pref|no_cut"] = set(pull_dictionary(pos, prefix_data))
 
     if "suff" in required_comps.keys():
         pos = "suffix"
         sheet_name = "suffixes"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["suff|no_cut"] = set(pull_dictionary(json_file, pos))
+        suffix_data, suffix_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["suff|no_cut"] = set(pull_dictionary(pos, suffix_data))
 
     if "head" in required_comps.keys():
         pos = "head"
         sheet_name = "heads"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["head|no_cut"] = set(pull_dictionary(json_file, pos))
+        head_data, head_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["head|no_cut"] = set(pull_dictionary(pos, head_data))
 
     if "tail" in required_comps.keys():
         pos = "tail"
         sheet_name = "tails"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["tail|no_cut"] = set(pull_dictionary(json_file, pos))
+        tail_data, tail_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["tail|no_cut"] = set(pull_dictionary(pos, tail_data))
 
     if "join" in required_comps.keys():
         pos = "join"
         sheet_name = "joints"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["join|no_cut"] = set(pull_dictionary(json_file, pos))
+        join_data, join_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["join|no_cut"] = set(pull_dictionary(pos, join_data))
 
     if "ffun" in required_comps.keys():
         pos = "ffun"
         sheet_name = "front_fun"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["ffun|no_cut"] = set(pull_dictionary(json_file, pos))
+        ffun_data, ffun_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["ffun|no_cut"] = set(pull_dictionary(pos, ffun_data))
 
     if "rfun" in required_comps.keys():
         pos = "rfun"
         sheet_name = "rear_fun"
-        json_file = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
-        keyword_dict["rfun|no_cut"] = set(pull_dictionary(json_file, pos))
+        rfun_data, rfun_fp = convert_excel_to_json(text_components_data_xlsx_fp, sheet_name, convert_list=True)  
+        keyword_dict["rfun|no_cut"] = set(pull_dictionary(pos, rfun_data))
 
     keyword_dict_json = {}
     for key, item in keyword_dict.items():
@@ -356,6 +354,8 @@ def generate_names(project_id: str):
                     keywords = keywords_list,
                     keyword_combinations = [keyword_combination],
                     pos_combinations = [pos_combination],
+                    lang=name.lang,
+                    translated=name.translated,
                     keyword_pos_combos={keyword_combination:[pos_combination]},
                     modifier_combinations = [modifier_combination],
                     keyword_classes = name.keyword_classes,
@@ -371,6 +371,8 @@ def generate_names(project_id: str):
                 data:Graded_name = copy.deepcopy(graded_names[key])
                 modwords_list = sorted(set(list(data.modwords) + list(etymology_data.modword_tuple)))
                 keywords_list = sorted(set(list(data.keywords) + list(etymology_data.keyword_tuple)))
+                lang_list = list(set(data.lang + name.lang))
+                translated_list = list(set(data.translated + name.translated))
                 exempt_contained_list = sorted(set(list(data.exempt_contained) + list(name.exempt_contained) + list(exempt_contained_list))) if name.exempt_contained else sorted(set(list(data.exempt_contained) + list(exempt_contained_list)))
                 contained_words_list = find_contained_words(keyword=name_in_title_str, curated_eng_list=curated_eng_list, type="name", exempt=exempt_contained_list)
                 grade_str, reject_reason = grade_name(name_type_str, name.phonetic_grade, name.implaus_chars, name.end_valid, name.is_word, name.length, contained_words_list, wiki_title_check)
@@ -406,6 +408,8 @@ def generate_names(project_id: str):
                 data.keywords = keywords_list
                 data.keyword_combinations = sorted(set(data.keyword_combinations + [keyword_combination]))
                 data.pos_combinations = sorted(set(data.pos_combinations + [pos_combination]))
+                data.lang = lang_list
+                data.translated = translated_list
                 data.keyword_pos_combos = keyword_pos_combos
                 data.modifier_combinations = sorted(set(data.modifier_combinations + [modifier_combination]))
                 data.keyword_classes = keyword_class_list
@@ -419,7 +423,7 @@ def generate_names(project_id: str):
                 graded_names[key] = data
 
     # Sort graded names according to grade.
-    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].relevance, graded_names[k].grade, graded_names[k].length, graded_names[k].name_class, graded_names[k].name_in_lower))
+    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].grade, graded_names[k].length, graded_names[k].relevance, graded_names[k].name_class, graded_names[k].name_in_lower))
     sorted_graded_names = {}
     for name in sorted_graded_names_list:
         sorted_graded_names[name] = graded_names[name]
@@ -431,11 +435,22 @@ def generate_names(project_id: str):
     push_contained_words_list(sorted_graded_names, master_exempt_contained_words)
 
     print("Preparing data for export...")
-    name_types = ["repeating_name", "rpn_percentage", "fit_name", "fn_percentage", "text_comp_name", "tcn_percentage", "fun_name", "fun_percentage", "pref_suff_name", "psn_percentage", "cut_name", "cn_percentage", "part_cut_name", "pcn_percentage", "no_cut_name", "ncn_percentage"]
+    name_types = [
+        "repeating_name", 
+        "fit_name", 
+        "text_comp_name", 
+        "fun_name", 
+        "pref_suff_name", 
+        "cut_name", 
+        "part_cut_name", 
+        "no_cut_name"
+    ]
+
     keyword_combos = {}
     keyword_combo_set = set()
     sorted_names = {"keyword_combinations": [], "shortlisted keywords": keyword_dict_sorted}
     raw_statistics = {}
+
     for name_type in name_types:
         raw_statistics[name_type] = {}
         if not name_type.endswith("percentage"):

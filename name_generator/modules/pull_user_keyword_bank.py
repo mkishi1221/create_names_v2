@@ -17,9 +17,7 @@ def pull_user_keyword_bank(project_path):
     user_keyword_bank_list = []
     user_keyword_bank_fp = f"{project_path}/data/user_keyword_bank.xlsx"
     if os.path.exists(user_keyword_bank_fp):
-        user_keyword_bank_json_fp = convert_excel_to_json(user_keyword_bank_fp, target_sheet='user_keyword_bank', output_json_fp=f"{project_path}/tmp/logs/user_keyword_bank.json", convert_list=True)
-        with open(user_keyword_bank_json_fp) as user_keyword_bank_file:
-            raw_user_keyword_bank_list = json.loads(user_keyword_bank_file.read())
+        raw_user_keyword_bank_list, user_keyword_bank_json_fp = convert_excel_to_json(user_keyword_bank_fp, target_sheet='user_keyword_bank', output_json_fp=f"{project_path}/tmp/logs/user_keyword_bank.json", convert_list=True)
         for kw_obj in raw_user_keyword_bank_list:
             not_valid = [None, ""]
             if kw_obj["keyword"] not in not_valid:

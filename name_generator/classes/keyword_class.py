@@ -60,6 +60,7 @@ class Modword(Keyword):
     modifier: str = "no_cut"
     modword: str = ""
     modword_len: int = 0
+    lang: str = "english"
 
     def __eq__(self, o: object) -> bool:
         return self.modword == o.modword and self.keyword == o.keyword and self.pos == o.pos
