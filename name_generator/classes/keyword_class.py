@@ -11,7 +11,7 @@ class Keyword:
     """
 
     origin: List[str] = None
-    source_word: str = None
+    source_words: List[str] = None
     spacy_lemma: str = None
     nltk_lemma: str = None
     hard_lemma: Dict[str, str] = None
@@ -22,6 +22,9 @@ class Keyword:
     contained_words: List[str] = None
     phonetic_pattern: str = None
     phonetic_grade: str = None
+    phonetic_score: int = None
+    lowest_phonetic: str = None
+    implausible_chars: List[str] = None
     components: str = None
     abbreviations: List[str] = None
     restrictions_before: List[str] = None
@@ -29,21 +32,19 @@ class Keyword:
     restrictions_as_joint: List[str] = None
     yake_score: int = None
     yake_rank: int = None
-    latin: str = None
     keyword_class: str = None
     keyword: str = None
     pos: str = None
     shortlist: str = None
-    preferred_pos: List[str] = None
 
     def __eq__(self, o: object) -> bool:
-        return self.source_word == o.source_word and self.keyword == o.keyword and self.pos == o.pos
+        return self.keyword == o.keyword and self.pos == o.pos
 
     def __ne__(self, o: object) -> bool:
-        return self.source_word != o.source_word and self.keyword != o.keyword and self.pos != o.pos
+        return self.keyword != o.keyword and self.pos != o.pos
 
     def __hash__(self) -> int:
-        return hash((self.source_word, self.keyword_len, self.keyword, str(self.origin)))
+        return hash((self.keyword_len, self.keyword, self.pos, str(self.origin)))
 
     def __repr__(self) -> str:
         return str(
@@ -60,6 +61,7 @@ class Modword(Keyword):
     modifier: str = "no_cut"
     modword: str = ""
     modword_len: int = 0
+    lang: str = "english"
 
     def __eq__(self, o: object) -> bool:
         return self.modword == o.modword and self.keyword == o.keyword and self.pos == o.pos
@@ -68,34 +70,7 @@ class Modword(Keyword):
         return self.modword != o.modword and self.keyword != o.keyword and self.pos != o.pos
 
     def __hash__(self) -> int:
-        return hash((self.source_word, self.keyword_len, self.keyword, self.modword, self.pos))
-
-    def __repr__(self) -> str:
-        return str(
-            {
-                key: self.__dict__[key]
-                for key in self.__dict__
-                if self.__dict__[key] is not None
-            }
-        )
-
-@dataclass_json
-@dataclass
-class Preferred_Keyword:
-    keyword: str = None
-    preferred_pos: List[str] = None
-    origin: List[str] = None
-    keyword_class: str = None
-    disable: str = None
-
-    def __eq__(self, o: object) -> bool:
-        return self.keyword == o.keyword
-
-    def __ne__(self, o: object) -> bool:
-        return self.keyword != o.keyword
-
-    def __hash__(self) -> int:
-        return hash((self.keyword))
+        return hash((self.keyword_len, self.keyword, self.modword, self.pos))
 
     def __repr__(self) -> str:
         return str(

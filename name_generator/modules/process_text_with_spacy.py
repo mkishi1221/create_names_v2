@@ -20,7 +20,7 @@ nlp = spacy.load(
     ],
 )
 
-def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
+def create_keyword(word: str, word_pos: str, word_lemma: str, processed_word: str) -> Keyword:
     """
     summary:
         Creates a "keyword" so that similar words are grouped together regardless of their case-styles/symbols used.
@@ -35,19 +35,20 @@ def create_keyword(word: str, word_pos: str, word_lemma: str) -> Keyword:
     returns:
         token_dict: dict; a dictionary containing all important parameters of keyword
     """
-    processed_word = re.sub(r"^\W+", "", word).lower()
-    processed_word = re.sub(r"\W+$", "", processed_word)
 
     return Keyword(
-        source_word=word,
+        source_words=[word],
         spacy_lemma=word_lemma,
         keyword=processed_word,
         keyword_len=len(processed_word),
         spacy_pos=word_pos,
+        spacy_occurrence = 1
     )
 
 def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
-    keywords: List[Keyword] = []
+    print("Extracting keywords from sentences using spacy...")
+    not_valid = [None, ""]
+    keywords: dict[Keyword] = {}
     for line in lines:
         doc = nlp(line)
 
@@ -55,29 +56,23 @@ def process_text_with_spacy(lines: List[str]) -> List[Keyword]:
         # Tokens can also be symbols and other things that are not full words.
         for sent in doc.sents:
             for token in sent:
-                word = token.text
-                word_pos = token.pos_
-                word_lemma = token.lemma_
+                word = token.text.strip()
+                processed_word = re.sub(r"^\W+", "", word).lower()
+                processed_word = re.sub(r"\W+$", "", processed_word)
+                if processed_word not in not_valid:
+                    word_pos = token.pos_
+                    word_lemma = token.lemma_
+                    kw_obj = create_keyword(word, word_pos, word_lemma, processed_word)
+                    if word not in keywords.keys():
+                        keywords[processed_word] = kw_obj
+                    else:
+                        source_word_list = sorted(set(keywords[processed_word].source_words + [word]))
+                        keywords[processed_word].source_words = source_word_list
+                        keywords[processed_word].spacy_occurrence = keywords[processed_word].spacy_occurrence + 1
 
-                keywords.append(create_keyword(word, word_pos, word_lemma))
-
-    unique_words = []
-    for keyword in keywords:
-        not_valid = [None, ""]
-        if keyword.keyword not in not_valid and keyword not in unique_words:
-            unique_words.append(keyword)
-
-    # Count occurrence of unique word
-    unique_word: Keyword
-    for unique_word in unique_words:
-        unique_word.spacy_occurrence = keywords.count(unique_word)
-
-    # Sort keyword list according to:
-    # 1. "keyword" in alphabetical order
-    # 2. occurrence
-    # 3. "original" word in alphabetical order.
+    # Sort keyword list to "keyword" in alphabetical order
     sorted_unique_words = sorted(
-        unique_words, key=lambda k: (k.keyword, -k.spacy_occurrence, k.source_word.lower())
+        list(keywords.values()), key=lambda k: (k.keyword)
     )
 
     return sorted_unique_words

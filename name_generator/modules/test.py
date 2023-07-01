@@ -1,13 +1,3 @@
-y = 0.9123456
-x = 0.789012
+list = [1,2,3,4,5,6]
 
-print(type(y), type(x))
-
-y = str(y)
-x = str(x)
-
-print(type(y), type(x))
-
-status = "yes" if y > x else "no"
-
-print(y > x)
+print(list[:3])
