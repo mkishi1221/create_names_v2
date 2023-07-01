@@ -27,16 +27,17 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
 
     for keyword in keywords:
 
-        if keyword.keyword in blacklist:
+        if keyword.keyword in blacklist and keyword.origin == "sentences":
             keyword.pos = "Stopword"
 
         if (
             keyword.pos in approved_pos
             and not bool(illegal_char.search(keyword.keyword))
-            and keyword.keyword_len > 2
+            and keyword.keyword_len > 1
         ):
             approved_keywords.append(keyword)
         else:
-            other_keywords.append(keyword)
+            if keyword not in other_keywords:
+                other_keywords.append(keyword)
 
     return approved_keywords, other_keywords

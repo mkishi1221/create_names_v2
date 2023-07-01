@@ -7,16 +7,14 @@ import pandas as pd
 from pattern3.text.en import pluralize
 import dataclasses
 from classes.keyword_class import Keyword
-from classes.keyword_class import Preferred_Keyword
 from modules.collect_algorithms import collect_algorithms
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.find_contained_words import find_contained_words
 from modules.process_user_keywords import process_user_keywords_dict
 from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
-from modules.pull_user_keyword_bank import pull_user_keyword_bank
 from modules.keyword_modifier import keyword_modifier
-from modules.grade_phonetic import grade_phonetic
+from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.manage_contained_words import pull_master_exempt
 
 
@@ -45,7 +43,7 @@ def isNone(variable):
 
 # Generate name ideas
 # "keyword_fp", "algorithm_fp", "json_output_fp", "xlsx_output_fp" inputs are filepaths
-def generate_modwords(project_id: str):
+def generate_modwords(project_id: str, xgrams_dict:dict):
 
     project_path = f"projects/{project_id}"
 
@@ -81,24 +79,7 @@ def generate_modwords(project_id: str):
         keyword_dict[pos] = []
 
     keyword_data, keywords_json_fp = convert_excel_to_json(keyword_fp, target_sheets=sheet_names, output_json_fp=keywords_json_fp, convert_list=True)
-    raw_keyword_shortlist = generate_keyword_shortlist(keyword_data) + process_additional_keywords(keyword_fp, project_path, master_exempt_contained_words)
-    user_keyword_bank_list = pull_user_keyword_bank(project_path)
-    keyword_shortlist = []
-    for keyword_obj in raw_keyword_shortlist:
-        key = Preferred_Keyword(keyword=keyword_obj.keyword)
-        if key in user_keyword_bank_list:
-            kw_index = user_keyword_bank_list.index(key)
-            pos_list = user_keyword_bank_list[kw_index].preferred_pos
-            for pos_str in pos_list:
-                keyword_obj = copy.deepcopy(keyword_obj)
-                keyword_obj.pos = pos_str
-                keyword_obj.preferred_pos = pos_list
-                keyword_obj.keyword_class = "prime"
-                if keyword_obj not in keyword_shortlist:
-                    keyword_shortlist.append(keyword_obj)
-        elif keyword_obj not in keyword_shortlist:
-            keyword_shortlist.append(keyword_obj)
-
+    keyword_shortlist = generate_keyword_shortlist(keyword_data)
     print("Fetching keywords and making modifications...")
     if len(keyword_shortlist) == 0:
         print("No keywords shortlisted!")
@@ -120,6 +101,7 @@ def generate_modwords(project_id: str):
                 keyword_obj.keyword = plural_noun_str
                 keyword_obj.pos = "plural_noun"
                 keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
+                keyword_obj.phonetic_score, keyword_obj.lowest_phonetic = phonetic(plural_noun_str, xgrams_dict)
                 keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_word_list, type="keyword", exempt=master_exempt_contained_words)
                 keyword_obj.keyword_class = "prime"
                 for kw_modifier in modifier_list:
@@ -130,13 +112,15 @@ def generate_modwords(project_id: str):
 
     desired_order_list = [
         "origin",
-        "source_word",
+        "source_words",
         "spacy_pos",
         "eng_dict_pos",
         "keyword_len",
         "contained_words",
         "phonetic_pattern",
         "phonetic_grade",
+        "phonetic_score",
+        "lowest_phonetic",
         "components",
         "abbreviations",
         "yake_rank",

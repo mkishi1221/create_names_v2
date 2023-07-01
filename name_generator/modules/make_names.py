@@ -7,8 +7,7 @@ from classes.algorithm_class import Algorithm
 from classes.name_class import Etymology
 from classes.name_class import Name
 from classes.keyword_class import Modword
-from modules.grade_phonetic import grade_phonetic
-from modules.word_plausible import word_plausability
+from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.generate_hard_lemma import generate_hard_lemma
 
 def is_word(name: str, eng_dict_words: list):
@@ -58,23 +57,24 @@ def categorize_name(modifiers, pos_list, fit = None):
 
 def combine_1_word(modword_1_obj: Modword) -> Name:
 
-    pos_list = (modword_1_obj.pos)
-    modifiers = (modword_1_obj.modifier)
+    pos_list = [modword_1_obj.pos]
+    modifiers = [modword_1_obj.modifier]
     name_type = categorize_name(modifiers, pos_list)
     relevance = modword_1_obj.yake_score if modword_1_obj.yake_score else 1
     lang = modword_1_obj.lang
 
+
     return Etymology(
         name_in_title=modword_1_obj.modword.title(),
-        modword_tuple=(modword_1_obj.modword),
-        keyword_tuple=(modword_1_obj.keyword),
-        pos_tuple=pos_list,
-        modifier_tuple=modifiers,
-        exempt_contained= sorted(set(modword_1_obj.contained_words + [modword_1_obj.keyword])),
+        modword_tuple=(modword_1_obj.modword,),
+        keyword_tuple=(modword_1_obj.keyword,),
+        pos_tuple=(modword_1_obj.pos,),
+        modifier_tuple=(modword_1_obj.modifier,),
+        exempt_contained= sorted(set(list(modword_1_obj.contained_words or []) + [modword_1_obj.keyword])),
         keyword_classes= [modword_1_obj.keyword_class],
         name_type=name_type,
         relevance=str(relevance),
-        lang_tuple=(lang)
+        lang_tuple=(lang,)
     )
 
 def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: List[str], modifiers: List[str], fit: str = None) -> Name:
@@ -164,19 +164,20 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
         lang_tuple=(m1_lang, m2_lang, m3_lang)
     )
 
-def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: list):
+def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: list, xgrams_dict: list, letter_sets: list):
 
     name_lower = etymology_obj.name_in_title.lower()
     if name_lower not in name_dict.keys():
         phonetic_grade, phonetic_pattern = grade_phonetic(name_lower)
-        implaus_chars_list, end_valid_str = word_plausability(name_lower)
+        phonetic_score, lowest_phonetic, implaus_chars_list = score_phonetic(name_lower, xgrams_dict)
         name_dict[name_lower] = Name(
             name_in_lower=name_lower,
             length=len(name_lower),
             phonetic_pattern=phonetic_pattern,
             phonetic_grade=phonetic_grade,
+            phonetic_score=phonetic_score,
+            lowest_phonetic=lowest_phonetic,
             implaus_chars=implaus_chars_list,
-            end_valid=end_valid_str,
             is_word=is_word(name_lower, eng_dict_words),
             exempt_contained=set(etymology_obj.exempt_contained),
             keyword_classes=etymology_obj.keyword_classes,
@@ -239,7 +240,7 @@ def clean_wordlist(wordlist, before_pos=None, after_pos=None):
 
     return cleaned_wordlist
 
-def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list) -> Dict[str, List[Name]]:
+def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list, end_chars: list, letter_sets: list) -> Dict[str, List[Name]]:
     '''
     Names are now stored in a list in a dictionary where the dictionary keys are the keywords being used.
     ie. name such as "actnow" and "nowact" will be stored in the list under the same key.
@@ -263,7 +264,7 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
             modlist1 = clean_wordlist(wordlist=wordlist1)
             for modword_1_obj in modlist1:
                 etymology_obj = combine_1_word(modword_1_obj)
-                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
         elif algorithm_length == 2:
             wordlist_2_pos = algorithm.components[1].pos
@@ -287,7 +288,7 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
                     
                     if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
                         etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="repeating_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
                     elif (
                         modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
@@ -298,7 +299,7 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
                         and modword_2_obj.pos != "suffix"
                     ):
                         etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
                     elif (
                         modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
                         and modword_1_obj.modword_len >= 4
@@ -307,11 +308,11 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
                         and modword_2_obj.pos != "suffix"
                     ):
                         etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
                     
                     # create non-fit name too
                     etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers)
-                    name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                    name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
         elif algorithm_length == 3:
             wordlist_2_pos = algorithm.components[1].pos
@@ -340,7 +341,7 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
                             
                         if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
                             etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="repeating_")
-                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
                         elif (
                             modword_2_obj.modword[-1] == modword_3_obj.modword[0] 
@@ -352,9 +353,9 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
                             and modword_3_obj.pos != "suffix"
                         ):
                             etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="fit_")
-                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
                         etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers)
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words)
+                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
         else:
             if algorithm_length > 3:
                 print("Algorithm contains more than 3 keywords!")

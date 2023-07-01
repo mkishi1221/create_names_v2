@@ -12,7 +12,7 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
     if len(str(final_modword or "")) > 0:
         modword = Modword(
             origin=keyword_obj.origin,
-            source_word=keyword_obj.source_word,
+            source_words=keyword_obj.source_words,
             spacy_lemma=keyword_obj.spacy_lemma,
             nltk_lemma=keyword_obj.nltk_lemma,
             hard_lemma=keyword_obj.hard_lemma,
@@ -23,6 +23,8 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
             contained_words=keyword_obj.contained_words,
             phonetic_pattern=keyword_obj.phonetic_pattern,
             phonetic_grade=keyword_obj.phonetic_grade,
+            phonetic_score=keyword_obj.phonetic_score,
+            lowest_phonetic=keyword_obj.lowest_phonetic,
             components=keyword_obj.components,
             abbreviations=keyword_obj.abbreviations,
             restrictions_before=keyword_obj.restrictions_before,
@@ -32,7 +34,6 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
             yake_rank=keyword_obj.yake_rank,
             keyword=keyword_obj.keyword,
             pos=keyword_obj.pos,
-            preferred_pos=keyword_obj.preferred_pos,
             keyword_class=keyword_obj.keyword_class,
             modifier=kw_modifier,
             modword=final_modword,

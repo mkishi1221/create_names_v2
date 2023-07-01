@@ -52,8 +52,16 @@ class Etymology:
     def __repr__(self) -> str:
 
         algorithm_list = []
-        for index in range(len(self.pos_tuple)):
-            algorithm_list.append(f"{self.modword_tuple[index]}({self.keyword_tuple[index]}|{self.pos_tuple[index]})")
+        try:
+            for index in range(len(self.pos_tuple)):
+                algorithm_list.append(f"{self.modword_tuple[index]}({self.keyword_tuple[index]}|{self.pos_tuple[index]})")
+        except IndexError:
+            print("IndexError: string index out of range")
+            print(f"printing: {self.modword_tuple}")
+            print(self.modword_tuple[index])
+            print(self.keyword_tuple[index])
+            print(self.pos_tuple[index])
+    
         return "+".join(algorithm_list)
 
 @dataclass
@@ -67,8 +75,9 @@ class Name:
     length: int = 0
     phonetic_pattern: str = None
     phonetic_grade: str = None
+    phonetic_score: int = None
+    lowest_phonetic: int = None
     implaus_chars: list[str] = None
-    end_valid: str = None
     is_word: str = None
     exempt_contained: List[str] = None
     contained_words: List[str] = None
@@ -111,8 +120,9 @@ class Graded_name:
     length: Name.length = 0
     phonetic_pattern: Name.phonetic_pattern = None
     phonetic_grade: Name.phonetic_grade = None
+    phonetic_score: int = None
+    lowest_phonetic: int = None
     implaus_chars: Name.implaus_chars = None
-    end_valid: str = None
     is_word: Name.is_word = None
     exempt_contained: Name.exempt_contained = None
     contained_words: List[str] = None

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 from classes.keyword_class import Keyword
-from classes.keyword_class import Preferred_Keyword
 import sys
 import orjson as json
 from typing import List, Dict
@@ -13,9 +12,7 @@ from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.filter_keywords import filter_keywords
 from modules.yake_keyword_extractor import keyword_extractor
-from modules.run_googletrans import get_translation
-from modules.process_user_keywords import process_user_keywords_str
-from modules.pull_user_keyword_bank import pull_user_keyword_bank
+from modules.process_user_keywords import process_keyword_list
 from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
 
 # Pandas input/output for prototype only: remove for production
@@ -33,11 +30,10 @@ def generate_word_list(project_id):
     sentences_tsv_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_user_sentences.tsv"
 
     # tmp file filepaths and filenames:
-    keyword_list_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_keyword-list.json"
+    user_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_keyword-list.json"
     sentences_keywords_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_keywords_from_sentences.json"
     rated_kw_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_all_keywords.json"
     yake_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_yake_keywords.json"
-    gootrans_tmp_json_fp: str = f"{project_path}/tmp/keyword_generator/{project_id}_google_trans.json"
     keywords_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords.json"
 
     # output filepaths and filenames:
@@ -46,26 +42,19 @@ def generate_word_list(project_id):
     # Set variable defaults
     all_keywords: List[Keyword] = []
     all_keywords_dict: Dict[str, Dict[str, Keyword]] = {}
-    keyword_list = None
+    user_keywords = None
     sentences = None
 
     # Pull master exempt contained words list
     master_exempt_contained_words = pull_master_exempt()
 
-    # Check if keywords exists and create keywords from keywords list
+    # Check if keyword list exists and create keywords from keyword list
     if os.path.exists(keyword_list_tsv_fp):
-        keyword_list = [s for s in open(keyword_list_tsv_fp, "r").read().replace(" ", "\n").splitlines() if s]
-        if len(keyword_list) != 0:
-            print("Extracting keywords from keyword list and processing them through spacy......")
-            user_keywords = process_user_keywords_str(keyword_list, project_path)
-            for keyword in user_keywords:
-                keyword.origin = ["keyword_list"]
-            print("Getting keyword pos using eng_dict dictionary......")
-            keyword_list_keywords = verify_words_with_eng_dict(user_keywords, project_path, master_exempt_contained_words)
-            with open(keyword_list_keywords_json_fp, "wb+") as out_file:
-                out_file.write(json.dumps(keyword_list_keywords, option=json.OPT_INDENT_2))
-        else:
-            keyword_list_keywords = []
+        raw_keywords = [s for s in open(keyword_list_tsv_fp, "r").read().replace(" ", "\n").splitlines() if s]
+        user_keywords = process_keyword_list(raw_keywords)
+        user_keywords = verify_words_with_eng_dict(user_keywords, project_path, master_exempt_contained_words)
+        with open(user_keywords_json_fp, "wb+") as out_file:
+            out_file.write(json.dumps(user_keywords, option=json.OPT_INDENT_2))
 
     # Check if sentences exists and create keywords from sentences
     sentence_keywords = []
@@ -77,53 +66,42 @@ def generate_word_list(project_id):
             print("Finding unique lines...")
             unique_lines = sorted(set(sentences.splitlines()))
             # Run lines through Spacy to obtain keywords and categorize them according to their POS
-            print("Extracting keywords from sentences using spacy...")
             sentence_keywords = process_text_with_spacy(unique_lines)
             for keyword in sentence_keywords:
                 keyword.origin = ["sentences"]
-            print("Verifying keyword pos using eng_dict dictionary......")
             sentence_keywords = verify_words_with_eng_dict(sentence_keywords, project_path, master_exempt_contained_words)
             with open(sentences_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
 
     # Quit if both files are empty
-    if sentences == None and keyword_list == None:
-        print('No sentences and keywords detetcted! Please add source data to the "data" folder.')
+    if sentences == None and user_keywords == None:
+        print('No sentences and keywords detected! Please add source data to the "data" folder.')
         quit()
 
     # Combine keywords from sentences and keyword lists:
-    if sentences != None and keyword_list != None:
+    if sentences != None and user_keywords != None:
         for keyword_obj in sentence_keywords:
-            if keyword_obj in keyword_list_keywords:
-                kw_index = keyword_list_keywords.index(keyword_obj)
+            if keyword_obj in user_keywords:
+                kw_index = user_keywords.index(keyword_obj)
                 keyword_obj = copy.deepcopy(keyword_obj)
                 keyword_obj.origin.append("keyword_list")
-                keyword_obj.preferred_pos=keyword_list_keywords[kw_index].preferred_pos
             if keyword_obj not in all_keywords:
                 all_keywords.append(keyword_obj)
-        for keyword_obj in keyword_list_keywords:
+        for keyword_obj in user_keywords:
             if keyword_obj not in all_keywords:
                 all_keywords.append(keyword_obj)
     elif sentences != None:
         for keyword_obj in sentence_keywords:
             if keyword_obj not in all_keywords:
                 all_keywords.append(keyword_obj)
-    elif keyword_list != None:
-        for keyword_obj in keyword_list_keywords:
+    elif user_keywords != None:
+        for keyword_obj in user_keywords:
             if keyword_obj not in all_keywords:
                 all_keywords.append(keyword_obj)
 
     # Rank keywords using Yake:
     print("Extracting keywords using yake...")
-    yake_keywords_dict = keyword_extractor(output_fp=yake_tmp_json_fp, sentences=sentences, keywords=keyword_list)
-
-    # Get translated keywords:
-    print("Translating keywords to Latin...")
-    yake_keywords_list = list(yake_keywords_dict.keys())
-    tmp_fp = f"{project_path}/tmp/keyword_generator/{project_id}_tmp.txt"
-    with open(tmp_fp, "wb+") as out_file:
-        out_file.write("\n".join(yake_keywords_list).encode())
-    # google_translate_dict = get_translation(yake_keywords_list, gootrans_tmp_json_fp)
+    yake_keywords_dict = keyword_extractor(output_fp=yake_tmp_json_fp, sentences=sentences, keywords=raw_keywords)
 
     all_keywords_list = []
     for kw in all_keywords:
@@ -133,7 +111,7 @@ def generate_word_list(project_id):
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
         all_keywords_list.append(kw)
 
-    all_keywords_list = sorted(all_keywords_list, key=lambda d: (d.phonetic_grade, int(d.yake_rank or 1000000000), d.keyword))
+    all_keywords_list = sorted(all_keywords_list, key=lambda d: (d.keyword_len, int(d.yake_rank or 1000000000), d.keyword))
     with open(rated_kw_tmp_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_keywords_list, option=json.OPT_INDENT_2))
 
@@ -176,7 +154,8 @@ def generate_word_list(project_id):
         for keyword_str, keyword_obj in all_keywords_dict.items():
             pos_list = list(keyword_obj.keys())
             try:
-                eng_dict_pos = keyword_obj[pos_list[0]].eng_dict_pos[0]
+                eng_dict_pos_list = [x for x in keyword_obj[pos_list[0]].eng_dict_pos if x in required_pos]
+                eng_dict_pos = eng_dict_pos_list[0]
             except IndexError:
                 eng_dict_pos = None
             origin = keyword_obj[pos_list[0]].origin
@@ -215,31 +194,13 @@ def generate_word_list(project_id):
             elif pos == "adverb": 
                 excel_output_list_adverb.append(data)
 
-    # excel_output_list_noun = sorted(excel_output_list_noun, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    # excel_output_list_verb = sorted(excel_output_list_verb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    # excel_output_list_adjective = sorted(excel_output_list_adjective, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    # excel_output_list_adverb = sorted(excel_output_list_adverb, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword))
-    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (d.phonetic_grade, int(d.yake_rank or 1000000000), d.keyword))
-
-    # Add sheet for additional keywords
-    excel_output_list_additional_keywords = []
-    user_keyword_bank = pull_user_keyword_bank(project_path)
-    keyword_obj: Preferred_Keyword
-    for keyword_obj in user_keyword_bank:
-        if "additional_keywords" in keyword_obj.origin:
-            dict_data = {"keyword": keyword_obj.keyword, "preferred_pos": keyword_obj.preferred_pos, "disable": keyword_obj.disable}
-            excel_output_list_additional_keywords.append(dict_data)
-    len_output = len(excel_output_list_additional_keywords)
-    dict_data = {"keyword": None, "preferred_pos": None, "disable": None}
-    for x in range(200-len_output):
-        excel_output_list_additional_keywords.append(dict_data)
+    excel_output_other_keywords = sorted(other_keywords, key=lambda d: (d.keyword))
 
     df1 = pd.DataFrame.from_dict(excel_output_list_noun, orient="columns")
     df2 = pd.DataFrame.from_dict(excel_output_list_verb, orient="columns")
     df3 = pd.DataFrame.from_dict(excel_output_list_adjective, orient="columns")
     df4 = pd.DataFrame.from_dict(excel_output_list_adverb, orient="columns")
     df5 = pd.DataFrame.from_dict(excel_output_other_keywords, orient="columns")
-    df6 = pd.DataFrame.from_dict(excel_output_list_additional_keywords, orient="columns")
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
 
@@ -249,7 +210,6 @@ def generate_word_list(project_id):
         'adjectives',
         'adverbs',
         'other',
-        'additional keywords'
     ]
 
     df1.to_excel(writer, sheet_name=sheet_names[0])
@@ -257,7 +217,6 @@ def generate_word_list(project_id):
     df3.to_excel(writer, sheet_name=sheet_names[2])
     df4.to_excel(writer, sheet_name=sheet_names[3])
     df5.to_excel(writer, sheet_name=sheet_names[4])
-    df6.to_excel(writer, sheet_name=sheet_names[5])
 
     workbook  = writer.book
 

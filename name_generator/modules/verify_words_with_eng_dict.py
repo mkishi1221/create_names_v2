@@ -2,16 +2,15 @@
 # -*- coding:utf-8 -*-
 from typing import List
 from classes.keyword_class import Keyword
-from classes.keyword_class import Preferred_Keyword
 import regex as re
 from nltk.stem import WordNetLemmatizer
 from modules.generate_hard_lemma import generate_hard_lemma
-from modules.pull_user_keyword_bank import pull_user_keyword_bank
-from modules.grade_phonetic import grade_phonetic
+from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
 from modules.pull_eng_dict import pull_eng_dict
 import copy
+import orjson as json
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -51,11 +50,13 @@ def convert_spacy_pos(spacy_pos: str):
 
 def check_eng_dict(keyword: str, eng_dict: dict, eng_dict_words: list) -> list[str]:
     pos_list = set()
-    if keyword in eng_dict_words:
-        pos_list.update(eng_dict[keyword]["pos_list"])
-        return list(pos_list)
-    else:
-        return pos_list
+    try:
+        data = eng_dict[keyword]["pos_list"]
+    except KeyError:
+        data = None
+    if keyword in eng_dict_words and data is not None:
+        pos_list.update(data)
+    return list(pos_list)
 
 def fetch_eng_dict_pos_w_hardlemma(hard_lemma: dict, eng_dict: dict, eng_dict_words: list) -> list[str]:
 
@@ -129,21 +130,24 @@ def fetch_eng_dict_pos(keyword, eng_dict: dict, eng_dict_words: list) -> list[st
                 all_pos.append(pos)
     return list(all_pos)
 
-def verify_words_with_eng_dict(keywords_db: List[Keyword], project_path: str, exempt_contained_kw: list) -> List[Keyword]:
-
-    user_keyword_bank_list  = pull_user_keyword_bank(project_path)
+def verify_words_with_eng_dict(keywords: List[Keyword], project_path: str, exempt_contained_kw: list) -> List[Keyword]:
+    
+    print("Getting keyword pos using eng_dict dictionary...")
     eng_dict: dict = pull_eng_dict()
     eng_dict_words: list = list(eng_dict.keys())
     curated_eng_word_list = set(open("name_generator/curated_eng_word_list.txt", "r").read().splitlines())
+    xgram_fp = "../iweb_wordFreq_60k/xgrams.json"
+    with open(xgram_fp) as letter_sets_file:
+        xgrams_dict: dict = json.loads(letter_sets_file.read())
 
     # Take in keyword list created by spacy and add eng_dict pos data as well as other pos variations.
     # Get all possible pos using the fetch_eng_dict_pos function and add different pos variations to keyword list.
     # Do for both keyword and lemma word and collect all possible pos.
-    updated_keywords_db = []
+    keywords_db = []
     hard_lemma = None
 
     keyword_obj: Keyword
-    for keyword_obj in keywords_db:
+    for keyword_obj in keywords:
 
         eng_dict_pos_list = set()
         # Collect all pos possibilities
@@ -166,16 +170,6 @@ def verify_words_with_eng_dict(keywords_db: List[Keyword], project_path: str, ex
         else:
             spacy_pos = None
 
-        # Create preferred_pos
-        preferred_pos = None
-        if Preferred_Keyword(keyword=keyword_obj.keyword) in user_keyword_bank_list:
-            kw_index = user_keyword_bank_list.index(Preferred_Keyword(keyword=keyword_obj.keyword))
-            user_keyword: Preferred_Keyword = user_keyword_bank_list[kw_index]
-            none_value = [None, ""]
-            if user_keyword.disable in none_value:
-                preferred_pos = user_keyword.preferred_pos
-                keyword_obj.preferred_pos = preferred_pos
-
         # If still no pos is returned, use hard_lemma to generate pos.
         if len(eng_dict_pos_list) == 0:
             hard_lemma = generate_hard_lemma(keyword_obj.keyword)
@@ -185,25 +179,29 @@ def verify_words_with_eng_dict(keywords_db: List[Keyword], project_path: str, ex
                 if hard_lemma["hard_lemma_1"] + "s" == keyword_obj.keyword and len(hard_lemma["hard_lemma_1"]) > 1:
                     keyword_obj.keyword = hard_lemma["hard_lemma_1"]
 
+        # If still no pos is returned, but source is from "keyword list", apply default as noun.
+        if len(eng_dict_pos_list) == 0 and "keyword_list" in keyword_obj.origin:
+            eng_dict_pos_list.add("noun")
+
         # Generate phonetic grade, pattern
         keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(keyword_obj.keyword)
+        keyword_obj.phonetic_score, keyword_obj.lowest_phonetic, keyword_obj.implausible_chars = score_phonetic(keyword_obj.keyword, xgrams_dict)
 
         # Generate possible abbreviations
         if keyword_obj.keyword in eng_dict.keys():
             keyword_obj.components = eng_dict[keyword_obj.keyword]["component_list"]
             keyword_obj.abbreviations = keyword_abbreviator(keyword_obj.keyword, keyword_obj.components, curated_eng_word_list)
 
-        # Add all pos variants of keyword to keyword list. If there is a preferred pos or the spacy pos is in eng_dict_pos_list, use them instead.
+        # Add all pos variants of keyword to keyword list. If there is spacy pos in eng_dict_pos_list, use it instead.
         all_pos = set()
-        if len(list(preferred_pos or [])) > 0:
-            all_pos = preferred_pos
-        elif str(spacy_pos or "invalid") in eng_dict_pos_list:
+        if str(spacy_pos or "invalid") in eng_dict_pos_list:
             all_pos = {spacy_pos}
         elif len(list(eng_dict_pos_list or [])) > 0:
             all_pos = eng_dict_pos_list
         else:
             all_pos = {spacy_pos}
 
+        # Create keywords and add it to updated_keywords_db
         if len(all_pos) != 0:
             for pos_str in all_pos:
                 keyword_obj_1 = copy.deepcopy(keyword_obj)
@@ -216,15 +214,15 @@ def verify_words_with_eng_dict(keywords_db: List[Keyword], project_path: str, ex
                 keyword_obj_1.contained_words = find_contained_words(keyword=keyword_obj_1.keyword, curated_eng_list=curated_eng_word_list, type="keyword", exempt=exempt_contained_kw)
                 keyword_obj_1.eng_dict_pos = sorted(eng_dict_pos_list)
                 keyword_obj_1.pos = pos_str
-                updated_keywords_db.append(keyword_obj_1)
+                keywords_db.append(keyword_obj_1)
  
         else:
             if keyword_obj.spacy_lemma not in invalid:
                 keyword_obj.keyword = keyword_obj.spacy_lemma
             else:
-                keyword_obj.keyword = keyword_obj.source_word
+                keyword_obj.keyword = keyword_obj.source_words[0]
             keyword_obj.contained_words = find_contained_words(keyword=keyword_obj.keyword, curated_eng_list=curated_eng_word_list, type="keyword", exempt=exempt_contained_kw)
-            updated_keywords_db.append(keyword_obj)
+            keywords_db.append(keyword_obj)
 
-    return updated_keywords_db
+    return keywords_db
 

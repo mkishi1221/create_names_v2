@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-from classes.domain_class import Domain
-from classes.domain_class import NameDomain
+from classes.domain_class import Domain, NameDomain
 from classes.name_class import Graded_name
 from modules.get_whois import get_whois, DomainStates
 import sys
@@ -19,6 +18,8 @@ def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain
         name_type=name_data.name_type,
         length=name_data.length,
         phonetic_grade=name_data.phonetic_grade,
+        phonetic_score=name_data.phonetic_score,
+        lowest_phonetic=name_data.lowest_phonetic,
         keywords=name_data.keywords,
         keyword_combinations=name_data.keyword_combinations,
         pos_combinations=name_data.pos_combinations,
@@ -28,6 +29,56 @@ def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain
         not_avail_domains=not_avail_domain_list,
         grade=name_data.grade,
     )
+
+def create_excel_domain(name_type, status, data: NameDomain, domain:Domain, excel_domains):
+
+    keyword_combinations = data.keyword_combinations
+
+    kw = {
+        "k1":[],
+        "k2":[],
+        "k3":[]
+    }
+
+    for kc in keyword_combinations:
+        kc: str
+        kw_list = kc.split("|")
+        kw["k1"].append(kw_list[0])
+        if len(kw_list) > 1:
+            kw["k2"].append(kw_list[1])
+        if len(kw_list) > 2:
+            kw["k3"].append(kw_list[2])
+    
+    for key, value in kw.items():
+        if len(value) == 0:
+            kw[key] = None
+        else:
+            kw[key] = "|".join(set(value))
+
+    excel_domain = {
+        "name_in_lower": data.name_in_lower,
+        "name_in_title": data.name_in_title,
+        "domain": domain.domain,
+        "length": data.length,
+        "keyword_1":kw["k1"],
+        "keyword_2":kw["k2"],
+        "keyword_3":kw["k3"],
+        "keywords": data.keywords,
+        "keyword_combinations": keyword_combinations,
+        "pos_combinations": data.pos_combinations,
+        "modifier_combinations": data.modifier_combinations,
+        "phonetic_grade": data.phonetic_grade,
+        "phonetic_score": data.phonetic_score,
+        "lowest_phonetic": data.lowest_phonetic,
+        "etymologies": data.etymologies,
+        "grade": data.grade,
+        "last_checked": datetime.fromtimestamp(domain.last_checked).strftime("%d-%b-%Y (%H:%M:%S)"),
+        "data_valid_till": datetime.fromtimestamp(domain.data_valid_till).strftime("%d-%b-%Y (%H:%M:%S)"),
+        "availability": domain.availability,
+        "shortlist": domain.shortlist,
+    }
+    excel_domains[name_type][status].append(excel_domain)
+    return excel_domains
 
 # Checks domain availability using whois
 def check_domains(project_id: str, limit: int):
@@ -103,19 +154,14 @@ def check_domains(project_id: str, limit: int):
         else:
             print(f"New names detected. Using {remaining} new names...")
 
+    name_types = ["no_cut_name", "text_comp_name", "fun_name", "pref_suff_name", "fit_name", "part_cut_name", "cut_name", "repeating_name"]
+    NameDomain_dict = {}
+    for name_type in name_types:
+        NameDomain_dict[name_type] = {}
     if os.path.exists(json_output_fp):
         print("Previous domain check detected. Continuing domain check...")
         with open(json_output_fp, "rb") as NameDomain_file:
             NameDomain_dict_raw: dict = json.loads(NameDomain_file.read())
-        NameDomain_dict = {}
-        NameDomain_dict["repeating_name"] = {}
-        NameDomain_dict["fit_name"] = {}
-        NameDomain_dict["pref_suff_name"] = {}
-        NameDomain_dict["text_comp_name"] = {}
-        NameDomain_dict["fun_name"] = {}
-        NameDomain_dict["cut_name"] = {}
-        NameDomain_dict["part_cut_name"] = {}
-        NameDomain_dict["no_cut_name"] = {}
         name_list: dict
         for name_type, name_list in NameDomain_dict_raw.items():
             if not name_type.endswith("_reject"):
@@ -130,17 +176,6 @@ def check_domains(project_id: str, limit: int):
                     data["avail_domains"] = avail_domains_list
                     data["not_avail_domains"] = not_avail_domains_list
                     NameDomain_dict[name_type][name_in_title] = NameDomain(**data)
-
-    else:
-        NameDomain_dict = {}
-        NameDomain_dict["repeating_name"] = {}
-        NameDomain_dict["fit_name"] = {}
-        NameDomain_dict["pref_suff_name"] = {}
-        NameDomain_dict["text_comp_name"] = {}
-        NameDomain_dict["fun_name"] = {}
-        NameDomain_dict["cut_name"] = {}
-        NameDomain_dict["part_cut_name"] = {}
-        NameDomain_dict["no_cut_name"] = {}
 
     tld_list = [".com"] #TODO: Change to file source ".co.uk", ".org", ".io" 
 
@@ -162,9 +197,10 @@ def check_domains(project_id: str, limit: int):
         # Skip names that are already in the domain_check_log.
         # Desired number of available names is specified by the "limit" variable in bash file "create_names.sh"
         name_str: str
+        rejects = [None, "Reject"]
         dict_len = len(NameDomain_dict[name_type])
         for name_str in name_list:
-            if name_str not in NameDomain_dict[name_type] and names_dict[name_type][name_str]["grade"] is not None:
+            if name_str not in NameDomain_dict[name_type] and names_dict[name_type][name_str]["grade"] not in rejects:
                 name_data = Graded_name(**names_dict[name_type][name_str])
                 avail_domain_list = set()
                 not_avail_domain_list = set()
@@ -225,177 +261,34 @@ def check_domains(project_id: str, limit: int):
     with open(domain_log_fp, "wb+") as out_file:
         out_file.write(json.dumps(domain_log, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
-    # Export to excel file
-    repeating_name_avail = []
-    repeating_name_not_avail = []
-    fit_name_avail = []
-    fit_name_not_avail = []
-    pref_suff_name_avail = []
-    pref_suff_name_not_avail = []
-    text_comp_name_avail = []
-    text_comp_name_not_avail = []
-    fun_name_avail = []
-    fun_name_not_avail = []
-    cut_name_avail = []
-    cut_name_not_avail = []
-    part_cut_name_avail = []
-    part_cut_name_not_avail = []
-    no_cut_name_avail = []
-    no_cut_name_not_avail = []
+    statuses = ["avail", "not_avail"]
+    excel_domains = {}
+    for name_type in name_types:
+        excel_domains[name_type] = {}
+        for status in statuses:
+            excel_domains[name_type][status] = []
 
     for name_type, name_list in NameDomain_dict.items():
         data:NameDomain
         for name_in_title, data in name_list.items():
-            domain:Domain
             for domain in data.avail_domains:
-                excel_domain = {
-                    "name_in_lower": data.name_in_lower,
-                    "name_in_title": data.name_in_title,
-                    "domain": domain.domain,
-                    "length": data.length,
-                    "phonetic_grade": data.phonetic_grade,
-                    "keywords": data.keywords,
-                    "keyword_combinations": data.keyword_combinations,
-                    "pos_combinations": data.pos_combinations,
-                    "modifier_combinations": data.modifier_combinations,
-                    "etymologies": data.etymologies,
-                    "grade": data.grade,
-                    "last_checked": datetime.fromtimestamp(domain.last_checked).strftime("%d-%b-%Y (%H:%M:%S)"),
-                    "data_valid_till": datetime.fromtimestamp(domain.data_valid_till).strftime("%d-%b-%Y (%H:%M:%S)"),
-                    "availability": domain.availability,
-                    "shortlist": domain.shortlist,
-                }
-                if name_type == "repeating_name":
-                    repeating_name_avail.append(excel_domain)
-                elif name_type == "fit_name":
-                    fit_name_avail.append(excel_domain)
-                elif name_type == "pref_suff_name":
-                    pref_suff_name_avail.append(excel_domain)
-                elif name_type == "text_comp_name":
-                    text_comp_name_avail.append(excel_domain)
-                elif name_type == "fun_name":
-                    fun_name_avail.append(excel_domain)
-                elif name_type == "cut_name":
-                    cut_name_avail.append(excel_domain)
-                elif name_type == "part_cut_name":
-                    part_cut_name_avail.append(excel_domain)
-                elif name_type == "no_cut_name":
-                    no_cut_name_avail.append(excel_domain)
-
-            domain:Domain
+                excel_domains = create_excel_domain(name_type, "avail", data, domain, excel_domains)
             for domain in data.not_avail_domains:
-                excel_domain = {
-                    "name_in_lower": data.name_in_lower,
-                    "name_in_title": data.name_in_title,
-                    "domain": domain.domain,
-                    "length": data.length,
-                    "phonetic_grade": data.phonetic_grade,
-                    "keywords": data.keywords,
-                    "keyword_combinations": data.keyword_combinations,
-                    "pos_combinations": data.pos_combinations,
-                    "pos_combinations": data.pos_combinations,
-                    "modifier_combinations": data.modifier_combinations,
-                    "etymologies": data.etymologies,
-                    "grade": data.grade,
-                    "domain": domain.domain,
-                    "last_checked": datetime.fromtimestamp(domain.last_checked).strftime("%d-%b-%Y (%H:%M:%S)"),
-                    "data_valid_till": datetime.fromtimestamp(domain.data_valid_till).strftime("%d-%b-%Y (%H:%M:%S)"),
-                    "availability": domain.availability,
-                    "shortlist": domain.shortlist,
-                }
-                if name_type == "repeating_name":
-                    repeating_name_not_avail.append(excel_domain)
-                elif name_type == "fit_name":
-                    fit_name_not_avail.append(excel_domain)
-                elif name_type == "pref_suff_name":
-                    pref_suff_name_not_avail.append(excel_domain)
-                elif name_type == "text_comp_name":
-                    text_comp_name_not_avail.append(excel_domain)
-                elif name_type == "fun_name":
-                    fun_name_not_avail.append(excel_domain)
-                elif name_type == "cut_name":
-                    cut_name_not_avail.append(excel_domain)
-                elif name_type == "part_cut_name":
-                    part_cut_name_not_avail.append(excel_domain)
-                elif name_type == "no_cut_name":
-                    no_cut_name_not_avail.append(excel_domain)
-
-    repeating_name_avail_len = len(repeating_name_avail)
-    repeating_name_not_avail_len = len(repeating_name_not_avail)
-    fit_name_avail_len = len(fit_name_avail)
-    fit_name_not_avail_len = len(fit_name_not_avail)
-    pref_suff_name_avail_len = len(pref_suff_name_avail)
-    pref_suff_name_not_avail_len = len(pref_suff_name_not_avail)
-    text_comp_name_avail_len = len(text_comp_name_avail)
-    text_comp_name_not_avail_len = len(text_comp_name_not_avail)
-    fun_name_avail_len = len(fun_name_avail)
-    fun_name_not_avail_len = len(fun_name_not_avail)
-    cut_name_avail_len = len(cut_name_avail)
-    cut_name_not_avail_len = len(cut_name_not_avail)
-    part_cut_name_avail_len = len(part_cut_name_avail)
-    part_cut_name_not_avail_len = len(part_cut_name_not_avail)
-    no_cut_name_avail_len = len(no_cut_name_avail)
-    no_cut_name_not_avail_len = len(no_cut_name_not_avail)
-
-    df1 = pd.DataFrame.from_dict(repeating_name_avail, orient="columns")
-    df2 = pd.DataFrame.from_dict(fit_name_avail, orient="columns")
-    df3 = pd.DataFrame.from_dict(pref_suff_name_avail, orient="columns")
-    df4 = pd.DataFrame.from_dict(text_comp_name_avail, orient="columns")
-    df5 = pd.DataFrame.from_dict(fun_name_avail, orient="columns")
-    df6 = pd.DataFrame.from_dict(cut_name_avail, orient="columns")
-    df7 = pd.DataFrame.from_dict(part_cut_name_avail, orient="columns")
-    df8 = pd.DataFrame.from_dict(no_cut_name_avail, orient="columns")
-    df9 = pd.DataFrame.from_dict(repeating_name_not_avail, orient="columns")
-    df10 = pd.DataFrame.from_dict(fit_name_not_avail, orient="columns")
-    df11 = pd.DataFrame.from_dict(pref_suff_name_not_avail, orient="columns")
-    df12 = pd.DataFrame.from_dict(text_comp_name_not_avail, orient="columns")
-    df13 = pd.DataFrame.from_dict(fun_name_not_avail, orient="columns")
-    df14 = pd.DataFrame.from_dict(cut_name_not_avail, orient="columns")
-    df15 = pd.DataFrame.from_dict(part_cut_name_not_avail, orient="columns")
-    df16 = pd.DataFrame.from_dict(no_cut_name_not_avail, orient="columns")
+                excel_domains = create_excel_domain(name_type, "not_avail", data, domain, excel_domains)
 
     writer = pd.ExcelWriter(excel_output_fp, engine='xlsxwriter')
-
-    # Set sheet names:
-    sheet_names = [
-        f'avail repeating names ({repeating_name_avail_len})',
-        f'avail fit names ({fit_name_avail_len})',
-        f'avail pref suff names ({pref_suff_name_avail_len})',
-        f'avail text comp names ({text_comp_name_avail_len})',
-        f'avail fun names ({fun_name_avail_len})',
-        f'avail cut names ({cut_name_avail_len})',
-        f'avail part cut names ({part_cut_name_avail_len})',
-        f'avail no cut names ({no_cut_name_avail_len})',
-        f'unavail repeating names ({repeating_name_not_avail_len})',
-        f'unavail fit names ({fit_name_not_avail_len})',
-        f'unavail pref suff names ({pref_suff_name_not_avail_len})',
-        f'unavail text comp names ({text_comp_name_not_avail_len})',
-        f'unavail fun names ({fun_name_not_avail_len})',
-        f'unavail cut names ({cut_name_not_avail_len})',
-        f'unavail part cut names ({part_cut_name_not_avail_len})',
-        f'unavail no cut names ({no_cut_name_not_avail_len})'
-    ]
-
-    df1.to_excel(writer, sheet_name=sheet_names[0])
-    df2.to_excel(writer, sheet_name=sheet_names[1])
-    df3.to_excel(writer, sheet_name=sheet_names[2])
-    df4.to_excel(writer, sheet_name=sheet_names[3])
-    df5.to_excel(writer, sheet_name=sheet_names[4])
-    df6.to_excel(writer, sheet_name=sheet_names[5])
-    df7.to_excel(writer, sheet_name=sheet_names[6])
-    df8.to_excel(writer, sheet_name=sheet_names[7])
-    df9.to_excel(writer, sheet_name=sheet_names[8])
-    df10.to_excel(writer, sheet_name=sheet_names[9])
-    df11.to_excel(writer, sheet_name=sheet_names[10])
-    df12.to_excel(writer, sheet_name=sheet_names[11])
-    df13.to_excel(writer, sheet_name=sheet_names[12])
-    df14.to_excel(writer, sheet_name=sheet_names[13])
-    df15.to_excel(writer, sheet_name=sheet_names[14])
-    df16.to_excel(writer, sheet_name=sheet_names[15])
     workbook  = writer.book
-    for sheet_name in sheet_names:
-        worksheet = writer.sheets[sheet_name]
-        worksheet.set_column(1, 15, 20)
+    for status in statuses:
+        for name_type in name_types:    
+            domain_list = excel_domains[name_type][status]
+            if len(domain_list) != 0:
+                df = pd.DataFrame.from_dict(domain_list, orient="columns")
+            else:
+                df = pd.DataFrame.from_dict([{}], orient="columns")
+            sheet_name = f"{status} {name_type} ({len(domain_list)})"
+            df.to_excel(writer, sheet_name=sheet_name)
+            worksheet = writer.sheets[sheet_name]
+            worksheet.set_column(1, 15, 20)
     writer.save()
 
 if __name__ == "__main__":
