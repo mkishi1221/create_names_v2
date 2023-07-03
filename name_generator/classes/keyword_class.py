@@ -62,6 +62,7 @@ class Modword(Keyword):
     modword: str = ""
     modword_len: int = 0
     lang: str = "english"
+    translation: str = None
 
     def __eq__(self, o: object) -> bool:
         return self.modword == o.modword and self.keyword == o.keyword and self.pos == o.pos

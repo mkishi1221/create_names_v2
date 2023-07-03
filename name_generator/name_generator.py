@@ -146,7 +146,7 @@ def generate_names(project_id: str):
         modifier_list = required_comps[pos]
         for kw_modifier in modifier_list:
             key = f"{pos}|{kw_modifier}"
-            modword_list = keyword_modifier(keyword_obj, kw_modifier)
+            modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
             if modword_list is not None:
                 for modword_obj in modword_list:
                     keyword_dict[key].add(modword_obj)
@@ -167,7 +167,7 @@ def generate_names(project_id: str):
                 modifier_list = required_comps[pos]
                 for kw_modifier in modifier_list:
                     key = f"{pos}|{kw_modifier}"
-                    modword_list = keyword_modifier(keyword_obj, kw_modifier)
+                    modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
                     if modword_list is not None:
                         for modword_obj in modword_list:
                             keyword_dict[key].add(modword_obj)
@@ -300,7 +300,7 @@ def generate_names(project_id: str):
                 keywords_list = sorted(set(etymology_data.keyword_tuple))
                 exempt_contained_list = sorted(set(list(name.exempt_contained) + list(exempt_contained_list))) if name.exempt_contained else list(exempt_contained_list)
                 contained_words_list = find_contained_words(keyword=name_in_title_str, curated_eng_list=curated_eng_list, type="name", exempt=exempt_contained_list)
-                grade_str, reject_reason = grade_name(name_type_str, name.is_word, name.length, contained_words_list, wiki_title_check, name.phonetic_score)
+                grade_str, reject_reason = grade_name(name_type_str, name.is_word, name.length, contained_words_list, wiki_title_check, name.lowest_phonetic, name.translated)
                 if name.keyword_classes == ['prime']:
                     name_class_str = "Class_1"
                 elif name.keyword_classes == ['prime', 'standard']:
@@ -344,10 +344,10 @@ def generate_names(project_id: str):
                 modwords_list = sorted(set(list(data.modwords) + list(etymology_data.modword_tuple)))
                 keywords_list = sorted(set(list(data.keywords) + list(etymology_data.keyword_tuple)))
                 lang_list = list(set(data.lang + name.lang))
-                translated_list = list(set(data.translated + name.translated))
+                translated_list = "yes" if "yes" in [data.translated, name.translated] else "no"
                 exempt_contained_list = sorted(set(list(data.exempt_contained) + list(name.exempt_contained) + list(exempt_contained_list))) if name.exempt_contained else sorted(set(list(data.exempt_contained) + list(exempt_contained_list)))
                 contained_words_list = find_contained_words(keyword=name_in_title_str, curated_eng_list=curated_eng_list, type="name", exempt=exempt_contained_list)
-                grade_str, reject_reason = grade_name(name_type_str, name.is_word, name.length, contained_words_list, wiki_title_check, name.phonetic_score)
+                grade_str, reject_reason = grade_name(name_type_str, name.is_word, name.length, contained_words_list, wiki_title_check, name.lowest_phonetic, name.translated)
 
                 contained_words = []
                 if data.contained_words is not None:
@@ -413,6 +413,7 @@ def generate_names(project_id: str):
         "text_comp_name", 
         "fun_name", 
         "pref_suff_name", 
+        "mspl_name",
         "cut_name", 
         "part_cut_name", 
         "no_cut_name"
@@ -516,11 +517,12 @@ def generate_names(project_id: str):
         data["keyword_2"] = keyword_2
         data["keyword_3"] = keyword_3
         data["keyword_combination"] = keyword_combination_str
+        data["length"] = len(keyword_combination_str)
         data["remove"] = None
         del data["names"]
         keyword_combination_list.append(data)
 
-    sorted_keyword_combination_list = sorted(keyword_combination_list, key=lambda d: (-d["name_count"], d["keyword_combination"]))
+    sorted_keyword_combination_list = sorted(keyword_combination_list, key=lambda d: (d["length"], d["keyword_1"], d["keyword_2"], d["keyword_3"]))
     sorted_names["keyword_combinations"] = sorted_keyword_combination_list
     sorted_names["statistics"] = statistics
 

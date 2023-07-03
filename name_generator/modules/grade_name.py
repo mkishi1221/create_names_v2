@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_title, phonetic_grade):
+def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_title, lowest, translated):
 
     grade_str = None
     reject_reason = None
@@ -19,7 +19,7 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
     valid_types = ["cut_name", "pref_suff_name", "part_cut_name"]
     if name_type in valid_types:
         if (
-            phonetic_grade != 0
+            lowest != 0
             and is_it_word == "no"
             and name_length > 4
             and name_length < 20
@@ -37,7 +37,7 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
         else:
             grade_str = "Reject"
             reject_reason = []
-            if phonetic_grade == 0:
+            if lowest == 0:
                 reject_reason.append("implausible_chars")
             if is_it_word != "no":
                 reject_reason.append("is_word")
@@ -51,8 +51,12 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
                 reject_reason.append("wiki_title")
 
     else:
+        if translated == "no":
+            lowest = 1
+
         if (
-            is_it_word == "no"
+            lowest != 0
+            and is_it_word == "no"
             and name_length > 4
             and name_length < 20
             and contained_words == None

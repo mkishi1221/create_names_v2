@@ -88,7 +88,7 @@ def generate_modwords(project_id: str, xgrams_dict:dict):
     for keyword_obj in keyword_shortlist:
         pos = keyword_obj.pos
         for kw_modifier in modifier_list:
-            modword_list = keyword_modifier(keyword_obj, kw_modifier)
+            modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
             if modword_list is not None:
                 for modword_obj in modword_list:
                     keyword_dict[pos].append(modword_obj)
@@ -105,7 +105,7 @@ def generate_modwords(project_id: str, xgrams_dict:dict):
                 keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_word_list, type="keyword", exempt=master_exempt_contained_words)
                 keyword_obj.keyword_class = "prime"
                 for kw_modifier in modifier_list:
-                    modword_list = keyword_modifier(keyword_obj, kw_modifier)
+                    modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
                     if modword_list is not None:
                         for modword_obj in modword_list:
                             keyword_dict[pos].append(modword_obj)

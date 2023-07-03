@@ -110,11 +110,10 @@ def score_phonetic(text: str, xgrams_dict):
                     score_list.append(0.0)
     try:
         sorted_scores = sorted(score_list)
-        score = sum(sorted_scores[:4])/len(sorted_scores[:4])
-        lowest = sorted_scores[0]
+        score = sum(sorted_scores)/len(sorted_scores)
+        lowest = sum(sorted_scores[:3])/len(sorted_scores[:3])
     except ZeroDivisionError:
         score = 0
         lowest = 0
     implaus_chars = sorted(implaus_chars)
-
     return score, lowest, implaus_chars
