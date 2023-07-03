@@ -1,4 +1,5 @@
 from googletrans import Translator, LANGUAGES
+from unidecode import unidecode
 import re
 
 def get_translation(kw_list: list, input_lang: str, output_lang: str):
@@ -17,7 +18,7 @@ def get_translation(kw_list: list, input_lang: str, output_lang: str):
 def get_single_translation(text: str, input_lang: str, output_lang: str):
     translator = Translator()
     translation = translator.translate(text, dest=output_lang, src=input_lang)
-    translated_text = re.sub(r"^\W+", "", translation.text).lower()
+    translated_text = re.sub(r"^\W+", "", unidecode(translation.text)).lower()
     translated_text = re.sub(r"\W+$", "", translated_text)
     if translation.origin == translated_text:
         translated_text = None

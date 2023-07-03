@@ -3,7 +3,6 @@
 
 from typing import List
 from classes.keyword_class import Keyword, Modword
-from transliterate import translit
 from modules.run_googletrans import get_single_translation
 from modules.grade_phonetic import score_phonetic
 
@@ -53,26 +52,24 @@ def get_translated(keyword_obj:Keyword, output_lang_list, xgrams_dict):
     for output_lang in output_lang_list:
         translation, language = get_single_translation(keyword_obj.keyword, "en", output_lang)
         if translation is not None and " " not in translation:
-            if output_lang == "el":
-                translation = translit(translation, 'el', reversed=True)
             score, lowest, implaus_chars = score_phonetic(translation, xgrams_dict)
             implaus_chars_2 = [x for x in implaus_chars if len(x) == 2]
             if len(implaus_chars_2) > 0:
                 shortlist_str = None
-                print(f"'{translation}' for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")                
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")                
             if lowest == 0:
                 shortlist_str = None
-                print(f"'{translation}' for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")
             else:
                 shortlist_str = "s"
-                print(f"'{translation}' for '{keyword_obj.keyword}' approved - {lowest, implaus_chars}")
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' approved - {lowest, implaus_chars}")
             translations[translation] = {"shortlist_str":shortlist_str, "language":language}
     return translations
 
 def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, xgrams_dict: dict) -> List[Modword]:
     vowels = "aiueoy"
     modword_obj_list = []
-    output_lang_list = ["la", "el"]
+    output_lang_list = ["la", "el", "fr", "es"]
     translations = get_translated(keyword_obj, output_lang_list, xgrams_dict)
     if kw_modifier == "ab_cut":
         keyword_str = keyword_obj.keyword
