@@ -22,7 +22,27 @@ from modules.keyword_modifier import keyword_modifier
 from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.grade_name import grade_name
 from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
+from modules.run_googletrans import get_single_translation
 
+def get_translated(keyword_obj:Keyword, xgrams_dict):
+    translations = {}
+    output_lang_list = ["la", "el", "fr", "es", "mr"]
+    for output_lang in output_lang_list:
+        translation, language = get_single_translation(keyword_obj.keyword, "en", output_lang)
+        if translation is not None and " " not in translation:
+            score, lowest, implaus_chars = score_phonetic(translation, xgrams_dict)
+            implaus_chars_2 = [x for x in implaus_chars if len(x) == 2]
+            if len(implaus_chars_2) > 0:
+                shortlist_str = None
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")                
+            if lowest == 0:
+                shortlist_str = None
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")
+            else:
+                shortlist_str = "s"
+                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' approved - {lowest, implaus_chars}")
+            translations[translation] = {"shortlist_str":shortlist_str, "language":language}
+    return translations
 
 def check_if_wiki_title(is_word, name_in_lower: str, wiki_titles_list: list[str]):
     if name_in_lower in wiki_titles_list:
@@ -139,14 +159,19 @@ def generate_names(project_id: str):
 
     required_pos = {"head", "join", "tail", "suff", "pref", "ffun", "rfun"}
     for keyword_obj in keyword_shortlist:
+        # Get translations
+        translations = get_translated(keyword_obj, xgrams_dict)
         pos = keyword_obj.pos
         if pos in pos_conversion.keys():
             pos = pos_conversion[pos]
         required_pos.add(pos)
-        modifier_list = required_comps[pos]
+        try:
+            modifier_list = required_comps[pos]
+        except KeyError:
+            modifier_list = []
         for kw_modifier in modifier_list:
             key = f"{pos}|{kw_modifier}"
-            modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
+            modword_list = keyword_modifier(keyword_obj, kw_modifier, translations)
             if modword_list is not None:
                 for modword_obj in modword_list:
                     keyword_dict[key].add(modword_obj)
@@ -157,17 +182,21 @@ def generate_names(project_id: str):
             if plural_noun_str[-2:] != "ss":
                 pos = "plrn"
                 required_pos.add(pos)
-                keyword_obj: Keyword = copy.deepcopy(keyword_obj)
-                keyword_obj.keyword = plural_noun_str
-                keyword_obj.pos = "plural_noun"
-                keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
-                keyword_obj.phonetic_score, keyword_obj.lowest_phonetic, keyword_obj.implausible_chars = score_phonetic(plural_noun_str, xgrams_dict)
-                keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_list, type="keyword", exempt=master_exempt_contained_words)
-                keyword_obj.keyword_class = "prime"
-                modifier_list = required_comps[pos]
+                plural_obj: Keyword = copy.deepcopy(keyword_obj)
+                plural_obj.keyword = plural_noun_str
+                plural_obj.pos = "plural_noun"
+                plural_obj.phonetic_grade, plural_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
+                plural_obj.phonetic_score, plural_obj.lowest_phonetic, plural_obj.implausible_chars = score_phonetic(plural_noun_str, xgrams_dict)
+                plural_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_list, type="keyword", exempt=master_exempt_contained_words)
+                plural_obj.keyword_class = "prime"
+                translations = get_translated(plural_obj, xgrams_dict)
+                try:
+                    modifier_list = required_comps[pos]
+                except KeyError:
+                    modifier_list = []
                 for kw_modifier in modifier_list:
                     key = f"{pos}|{kw_modifier}"
-                    modword_list = keyword_modifier(keyword_obj, kw_modifier, xgrams_dict)
+                    modword_list = keyword_modifier(plural_obj, kw_modifier, translations)
                     if modword_list is not None:
                         for modword_obj in modword_list:
                             keyword_dict[key].add(modword_obj)

@@ -27,7 +27,7 @@ def filter_keywords(keywords: List[Keyword]) -> List[Keyword]:
 
     for keyword in keywords:
 
-        if keyword.keyword in blacklist and keyword.origin == "sentences":
+        if keyword.keyword in blacklist and "sentences" in keyword.origin:
             keyword.pos = "Stopword"
 
         if (

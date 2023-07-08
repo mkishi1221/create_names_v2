@@ -154,7 +154,7 @@ def check_domains(project_id: str, limit: int):
         else:
             print(f"New names detected. Using {remaining} new names...")
 
-    name_types = ["no_cut_name", "text_comp_name", "fun_name", "pref_suff_name", "fit_name", "part_cut_name", "cut_name", "repeating_name"]
+    name_types = ["no_cut_name", "mspl_name", "text_comp_name", "fun_name", "pref_suff_name", "fit_name", "part_cut_name", "cut_name", "repeating_name"]
     NameDomain_dict = {}
     for name_type in name_types:
         NameDomain_dict[name_type] = {}
@@ -177,7 +177,7 @@ def check_domains(project_id: str, limit: int):
                     data["not_avail_domains"] = not_avail_domains_list
                     NameDomain_dict[name_type][name_in_title] = NameDomain(**data)
 
-    tld_list = [".com"] #TODO: Change to file source ".co.uk", ".org", ".io" 
+    tld_list = [".com", ".co.uk", ".org"] #TODO: Change to file source ".co.uk", ".org", ".io" 
 
     json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
     with open(json_ndl_output_fp, "wb+") as out_file:

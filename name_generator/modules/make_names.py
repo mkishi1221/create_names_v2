@@ -318,43 +318,45 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
             modword_2_obj: Modword
             for modword_1_obj in modlist1:
                 for modword_2_obj in modlist2:
-                    pos_list = (modword_1_obj.pos, modword_2_obj.pos)
-                    modifiers = (modword_1_obj.modifier, modword_2_obj.modifier)
+                    # Make sure languages are all the same
+                    if  modword_1_obj.lang == modword_2_obj.lang:
+                        pos_list = (modword_1_obj.pos, modword_2_obj.pos)
+                        modifiers = (modword_1_obj.modifier, modword_2_obj.modifier)
 
-                    if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3:
-                        first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0]])
-                        second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1]])
-                        last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1]])
-                    else:
-                        first_chars = second_chars = last_chars = []
-                    
-                    if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="repeating_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3:
+                            first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0]])
+                            second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1]])
+                            last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1]])
+                        else:
+                            first_chars = second_chars = last_chars = []
+                        
+                        if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="repeating_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
-                    elif (
-                        modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
-                        and modword_1_obj.modword_len >= 3
-                        and modword_2_obj.modword_len >= 3
-                        and modword_1_obj.modifier == "no_cut"
-                        and modword_2_obj.modifier == "no_cut"
-                        and modword_2_obj.pos != "suffix"
-                    ):
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                        elif (
+                            modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
+                            and modword_1_obj.modword_len >= 3
+                            and modword_2_obj.modword_len >= 3
+                            and modword_1_obj.modifier == "no_cut"
+                            and modword_2_obj.modifier == "no_cut"
+                            and modword_2_obj.pos != "suffix"
+                        ):
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        elif (
+                            modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
+                            and modword_1_obj.modword_len >= 4
+                            and modword_2_obj.modword_len >= 3
+                            and modword_2_obj.modifier == "no_cut"
+                            and modword_2_obj.pos != "suffix"
+                        ):
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        
+                        # create non-fit name too
+                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers)
                         name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                    elif (
-                        modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
-                        and modword_1_obj.modword_len >= 4
-                        and modword_2_obj.modword_len >= 3
-                        and modword_2_obj.modifier == "no_cut"
-                        and modword_2_obj.pos != "suffix"
-                    ):
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                    
-                    # create non-fit name too
-                    etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers)
-                    name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
         elif algorithm_length == 3:
             wordlist_2_pos = algorithm.components[1].pos
@@ -372,32 +374,35 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
             for modword_1_obj in modlist1:
                 for modword_2_obj in modlist2:
                     for modword_3_obj in modlist3:
-                        pos_list = (modword_1_obj.pos, modword_2_obj.pos, modword_3_obj.pos)
-                        modifiers = (modword_1_obj.modifier, modword_2_obj.modifier, modword_3_obj.modifier)
-                        if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3 and modword_3_obj.modword_len >= 3:
-                            first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0], modword_3_obj.modword[0]])
-                            second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1], modword_3_obj.modword[1]])
-                            last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1], modword_3_obj.modword[-1]])
-                        else:
-                            first_chars = second_chars = last_chars = []
-                            
-                        if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
-                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="repeating_")
-                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        # Make sure languages are all the same
+                        languages = [modword_1_obj.lang, modword_2_obj.lang, modword_3_obj.lang]
+                        if len(set(languages)) == 1:
+                            pos_list = (modword_1_obj.pos, modword_2_obj.pos, modword_3_obj.pos)
+                            modifiers = (modword_1_obj.modifier, modword_2_obj.modifier, modword_3_obj.modifier)
+                            if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3 and modword_3_obj.modword_len >= 3:
+                                first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0], modword_3_obj.modword[0]])
+                                second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1], modword_3_obj.modword[1]])
+                                last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1], modword_3_obj.modword[-1]])
+                            else:
+                                first_chars = second_chars = last_chars = []
+                                
+                            if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
+                                etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="repeating_")
+                                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
-                        elif (
-                            modword_2_obj.modword[-1] == modword_3_obj.modword[0] 
-                            and modword_1_obj.modword_len >= 3
-                            and modword_2_obj.modword_len >= 4
-                            and modword_3_obj.modword_len >= 3
-                            and modword_3_obj.modifier == "no_cut"
-                            and modword_1_obj.modifier == "no_cut"
-                            and modword_3_obj.pos != "suffix"
-                        ):
-                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="fit_")
+                            elif (
+                                modword_2_obj.modword[-1] == modword_3_obj.modword[0] 
+                                and modword_1_obj.modword_len >= 3
+                                and modword_2_obj.modword_len >= 4
+                                and modword_3_obj.modword_len >= 3
+                                and modword_3_obj.modifier == "no_cut"
+                                and modword_1_obj.modifier == "no_cut"
+                                and modword_3_obj.pos != "suffix"
+                            ):
+                                etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="fit_")
+                                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers)
                             name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                        etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers)
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
         else:
             if algorithm_length > 3:
                 print("Algorithm contains more than 3 keywords!")

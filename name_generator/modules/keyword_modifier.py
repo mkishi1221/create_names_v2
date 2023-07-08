@@ -47,30 +47,11 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
         )
     return modword
 
-def get_translated(keyword_obj:Keyword, output_lang_list, xgrams_dict):
-    translations = {}
-    for output_lang in output_lang_list:
-        translation, language = get_single_translation(keyword_obj.keyword, "en", output_lang)
-        if translation is not None and " " not in translation:
-            score, lowest, implaus_chars = score_phonetic(translation, xgrams_dict)
-            implaus_chars_2 = [x for x in implaus_chars if len(x) == 2]
-            if len(implaus_chars_2) > 0:
-                shortlist_str = None
-                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")                
-            if lowest == 0:
-                shortlist_str = None
-                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")
-            else:
-                shortlist_str = "s"
-                print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' approved - {lowest, implaus_chars}")
-            translations[translation] = {"shortlist_str":shortlist_str, "language":language}
-    return translations
 
-def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, xgrams_dict: dict) -> List[Modword]:
+
+def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, translations:dict ) -> List[Modword]:
     vowels = "aiueoy"
     modword_obj_list = []
-    output_lang_list = ["la", "el", "fr", "es"]
-    translations = get_translated(keyword_obj, output_lang_list, xgrams_dict)
     if kw_modifier == "ab_cut":
         keyword_str = keyword_obj.keyword
         pos_str = keyword_obj.pos
@@ -96,10 +77,16 @@ def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, xgrams_dict: dict) 
         for keyword, data in translations.items():
             if keyword.endswith("er"):
                 modwords.append(keyword[:-2] + "r")
+            if keyword.endswith("ing"):
+                modwords.append(keyword[:-1])
             if keyword[-1] in vowels:
                 replacements = vowels.replace(keyword[-1], "")
                 for repl in replacements:
                     modwords.append(keyword[:-1] + repl)
+            if keyword[-1] not in vowels and keyword[-1] != "s":
+                modwords.append(keyword + keyword[-1])
+                for vowel in vowels:
+                    modwords.append(keyword + vowel)
             if len(modwords) > 0:
                 for modword in modwords:
                     modword_obj = create_modword_obj(
