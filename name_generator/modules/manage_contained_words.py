@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from modules.convert_excel_to_json import convert_excel_to_json
-from modules.pull_eng_dict import pull_eng_dict
+from modules.pull_eng_dict import eng_dict
 import pandas as pd
 import orjson as json
 import os
@@ -45,7 +45,6 @@ def pull_master_exempt():
             except ValueError:
                 pass
     else:
-        eng_dict:dict = pull_eng_dict()
         curated_eng_word_list: list = list(eng_dict.keys())
         for kw in master_exempt_contained_words:
             try:
@@ -88,8 +87,6 @@ def collect_contained_words(data, master_cw_dict, eng_dict, master_exempt_contai
 def push_contained_words_list(data_dict: dict, master_exempt_contained_words):
 
     master_cw_dict = {}
-
-    eng_dict = pull_eng_dict()
 
     # Sort graded names according to grade and add to contained words dict.
     for key_1, data_1 in data_dict.items():

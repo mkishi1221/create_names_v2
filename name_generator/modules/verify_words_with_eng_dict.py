@@ -8,9 +8,9 @@ from modules.generate_hard_lemma import generate_hard_lemma
 from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
-from modules.pull_eng_dict import pull_eng_dict
+from modules.pull_eng_dict import eng_dict
 import copy
-import orjson as json
+from modules.pull_xgram import x_grams
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -133,12 +133,9 @@ def fetch_eng_dict_pos(keyword, eng_dict: dict, eng_dict_words: list) -> list[st
 def verify_words_with_eng_dict(keywords: List[Keyword], project_path: str, exempt_contained_kw: list) -> List[Keyword]:
     
     print("Getting keyword pos using eng_dict dictionary...")
-    eng_dict: dict = pull_eng_dict()
     eng_dict_words: list = list(eng_dict.keys())
     curated_eng_word_list = set(open("name_generator/curated_eng_word_list.txt", "r").read().splitlines())
-    xgram_fp = "../iweb_wordFreq_60k/xgrams.json"
-    with open(xgram_fp) as letter_sets_file:
-        xgrams_dict: dict = json.loads(letter_sets_file.read())
+    xgrams_dict: dict = x_grams
 
     # Take in keyword list created by spacy and add eng_dict pos data as well as other pos variations.
     # Get all possible pos using the fetch_eng_dict_pos function and add different pos variations to keyword list.

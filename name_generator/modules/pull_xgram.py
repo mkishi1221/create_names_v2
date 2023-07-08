@@ -7,6 +7,6 @@ d = Deta("a0xztrxeaye_oCyrV2ZZAKZqn4fw7NEG8hhJdn56YMau")
 
 drive = d.Drive("eng_simplified")
 
-reader = drive.get("simplified_eng_dict.json")
+reader = drive.get("xgrams.json")
 
-eng_dict: dict = json.loads(reader.read())
+x_grams: dict = json.loads(reader.read())

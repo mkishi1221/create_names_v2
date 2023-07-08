@@ -17,12 +17,13 @@ from modules.collect_algorithms import collect_algorithms
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.find_contained_words import find_contained_words
-from modules.pull_eng_dict import pull_eng_dict
+from modules.pull_eng_dict import eng_dict
 from modules.keyword_modifier import keyword_modifier
 from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.grade_name import grade_name
 from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
 from modules.run_googletrans import get_single_translation
+from modules.pull_xgram import x_grams
 
 def get_translated(keyword_obj:Keyword, xgrams_dict):
     translations = {}
@@ -102,19 +103,16 @@ def generate_names(project_id: str):
     json_kc_output_fp = f"{project_path}/tmp/name_generator/{project_id}_keyword_combos.json"
     json_stats_output_fp = f"{project_path}/tmp/name_generator/{project_id}_names_statistics.json"
     keywords_json_fp: str = f"{project_path}/tmp/logs/{project_id}_keywords.json"
-    xgram_fp = "../iweb_wordFreq_60k/xgrams.json"
-
     # output filepaths and filenames:
     excel_output_fp = f"{project_path}/results/{project_id}_names.xlsx"
 
     # Pull eng_dict data
-    eng_dict_data: dict = pull_eng_dict()
+    eng_dict_data: dict = eng_dict
     eng_dict_words: set = set(list(eng_dict_data.keys()))
     wiki_titles_data: set = set(open(wiki_titles_data_fp, "r").read().splitlines())
     curated_eng_list = set(open(curated_eng_list_fp, "r").read().splitlines())
     
-    with open(xgram_fp) as letter_sets_file:
-        xgrams_dict: dict = json.loads(letter_sets_file.read())
+    xgrams_dict: dict = x_grams
     letter_sets = set(xgrams_dict["quadgrams"].keys())   
 
     # Pull master exempt contained words list

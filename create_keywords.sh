@@ -63,13 +63,13 @@ sentences="$(sh name_generator/modules/check_for_sentences.sh $project_id)"
 keywords="$(sh name_generator/modules/check_for_keywords.sh $project_id)"
 
 # Exit script if no sentences or keywords detected.
-if [ "$sentences" == "exists" -a "$keywords" == "exists" ]; then
+if [ "$sentences" = "exists" -a "$keywords" = "exists" ]; then
     echo "Running script with both sentences and keywords..."
-elif [ "$sentences" == "exists"  -a "$keywords" == "none" ]; then
+elif [ "$sentences" = "exists"  -a "$keywords" = "none" ]; then
     echo "No keywords found. Running script with only sentences..."
-elif [ "$sentences" == "none"  -a "$keywords" == "exists" ]; then
+elif [ "$sentences" = "none"  -a "$keywords" = "exists" ]; then
     echo "No sentences found. Running script with only keywords..."
-elif [ "$keywords" == "none"  -a "$sentences" == "none" ]; then
+elif [ "$keywords" = "none"  -a "$sentences" = "none" ]; then
     echo "No sentences and keywords detetcted! Please add source data in txt format to the \"data\" folder."
     exit
 fi
