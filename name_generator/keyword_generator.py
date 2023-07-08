@@ -111,7 +111,7 @@ def generate_word_list(project_id):
             kw.yake_rank = yake_keywords_dict[kw.keyword][0]
         all_keywords_list.append(kw)
 
-    all_keywords_list = sorted(all_keywords_list, key=lambda d: (d.keyword_len, int(d.yake_rank or 1000000000), d.keyword))
+    all_keywords_list = sorted(all_keywords_list, key=lambda d: (int(d.yake_rank or 1000000000), d.keyword_len, d.keyword))
     with open(rated_kw_tmp_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(all_keywords_list, option=json.OPT_INDENT_2))
 

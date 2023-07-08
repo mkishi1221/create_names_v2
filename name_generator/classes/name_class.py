@@ -82,8 +82,8 @@ class Name:
     exempt_contained: List[str] = None
     contained_words: List[str] = None
     keyword_classes: List[str] = None
-    translated: List[str] = None
     lang: List[str] = None
+    translated: str = None
     etymologies: Dict[str, Etymology] = None
     relevance: float = None
 
@@ -132,7 +132,7 @@ class Graded_name:
     keyword_combinations: List[str] = None
     pos_combinations: List[str] = None
     lang: List[str] = None
-    translated: List[str] = None
+    translated: str = None
     keyword_pos_combos: dict = None
     modifier_combinations: List[str] = None
     keyword_classes: List[str] = None

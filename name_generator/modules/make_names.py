@@ -35,7 +35,9 @@ def categorize_name(modifiers, pos_list, fit = None):
     pref_suff_comps = ["prefix", "suffix"]
     text_comps = ["head", "tail", "join"]
     fun_comps = ["ffun", "rfun"]
-    if any(comp in pos_list for comp in text_comps):
+    if any(p == "ms_cut" for p in modifiers) and len(modifiers) > 0:
+        name_type = "mspl_name"
+    elif any(comp in pos_list for comp in text_comps):
         name_type = "text_comp_name"
     elif any(comp in pos_list for comp in pref_suff_comps):
         name_type = "pref_suff_name"
@@ -63,11 +65,15 @@ def combine_1_word(modword_1_obj: Modword) -> Name:
     relevance = modword_1_obj.yake_score if modword_1_obj.yake_score else 1
     lang = modword_1_obj.lang
 
+    if lang != "english":
+        keyword = f"{modword_1_obj.translation}({modword_1_obj.keyword})"
+    else:
+        keyword = modword_1_obj.keyword
 
     return Etymology(
         name_in_title=modword_1_obj.modword.title(),
         modword_tuple=(modword_1_obj.modword,),
-        keyword_tuple=(modword_1_obj.keyword,),
+        keyword_tuple=(keyword,),
         pos_tuple=(modword_1_obj.pos,),
         modifier_tuple=(modword_1_obj.modifier,),
         exempt_contained= sorted(set(list(modword_1_obj.contained_words or []) + [modword_1_obj.keyword])),
@@ -104,12 +110,22 @@ def combine_2_words(modword_1_obj: Modword, modword_2_obj: Modword, pos_list: Li
     relevance = (m1_yake + m2_yake) / 2
 
     m1_lang = modword_1_obj.lang
+    if m1_lang != "english":
+        m1_keyword = f"{modword_1_obj.translation}({modword_1_obj.keyword})"
+    else:
+        m1_keyword = modword_1_obj.keyword
+
     m2_lang = modword_2_obj.lang
+    if m2_lang != "english":
+        m2_keyword = f"{modword_2_obj.translation}({modword_2_obj.keyword})"
+    else:
+        m2_keyword = modword_2_obj.keyword
+
     
     return Etymology(
         name_in_title=name_c2w,
         modword_tuple=(modword_1_obj.modword, modword_2_obj.modword),
-        keyword_tuple=(modword_1_obj.keyword, modword_2_obj.keyword),
+        keyword_tuple=(m1_keyword, m2_keyword),
         pos_tuple=pos_list,
         modifier_tuple=modifiers,
         exempt_contained=exempt_contained_words,
@@ -148,13 +164,27 @@ def combine_3_words(modword_1_obj: Modword, modword_2_obj: Modword, modword_3_ob
     relevance = (m1_yake + m2_yake + m3_yake) / 3
 
     m1_lang = modword_1_obj.lang
+    if m1_lang != "english":
+        m1_keyword = f"{modword_1_obj.translation}({modword_1_obj.keyword})"
+    else:
+        m1_keyword = modword_1_obj.keyword
+
     m2_lang = modword_2_obj.lang
+    if m2_lang != "english":
+        m2_keyword = f"{modword_2_obj.translation}({modword_2_obj.keyword})"
+    else:
+        m2_keyword = modword_2_obj.keyword
+
     m3_lang = modword_3_obj.lang
+    if m3_lang != "english":
+        m3_keyword = f"{modword_3_obj.translation}({modword_3_obj.keyword})"
+    else:
+        m3_keyword = modword_3_obj.keyword
 
     return Etymology(
         name_in_title=name_c3w,
         modword_tuple=(modword_1_obj.modword, modword_2_obj.modword, modword_3_obj.modword),
-        keyword_tuple=(modword_1_obj.keyword, modword_2_obj.keyword, modword_3_obj.keyword),
+        keyword_tuple=(m1_keyword, m2_keyword, m3_keyword),
         pos_tuple=pos_list,
         modifier_tuple=modifiers,
         exempt_contained=exempt_contained_words,
@@ -170,6 +200,12 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
     if name_lower not in name_dict.keys():
         phonetic_grade, phonetic_pattern = grade_phonetic(name_lower)
         phonetic_score, lowest_phonetic, implaus_chars_list = score_phonetic(name_lower, xgrams_dict)
+
+        langs = set(etymology_obj.lang_tuple)
+        translated = "no"
+        if "english" not in langs or len(langs) > 1:
+            translated = "yes"
+
         name_dict[name_lower] = Name(
             name_in_lower=name_lower,
             length=len(name_lower),
@@ -183,18 +219,24 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
             keyword_classes=etymology_obj.keyword_classes,
             etymologies={etymology_obj},
             relevance=etymology_obj.relevance,
-            lang={"+".join(etymology_obj.lang_tuple)},
-            translated=set(etymology_obj.lang_tuple)
+            lang=langs,
+            translated=translated
         )
     else:
+
+        langs: set = name_dict[name_lower].lang
+        langs.update(etymology_obj.lang_tuple)
+        translated = name_dict[name_lower].translated
+        if "english" not in langs or len(langs) > 1:
+            translated = "yes"
 
         if float(name_dict[name_lower].relevance) > float(etymology_obj.relevance):
             name_dict[name_lower].relevance = etymology_obj.relevance
         name_dict[name_lower].etymologies.add(etymology_obj)
         name_dict[name_lower].keyword_classes = sorted(set(name_dict[name_lower].keyword_classes + etymology_obj.keyword_classes))
         name_dict[name_lower].exempt_contained.update(etymology_obj.exempt_contained)
-        name_dict[name_lower].lang.add("+".join(etymology_obj.lang_tuple))
-        name_dict[name_lower].translated.update(set(etymology_obj.lang_tuple))
+        name_dict[name_lower].lang = langs
+        name_dict[name_lower].translated = translated
     
     return name_dict
 
@@ -276,43 +318,45 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
             modword_2_obj: Modword
             for modword_1_obj in modlist1:
                 for modword_2_obj in modlist2:
-                    pos_list = (modword_1_obj.pos, modword_2_obj.pos)
-                    modifiers = (modword_1_obj.modifier, modword_2_obj.modifier)
+                    # Make sure languages are all the same
+                    if  modword_1_obj.lang == modword_2_obj.lang:
+                        pos_list = (modword_1_obj.pos, modword_2_obj.pos)
+                        modifiers = (modword_1_obj.modifier, modword_2_obj.modifier)
 
-                    if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3:
-                        first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0]])
-                        second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1]])
-                        last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1]])
-                    else:
-                        first_chars = second_chars = last_chars = []
-                    
-                    if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="repeating_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3:
+                            first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0]])
+                            second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1]])
+                            last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1]])
+                        else:
+                            first_chars = second_chars = last_chars = []
+                        
+                        if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="repeating_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
-                    elif (
-                        modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
-                        and modword_1_obj.modword_len >= 3
-                        and modword_2_obj.modword_len >= 3
-                        and modword_1_obj.modifier == "no_cut"
-                        and modword_2_obj.modifier == "no_cut"
-                        and modword_2_obj.pos != "suffix"
-                    ):
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                        elif (
+                            modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
+                            and modword_1_obj.modword_len >= 3
+                            and modword_2_obj.modword_len >= 3
+                            and modword_1_obj.modifier == "no_cut"
+                            and modword_2_obj.modifier == "no_cut"
+                            and modword_2_obj.pos != "suffix"
+                        ):
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        elif (
+                            modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
+                            and modword_1_obj.modword_len >= 4
+                            and modword_2_obj.modword_len >= 3
+                            and modword_2_obj.modifier == "no_cut"
+                            and modword_2_obj.pos != "suffix"
+                        ):
+                            etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
+                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        
+                        # create non-fit name too
+                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers)
                         name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                    elif (
-                        modword_1_obj.modword[-1] == modword_2_obj.modword[0]  
-                        and modword_1_obj.modword_len >= 4
-                        and modword_2_obj.modword_len >= 3
-                        and modword_2_obj.modifier == "no_cut"
-                        and modword_2_obj.pos != "suffix"
-                    ):
-                        etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers, fit="fit_")
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                    
-                    # create non-fit name too
-                    etymology_obj = combine_2_words(modword_1_obj, modword_2_obj, pos_list, modifiers)
-                    name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
         elif algorithm_length == 3:
             wordlist_2_pos = algorithm.components[1].pos
@@ -330,32 +374,35 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
             for modword_1_obj in modlist1:
                 for modword_2_obj in modlist2:
                     for modword_3_obj in modlist3:
-                        pos_list = (modword_1_obj.pos, modword_2_obj.pos, modword_3_obj.pos)
-                        modifiers = (modword_1_obj.modifier, modword_2_obj.modifier, modword_3_obj.modifier)
-                        if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3 and modword_3_obj.modword_len >= 3:
-                            first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0], modword_3_obj.modword[0]])
-                            second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1], modword_3_obj.modword[1]])
-                            last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1], modword_3_obj.modword[-1]])
-                        else:
-                            first_chars = second_chars = last_chars = []
-                            
-                        if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
-                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="repeating_")
-                            name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                        # Make sure languages are all the same
+                        languages = [modword_1_obj.lang, modword_2_obj.lang, modword_3_obj.lang]
+                        if len(set(languages)) == 1:
+                            pos_list = (modword_1_obj.pos, modword_2_obj.pos, modword_3_obj.pos)
+                            modifiers = (modword_1_obj.modifier, modword_2_obj.modifier, modword_3_obj.modifier)
+                            if modword_1_obj.modword_len >= 3 and modword_2_obj.modword_len >= 3 and modword_3_obj.modword_len >= 3:
+                                first_chars = set([modword_1_obj.modword[0], modword_2_obj.modword[0], modword_3_obj.modword[0]])
+                                second_chars = set([modword_1_obj.modword[1], modword_2_obj.modword[1], modword_3_obj.modword[1]])
+                                last_chars = set([modword_1_obj.modword[-1], modword_2_obj.modword[-1], modword_3_obj.modword[-1]])
+                            else:
+                                first_chars = second_chars = last_chars = []
+                                
+                            if len(first_chars) == 1 and len(second_chars) == 1 and len(last_chars) == 1:
+                                etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="repeating_")
+                                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
 
-                        elif (
-                            modword_2_obj.modword[-1] == modword_3_obj.modword[0] 
-                            and modword_1_obj.modword_len >= 3
-                            and modword_2_obj.modword_len >= 4
-                            and modword_3_obj.modword_len >= 3
-                            and modword_3_obj.modifier == "no_cut"
-                            and modword_1_obj.modifier == "no_cut"
-                            and modword_3_obj.pos != "suffix"
-                        ):
-                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="fit_")
+                            elif (
+                                modword_2_obj.modword[-1] == modword_3_obj.modword[0] 
+                                and modword_1_obj.modword_len >= 3
+                                and modword_2_obj.modword_len >= 4
+                                and modword_3_obj.modword_len >= 3
+                                and modword_3_obj.modifier == "no_cut"
+                                and modword_1_obj.modifier == "no_cut"
+                                and modword_3_obj.pos != "suffix"
+                            ):
+                                etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers, fit="fit_")
+                                name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
+                            etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers)
                             name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
-                        etymology_obj = combine_3_words(modword_1_obj, modword_2_obj, modword_3_obj, pos_list, modifiers)
-                        name_dict = create_name_obj(etymology_obj, name_dict, eng_dict_words, end_chars, letter_sets)
         else:
             if algorithm_length > 3:
                 print("Algorithm contains more than 3 keywords!")
@@ -370,7 +417,6 @@ def make_names(algorithms: List[Algorithm], wordlist: dict, eng_dict_words: list
         name_data.etymologies = list(name_data.etymologies)
         name_data.exempt_contained = list(name_data.exempt_contained)
         name_data.lang = list(name_data.lang)
-        name_data.translated = list(name_data.translated)
         sorted_name_dict[name_in_lower] = name_data
 
     return sorted_name_dict
