@@ -7,7 +7,7 @@ project_id=$3
 project_path=projects/$project_id
 
 # Check if data with sentences exists
-if [ "$sentences" == "exists" ]; then
+if [ "$sentences" = "exists" ]; then
     # Pour source texts into one file
     FILES=$project_path/data/sentences/*.txt
     for f in $FILES
@@ -21,7 +21,7 @@ else
 fi
 
 # Check if data with keywords exists
-if [ "$keywords" == "exists" ]; then
+if [ "$keywords" = "exists" ]; then
     # Pour user provided keywords into one file
     FILES=$project_path/data/keywords/*.txt
     for f in $FILES
