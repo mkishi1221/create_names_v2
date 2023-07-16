@@ -64,13 +64,10 @@ def generate_modwords(project_id: str, xgrams_dict:dict):
     # Get all algorithms
     print("Loading algorithms...")
     algorithms = collect_algorithms()
-    modifier_list = set()
+    modifier_list = set([component.modifier for algorithm in algorithms for component in algorithm.components])
 
     sheet_names = ["nouns", "verbs", "adjectives", "adverbs"]
     pos_list = ["noun", "verb", "adjective", "adverb"]
-    for algorithm in algorithms:
-        for component in algorithm.components:
-            modifier_list.add(component.modifier)
 
     # Access keyword list and sort words into verbs, nouns or adjectives
     # Excel input for prototype only: for production, import directly from json

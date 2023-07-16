@@ -50,7 +50,7 @@ def generate_keyword_shortlist(keyword_data):
                 keyword_class="prime",
                 shortlist=keyword["shortlist"]
             )
-
+            
             shortlist.append(keyword_obj)
 
     return shortlist

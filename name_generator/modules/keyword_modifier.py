@@ -64,7 +64,7 @@ def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, translations:dict )
                 modwords.append(keyword_str[:1] + "".join(letters))
         abbreviations = keyword_obj.abbreviations if keyword_obj.abbreviations is not None else []
         if len(modwords) > 0:
-            for modword in modwords:                
+            for modword in modwords:
                 shortlist_str = "s" if modword in abbreviations else None
                 modword_obj = create_modword_obj(keyword_obj, kw_modifier, modword, shortlist_str)
                 if modword_obj is not None:
