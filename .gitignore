@@ -3,6 +3,7 @@ projects/
 projects/*
 name_generator/modules/__pycache__/
 name_generator/keys.json
+name_generator/modules/Pois
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
