@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from time import sleep
 import re
 
-pois = SourceFileLoader("pois", "modules/Pois/pois/__init__.py").load_module()
+pois = SourceFileLoader("pois", "name_generator/modules/Pois/pois/__init__.py").load_module()
 
 # Search domain database by calling the whois database in python
 class DomainStates:
@@ -63,7 +63,9 @@ def get_whois(domain_str) -> Domain:
     return data
 
 # For testing purposes:
-""" domains = ["brandbrand.co", "messaguides.co", "strategicreativity.co", "google.com"]
+# google.com should be NOT_AVAIL
+# masayukikishi1221.com should be AVAIL
+domains = ["google.com", "masayukikishi1221.com"]
 for d in domains:
     w = get_whois(d)
-    print(w) """
+    print(w)
