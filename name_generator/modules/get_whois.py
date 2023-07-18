@@ -5,38 +5,14 @@ from classes.domain_class import Domain
 from datetime import datetime, timedelta
 from time import sleep
 import re
-from urllib.request import Request, urlopen
-from fake_useragent import UserAgent
-from bs4 import BeautifulSoup
-import random
 
-pois = SourceFileLoader("pois", "name_generator/modules/Pois/pois/__init__.py").load_module()
+pois = SourceFileLoader("pois", "modules/Pois/pois/__init__.py").load_module()
 
 # Search domain database by calling the whois database in python
 class DomainStates:
     AVAIL = "available"
     NOT_AVAIL = "not available"
     UNKNOWN = "connection error"
-
-ua = UserAgent()
-proxies = []
-
-def random_proxy():
-  return random.randint(0, len(proxies) - 1)
-
-proxies_req = Request('https://www.sslproxies.org/')
-proxies_req.add_header('User-Agent', ua.random)
-proxies_doc = urlopen(proxies_req).read().decode('utf8')
-
-soup = BeautifulSoup(proxies_doc, 'html.parser')
-proxies_table = soup.find("table", { "class": "table table-striped table-bordered" })
-
-# Save proxies in the array
-for row in proxies_table.tbody.find_all('tr'):
-    proxies.append({
-        'ip':   row.find_all('td')[0].string,
-        'port': row.find_all('td')[1].string
-    })
 
 def get_whois(domain_str) -> Domain:
 
@@ -49,8 +25,7 @@ def get_whois(domain_str) -> Domain:
     sleep_time = 1
     num_retries = 5
 
-    proxy = proxies[random_proxy()]
-    proxy_info = {'proxy_type':'http','addr': proxy["ip"], 'port': proxy["port"]}
+    proxy_info = {"proxy_type": "socks5", "addr": "p.webshare.io", "port": 80, "username": "ihgosdbs-rotate", "password": "a6au825lb0n3"}
     p = pois.Pois(timeout=10, proxy_info=proxy_info)
 
     for x in range(0, num_retries):
@@ -67,10 +42,11 @@ def get_whois(domain_str) -> Domain:
                 last_checked_int = int(datetime.now().timestamp())
                 status = DomainStates.NOT_AVAIL
 
-        except (pois.SocketError):
+        except (pois.SocketError) as e:
+            print(e)
             check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
             last_checked_int = int(datetime.now().timestamp())
-            status = DomainStates.AVAIL
+            status = DomainStates.NOT_AVAIL
         except (AttributeError) as e:
             str_error = str(e)
         if str_error:
@@ -87,10 +63,7 @@ def get_whois(domain_str) -> Domain:
     return data
 
 # For testing purposes:
-# domains = ["brandbrand.co", "messaguides.co", "strategicreativity.co", ]
-# for d in domains:
-#     flags = 0
-#     flags = flags | whois.NICClient.WHOIS_QUICK
-#     name="strategicreativity.co"
-#     w = whois.whois(name, flags=flags)
-#     print(w)
+""" domains = ["brandbrand.co", "messaguides.co", "strategicreativity.co", "google.com"]
+for d in domains:
+    w = get_whois(d)
+    print(w) """
