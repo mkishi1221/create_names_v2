@@ -21,7 +21,6 @@ def find_contained_words(keyword: str, curated_eng_list: list, type: str, exempt
     else:
         raise Exception(f"Variable 'type' can only be 'keyword or 'name'. Type of '{type}' specified instead.")
     
-
     for index, letter in enumerate(keyword):
         for length in range(min_size, keyword_len+1):
             contained_word = keyword[index:length]

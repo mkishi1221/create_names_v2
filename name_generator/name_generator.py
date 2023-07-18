@@ -21,7 +21,7 @@ from modules.pull_eng_dict import eng_dict
 from modules.keyword_modifier import keyword_modifier
 from modules.grade_phonetic import grade_phonetic, score_phonetic
 from modules.grade_name import grade_name
-from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
+from modules.manage_contained_words import pull_master_exempt
 from modules.run_googletrans import get_single_translation
 from modules.pull_xgram import x_grams
 
@@ -429,9 +429,6 @@ def generate_names(project_id: str):
     print("Exporting graded names.json...")
     with open(json_graded_output_fp, "wb+") as out_file:
         out_file.write(json.dumps(sorted_graded_names, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
-
-    # Update and export contained words list
-    push_contained_words_list(sorted_graded_names, master_exempt_contained_words)
 
     print("Preparing data for export...")
     name_types = [

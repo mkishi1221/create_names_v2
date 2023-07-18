@@ -13,7 +13,7 @@ from modules.convert_excel_to_json import convert_excel_to_json
 from modules.filter_keywords import filter_keywords
 from modules.yake_keyword_extractor import keyword_extractor
 from modules.process_user_keywords import process_keyword_list
-from modules.manage_contained_words import pull_master_exempt, push_contained_words_list
+from modules.manage_contained_words import pull_master_exempt
 
 # Pandas input/output for prototype only: remove for production
 import pandas as pd
@@ -172,9 +172,6 @@ def generate_word_list(project_id):
     sorted_keywords_dict = {k: all_keywords_dict[k] for k in sorted(all_keywords_dict.keys())}
     with open(keywords_json_fp, "wb+") as out_file:
         out_file.write(json.dumps(sorted_keywords_dict, option=json.OPT_INDENT_2))
-
-    # Update and export contained words list
-    push_contained_words_list(sorted_keywords_dict, master_exempt_contained_words)
 
     # Excel output for reference only: remove for production
     print(f"Exporting {project_id}_keywords.xlsx...")
