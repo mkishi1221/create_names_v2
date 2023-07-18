@@ -10,6 +10,11 @@ from datetime import datetime
 from typing import List
 import os
 import copy
+from deta import Deta
+
+d = Deta("a0xztrxeaye_oCyrV2ZZAKZqn4fw7NEG8hhJdn56YMau")
+domain_log_base = d.Base("domain_log")
+
 
 def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain], not_avail_domain_list: List[Domain]):
     return NameDomain (
@@ -88,9 +93,6 @@ def check_domains(project_id: str, limit: int):
     # input file filepaths and filenames:
     sl_namelist_fp: str = f"{project_path}/tmp/name_generator/{project_id}_names_shortlist.json"
 
-    # dict resource paths and filenames:
-    domain_log_fp = "name_generator/domain_log.json"
-
     # tmp file filepaths and filenames:
     json_output_fp: str = f"{project_path}/tmp/domain_checker/{project_id}_domains.json"
     json_ndl_output_fp = f"{project_path}/tmp/domain_checker/{project_id}_namedomain_list_domains.json"
@@ -99,28 +101,7 @@ def check_domains(project_id: str, limit: int):
     # output filepaths and filenames:
     excel_output_fp = f"{project_path}/results/{project_id}_domains.xlsx"
 
-    limit = int(limit)    
-    domain_log = {}
-
-    if os.path.exists(domain_log_fp):
-        print("Domain log found - adding items to domain log...")
-        with open(domain_log_fp) as domain_log_file:
-            domain_log_raw = json.loads(domain_log_file.read())
-        for domain, data in domain_log_raw.items():
-            if data["data_valid_till"] > datetime.now().timestamp():
-                domain_log[domain] = Domain(
-                    domain= data["domain"],
-                    availability= data["availability"],
-                    last_checked= data["last_checked"],
-                    data_valid_till= data["data_valid_till"],
-                    shortlist= data["shortlist"]
-                )
-            else:
-                valid_till = data["data_valid_till"]
-                expired_time = datetime.fromtimestamp(valid_till).strftime("%d-%b-%Y (%H:%M:%S)")
-                print(f"{domain} check validity expired! Expired in {expired_time} Removing from list...")
-    else:
-        print("Domain log not found - creating new domain log...")
+    limit = int(limit)
 
     # Open file with generated names
     if os.path.exists(remaining_names_fp):
@@ -191,7 +172,6 @@ def check_domains(project_id: str, limit: int):
         name_list = list(names_dict[name_type].keys())
         available = 0
         domain_log_use = ""
-        domain_log_list = set(domain_log.keys())
 
         # Check the shortest names from top of the name list until it reaches the desired number of available names
         # Skip names that are already in the domain_check_log.
@@ -210,13 +190,12 @@ def check_domains(project_id: str, limit: int):
                     print(f"Checking {domain_str}...", end = "\r")
 
                     # Skip name if name is in domain_check_log
-                    if domain_str not in domain_log_list:
+                    if (domain_res := domain_log_base.get(domain_str)) is None:
                         # Access whois API and add result to domain log
                         domain_obj: Domain = get_whois(domain_str)
-                        domain_log[domain_str] = domain_obj
-                        domain_log_list.add(domain_str)
+                        domain_log_base.put(domain_obj.to_json(), domain_obj.domain)
                     else:
-                        domain_obj: Domain = domain_log[domain_str]
+                        domain_obj: Domain = Domain.from_json(domain_res["value"])
                         domain_log_use = " (Domain already checked!)"
 
                     sys.stdout.write("\033[K")
@@ -258,8 +237,6 @@ def check_domains(project_id: str, limit: int):
         out_file.write(json.dumps(NameDomain_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
     with open(remaining_names_fp, "wb+") as out_file:
         out_file.write(json.dumps(names_dict, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
-    with open(domain_log_fp, "wb+") as out_file:
-        out_file.write(json.dumps(domain_log, option=json.OPT_SERIALIZE_DATACLASS | json.OPT_INDENT_2))
 
     statuses = ["avail", "not_avail"]
     excel_domains = {}
