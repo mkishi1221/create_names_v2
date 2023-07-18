@@ -3,8 +3,6 @@
 
 from typing import List
 from classes.keyword_class import Keyword, Modword
-from modules.run_googletrans import get_single_translation
-from modules.grade_phonetic import score_phonetic
 
 def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: str, shortlist_str: str = None, output_lang: str = "english", translation: str = None ):
     modword = None

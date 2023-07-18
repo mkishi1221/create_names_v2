@@ -82,38 +82,43 @@ def score_phonetic(text: str, xgrams_dict):
                 gram = text[start:end]
                 if end <= len(text):
                     if start == 0:
-                        dictRef = "startFreq"
+                        dictRef = "startFreqRank_percentile"
+                        key = "startFreq"
                     elif end == len(text):
-                        dictRef = "endFreq"
+                        dictRef = "endFreqRank_percentile"
+                        key = "endFreq"
                     else:
-                        dictRef = "gramFreq"
+                        dictRef = "freqRank_percentile"
+                        key = "gramFreq"
                     try:
                         freq = xgrams_dict[gramtype][gram][dictRef]
                     except KeyError:
-                        freq = 0
+                        freq = 1.0
                         implaus_chars.add(gram)
-                    breakdown[gramtype][dictRef].append(freq)
+                    breakdown[gramtype][key].append(freq)
 
     score_list = []
     average_scores = {}
     for gramtype in gram_types:
         average_scores[gramtype] = {}
         for dictRef in score_types:
-            max_freq = xgrams_dict[gramtype]["max_values"]["gramFreq"]
             if len(breakdown[gramtype][dictRef]) > 0:
                 try:
-                    normalised = sum(breakdown[gramtype][dictRef])/len(breakdown[gramtype][dictRef])/max_freq
+                    normalised = round(sum(breakdown[gramtype][dictRef])/len(breakdown[gramtype][dictRef]),3)
                     average_scores[gramtype][dictRef] = normalised
                     score_list.append(normalised)
                 except ZeroDivisionError:
-                    average_scores[gramtype][dictRef] = 0.0
-                    score_list.append(0.0)
+                    average_scores[gramtype][dictRef] = 1.0
+                    score_list.append(1.0)
     try:
         sorted_scores = sorted(score_list)
-        score = sum(sorted_scores)/len(sorted_scores)
-        lowest = sum(sorted_scores[:3])/len(sorted_scores[:3])
+        score = round(sum(sorted_scores)/len(sorted_scores),3)
+        lowest = round(sum(sorted_scores[-3:])/len(sorted_scores[-3:]),3)
     except ZeroDivisionError:
-        score = 0
-        lowest = 0
+        score = 1
+        lowest = 1
+    # print(text, sorted_scores)
+    # print(text, sorted_scores[-3:])
+    # print(text, breakdown)
     implaus_chars = sorted(implaus_chars)
     return score, lowest, implaus_chars

@@ -16,10 +16,10 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
     elif name_type[:9] == "repeating":
         name_type = name_type[10:]
 
-    valid_types = ["cut_name", "pref_suff_name", "part_cut_name"]
+    valid_types = ["cut_name", "pref_suff_name", "part_cut_name", "mspl_name"]
     if name_type in valid_types:
         if (
-            lowest != 0
+            lowest < 0.7
             and is_it_word == "no"
             and name_length > 4
             and name_length < 20
@@ -37,7 +37,7 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
         else:
             grade_str = "Reject"
             reject_reason = []
-            if lowest == 0:
+            if lowest < 0.7:
                 reject_reason.append("implausible_chars")
             if is_it_word != "no":
                 reject_reason.append("is_word")
@@ -52,10 +52,10 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
 
     else:
         if translated == "no":
-            lowest = 1
+            lowest = 0
 
         if (
-            lowest != 0
+            lowest < 0.7
             and is_it_word == "no"
             and name_length > 4
             and name_length < 20
@@ -73,6 +73,8 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
         else:
             grade_str = "Reject"
             reject_reason = []
+            if lowest < 0.7:
+                reject_reason.append("implausible_chars")
             if is_it_word != "no":
                 reject_reason.append("is_word")
             if name_length <= 4:

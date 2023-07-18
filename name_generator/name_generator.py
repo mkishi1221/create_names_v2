@@ -36,7 +36,7 @@ def get_translated(keyword_obj:Keyword, xgrams_dict):
             if len(implaus_chars_2) > 0:
                 shortlist_str = None
                 print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")                
-            if lowest == 0:
+            if lowest == 1:
                 shortlist_str = None
                 print(f"'{translation}' ({language}) for '{keyword_obj.keyword}' rejected - {lowest, implaus_chars}")
             else:
@@ -422,7 +422,7 @@ def generate_names(project_id: str):
                 graded_names[key] = data
 
     # Sort graded names according to grade.
-    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].length, -graded_names[k].lowest_phonetic, -graded_names[k].phonetic_score, graded_names[k].grade, -float(graded_names[k].relevance), graded_names[k].name_class, graded_names[k].name_in_lower))
+    sorted_graded_names_list = sorted(graded_names, key=lambda k: (graded_names[k].length, graded_names[k].lowest_phonetic, graded_names[k].phonetic_score, graded_names[k].grade, -float(graded_names[k].relevance), graded_names[k].name_class, graded_names[k].name_in_lower))
     sorted_graded_names = {}
     for name in sorted_graded_names_list:
         sorted_graded_names[name] = graded_names[name]

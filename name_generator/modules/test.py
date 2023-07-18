@@ -11,4 +11,5 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 text = "asdhbs"
 
-print(all(letter in alphabet for letter in text))
+print(text[-2:])
+# print(all(letter in alphabet for letter in text))
