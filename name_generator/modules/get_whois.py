@@ -5,8 +5,14 @@ from classes.domain_class import Domain
 from datetime import datetime, timedelta
 from time import sleep
 import re
+import sys
 
-pois = SourceFileLoader("pois", "name_generator/modules/Pois/pois/__init__.py").load_module()
+if "pytest" in sys.modules:
+    pois_location = "modules/Pois/pois/__init__.py"
+else:
+    pois_location = "name_generator/modules/Pois/pois/__init__.py"
+
+pois = SourceFileLoader("pois", pois_location).load_module()
 
 # Search domain database by calling the whois database in python
 class DomainStates:
@@ -65,7 +71,7 @@ def get_whois(domain_str) -> Domain:
 # For testing purposes:
 # google.com should be NOT_AVAIL
 # masayukikishi1221.com should be AVAIL
-domains = ["google.com", "masayukikishi1221.com"]
+""" domains = ["google.com", "masayukikishi1221.com"]
 for d in domains:
     w = get_whois(d)
-    print(w)
+    print(w) """
