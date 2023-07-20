@@ -12,7 +12,11 @@ import os
 import copy
 from deta import Deta
 
-d = Deta("a0xztrxeaye_oCyrV2ZZAKZqn4fw7NEG8hhJdn56YMau")
+
+with open("name_generator/keys.json") as keys_files:
+    keys_dict = json.loads(keys_files.read())
+deta_key = keys_dict["deta_key"]
+d = Deta(deta_key)
 domain_log_base = d.Base("domain_log")
 
 
@@ -85,8 +89,23 @@ def create_excel_domain(name_type, status, data: NameDomain, domain:Domain, exce
     excel_domains[name_type][status].append(excel_domain)
     return excel_domains
 
+def scrub_domain_log():
+    fetch_query = {"data_valid_till?lt": int(datetime.now().timestamp())}
+    response = domain_log_base.fetch(fetch_query)
+
+    values = response.items
+
+    while response.last is not None:
+        response = domain_log_base.fetch(fetch_query)
+        values += response.items
+
+    for val in values:
+        domain_log_base.delete(val["key"])
+
 # Checks domain availability using whois
 def check_domains(project_id: str, limit: int):
+
+    scrub_domain_log()
 
     project_path = f"projects/{project_id}"
 
@@ -193,9 +212,9 @@ def check_domains(project_id: str, limit: int):
                     if (domain_res := domain_log_base.get(domain_str)) is None:
                         # Access whois API and add result to domain log
                         domain_obj: Domain = get_whois(domain_str)
-                        domain_log_base.put(domain_obj.to_json(), domain_obj.domain)
+                        domain_log_base.put(domain_obj.to_dict(), domain_obj.domain)
                     else:
-                        domain_obj: Domain = Domain.from_json(domain_res["value"])
+                        domain_obj: Domain = Domain.from_dict(domain_res)
                         domain_log_use = " (Domain already checked!)"
 
                     sys.stdout.write("\033[K")
@@ -270,5 +289,3 @@ def check_domains(project_id: str, limit: int):
 
 if __name__ == "__main__":
     check_domains(sys.argv[1], sys.argv[2])
-
-

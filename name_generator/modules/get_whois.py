@@ -77,7 +77,7 @@ def get_whois(domain_str) -> Domain:
 # For testing purposes:
 # google.com should be NOT_AVAIL
 # masayukikishi1221.com should be AVAIL
-domains = ["google.com", "masayukikishi1221.com"]
+""" domains = ["google.com", "masayukikishi1221.com"]
 for d in domains:
     w = get_whois(d)
-    print(w)
+    print(w) """

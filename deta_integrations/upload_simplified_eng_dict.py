@@ -1,5 +1,5 @@
 from deta import Deta
-import orjson
+import orjson as json
 
 with open("name_generator/keys.json") as keys_files:
     keys_dict = json.loads(keys_files.read())

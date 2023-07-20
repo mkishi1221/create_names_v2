@@ -1,2 +1,2 @@
 test_mappings:
-  - "/home/secretone/git_repos_iu/create_names_v2": "python3 -m pytest"
+  - "name_generator": "python3 -m pytest"
