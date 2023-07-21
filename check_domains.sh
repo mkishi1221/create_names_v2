@@ -29,6 +29,8 @@ start_time=`gdate +%s%3N`
 mkdir -p $project_path/tmp/domain_checker
 mkdir -p $project_path/results/
 
+export SOCKS=ihgosdbs-rotate:a6au825lb0n3@p.webshare.io:80
+
 python3 name_generator/domain_checker.py \
     $project_id \
     500

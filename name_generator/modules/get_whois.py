@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-from importlib.machinery import SourceFileLoader
 from classes.domain_class import Domain
 from datetime import datetime, timedelta
 from time import sleep
-import re
-import sys
 import logging
+import whois
 
-if "pytest" in sys.modules:
-    pois_location = "modules/Pois/pois/__init__.py"
-else:
-    pois_location = "name_generator/modules/Pois/pois/__init__.py"
-
-pois = SourceFileLoader("pois", pois_location).load_module()
 
 # Search domain database by calling the whois database in python
 class DomainStates:
@@ -32,30 +24,22 @@ def get_whois(domain_str) -> Domain:
     sleep_time = 1
     num_retries = 5
 
-    proxy_info = {"proxy_type": "socks5", "addr": "p.webshare.io", "port": 80, "username": "ihgosdbs-rotate", "password": "a6au825lb0n3"}
-    p = pois.Pois(timeout=10, proxy_info=proxy_info)
-
     for x in range(0, num_retries):
         try:
-            d = p.fetch(domain=domain_str)
+            flags = 0
+            flags = flags | whois.NICClient.WHOIS_QUICK
+            d = whois.whois(domain_str, flags=flags)
 
-            raw_date = re.findall(r"Registry Expiry Date: (.*T.*Z)", d["registry_result"])
-            try:
-                exp_date = raw_date[0].replace("Z", "")
-            except:
-                exp_date = (datetime.now() + timedelta(days=1)).isoformat()
-
-            if d["registrar_result"] == None or datetime.fromisoformat(exp_date) < datetime.now():
+            if d.domain_name is None:
                 check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
                 last_checked_int = int(datetime.now().timestamp())
                 status = DomainStates.AVAIL
             else:
-                check_expiration = int(datetime.fromisoformat(exp_date).timestamp())
+                check_expiration = int(d.expiration_date.timestamp())
                 last_checked_int = int(datetime.now().timestamp())
                 status = DomainStates.NOT_AVAIL
 
-        except (pois.SocketError) as e:
-            logging.warn(e)
+        except (whois.parser.PywhoisError) as e:
             check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
             last_checked_int = int(datetime.now().timestamp())
             status = DomainStates.NOT_AVAIL

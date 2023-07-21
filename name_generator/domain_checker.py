@@ -11,6 +11,7 @@ from typing import List
 import os
 import copy
 from deta import Deta
+from modules.domain_log_sync import sync_logs
 
 
 with open("name_generator/keys.json") as keys_files:
@@ -18,6 +19,9 @@ with open("name_generator/keys.json") as keys_files:
 deta_key = keys_dict["deta_key"]
 d = Deta(deta_key)
 domain_log_base = d.Base("domain_log")
+domain_log_drive = d.Drive("domain_log")
+
+checked_domains = json.loads(domain_log_drive.get("domain_log.json").read())
 
 
 def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain], not_avail_domain_list: List[Domain]):
@@ -93,10 +97,12 @@ def scrub_domain_log():
     fetch_query = {"data_valid_till?lt": int(datetime.now().timestamp())}
     response = domain_log_base.fetch(fetch_query)
 
+    last = response.last
     values = response.items
 
     while response.last is not None:
-        response = domain_log_base.fetch(fetch_query)
+        response = domain_log_base.fetch(fetch_query, last=last)
+        last = response.last
         values += response.items
 
     for val in values:
@@ -209,12 +215,12 @@ def check_domains(project_id: str, limit: int):
                     print(f"Checking {domain_str}...", end = "\r")
 
                     # Skip name if name is in domain_check_log
-                    if (domain_res := domain_log_base.get(domain_str)) is None:
+                    if not domain_str in checked_domains:
                         # Access whois API and add result to domain log
                         domain_obj: Domain = get_whois(domain_str)
                         domain_log_base.put(domain_obj.to_dict(), domain_obj.domain)
                     else:
-                        domain_obj: Domain = Domain.from_dict(domain_res)
+                        domain_obj: Domain = Domain.from_dict(domain_log_base.get(domain_str))
                         domain_log_use = " (Domain already checked!)"
 
                     sys.stdout.write("\033[K")
@@ -289,3 +295,4 @@ def check_domains(project_id: str, limit: int):
 
 if __name__ == "__main__":
     check_domains(sys.argv[1], sys.argv[2])
+    sync_logs()
