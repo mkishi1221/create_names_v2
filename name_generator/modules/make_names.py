@@ -7,7 +7,7 @@ from classes.algorithm_class import Algorithm
 from classes.name_class import Etymology
 from classes.name_class import Name
 from classes.keyword_class import Modword
-from modules.grade_phonetic import grade_phonetic, score_phonetic
+from modules.grade_phonetic import score_phonetic
 from modules.generate_hard_lemma import generate_hard_lemma
 
 def is_word(name: str, eng_dict_words: list):
@@ -198,7 +198,6 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
 
     name_lower = etymology_obj.name_in_title.lower()
     if name_lower not in name_dict.keys():
-        phonetic_grade, phonetic_pattern = grade_phonetic(name_lower)
         phonetic_score, lowest_phonetic, implaus_chars_list = score_phonetic(name_lower, xgrams_dict)
 
         langs = set(etymology_obj.lang_tuple)
@@ -209,8 +208,6 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
         name_dict[name_lower] = Name(
             name_in_lower=name_lower,
             length=len(name_lower),
-            phonetic_pattern=phonetic_pattern,
-            phonetic_grade=phonetic_grade,
             phonetic_score=phonetic_score,
             lowest_phonetic=lowest_phonetic,
             implaus_chars=implaus_chars_list,

@@ -22,8 +22,6 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
             keyword_len=keyword_obj.keyword_len,
             spacy_occurrence=keyword_obj.spacy_occurrence,
             contained_words=keyword_obj.contained_words,
-            phonetic_pattern=keyword_obj.phonetic_pattern,
-            phonetic_grade=keyword_obj.phonetic_grade,
             phonetic_score=keyword_obj.phonetic_score,
             lowest_phonetic=keyword_obj.lowest_phonetic,
             components=keyword_obj.components,

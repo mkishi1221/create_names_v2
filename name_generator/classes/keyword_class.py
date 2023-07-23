@@ -20,8 +20,6 @@ class Keyword:
     keyword_len: int = 0
     spacy_occurrence: int = 0
     contained_words: List[str] = None
-    phonetic_pattern: str = None
-    phonetic_grade: str = None
     phonetic_score: int = None
     lowest_phonetic: str = None
     implausible_chars: List[str] = None

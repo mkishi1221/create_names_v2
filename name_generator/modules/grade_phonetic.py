@@ -8,7 +8,6 @@ def grade_phonetic(text):
     phonetic_pattern = ""
     vowels = "aeiou"
     middle = "yw"
-    approved_repeat_strings = ["ss", "ll", "oo", "ee", "tt", "rr", "pp", "nn", "mm", "ff", "gg", "cc", "dd", "bb", "zz"]
 
     last_index = len(text) - 1
     prev_letter = ""
@@ -33,37 +32,31 @@ def grade_phonetic(text):
         indexes = [i for i, letter in enumerate(phonetic_pattern_for_eval) if letter == "_"]
 
         for index in indexes:
-            repeat_str = text[index] + text[index+1]
-            if repeat_str not in approved_repeat_strings:
-                phonetic_pattern_list = list(phonetic_pattern_for_eval)
-                phonetic_pattern_list[index] = phonetic_pattern_list[index+1]
-                phonetic_pattern_for_eval = "".join(phonetic_pattern_list)
+            phonetic_pattern_list = list(phonetic_pattern_for_eval)
+            phonetic_pattern_list[index] = phonetic_pattern_list[index+1]
+            phonetic_pattern_for_eval = "".join(phonetic_pattern_list)
 
     eval_pattern = phonetic_pattern_for_eval.replace("_", "")
 
     vowel_count = eval_pattern.count("11")
     consonant_count = eval_pattern.count("22")
 
+    phonetic_score = 1.0
     if (
         consonant_count == 0
         and vowel_count == 0
     ):
-        phonetic_grade = "Phonetic_A"
+        phonetic_score = 0.25
     elif (
         consonant_count == 0
-        and vowel_count == 1
+        and vowel_count == 1.0
     ):
-        phonetic_grade = "Phonetic_B"
-    elif (
-        consonant_count <= 1
-        and vowel_count <= 1
-    ):
-        phonetic_grade = "Phonetic_C"
+        phonetic_score = 0.50
 
     else:
-        phonetic_grade = "Phonetic_D"
+        phonetic_score = 1.0
 
-    return phonetic_grade, phonetic_pattern
+    return phonetic_score
 
 
 def score_phonetic(text: str, xgrams_dict):
@@ -93,8 +86,9 @@ def score_phonetic(text: str, xgrams_dict):
                     try:
                         freq = xgrams_dict[gramtype][gram][dictRef]
                     except KeyError:
-                        freq = 1.0
-                        implaus_chars.add(gram)
+                        freq = grade_phonetic(gram)
+                        if freq == 1:
+                            implaus_chars.add(gram)
                     breakdown[gramtype][key].append(freq)
 
     score_list = []

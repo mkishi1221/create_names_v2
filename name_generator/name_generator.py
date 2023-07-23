@@ -17,13 +17,13 @@ from modules.collect_algorithms import collect_algorithms
 from modules.convert_excel_to_json import convert_excel_to_json
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.find_contained_words import find_contained_words
-from modules.pull_eng_dict import eng_dict
+from modules.pull_eng_dict import pull_eng_dict
 from modules.keyword_modifier import keyword_modifier
-from modules.grade_phonetic import grade_phonetic, score_phonetic
+from modules.grade_phonetic import score_phonetic
 from modules.grade_name import grade_name
 from modules.manage_contained_words import pull_master_exempt
 from modules.run_googletrans import get_single_translation
-from modules.pull_xgram import x_grams
+from modules.pull_xgram import pull_xgrams
 
 def get_translated(keyword_obj:Keyword, xgrams_dict):
     translations = {}
@@ -107,12 +107,12 @@ def generate_names(project_id: str):
     excel_output_fp = f"{project_path}/results/{project_id}_names.xlsx"
 
     # Pull eng_dict data
-    eng_dict_data: dict = eng_dict
+    eng_dict_data: dict = pull_eng_dict()
     eng_dict_words: set = set(list(eng_dict_data.keys()))
     wiki_titles_data: set = set(open(wiki_titles_data_fp, "r").read().splitlines())
     curated_eng_list = set(open(curated_eng_list_fp, "r").read().splitlines())
     
-    xgrams_dict: dict = x_grams
+    xgrams_dict: dict = pull_xgrams()
     letter_sets = set(xgrams_dict["quadgrams"].keys())   
 
     # Pull master exempt contained words list
@@ -183,7 +183,6 @@ def generate_names(project_id: str):
                 plural_obj: Keyword = copy.deepcopy(keyword_obj)
                 plural_obj.keyword = plural_noun_str
                 plural_obj.pos = "plural_noun"
-                plural_obj.phonetic_grade, plural_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
                 plural_obj.phonetic_score, plural_obj.lowest_phonetic, plural_obj.implausible_chars = score_phonetic(plural_noun_str, xgrams_dict)
                 plural_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_list, type="keyword", exempt=master_exempt_contained_words)
                 plural_obj.keyword_class = "prime"
@@ -274,8 +273,6 @@ def generate_names(project_id: str):
                     "eng_dict_pos",
                     "keyword_len",
                     "contained_words",
-                    "phonetic_pattern",
-                    "phonetic_grade",
                     "phonetic_score",
                     "lowest_phonetic",
                     "components",
@@ -340,8 +337,6 @@ def generate_names(project_id: str):
                     name_in_title = name_in_title_str,
                     name_type = name_type_str,
                     length = name.length,
-                    phonetic_pattern= name.phonetic_pattern,
-                    phonetic_grade = name.phonetic_grade,
                     phonetic_score = name.phonetic_score,
                     lowest_phonetic = name.lowest_phonetic,
                     implaus_chars = name.implaus_chars,

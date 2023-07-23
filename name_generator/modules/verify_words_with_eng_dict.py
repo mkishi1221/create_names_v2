@@ -5,7 +5,7 @@ from classes.keyword_class import Keyword
 import regex as re
 from nltk.stem import WordNetLemmatizer
 from modules.generate_hard_lemma import generate_hard_lemma
-from modules.grade_phonetic import grade_phonetic, score_phonetic
+from modules.grade_phonetic import score_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
 from modules.pull_eng_dict import eng_dict
@@ -181,7 +181,6 @@ def verify_words_with_eng_dict(keywords: List[Keyword], project_path: str, exemp
             eng_dict_pos_list.add("noun")
 
         # Generate phonetic grade, pattern
-        keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(keyword_obj.keyword)
         keyword_obj.phonetic_score, keyword_obj.lowest_phonetic, keyword_obj.implausible_chars = score_phonetic(keyword_obj.keyword, xgrams_dict)
 
         # Generate possible abbreviations

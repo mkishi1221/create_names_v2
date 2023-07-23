@@ -73,8 +73,6 @@ class Name:
 
     name_in_lower: str = None
     length: int = 0
-    phonetic_pattern: str = None
-    phonetic_grade: str = None
     phonetic_score: int = None
     lowest_phonetic: int = None
     implaus_chars: list[str] = None
@@ -118,8 +116,6 @@ class Graded_name:
     name_in_title: Etymology.name_in_title = None
     name_type: Etymology.name_type = None
     length: Name.length = 0
-    phonetic_pattern: Name.phonetic_pattern = None
-    phonetic_grade: Name.phonetic_grade = None
     phonetic_score: int = None
     lowest_phonetic: int = None
     implaus_chars: Name.implaus_chars = None

@@ -14,7 +14,7 @@ from modules.find_contained_words import find_contained_words
 from modules.process_user_keywords import process_keyword_list
 from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
 from modules.keyword_modifier import keyword_modifier
-from modules.grade_phonetic import grade_phonetic, score_phonetic
+from modules.grade_phonetic import score_phonetic
 from modules.manage_contained_words import pull_master_exempt
 
 
@@ -97,7 +97,6 @@ def generate_modwords(project_id: str, xgrams_dict:dict):
                 keyword_obj: Keyword = copy.deepcopy(keyword_obj)
                 keyword_obj.keyword = plural_noun_str
                 keyword_obj.pos = "plural_noun"
-                keyword_obj.phonetic_grade, keyword_obj.phonetic_pattern = grade_phonetic(plural_noun_str)
                 keyword_obj.phonetic_score, keyword_obj.lowest_phonetic = score_phonetic(plural_noun_str, xgrams_dict)
                 keyword_obj.contained_words = find_contained_words(keyword=plural_noun_str, curated_eng_list=curated_eng_word_list, type="keyword", exempt=master_exempt_contained_words)
                 keyword_obj.keyword_class = "prime"
@@ -114,8 +113,6 @@ def generate_modwords(project_id: str, xgrams_dict:dict):
         "eng_dict_pos",
         "keyword_len",
         "contained_words",
-        "phonetic_pattern",
-        "phonetic_grade",
         "phonetic_score",
         "lowest_phonetic",
         "components",

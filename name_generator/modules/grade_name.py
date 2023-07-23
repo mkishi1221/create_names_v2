@@ -37,7 +37,7 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
         else:
             grade_str = "Reject"
             reject_reason = []
-            if lowest < 0.7:
+            if lowest > 0.7:
                 reject_reason.append("implausible_chars")
             if is_it_word != "no":
                 reject_reason.append("is_word")
@@ -73,7 +73,7 @@ def grade_name(name_type, is_it_word, name_length, contained_words, if_wiki_titl
         else:
             grade_str = "Reject"
             reject_reason = []
-            if lowest < 0.7:
+            if lowest > 0.7:
                 reject_reason.append("implausible_chars")
             if is_it_word != "no":
                 reject_reason.append("is_word")

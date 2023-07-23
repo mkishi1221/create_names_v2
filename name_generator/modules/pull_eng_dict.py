@@ -3,11 +3,14 @@
 import orjson as json
 from deta import Deta
 
-with open("name_generator/keys.json") as keys_files:
-    keys_dict = json.loads(keys_files.read())
-deta_key = keys_dict["deta_key"]
+def pull_eng_dict():
+    print("Pulling eng_dict from deta...")
+    with open("name_generator/keys.json") as keys_files:
+        keys_dict = json.loads(keys_files.read())
+    deta_key = keys_dict["deta_key"]
 
-d = Deta(deta_key)
-drive = d.Drive("eng_simplified")
-reader = drive.get("simplified_eng_dict.json")
-eng_dict: dict = json.loads(reader.read())
+    d = Deta(deta_key)
+    drive = d.Drive("eng_simplified")
+    reader = drive.get("simplified_eng_dict.json")
+    eng_dict: dict = json.loads(reader.read())
+    return eng_dict

@@ -35,8 +35,6 @@ def generate_keyword_shortlist(keyword_data):
                 keyword_len=keyword["keyword_len"],
                 spacy_occurrence=keyword["spacy_occurrence"],
                 contained_words=keyword["contained_words"],
-                phonetic_pattern=keyword["phonetic_pattern"],
-                phonetic_grade=keyword["phonetic_grade"],
                 phonetic_score=keyword["phonetic_score"],
                 lowest_phonetic=keyword["lowest_phonetic"],
                 abbreviations=keyword["abbreviations"],

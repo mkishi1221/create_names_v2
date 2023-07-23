@@ -30,7 +30,6 @@ def create_NameDomain_obj(name_data: Graded_name, avail_domain_list: List[Domain
         name_in_lower=name_data.name_in_lower,
         name_type=name_data.name_type,
         length=name_data.length,
-        phonetic_grade=name_data.phonetic_grade,
         phonetic_score=name_data.phonetic_score,
         lowest_phonetic=name_data.lowest_phonetic,
         keywords=name_data.keywords,
@@ -80,7 +79,6 @@ def create_excel_domain(name_type, status, data: NameDomain, domain:Domain, exce
         "keyword_combinations": keyword_combinations,
         "pos_combinations": data.pos_combinations,
         "modifier_combinations": data.modifier_combinations,
-        "phonetic_grade": data.phonetic_grade,
         "phonetic_score": data.phonetic_score,
         "lowest_phonetic": data.lowest_phonetic,
         "etymologies": data.etymologies,
@@ -106,6 +104,7 @@ def scrub_domain_log():
         values += response.items
 
     for val in values:
+        print(val)
         domain_log_base.delete(val["key"])
 
 # Checks domain availability using whois

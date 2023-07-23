@@ -40,7 +40,6 @@ class NameDomain:
     name_in_lower: Graded_name.name_in_title = None
     name_type: Graded_name.name_type = None
     length: Graded_name.length = 0
-    phonetic_grade: Graded_name.phonetic_grade = None
     phonetic_score: Graded_name.phonetic_score = None
     lowest_phonetic: Graded_name.lowest_phonetic = None
     keywords: Graded_name.keywords = None
