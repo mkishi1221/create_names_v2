@@ -18,7 +18,7 @@ from modules.grade_phonetic import score_phonetic
 from modules.manage_contained_words import pull_master_exempt
 
 
-def process_additional_keywords(additional_keyword_list_fp, project_path, master_exempt_contained_words):
+def process_additional_keywords(additional_keyword_list_fp, eng_dict, eng_dict_words, xgrams, project_path, master_exempt_contained_words):
     keywords_json_fp = f"{project_path}/tmp/keyword_generator/additional_keywords.json"
     kw_list, keywords_json_fp = convert_excel_to_json(additional_keyword_list_fp, target_sheet="additional keywords", output_json_fp=keywords_json_fp, convert_list=True)
     not_valid = [None, ""]
@@ -29,7 +29,7 @@ def process_additional_keywords(additional_keyword_list_fp, project_path, master
         for keyword in additional_keywords:
             keyword.origin = ["additional_user_keywords"]
         print("Getting keyword pos using eng_dict dictionary......")
-        additional_keywords = verify_words_with_eng_dict(additional_keywords, project_path, master_exempt_contained_words)
+        additional_keywords = verify_words_with_eng_dict(additional_keywords, eng_dict, eng_dict_words, xgrams, master_exempt_contained_words)
     else:
         additional_keywords = []
     return additional_keywords

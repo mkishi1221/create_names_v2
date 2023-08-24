@@ -44,7 +44,6 @@ def create_modword_obj(keyword_obj: Keyword, kw_modifier: str, final_modword: st
     return modword
 
 
-
 def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, translations:dict ) -> List[Modword]:
     vowels = "aiueoy"
     modword_obj_list = []
@@ -81,8 +80,10 @@ def keyword_modifier(keyword_obj: Keyword, kw_modifier: str, translations:dict )
                     modwords.append(keyword[:-1] + repl)
             if keyword[-1] not in vowels and keyword[-1] != "s":
                 modwords.append(keyword + keyword[-1])
-                for vowel in vowels:
-                    modwords.append(keyword + vowel)
+                for vowel_1 in vowels:
+                    modwords.append(keyword + vowel_1)
+                    for vowel_2 in vowels:
+                        modwords.append(keyword + vowel_1 + vowel_2)
             if len(modwords) > 0:
                 for modword in modwords:
                     modword_obj = create_modword_obj(

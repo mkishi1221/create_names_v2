@@ -220,7 +220,6 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
             translated=translated
         )
     else:
-
         langs: set = name_dict[name_lower].lang
         langs.update(etymology_obj.lang_tuple)
         translated = name_dict[name_lower].translated
@@ -234,7 +233,6 @@ def create_name_obj(etymology_obj: Etymology, name_dict: dict, eng_dict_words: l
         name_dict[name_lower].exempt_contained.update(etymology_obj.exempt_contained)
         name_dict[name_lower].lang = langs
         name_dict[name_lower].translated = translated
-    
     return name_dict
 
 def clean_wordlist(wordlist, before_pos=None, after_pos=None):

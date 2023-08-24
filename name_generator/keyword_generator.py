@@ -7,6 +7,8 @@ from typing import List, Dict
 import copy
 import os.path
 from modules.process_text_with_spacy import process_text_with_spacy
+from modules.pull_eng_dict import pull_eng_dict
+from modules.pull_xgram import pull_xgrams
 from modules.verify_words_with_eng_dict import verify_words_with_eng_dict
 from modules.generate_keyword_shortlist import generate_keyword_shortlist
 from modules.convert_excel_to_json import convert_excel_to_json
@@ -45,14 +47,17 @@ def generate_word_list(project_id):
     user_keywords = None
     sentences = None
 
-    # Pull master exempt contained words list
+    # Pull dicts
     master_exempt_contained_words = pull_master_exempt()
+    eng_dict = pull_eng_dict()
+    eng_dict_words = list(eng_dict.keys())
+    xgrams = pull_xgrams()
 
     # Check if keyword list exists and create keywords from keyword list
     if os.path.exists(keyword_list_tsv_fp):
         raw_keywords = [s for s in open(keyword_list_tsv_fp, "r").read().replace(" ", "\n").splitlines() if s]
         user_keywords = process_keyword_list(raw_keywords)
-        user_keywords = verify_words_with_eng_dict(user_keywords, project_path, master_exempt_contained_words)
+        user_keywords = verify_words_with_eng_dict(user_keywords, eng_dict, eng_dict_words, xgrams, master_exempt_contained_words)
         with open(user_keywords_json_fp, "wb+") as out_file:
             out_file.write(json.dumps(user_keywords, option=json.OPT_INDENT_2))
 
@@ -69,7 +74,7 @@ def generate_word_list(project_id):
             sentence_keywords = process_text_with_spacy(unique_lines)
             for keyword in sentence_keywords:
                 keyword.origin = ["sentences"]
-            sentence_keywords = verify_words_with_eng_dict(sentence_keywords, project_path, master_exempt_contained_words)
+            sentence_keywords = verify_words_with_eng_dict(sentence_keywords, eng_dict, eng_dict_words, xgrams, master_exempt_contained_words)
             with open(sentences_keywords_json_fp, "wb+") as out_file:
                 out_file.write(json.dumps(sentence_keywords, option=json.OPT_INDENT_2))
 

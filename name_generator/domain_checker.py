@@ -182,7 +182,7 @@ def check_domains(project_id: str, limit: int):
                     data["not_avail_domains"] = not_avail_domains_list
                     NameDomain_dict[name_type][name_in_title] = NameDomain(**data)
 
-    tld_list = [".com", ".co.uk", ".org"] #TODO: Change to file source ".co.uk", ".org", ".io" 
+    tld_list = [".com", ".co.uk"] #TODO: Change to file source ".co.uk", ".org", ".io" 
 
     json_ndl_output_fp = json_output_fp.replace("tmp/domain_checker/", "tmp/domain_checker/namedomain_list_")
     with open(json_ndl_output_fp, "wb+") as out_file:
@@ -219,8 +219,12 @@ def check_domains(project_id: str, limit: int):
                         domain_obj: Domain = get_whois(domain_str)
                         domain_log_base.put(domain_obj.to_dict(), domain_obj.domain)
                     else:
-                        domain_obj: Domain = Domain.from_dict(domain_log_base.get(domain_str))
-                        domain_log_use = " (Domain already checked!)"
+                        try:
+                            domain_obj: Domain = Domain.from_dict(domain_log_base.get(domain_str))
+                            domain_log_use = " (Domain already checked!)"
+                        except AttributeError:
+                            domain_obj: Domain = get_whois(domain_str)
+                            domain_log_base.put(domain_obj.to_dict(), domain_obj.domain)
 
                     sys.stdout.write("\033[K")
 

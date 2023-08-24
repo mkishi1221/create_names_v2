@@ -8,9 +8,7 @@ from modules.generate_hard_lemma import generate_hard_lemma
 from modules.grade_phonetic import score_phonetic
 from modules.keyword_abbreviator import keyword_abbreviator
 from modules.find_contained_words import find_contained_words
-from modules.pull_eng_dict import eng_dict
 import copy
-from modules.pull_xgram import x_grams
 
 def convert_to_nltk_pos(pos_str: str):
     pos_conversion = {
@@ -130,10 +128,9 @@ def fetch_eng_dict_pos(keyword, eng_dict: dict, eng_dict_words: list) -> list[st
                 all_pos.append(pos)
     return list(all_pos)
 
-def verify_words_with_eng_dict(keywords: List[Keyword], project_path: str, exempt_contained_kw: list) -> List[Keyword]:
+def verify_words_with_eng_dict(keywords: List[Keyword], eng_dict, eng_dict_words, x_grams, exempt_contained_kw: list) -> List[Keyword]:
     
     print("Getting keyword pos using eng_dict dictionary...")
-    eng_dict_words: list = list(eng_dict.keys())
     curated_eng_word_list = set(open("name_generator/curated_eng_word_list.txt", "r").read().splitlines())
     xgrams_dict: dict = x_grams
 
