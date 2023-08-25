@@ -30,7 +30,7 @@ def get_whois(domain_str) -> Domain:
             flags = flags | whois.NICClient.WHOIS_QUICK
             d = whois.whois(domain_str, flags=flags)
 
-            if d.domain_name is None:
+            if d.domain_name is None or datetime.fromtimestamp(d.expiration_date.timestamp()) < datetime.now():
                 check_expiration = int((datetime.now() + timedelta(days=1)).timestamp())
                 last_checked_int = int(datetime.now().timestamp())
                 status = DomainStates.AVAIL

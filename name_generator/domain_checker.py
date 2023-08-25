@@ -104,7 +104,6 @@ def scrub_domain_log():
         values += response.items
 
     for val in values:
-        print(val)
         domain_log_base.delete(val["key"])
 
 # Checks domain availability using whois
